@@ -1,0 +1,16 @@
+/config/config.yml
+robots.txt
+/tmp/
+/db/
+/log/
+/phpdoc/
+/nbproject/
+/vhost/
+/lib/error_log
+error_log
+/theme/
+/docs/docs1/tmp/
+/docs/docs1/export/
+/docs/docs1/formats/
+/docs/docs1/images/
+/docs/docs1/pdfs/

@@ -1,0 +1,82 @@
+# PARAMETROS DE CONFIGURACION GLOBAL DE LA APLICACION
+---
+config:
+  debug:
+    active: true
+    save_queries: false
+    save_error_query: true
+    email_error_query: info@albatronic.com
+    email_webmaster: info@albatronic.com
+    access_log: true
+  
+  # Para mostrar o no los botones de auditoria de los formularios
+  audit_mode: true
+  
+  # FORMATOS DE EXPORTACION DE INFORMACION
+  export_types:
+    - xml
+    - csv
+    - json
+    
+  # ENTORNO DE LA APLICACION
+  app:
+    name: Agentes CLOUD
+    url: agentescloud.local
+    path: 
+    framework: bin/albatronic/
+    #urlParent: http://localhost/Pcae 
+    
+  # CONEXIONES A LAS BASES DE DATOS
+  conections:
+    emp:
+      dbEngine: mysql
+      host: localhost
+      user: root
+      password: 
+      database: agentes_emp
+      #database: agentes_datos1
+    datos:
+      dbEngine: mysql
+      host: localhost
+      user: root
+      password: 
+      database: agentes_datos<?php echo $_SESSION['emp'];?>        
+
+  # CONEXIóN FTP NECESARIA SI LA WEB SUBE DOCUMENTOS AL SERVIDOR
+  projectFtp:
+    server:
+    port: 21
+    user:
+    password:
+    timeout: 30
+    folder: 
+        
+  # MOTOR DE ENVIO DE CORREOS
+  mailer:
+    plugin_dir: bin/Swift-5.0.0/lib/
+    plugin_file: swift_required.php
+    motor: 
+    socket: smtp
+    host: mail.albatronic.com
+    smtp_auth: true
+    user_name: pruebas@albatronic.com
+    password: P12#34s 
+    from: pruebas@albatronic.com
+    from_name: Agentes Cloud
+    timeout: 30
+    port: 25
+    save_sends: true
+    
+  # MOTOR PARA DOCUMENTOS EXCEL
+  # excel: bin/PHPExcel/PHPExcel.php
+  
+  # MOTOR PARA GENERAR DOCUMENTOS PDF
+  pdf: bin/pdf/fpdf.class.php
+  
+  # MOTOR DE TEMPLATES
+  twig:
+    motor: bin/Twig-1.16.2/lib/Twig/Autoloader.php
+    templates_folder: modules
+    debug_mode: true
+    cache_folder: tmp
+    charset: null

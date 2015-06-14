@@ -1,0 +1,16 @@
+{#
+  Module: Aplicaciones
+  Document : modules\Aplicaciones\fields.html.twig
+
+  copyright: ALBATRONIC
+  date 17.12.2014 12:00:58
+#}
+
+{{ macro.input(values.atributos.CodigoApp,'Etiqueta','text',values.controller ~ '[CodigoApp]',values.controller ~ '_CodigoApp',datos.CodigoApp,'15','CampoTextoCorto','1') }}
+{{ macro.input(values.atributos.NombreApp,'Etiqueta','text',values.controller ~ '[NombreApp]',values.controller ~ '_NombreApp',datos.NombreApp,'100','CampoTextoLargo','2') }}
+{{ macro.input(values.atributos.Descripcion,'Etiqueta','text',values.controller ~ '[Descripcion]',values.controller ~ '_Descripcion',datos.Descripcion,'100','CampoTextoLargo','3') }}
+{{ macro.input(values.atributos.Icon,'Etiqueta','text',values.controller ~ '[Icon]',values.controller ~ '_Icon',datos.Icon,'50','CampoTextoLargo','4') }}
+
+{% include '_global/fieldsComunes.html.twig' %}
+
+{{ macro.foco(values.controller ~ '_CodigoApp') }}

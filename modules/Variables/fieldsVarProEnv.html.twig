@@ -1,0 +1,32 @@
+{# VARIABLES DE ENTORNO A NIVEL DE PROYECTO #}
+
+{# author Sergio Pérez <sergio.perez@albatronic.com> #}
+{# copyright Informática ALBATRONIC, SL #}
+{# 12.sep.2012 11:16 #}
+
+{% extends 'Variables/form.html.twig' %}
+
+{% block template %}
+<div class="row">  
+    <div class="col-xs-12">
+        {{ macro.input({'caption':'Código tienda Plataforma [codigoPlataforma]','visible':'1','varEnv':'1','help':'Indique el código asignado a la tienda que hará las veces de plataforma'},'EtiquetaLarga','text','d[codigoPlataforma]','d_codigoPlataforma',values.d.codigoPlataforma,'50','CampoTextoMedio','1') }}
+        {{ macro.input({'caption':'Margen global precios libres [margenGlobal]','visible':'1','varEnv':'1','help':'El % de margen comercial por defecto que se aplicará para los libros de precio libre'},'EtiquetaLarga','text','d[margenGlobal]','d_margenGlobal',values.d.margenGlobal,'50','CampoTextoMedio','1') }}
+        {{ macro.input({'caption':'Iva Incluido [ivaIncluido]','visible':'1','varEnv':'1'},'EtiquetaLarga','text','d[ivaIncluido]','d_ivaIncluido',values.d.ivaIncluido,'50','CampoTextoMedio','1') }}
+        {{ macro.input({'caption':'Url servicio SMS [sms][url]','visible':'1','varEnv':'1'},'EtiquetaLarga','text','d[sms][url]','d_sms_url',values.d.sms.url,'50','CampoTextoMedio','1') }}
+        {{ macro.input({'caption':'Usuario servicio SMS [sms][usuario]','visible':'1','varEnv':'1'},'EtiquetaLarga','text','d[sms][usuario]','d_sms_usuario',values.d.sms.usuario,'50','CampoTextoMedio','1') }}
+        {{ macro.input({'caption':'Contraseña servicio SMS [sms][password]','visible':'1','varEnv':'1'},'EtiquetaLarga','text','d[sms][password]','d_sms_password',values.d.sms.password,'50','CampoTextoMedio','1') }}
+<<<<<<< HEAD
+        {{ macro.textarea({'caption':'Direcciones de e-mail separadas por ";" donde se enviarán las incidencias de las recepciones en tiendas [emailIncidencias]','visible':'1','varEnv':'1'},none,'d[emailIncidencias]','d_emailIncidencias',values.d.emailIncidencias) }}
+        {{ macro.textarea({'caption':'Direcciones de e-mail separadas por ";" donde se enviarán alertas genéricas [emailAlertas]','visible':'1','varEnv':'1'},none,'d[emailAlertas]','d_emailAlertas',values.d.emailAlertas) }}
+=======
+        {{ macro.input({'caption':'Direcciones de e-mail separadas por ";" donde se enviarán las incidencias de las recepciones en tiendas [emailIncidencias]','visible':'1','varEnv':'1'},'EtiquetaLarga','text','d[emailIncidencias]','d_emailIncidencias',values.d.emailIncidencias,'255','CampoTextoMedio','1') }}
+        {{ macro.input({'caption':'Direcciones de e-mail separadas por ";" donde se enviarán alertas genéricas [emailAlertas]','visible':'1','varEnv':'1'},'EtiquetaLarga','text','d[emailAlertas]','d_emailAlertas',values.d.emailAlertas,'255','CampoTextoMedio','1') }}        
+        {#
+>>>>>>> 573dad4bc10013df3aa5bb16b3218e06117c9ede
+        {{ macro.textarea({'caption':'Plantilla SMS notificación de recepción al cliente [smsCliente]','visible':'1','varEnv':'1'},none,'d[smsCliente]','d_smsCliente',values.d.smsCliente) }}
+        {{ macro.textarea({'caption':'Plantilla MAIL notificación de recepción al cliente [mailCliente]','visible':'1','varEnv':'1'},none,'d[mailCliente]','d_mailCliente',values.d.mailCliente) }}
+        {{ macro.textarea({'caption':'Plantilla MAIL notificación de incidencia en la recepción [mailIncidenciaRecepcion]','visible':'1','varEnv':'1'},none,'d[mailIncidenciaRecepcion]','d_mailIncidenciaRecepcion',values.d.mailIncidenciaRecepcion) }}
+        #}
+    </div>
+</div>
+{% endblock %}

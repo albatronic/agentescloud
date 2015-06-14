@@ -1,0 +1,26 @@
+# Module: Sucursales
+# Document : modules\Sucursales\listados.yml
+#
+# @copyright: ALBATRONIC
+# @date 18.12.2014 00:24:08
+#
+---
+listados:
+  -
+    title: Usuarios
+    order_by: Apellidos,Nombre
+    break_field: null
+    idPerfil: null
+    orientation: P
+    unit: mm
+    format: A4
+    margins: '10, 10, 15, 10'
+    body_font: 'Courier, , 8'
+    line_height: 4
+    print_interline: null
+    legend_bottom: null
+    columns:
+      NombreApellidos: { field: NombreApellidos, title: Usuario, length: '50', align: L, type: string, total: NO, formula: null, format: null }
+      Perfil: { field: IdPerfil, title: Perfil, length: '25', align: L, type: string, total: NO, formula: null, format: null }
+      Tienda: { field: IdSucursal, title: Tienda, length: '15', align: L, type: string, total: NO, formula: null, format: null }
+

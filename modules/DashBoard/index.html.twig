@@ -1,0 +1,22 @@
+{# Index/index.html.twig #}
+{% extends layout %}
+
+{% block title %}
+{{ parent() }} - {{values.titulo}}
+{% endblock %}
+
+
+{% block content %}
+    <div class="page_title row">
+        <div class="col-md-12">
+            <h1>{{values.titulo}}</h1>
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+    {% include values.controller ~ '/pedidosReiterados.html.twig' with {'pedidos': values.dashboard.pedidosReiterados}%}
+    {% include values.controller ~ '/pedidosIncidencia.html.twig' with {'pedidos': values.dashboard.pedidosIncidenciaRecepcion}%}
+    {% include values.controller ~ '/pedidosPendientes.html.twig' with {'pedidos': values.dashboard.pedidosPendientes}%}
+    
+{% endblock %}

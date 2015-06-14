@@ -1,0 +1,29 @@
+
+{% extends "_global/js.html.twig" %}
+
+{% block js %}
+    {{ parent() }}
+<script>
+    $(document).ready(function() {
+
+    });
+
+    function mensajeAnular(jsonObj) {
+
+        linea = $.parseJSON(jsonObj);
+
+        html = "<div class='row'>";
+        html = html + "<div class='col-md-7'>";
+        html = html + "<p>" + linea.Descripcion + "</p>";
+        html = html + "<p>Se ha pedido " + linea.NumeroIntentos + " veces.</p>";
+        html = html + "<p>La última vez fue el " + linea.ModifiedAt + "</p>";
+        html = html + "</div>";
+        html = html + "<div class='col-md-5'><img src='" + linea.UrlImagen + "' width='150px;'></div>";
+        html = html + "</div>";
+
+        $('#modalBody').html(html);
+        
+        $('#botonAnular').attr('onclick',"document.location.href='{{app.path}}/PedidosCab/AnularLinea/" + linea.PrimaryKeyMD5 + "'");
+    }
+</script>
+{% endblock %}

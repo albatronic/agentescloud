@@ -1,0 +1,11 @@
+{# Template new.html.twig for Perfiles #}
+{# -------------------------------------------------------#}
+{# CREAR UN REGISTRO NUEVO                                #}
+{# -------------------------------------------------------#}
+{% extends 'Perfiles/index.html.twig' %}
+
+{% block navegador %}{% endblock %}
+
+{% block mantenimiento %}
+    {% include '_global/formNew.html.twig' with {'values': values} %}
+{% endblock %}

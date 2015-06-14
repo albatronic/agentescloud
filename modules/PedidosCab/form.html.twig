@@ -1,0 +1,33 @@
+{#
+  Module: PedidosCab
+  Document : modules\PedidosCab\fields.html.twig
+
+  copyright: ALBATRONIC
+  date 24.02.2015 17:27:14
+#}
+
+<div class="row">
+    <div class="col-md-6">
+        <a href="{{app.path}}/{{values.controller}}/enviaConfirmacion/{{datos.Id}}">Enviar confirmación al cliente</a>
+        <div class="margin-bottom-15"></div>
+        {{ macro.input(values.atributos.Id,'Etiqueta','text',values.controller ~ '[Id]',values.controller ~ '_Id',datos.Id,'4','CampoUnidades','6') }}        
+        {{ macro.input(values.atributos.IdSucursal,'Etiqueta','text',values.controller ~ '[IdSucursal]',values.controller ~ '_IdSucursal',datos.IdSucursal,'1')}}
+        {{ macro.input(values.atributos.IdUsuario,'Etiqueta','text',values.controller ~ '[IdUsuario]',values.controller ~ '_IdUsuario',datos.IdUsuario,'2')}}
+        {{ macro.input(values.atributos.IdCliente,'Etiqueta','text',values.controller ~ '[IdCliente]',values.controller ~ '_IdCliente',datos.IdCliente,'3')}}
+        {{ macro.input(values.atributos.Fecha,'Etiqueta','text',values.controller ~ '[Fecha]',values.controller ~ '_Fecha',datos.Fecha|date('d/m/Y H:m:i'),'19','','4')}}      
+        {# macro.select(values.atributos.IdEstado,'Etiqueta',values.controller ~ '[IdEstado]',values.controller ~ '_IdEstado',none,datos.IdEstado.IdTipo,datos.IdEstado.fetchAll(false),'chzn-select','5')#}
+        {{ macro.input(values.atributos.NItems,'Etiqueta','text',values.controller ~ '[NItems]',values.controller ~ '_NItems',datos.NItems,'4','CampoUnidades','6') }}
+        {{ macro.input(values.atributos.Importe,'Etiqueta','text',values.controller ~ '[Importe]',values.controller ~ '_Importe',datos.Importe,'10','CampoImporte','7') }}        
+    </div>
+    <div class="col-md-6">    
+        {{ macro.textarea(values.atributos.Observations,none,values.controller ~ '[Observations]',values.controller ~ '_Observations',values.datos.Observations)}}        
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        {% include values.controller ~ '/listLineas.html.twig' with {'lineas': datos.getLineas}%}        
+    </div>    
+</div>
+{% include '_global/fieldsComunes.html.twig' %}
+

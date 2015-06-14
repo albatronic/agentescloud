@@ -1,0 +1,20 @@
+{#
+  Module: Modulos
+  Document : modules\Modulos\fields.html.twig
+
+  copyright: ALBATRONIC
+  date 17.12.2014 12:02:28
+#}
+
+{{ macro.select(values.atributos.CodigoApp,'Etiqueta',values.controller ~ '[CodigoApp]',values.controller ~ '_CodigoApp',none,datos.CodigoApp.CodigoApp,datos.CodigoApp.fetchAll('NombreApp',false),'chzn-select','1')}}
+{{ macro.input(values.atributos.NombreModulo,'Etiqueta','text',values.controller ~ '[NombreModulo]',values.controller ~ '_NombreModulo',datos.NombreModulo,'255','CampoTextoLargo','2') }}
+{{ macro.input(values.atributos.Nivel,'Etiqueta','text',values.controller ~ '[Nivel]',values.controller ~ '_Nivel',datos.Nivel,'4','CampoUnidades','3') }}
+{{ macro.input(values.atributos.Titulo,'Etiqueta','text',values.controller ~ '[Titulo]',values.controller ~ '_Titulo',datos.Titulo,'100','CampoTextoLargo','4') }}
+{{ macro.input(values.atributos.Descripcion,'Etiqueta','text',values.controller ~ '[Descripcion]',values.controller ~ '_Descripcion',datos.Descripcion,'100','CampoTextoLargo','5') }}
+{{ macro.input(values.atributos.Funcionalidades,'Etiqueta','text',values.controller ~ '[Funcionalidades]',values.controller ~ '_Funcionalidades',datos.Funcionalidades,'255','CampoTextoLargo','6') }}
+{{ macro.input(values.atributos.Icon,'Etiqueta','text',values.controller ~ '[Icon]',values.controller ~ '_Icon',datos.Icon,'50','CampoTextoLargo','7') }}
+{# macro.input(values.atributos.BelongsTo,'Etiqueta','text',values.controller ~ '[BelongsTo]',values.controller ~ '_BelongsTo',datos.BelongsTo,'11','CampoImporte','8') #}
+
+{% include '_global/fieldsComunes.html.twig' %}
+
+{{ macro.foco(values.controller ~ '_CodigoApp') }}

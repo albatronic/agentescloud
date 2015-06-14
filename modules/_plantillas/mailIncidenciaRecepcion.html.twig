@@ -1,0 +1,66 @@
+{# EMAIL DE NOTIFICACION INCIDENCIA RECEPCION A PERSONAL DE VIPS #}
+<html>
+    <head>
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
+        <link href="{{appUrl}}/assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+        <link href="{{appUrl}}/assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
+        <link href="{{appUrl}}/assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="{{appUrl}}/assets/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+        <link href="{{appUrl}}/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css"/>
+        <!-- END GLOBAL MANDATORY STYLES -->
+        <!-- BEGIN PAGE LEVEL PLUGIN STYLES -->
+        <link href="{{appUrl}}/assets/global/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css"/>
+        <link href="{{appUrl}}/assets/global/plugins/fullcalendar/fullcalendar.min.css" rel="stylesheet" type="text/css"/>
+        <link href="{{appUrl}}/assets/global/plugins/jqvmap/jqvmap/jqvmap.css" rel="stylesheet" type="text/css"/>
+        <link href="{{appUrl}}/assets/global/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.css" rel="stylesheet" type="text/css"/>
+        <!-- END PAGE LEVEL PLUGIN STYLES -->
+        <!-- BEGIN PAGE STYLES -->
+        <link href="{{appUrl}}/assets/admin/pages/css/tasks.css" rel="stylesheet" type="text/css"/>
+        <!-- END PAGE STYLES -->
+        <!-- BEGIN THEME STYLES -->
+        <!-- DOC: To use 'rounded corners' style just load 'components-rounded.css' stylesheet instead of 'components.css' in the below style tag -->
+        <link href="{{appUrl}}/assets/global/css/components.css" id="style_components" rel="stylesheet" type="text/css"/>
+        <link href="{{appUrl}}/assets/global/css/plugins.css" rel="stylesheet" type="text/css"/>
+        <link href="{{appUrl}}/assets/admin/layout/css/layout.css" rel="stylesheet" type="text/css"/>
+        <link href="{{appUrl}}/assets/admin/layout/css/themes/default.css" rel="stylesheet" type="text/css" id="style_color"/>
+        <link href="{{appUrl}}/assets/admin/layout/css/custom.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <p>Se han producido las siguienes incidencias durante la recepción en tienda</p>.
+        <ul>
+            <li>TIENDA {{pedido.IdSucursal.Direccion}}</li>
+            <li>Pedido {{pedido.Id}}</li>
+            <li>Fecha {{pedido.Fecha|date('d/m/Y')}}</li>
+            {#
+            <li>Cliente {{pedido.IdCliente.RazonSocial}}</li>
+            <li>Dirección {{pedido.IdCliente.Direccion}}</li>
+            <li>{{pedido.IdCliente.CodigoPostal}} - {{pedido.IdCliente.Poblacion}} ({{pedido.IdCliente.Provincia}})</li>
+            <li>EMail {{pedido.IdCliente.EMail}}</li>#}
+        </ul>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Descripción</th>
+                    <th>Udes Pedidas</th>
+                    <th>Recibido Plataforma</th>
+                    <th>Recibido Tienda</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for linea in pedido.getLineas %}
+                <tr>
+                    <td>{{linea.Ean}}</td>
+                    <td>{{linea.Descripcion}}</td>
+                    <td class="text-right">{{linea.Unidades}}</td>
+                    <td class="text-right">{{linea.RecibidoPlataforma}}</td>
+                    <td class="text-right">{{linea.RecibidoTienda}}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        
+        <p>OBSERVACIONES:</p><p>{{pedido.Observations}}</p>
+    </body>
+</html>

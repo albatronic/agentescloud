@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /bin/
+Disallow: /config/
+Disallow: /cron/
+Disallow: /entities/
+Disallow: /lang/
+Disallow: /lib/
+Disallow: /log/
+Disallow: /tmp/
+Sitemap: http://www.DOMINIO.com/sitemap/index.xml

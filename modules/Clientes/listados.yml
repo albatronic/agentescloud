@@ -1,0 +1,27 @@
+# Module: Clientes
+# Document : modules\Clientes\listados.yml
+#
+# @copyright: ALBATRONIC
+# @date 18.12.2014 00:24:08
+#
+---
+listados:
+  -
+    title: Clientes
+    order_by: RazonSocial
+    break_field: null
+    idPerfil: null
+    orientation: P
+    unit: mm
+    format: A4
+    margins: '10, 10, 15, 10'
+    body_font: 'Courier, , 8'
+    line_height: 4
+    print_interline: null
+    legend_bottom: null
+    columns:
+        RazonSocial: { field: RazonSocial, title: Razon Sócial, length: '50', align: L, type: string, total: NO, formula: null, format: null }
+        Nif: { field: Nif, title: Nif, length: '25', align: L, type: string, total: NO, formula: null, format: null }
+        Provincia: { field: Provincia, title: Provincia, length: '15', align: L, type: string, total: NO, formula: null, format: null }
+        Poblacion: { field: Poblacion, title: Poblacion, length: '15', align: L, type: string, total: NO, formula: null, format: null }
+

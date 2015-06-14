@@ -1,0 +1,9 @@
+{# Template edit.html.twig for TiposIva #}
+{# -------------------------------------------------------#}
+{# EDITAR UN REGISTRO. ACCIONES: GUARDAR Y BORRAR         #}
+{# -------------------------------------------------------#}
+{% extends 'TiposIva/index.html.twig' %}
+
+{% block mantenimiento %}
+    {% include '_global/formEdit.html.twig' with {'values': values} %}
+{% endblock %}

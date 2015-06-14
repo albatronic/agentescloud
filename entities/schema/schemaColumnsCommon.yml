@@ -1,0 +1,21 @@
+# COLUMNAS COMUNES A TODAS LAS TABLAS.
+    Observations:         {type: text, default: NULL}
+    PrimaryKeyMD5:        {type: string(100), default: NULL, index: unique}
+    IsDefault:            {type: tinyint, notnull: true, default: 0, index: index, comment: 'Abstract,ValoresSN,IDTipo'}
+    IsSuper:              {type: tinyint, notnull: true, default: 0, index: index, comment: 'Abstract,ValoresSN,IDTipo'}
+    BelongsTo:            {type: integer(11), notnull: true, default: 0, index: index}
+    NivelJerarquico:      {type: int(4), notnull: true, default: 1 }    
+    Publish:              {type: tinyint, notnull: true, default: 0, index: index, comment: 'Abstract,ValoresSN,IDTipo'}
+    
+    # Auditoria
+    CreatedBy:            {type: integer, notnull: true, default: 0}
+    CreatedAt:            {type: datetime, notnull: true, default: '0000-00-00 00:00:00'}
+    ModifiedBy:           {type: integer, notnull: true, default: 0}
+    ModifiedAt:           {type: datetime, notnull: true, default: '0000-00-00 00:00:00'}
+    Deleted:              {type: tinyint, notnull: true, default: 0, index: index, comment: 'Abstract,ValoresSN,IDTipo'}
+    DeletedBy:            {type: integer, notnull: true, default: 0}
+    DeletedAt:            {type: datetime, notnull: true, default: '0000-00-00 00:00:00'}
+    PrintedBy:            {type: integer, notnull: true, default: 0}
+    PrintedAt:            {type: datetime, notnull: true, default: '0000-00-00 00:00:00'}
+    EmailedBy:            {type: integer, notnull: true, default: 0}
+    EmailedAt:            {type: datetime, notnull: true, default: '0000-00-00 00:00:00'}   

@@ -1,0 +1,160 @@
+# ESQUEMA EMPRESAS    
+
+# Aplicaciones del Agt
+AgtAplicaciones:
+  engine:
+  charSet:
+  comment: Sub apps del Cpanel
+  columns:
+    CodigoApp:   {type: string(15), notnull: true, index: unique}
+    NombreApp:   {type: string(100), notnull: true}
+    Descripcion: {type: string(100), notnul: true}
+    Icon:        {type: string(50), default: NULL }
+    <?php include '../../entities/schema/schemaColumnsCommon.yml'; echoln('');?>
+  relations:
+    
+# Módulos de la aplicación
+AgtModulos:
+  comment: Módulos de la aplicación
+  columns:
+    CodigoApp:       { type: string(15), notnull: true, index: index, comment: 'emp,Aplicaciones,CodigoApp' }
+    NombreModulo:    { type: string(255), notnull: true, index: unique }
+    Nivel:           { type: integer(4), notnull: true, default: 0 }
+    Titulo:          { type: string(100), notnull: true }
+    Descripcion:     { type: string(100), default: NULL }
+    Funcionalidades: { type: string(255), notnull: true }
+    Icon:            { type: string(50), default: NULL } 
+    BelongsTo:       { type: integer(11), default: 0 }
+    <?php include '../../entities/schema/schemaColumnsCommon.yml'; echoln('');?>
+  relations:
+    CodigoApp : { ForeignEntity: Aplicaciones, ForeignId: CodigoApp } 
+    
+# Municipios
+AgtMunicipios:
+  comment: Municipios
+  columns:
+    IdPais:        { type: bigint(11), notnull: true, defautl: 68, index: index, comment: 'emp,Paises,Id' }
+    IdProvincia:   { type: bigint(11), notnull: true, defautl: 0, index: index, comment: 'emp,Provincias,Id' }
+    Codigo:        { type: string(5), notnull: true }
+    DigitoControl: { type: string(2), notnull: true }
+    Municipio:     { type: string(255), notnull: true, index: INDEX }
+    <?php include '../../entities/schema/schemaColumnsCommon.yml'; echoln('');?>       
+  relations:
+
+# Paises
+AgtPaises:
+  comment: Paises del mundo
+  columns:
+    Codigo: { type: string(2), notnull: true }
+    Pais: { type: string(255), notnull: true, index: INDEX }
+    IdMoneda: { type: bigint(11), default: 0, index: index, comment: 'emp,Monedas,Id' }
+    IdZonaHoraria: { type: bigint(11), default: 0, index: index, comment: 'emp,ZonasHorarias,Id' }
+    Latitud: { type: float, notnull: true, default: 0 }
+    Longitud: { type: float, notnull: true, default: 0 }
+    <?php include '../../entities/schema/schemaColumnsCommon.yml'; echoln('');?>
+  relations:
+    IdMoneda: { ForeignEntity: Monedas, ForeignId: Id }
+    IdZonaHoraria: { ForeignEntity: ZonasHorarias, ForeignId: Id }
+
+# Zonas Horarias
+AgtZonasHorarias:
+  comment: Zonas Horarias mundiales
+  columns:
+    Zona: { type: string(255), notnul: true }
+    <?php include '../../entities/schema/schemaColumnsCommon.yml'; echoln('');?>
+
+# Monedas
+AgtMonedas:
+  comment: Monedas mundiales
+  columns:
+    Codigo: { type: string(3), notnull: true }
+    Moneda: { type: string(255), notnull: true }
+    Simbolo: { type: string(255), default: NULL }
+    <?php include '../../entities/schema/schemaColumnsCommon.yml'; echoln('');?>
+
+# Provincias
+AgtProvincias:
+  comment: Provincias
+  columns:
+    IdPais:      { type: bigint(11), notnull: true, default: 68, index: index, comment: 'emp,Paises,Id' }
+    Codigo:      { type: varchar(5), default: NULL }
+    Provincia:   { type: string(255), notnull: true, index: INDEX }
+    <?php include '../../entities/schema/schemaColumnsCommon.yml'; echoln('');?>    
+  relations:
+      
+# Perfiles de usuarios
+AgtPerfiles:
+  comment: Perfiles de usuarios
+  columns:
+    Perfil: { type: varchar(50), notnull: true }
+    <?php include '../../entities/schema/schemaColumnsCommon.yml'; echoln('');?>   
+  relations: 
+
+# Permisos
+AgtPermisos:
+  columns:
+    IdPerfil:        { type: integer, notnull: true, index: index, comment: 'emp,Perfiles,Id' }
+    NombreModulo:    { type: string(255), notnull: true, index: index, comment: 'emp,Modulos,NombreModulo' }
+    Funcionalidades: { type: string(255), notnull: true }
+    <?php include '../../entities/schema/schemaColumnsCommon.yml'; echoln('');?>
+  relations:
+    IdPerfil:     { ForeignEntity: AgtPerfiles, ForeignId: Id }
+    NombreModulo: { ForeignEntity: AgtModulos, ForeignId: NombreModulo }
+
+# Funcionalidades
+AgtFuncionalidades:
+  columns:
+    Codigo:      { type: string(15), notnull: true, index: unique}
+    Titulo:      { type: string(100), notnull: true}
+    Descripcion: { type: string(100), default: NULL}
+    EsEstandar : { type: boolean, notnull: true, default: 0, index: index, comment: 'abstract,ValoresSN,IDTipo' }
+    <?php include '../../entities/schema/schemaColumnsCommon.yml'; echoln('');?>
+  relations:
+    EsEstandar:  { ForeignEntity: ValoresSN, ForeignId: IDTipo }
+    
+# VARIABLES DE ENTORNO Y WEB DEL PROYECTO, SUBAPPS Y MODULOS
+AgtVariables:
+  comment: Variables de entorno y web del proyecto, subapps y modulos
+  columns:
+    IdPerfil: { type: bigint(11), notnull: true, default: 0, index: index, comment: 'bd,Perfiles,Id' }
+    Variable: { type: string(255), notnull: true, index: index }
+    Yml:      { type: text}
+    <?php include '../../entities/schema/schemaColumnsCommon.yml'; echoln('');?>
+  relations:
+    
+# USUARIOS
+AgtUsuarios:
+  columns:
+    Nombre:       { type: string(50), notnull: true }
+    Apellidos:    { type: string(50), notnull: true }
+    DNI:          { type: string(15), default: NULL }
+    Direccion:    { type: string(100), default: NULL }
+    Pais:         { type: varchar(50), notnull: false, default: 'España' } 
+    Provincia:    { type: varchar(50), default: NULL } 
+    Poblacion:    { type: varchar(50), default: NULL } 
+    CodigoPostal: { type: string(10), default: NULL}
+    Telefono:     { type: string(50), default: NULL }
+    Fax:          { type: string(50), default: NULL }
+    Movil:        { type: string(50), default: NULL }
+    EMail:        { type: string(100), notnull: true, default: '', index: unique }
+    Password:     { type: string(100), default: NULL }
+    TokenLogin:   { type: string(100), default: NULL }
+    NLogin:       { type: integer, notnull: true, default: 0 }
+    UltimoLogin:  { type: datetime, notnull: true, default: '0000-00-00 00:00:00'}
+    IdPerfil:     { type: bigint(11), notnull: true, default: 0, index: index, comment: 'bd,Perfiles,Id' }
+    Activo:       { type: boolean, notnull: true, default: 1, index: index, comment: 'Abstract,ValoresSN,IDTipo' }
+    <?php include '../../entities/schema/schemaColumnsCommon.yml'; echoln('');?>
+  relations:
+    IdPerfil: { ForeignEntity: Perfiles, ForeignId: Id }
+
+# Tipos de Iva
+AgtTiposIva:
+  comment: Tipos de iva
+  columns:
+    IDIva:     { type: bigint(11), notnull: true, index: PRIMARY, autoIncrement: true}
+    Tipo :     { type: string(255), notnull: true }
+    Iva:       { type: decimal(2), notnull: true, default: '0.00' }
+    Recargo:   { type: decimal(2), notnull: true, default: '0.00' }
+    Retencion: { type: decimal(2), notnull: true, default: '0.00' }    
+    <?php include '../../entities/schema/schemaColumnsCommon.yml'; echoln('');?>     
+  relations: 

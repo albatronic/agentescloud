@@ -1,0 +1,10 @@
+{# empty Twig template #}
+{% extends layout %}
+
+{% block title parent() ~ ' - '  ~ values.titulo %}
+
+{% block content %}
+    
+    <h1>{{values.mensaje}}</h1>
+    
+{% endblock %}

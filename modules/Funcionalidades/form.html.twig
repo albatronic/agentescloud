@@ -1,0 +1,16 @@
+{#
+  Module: Funcionalidades
+  Document : modules\Funcionalidades\fields.html.twig
+
+  copyright: ALBATRONIC
+  date 16.12.2014 22:23:05
+#}
+
+{{ macro.input(values.atributos.Codigo,'Etiqueta','text',values.controller ~ '[Codigo]',values.controller ~ '_Codigo',datos.Codigo,'15','CampoTextoCorto','1') }}
+{{ macro.input(values.atributos.Titulo,'Etiqueta','text',values.controller ~ '[Titulo]',values.controller ~ '_Titulo',datos.Titulo,'100','CampoTextoLargo','2') }}
+{{ macro.input(values.atributos.Descripcion,'Etiqueta','text',values.controller ~ '[Descripcion]',values.controller ~ '_Descripcion',datos.Descripcion,'100','CampoTextoLargo','3') }}
+{{ macro.select(values.atributos.EsEstandar,'Etiqueta',values.controller ~ '[EsEstandar]',values.controller ~ '_EsEstandar',none,datos.EsEstandar.EsEstandar,datos.EsEstandar.fetchAll('IDTipo'),'chzn-select','4')}}
+
+{% include '_global/fieldsComunes.html.twig' %}
+
+{{ macro.foco(values.controller ~ '_Codigo') }}

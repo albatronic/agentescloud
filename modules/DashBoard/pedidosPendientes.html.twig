@@ -1,0 +1,34 @@
+{# PEDIDOS PENDIENTES DE RECIBIDR / EN TRÁNSITO #}
+    <div class="panel panel-primary">
+        <div class="panel-heading">PEDIDOS EN TRÁNSITO</div>
+        <div class="panel-body">
+          <p>Aquí se muestran los pedidos que están confirmados y pendientes de recibir (ya sea directamente de la distribuidora o de la plataforma)</p>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>N.Pedido</th>
+                    <th>Cliente</th>
+                    <th>Artículo</th>
+                    <th>Distribuidora</th>                    
+                    <th>Udes</th>
+                    <th>Fecha Pedido</th>
+                    <th>Fecha Confirmación</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for linea in pedidos %}  
+                <tr>
+                    <td><a href="{{app.path}}/PedidosCab/edit/{{linea.IdPedido.PrimaryKeyMD5}}" target="_blank">{{linea.IdPedido}}</a></td>
+                    <td>{{linea.IdCliente.RazonSocial}}</td>
+                    <td>{{linea.Ean}} - {{linea.Descripcion}}</td>
+                    <td>{{linea.IdDistribuidora.RazonSocial}}</td>                    
+                    <td class="text-right">{{linea.Unidades}}</td>
+                    <td>{{linea.CreatedAt|date('d/m/Y')}}</td>
+                    <td>{{linea.ModifiedAt|date('d/m/Y')}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>        
+    </div>

@@ -1,0 +1,552 @@
+# Module: PedidosLineas
+# Document : modules/PedidosLineas/config.yml
+#
+# @author: Sergio Pérez <sergio.perez@albatronic.com>
+# @copyright: Informática ALBATRONIC SL
+# @date 06.05.2015 13:13:18
+#
+---
+PedidosLineas:
+  app: ''
+  isModuleRoot: 0
+  linkModule:
+    fromColumn: ''
+    toEntity: ''
+    toColumn: ''
+  modulosRelacionables: ''
+  translatable: false
+  searchable: false
+  showCommonFields: false
+  numMaxRecords: ''
+  numberOfImages: '0'
+  withMetadata: '0'
+  addMetadata: '0'
+  deleteMetadata: '0'
+  withGalery: '0'
+  withDocuments: '0'
+  withVideos: 0
+  withAudios: '0'
+  maxSizes:
+    image: '400000'
+    document: ''
+    video: ''
+    audio: ''
+  galery:
+    maxWidthImage: '500'
+    maxHeightImage: '400'
+    generateThumbnail: '0'
+    widthThumbnail: '50'
+    heightThumbnail: '50'
+  urlFriendlyManagement: false
+  fieldGeneratorUrlFriendly: IdPedido
+  metatagTitleManagement: false
+  fieldGeneratorMetatagTitle: IdPedido
+  fieldGeneratorMetatagDescription: IdPedido
+  fieldGeneratorMetatagKeywords: IdPedido
+  controller: PedidosLineas
+  action: Index
+  template: index.html.twig
+  parametros: ''
+  login_required: YES
+  permission_control: YES
+  favourite_control: NO
+  help_file: help.html.twig
+  title: Consulta Histórico de Pedidos
+  id_video: pedidoslineas
+  url_video: null
+  feature_list: YES
+  entity: PedidosLineas
+  table: AgtPedidosLineas
+  primarykey: Id
+  linkBy: ''
+  records_per_page: 10
+  export: 'false'
+  order_by:
+    -
+      title: 'Pedido z-a'
+      criteria: 'IdPedido DESC'      
+    -
+      title: 'Pedido a-z'
+      criteria: 'IdPedido ASC'
+    -
+      title: 'Fecha z-a'
+      criteria: 'CreatedAt DESC'      
+    -
+      title: 'Fecha a-z'
+      criteria: 'CreatedAt ASC'
+  search_default: IdPedido
+  referenced_entities:
+    - PedidosCab
+    - Sucursales
+    - Distribuidoras
+    - Usuarios
+    - Clientes
+    - ValoresSN
+    - EstadosLineasPedidos
+  columns:
+    Id:
+      title: Id
+      visible: false
+      updatable: false
+      filter: NO
+      list: NO
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+    IdPedido:
+      title: Pedido Web
+      filter: YES
+      list: YES
+      visible: true
+      updatable: false
+      default: '0'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: PedidosCab/edit, param: null, title: Editar Pedido completo, target: null, link: null }
+      #aditional_filter: { order: 1, caption: IdPedido, entity: PedidosCab, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      validator: { nullable: NO, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
+    PedidoVips:
+      title: Pedido Vips
+      filter: YES
+      list: YES
+      visible: true
+      updatable: false
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: YES, type: string, length: '15', min: null, max: null, message: 'Valor Requerido' }
+    DocumentoRecepcion:
+      title: Doc. Recepcion
+      filter: YES
+      list: true
+      visible: true
+      updatable: false
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: YES, type: string, length: '15', min: null, max: null, message: 'Valor Requerido' }      
+    IdSucursal:
+      title: Tienda
+      filter: NO
+      list: NO
+      visible: true
+      updatable: false
+      default: '0'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      #aditional_filter: { order: 2, caption: IdSucursal, entity: Sucursales, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      validator: { nullable: NO, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
+    IdDistribuidora:
+      title: Distribuidora
+      filter: NO
+      list: false
+      visible: true
+      updatable: false
+      default: '0'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      aditional_filter: { order: 3, caption: Distribuidora, entity: Distribuidoras, method: fetchAll, params: RazonSocial, type: select, operator: '=', event: null }
+      validator: { nullable: NO, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
+    IdUsuario:
+      title: Usuario
+      filter: NO
+      list: NO
+      visible: true
+      updatable: false
+      default: '0'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      aditional_filter: { order: 4, caption: Usuario, entity: Usuarios, method: fetchAll, params: Nombre, type: select, operator: '=', event: null }
+      validator: { nullable: NO, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
+    IdCliente:
+      title: Cliente
+      filter: NO
+      list: YES
+      visible: true
+      updatable: false
+      default: '0'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      aditional_filter: { order: 1, caption: Cliente (%), entity: Clientes, method: null, params: RazonSocial, type: input }
+      validator: { nullable: NO, type: integer, length: '25', min: null, max: null, message: 'Valor Requerido' }
+    PedidoDistribuidora:
+      title: Pedido Distrib
+      filter: YES
+      list: NO
+      visible: true
+      updatable: false
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: YES, type: string, length: '15', min: null, max: null, message: 'Valor Requerido' }
+    IdSucursalPedido:
+      title: Tienda Pedido
+      filter: NO
+      list: NO
+      visible: true
+      updatable: false
+      default: '0'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      #aditional_filter: { order: 6, caption: IdSucursalPedido, entity: Sucursales, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      validator: { nullable: NO, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
+    Sku:
+      title: Sku
+      filter: YES
+      list: NO
+      visible: true
+      updatable: false
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: NO, type: string, length: '25', min: null, max: null, message: 'Valor Requerido' }
+    Ean:
+      title: Ean
+      filter: YES
+      list: true
+      visible: true
+      updatable: false
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: NO, type: string, length: '25', min: null, max: null, message: 'Valor Requerido' }
+    Descripcion:
+      title: Descripcion
+      filter: YES
+      list: true
+      visible: true
+      updatable: false
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: NO, type: string, length: '25', min: null, max: null, message: 'Valor Requerido' }
+    Autor:
+      title: Autor
+      filter: YES
+      list: NO
+      visible: true
+      updatable: false
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: YES, type: string, length: '255', min: null, max: null, message: 'Valor Requerido' }
+    Editorial:
+      title: Editorial
+      filter: YES
+      list: NO
+      visible: true
+      updatable: false
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: YES, type: string, length: '255', min: null, max: null, message: 'Valor Requerido' }
+    Estudios:
+      title: Estudios
+      filter: YES
+      list: NO
+      visible: true
+      updatable: false
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: YES, type: string, length: '255', min: null, max: null, message: 'Valor Requerido' }
+    Curso:
+      title: Curso
+      filter: YES
+      list: NO
+      visible: true
+      updatable: false
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: YES, type: string, length: '255', min: null, max: null, message: 'Valor Requerido' }
+    Asignatura:
+      title: Asignatura
+      filter: YES
+      list: NO
+      visible: true
+      updatable: false
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: YES, type: string, length: '255', min: null, max: null, message: 'Valor Requerido' }
+    Idioma:
+      title: Idioma
+      filter: YES
+      list: NO
+      visible: true
+      updatable: false
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: YES, type: string, length: '255', min: null, max: null, message: 'Valor Requerido' }
+    UrlImagen:
+      title: UrlImagen
+      filter: YES
+      list: NO
+      visible: true
+      updatable: false
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: YES, type: string, length: '255', min: null, max: null, message: 'Valor Requerido' }
+    Unidades:
+      title: Udes Pedidas
+      filter: YES
+      list: yes
+      visible: true
+      updatable: false
+      default: '0.00'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: NO, type: decimal, length: '10', min: null, max: null, message: 'Valor Requerido' }
+    RecibidoPlataforma:
+      title: Recibido Plataf
+      filter: YES
+      list: yes
+      visible: true
+      updatable: false
+      default: '0.00'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: NO, type: decimal, length: '10', min: null, max: null, message: 'Valor Requerido' }
+    RecibidoTienda:
+      title: Recibido Tienda
+      filter: YES
+      list: yes
+      visible: true
+      updatable: false
+      default: '0.00'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: NO, type: decimal, length: '10', min: null, max: null, message: 'Valor Requerido' }      
+    Precio:
+      title: Precio
+      filter: YES
+      list: NO
+      visible: true
+      updatable: false
+      default: '0.00'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: NO, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+    Descuento:
+      title: Descuento
+      filter: YES
+      list: NO
+      visible: true
+      updatable: false
+      default: '0.00'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: NO, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+    Pvd:
+      title: Pvd
+      filter: YES
+      list: NO
+      visible: true
+      updatable: false
+      default: '0.00'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: NO, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+    Importe:
+      title: Importe
+      filter: YES
+      list: NO
+      visible: true
+      updatable: false
+      default: '0.00'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: NO, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+    Iva:
+      title: Iva
+      filter: YES
+      list: NO
+      visible: true
+      updatable: false
+      default: '0.00'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: NO, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+    Recargo:
+      title: Recargo
+      filter: YES
+      list: NO
+      visible: true
+      updatable: false
+      default: '0.00'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: NO, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+    IvaIncluido:
+      title: Iva Incluido
+      filter: NO
+      list: NO
+      visible: true
+      updatable: false
+      default: '1'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      #aditional_filter: { order: 7, caption: IvaIncluido, entity: ValoresSN, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      validator: { nullable: NO, type: tinyint, length: '1', min: null, max: null, message: 'Valor Requerido' }
+    IdEstado:
+      title: Estado
+      filter: NO
+      list: yes
+      visible: true
+      updatable: false
+      default: '0'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      aditional_filter: { order: 8, caption: Estado, entity: EstadosLineasPedidos, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      validator: { nullable: NO, type: integer, length: '25', min: null, max: null, message: 'Valor Requerido' }
+    NumeroIntentos:
+      title: Intentos Pedido
+      filter: NO
+      list: false
+      visible: true
+      updatable: false
+      default: '0'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      #aditional_filter: { order: 8, caption: Estado, entity: EstadosLineasPedidos, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      validator: { nullable: NO, type: integer, length: '25', min: null, max: null, message: 'Valor Requerido' }
+    Observations:
+      title: Observaciones
+      filter: NO
+      list: NO
+      visible: true
+      updatable: false
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      #aditional_filter: { order: 8, caption: IsDefault, entity: ValoresSN, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      validator: { nullable: NO, type: tinyint, length: '1', min: null, max: null, message: 'Valor Requerido' }
+    CreatedAt:
+      title: Fec. Creación
+      filter: NO
+      list: NO
+      visible: true
+      updatable: false
+      default: '0000-00-00 00:00:00'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: NO, type: datetime, length: false, min: null, max: null, message: 'Valor Requerido' }
+      aditional_filter: {order: 5, caption: Fecha, entity: null, type: range, default: '<?php echo '01/01/'.date('Y').',31/12/'.date('Y');?>', operator: '>='}
+    IsDefault:
+      title: Retirado Cliente
+      filter: NO
+      list: false
+      visible: true
+      updatable: false
+      default: '0'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      aditional_filter: { order: 8, caption: Retirado Cliente, entity: ValoresSN, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      validator: { nullable: NO, type: integer, length: '25', min: null, max: null, message: 'Valor Requerido' }

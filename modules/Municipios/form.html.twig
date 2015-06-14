@@ -1,0 +1,17 @@
+{#
+  Module: Municipios
+  Document : modules\Municipios\fields.html.twig
+
+  copyright: ALBATRONIC
+  date 18.12.2014 00:58:11
+#}
+
+{{ macro.select(values.atributos.IdPais,'Etiqueta',values.controller ~ '[IdPais]',values.controller ~ '_IdPais',none,datos.IdPais.Id,datos.IdPais.fetchAll('Pais'),'chzn-select','1')}}
+{{ macro.select(values.atributos.IdProvincia,'Etiqueta',values.controller ~ '[IdProvincia]',values.controller ~ '_IdProvincia',none,datos.IdProvincia.Id,datos.IdProvincia.fetchAll('Provincia'),'chzn-select','2')}}
+{{ macro.input(values.atributos.Codigo,'Etiqueta','text',values.controller ~ '[Codigo]',values.controller ~ '_Codigo',datos.Codigo,'5','CampoTextoCorto','3') }}
+{{ macro.input(values.atributos.DigitoControl,'Etiqueta','text',values.controller ~ '[DigitoControl]',values.controller ~ '_DigitoControl',datos.DigitoControl,'2','CampoTextoCorto','4') }}
+{{ macro.input(values.atributos.Municipio,'Etiqueta','text',values.controller ~ '[Municipio]',values.controller ~ '_Municipio',datos.Municipio,'255','CampoTextoLargo','5') }}
+
+{% include '_global/fieldsComunes.html.twig' %}
+
+{{ macro.foco(values.controller ~ '_IdPais') }}

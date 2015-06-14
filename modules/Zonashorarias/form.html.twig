@@ -1,0 +1,13 @@
+{#
+  Module: Zonashorarias
+  Document : modules\Zonashorarias\fields.html.twig
+
+  copyright: ALBATRONIC
+  date 16.12.2014 22:23:06
+#}
+
+{{ macro.input(values.atributos.Zona,'Etiqueta','text',values.controller ~ '[Zona]',values.controller ~ '_Zona',datos.Zona,'255','CampoTextoLargo','1') }}
+
+{% include '_global/fieldsComunes.html.twig' %}
+
+{{ macro.foco(values.controller ~ '_Zona') }}

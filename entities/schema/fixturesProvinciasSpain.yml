@@ -1,0 +1,213 @@
+# VALORES POR DEFECTO PARA LA TABLA PROVINCIAS
+#
+# SOLO SE INCLUYEN LAS PROVINCIAS ESPAÑOLAS
+#
+Provincias:
+  -
+    IdPais: 68
+    Codigo: 01
+    Provincia: "ÁLAVA"
+  -
+    IdPais: 68
+    Codigo: 02
+    Provincia: "ALBACETE"
+  -
+    IdPais: 68
+    Codigo: 03
+    Provincia: "ALICANTE"
+  -
+    IdPais: 68
+    Codigo: 04
+    Provincia: "ALMERIA"
+  -
+    IdPais: 68
+    Codigo: 05
+    Provincia: "ÁVILA"
+  -
+    IdPais: 68
+    Codigo: 06
+    Provincia: "BADAJOZ"
+  -
+    IdPais: 68
+    Codigo: 07
+    Provincia: "BALEARES"
+  -
+    IdPais: 68
+    Codigo: 08
+    Provincia: "BARCELONA"
+  -
+    IdPais: 68
+    Codigo: 09
+    Provincia: "BURGOS"
+  -
+    IdPais: 68
+    Codigo: 10
+    Provincia: "CÁCERES"
+  -
+    IdPais: 68
+    Codigo: 11
+    Provincia: "CÁDIZ"
+  -
+    IdPais: 68
+    Codigo: 12
+    Provincia: "CASTELLÓN"
+  -
+    IdPais: 68
+    Codigo: 13
+    Provincia: "CIUDAD REAL"
+  -
+    IdPais: 68
+    Codigo: 14
+    Provincia: "CÓRDOBA"
+  -
+    IdPais: 68
+    Codigo: 15
+    Provincia: "LA CORUÑA"
+  -
+    IdPais: 68
+    Codigo: 16
+    Provincia: "CUENCA"
+  -
+    IdPais: 68
+    Codigo: 17
+    Provincia: "GERONA"
+  -
+    IdPais: 68
+    Codigo: 18
+    Provincia: "GRANADA"
+  -
+    IdPais: 68
+    Codigo: 19
+    Provincia: "GUADALAJARA"
+  -
+    IdPais: 68
+    Codigo: 20
+    Provincia: "GUIPUZCOA"
+  -
+    IdPais: 68
+    Codigo: 21
+    Provincia: "HUELVA"
+  -
+    IdPais: 68
+    Codigo: 22
+    Provincia: "HUESCA"
+  -
+    IdPais: 68
+    Codigo: 23
+    Provincia: "JAEN"
+  -
+    IdPais: 68
+    Codigo: 24
+    Provincia: "LEÓN"
+  -
+    IdPais: 68
+    Codigo: 25
+    Provincia: "LÉRIDA"
+  -
+    IdPais: 68
+    Codigo: 26
+    Provincia: "LA RIOJA"
+  -
+    IdPais: 68
+    Codigo: 27
+    Provincia: "LUGO"
+  -
+    IdPais: 68
+    Codigo: 28
+    Provincia: "MADRID"
+  -
+    IdPais: 68
+    Codigo: 29
+    Provincia: "MÁLAGA"
+  -
+    IdPais: 68
+    Codigo: 30
+    Provincia: "MURCIA"
+  -
+    IdPais: 68
+    Codigo: 31
+    Provincia: "NAVARRA"
+  -
+    IdPais: 68
+    Codigo: 32
+    Provincia: "ORENSE"
+  -
+    IdPais: 68
+    Codigo: 33
+    Provincia: "ASTURIAS"
+  -
+    IdPais: 68
+    Codigo: 34
+    Provincia: "PALENCIA"
+  -
+    IdPais: 68
+    Codigo: 35
+    Provincia: "LAS PALMAS"
+  -
+    IdPais: 68
+    Codigo: 36
+    Provincia: "PONTEVEDRA"
+  -
+    IdPais: 68
+    Codigo: 37
+    Provincia: "SALAMANCA"
+  -
+    IdPais: 68
+    Codigo: 38
+    Provincia: "S.C. TENERIFE"
+  -
+    IdPais: 68
+    Codigo: 39
+    Provincia: "CANTABRIA"
+  -
+    IdPais: 68
+    Codigo: 40
+    Provincia: "SEGOVIA"
+  -
+    IdPais: 68
+    Codigo: 41
+    Provincia: "SEVILLA"
+  -
+    IdPais: 68
+    Codigo: 42
+    Provincia: "SORIA"
+  -
+    IdPais: 68
+    Codigo: 43
+    Provincia: "TARRAGONA"
+  -
+    IdPais: 68
+    Codigo: 44
+    Provincia: "TERUEL"
+  -
+    IdPais: 68
+    Codigo: 45
+    Provincia: "TOLEDO"
+  -
+    IdPais: 68
+    Codigo: 46
+    Provincia: "VALENCIA"
+  -
+    IdPais: 68
+    Codigo: 47
+    Provincia: "VALLADOLID"
+  -
+    IdPais: 68
+    Codigo: 48
+    Provincia: "VIZCAYA"
+  -
+    IdPais: 68
+    Codigo: 49
+    Provincia: "ZAMORA"
+  -
+    IdPais: 68
+    Codigo: 50
+    Provincia: "ZARAGOZA"
+  -
+    IdPais: 68
+    Codigo: 51
+    Provincia: "CEUTA"
+  -
+    IdPais: 68
+    Codigo: 52
+    Provincia: "MELILLA"

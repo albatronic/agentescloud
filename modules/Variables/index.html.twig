@@ -1,0 +1,32 @@
+{#
+  Module: Variables
+  Document : modules\Variables\index.html.twig
+
+  author: Sergio Pérez <sergio.perez@albatronic.com>
+  copyright: INFORMATICA ALBATRONIC SL
+  date 27.08.2012 20:59:40
+#}
+
+{% extends layout %}
+
+{% block title parent() ~ ' - '  ~ values.titulo %}
+
+{% block content %}
+
+    <div class="page_title">
+        <h3>
+        <div style="float: left; margin-right: 20px;">
+        {% if values.nombre %}<a href="{{app.path}}/{{values.nombre}}">{%endif%}
+            {{ values.titulo }}
+        {% if values.nombre %}</a>{%endif%}
+        </div>
+        <div style="float: left;">
+            {% include "_global/comandosSave.html.twig" %}               
+        </div>
+        </h3>
+    </div>
+
+    {% block mantenimiento %}
+    {% endblock %}
+
+{% endblock %}

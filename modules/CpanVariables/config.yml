@@ -1,0 +1,21 @@
+CpanVariables:
+  translatable: false
+  login_required: true
+  permission_control: true
+  title: 'Gestión de Variables Web y de Entorno'
+  help_file: help.html.twig
+  columns:
+    RevisitAfter:
+      title: RevisitAfter
+      filter: false
+      list: false
+      visible: true
+      updatable: true
+      default: ''
+    AccessProfileListWeb:
+      title: 'Perfiles Web'
+      filter: false
+      list: false
+      visible: true
+      updatable: true
+      default: "perfiles:\n  - 1\n"

@@ -1,0 +1,18 @@
+{#
+  Module: Paises
+  Document : modules\Paises\fields.html.twig
+
+  copyright: ALBATRONIC
+  date 18.12.2014 00:24:08
+#}
+
+{{ macro.input(values.atributos.Codigo,'Etiqueta','text',values.controller ~ '[Codigo]',values.controller ~ '_Codigo',datos.Codigo,'2','CampoTextoCorto','1') }}
+{{ macro.input(values.atributos.Pais,'Etiqueta','text',values.controller ~ '[Pais]',values.controller ~ '_Pais',datos.Pais,'255','CampoTextoLargo','2') }}
+{{ macro.select(values.atributos.IdMoneda,'Etiqueta',values.controller ~ '[IdMoneda]',values.controller ~ '_IdMoneda',none,datos.IdMoneda.IdMoneda,datos.IdMoneda.fetchAll('Id'),'chzn-select','3')}}
+{{ macro.select(values.atributos.IdZonaHoraria,'Etiqueta',values.controller ~ '[IdZonaHoraria]',values.controller ~ '_IdZonaHoraria',none,datos.IdZonaHoraria.IdZonaHoraria,datos.IdZonaHoraria.fetchAll('Id'),'chzn-select','4')}}
+{{ macro.input(values.atributos.Latitud,'Etiqueta','text',values.controller ~ '[Latitud]',values.controller ~ '_Latitud',datos.Latitud,'255','','5') }}
+{{ macro.input(values.atributos.Longitud,'Etiqueta','text',values.controller ~ '[Longitud]',values.controller ~ '_Longitud',datos.Longitud,'255','','6') }}
+
+{% include '_global/fieldsComunes.html.twig' %}
+
+{{ macro.foco(values.controller ~ '_Codigo') }}

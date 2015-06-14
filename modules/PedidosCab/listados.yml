@@ -1,0 +1,29 @@
+# Module: PedidosCab
+# Document : modules\PedidosCab\listados.yml
+#
+# @copyright: ALBATRONIC
+# @date 22.02.2015 14:40:49
+#
+---
+listados:
+  -
+    title: Pedidos
+    order_by: Id
+    break_field: null
+    idPerfil: null
+    orientation: P
+    unit: mm
+    format: A4
+    margins: '10, 10, 15, 10'
+    body_font: 'Courier, , 8'
+    line_height: 4
+    print_interline: null
+    legend_bottom: null
+    columns:
+      IdSucursal: { field: IdSucursal, title: Sucursal, length: '11', align: L, type: string, total: NO, formula: null, format: null }
+      IdUsuario: { field: IdUsuario, title: Usuario, length: '11', align: L, type: string, total: NO, formula: null, format: null }
+      IdCliente: { field: IdCliente, title: Cliente, length: '35', align: L, type: string, total: NO, formula: null, format: null }
+      Fecha: { field: Fecha, title: Fecha, length: 10, align: L, type: datetime, total: NO, formula: null, format: null }
+      IdEstado: { field: IdEstado, title: Estado, length: '11', align: L, type: string, total: NO, formula: null, format: null }
+      NItems: { field: NItems, title: NItems, length: '6', align: R, type: integer, total: YES, formula: null, format: null }
+      Importe: { field: Importe, title: Importe, length: '10', align: R, type: integer, total: YES, formula: null, format: null }

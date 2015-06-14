@@ -1,0 +1,154 @@
+# Module: TiposIva
+#
+# @author Sergio Perez <sergio.perez@albatronic.com>
+# @copyright Informatica ALBATRONIC
+# @since: 27-11-2011
+#
+---
+TiposIva:
+  app: ''
+  isModuleRoot: 0
+  linkModule:
+    fromColumn: ''
+    toEntity: ''
+    toColumn: ''
+  translatable: false
+  searchable: false
+  showCommonFields: false
+  numMaxRecords: ''
+  numberOfImages: '0'
+  withGalery: '0'
+  withDocuments: '0'
+  withVideos: 0
+  withAudios: '0'
+  maxSizes:
+    image: '400000'
+    document: ''
+    video: ''
+    audio: ''
+  galery:
+    maxWidthImage: '500'
+    maxHeightImage: '400'
+    generateThumbnail: '0'
+    widthThumbnail: '50'
+    heightThumbnail: '50'
+  urlFriendlyManagement: false
+  fieldGeneratorUrlFriendly: Tipo
+  metatagTitleManagement: false
+  fieldGeneratorMetatagTitle: Tipo
+  controller: TiposIva
+  action: Index
+  template: index.html.twig
+  parametros: ''
+  login_required: true
+  permission_control: true
+  favourite_control: false
+  help_file: help.html.twig
+  title: Tipos de Iva
+  id_video: tiposIva
+  url_video: null
+  feature_list: true
+  conection: emp
+  entity: TiposIva
+  table: AgtTiposIva
+  primarykey: IDIva
+  linkBy: ''
+  records_per_page: 10
+  order_by:
+    -
+      title: Tipo a-z
+      criteria: Tipo ASC
+    -
+      title: Tipo z-a
+      criteria: Tipo DESC
+  search_default: Tipo
+  columns:
+    IDIva:
+      title: Codigo
+      filter: false
+      list: false
+      visible: false
+      updatable: false
+      link:
+        route: null
+        param: null
+        title: null
+        target: null
+      default: null
+      validator: null
+    Tipo:
+      title: Tipo
+      filter: true
+      list: true
+      visible: true
+      updatable: true    
+      link:
+        route: null
+        param: null
+        title: null
+        target: null
+      default: null
+      validator:
+        nullable: NO
+        type: string
+        length: 30
+        min: null
+        max: null
+        message: Valor Requerido
+    Iva:
+      title: Iva
+      filter: false
+      list: true
+      visible: true
+      updatable: true    
+      link:
+        route: null
+        param: null
+        title: null
+        target: null
+      default: 0.00
+      validator:
+        nullable: NO
+        type: decimal
+        length: 5
+        min: 0
+        max: 99
+        message: Valor Requerido (0-99)
+    Recargo:
+      title: Recargo
+      filter: false
+      list: true
+      visible: true
+      updatable: true      
+      link:
+        route: null
+        param: null
+        title: null
+        target: null
+      default: 0.00
+      validator:
+        nullable: NO
+        type: decimal
+        length: 5
+        min: 0
+        max: 20
+        message: Valor Requerido (0-20)
+    Retencion:
+      title: Retención
+      filter: false
+      list: true
+      visible: true
+      updatable: true     
+      link:
+        route: null
+        param: null
+        title: null
+        target: null
+      default: 0.00
+      validator:
+        nullable: NO
+        type: decimal
+        length: 5
+        min: 0
+        max: 99
+        message: Valor Requerido (0-99)

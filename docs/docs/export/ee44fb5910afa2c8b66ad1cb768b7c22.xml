@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Clientes>
+    <RazonSocial>Cliente de prueba 1</RazonSocial>
+    <Nif>11111111X</Nif>
+    <Provincia>Madrid</Provincia>
+    <Poblacion>Madrid</Poblacion>
+  </Clientes>
+  <Clientes>
+    <RazonSocial>Cliente de prueba 2</RazonSocial>
+    <Nif>11111111X</Nif>
+    <Provincia>Madrid</Provincia>
+    <Poblacion>Madrid</Poblacion>
+  </Clientes>
+  <Clientes>
+    <RazonSocial>Cliente de prueba 3</RazonSocial>
+    <Nif>11111111X</Nif>
+    <Provincia>Madrid</Provincia>
+    <Poblacion>Madrid</Poblacion>
+  </Clientes>
+  <Clientes>
+    <RazonSocial>Cliente de prueba 4</RazonSocial>
+    <Nif>11111111X</Nif>
+    <Provincia>Madrid</Provincia>
+    <Poblacion>Madrid</Poblacion>
+  </Clientes>
+</root>

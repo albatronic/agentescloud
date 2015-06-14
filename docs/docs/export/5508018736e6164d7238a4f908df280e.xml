@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <PedidosCab>
+    <IdSucursal>Majadahonda</IdSucursal>
+    <IdUsuario>Super</IdUsuario>
+    <IdCliente>Pérez Sánchez, Sergio</IdCliente>
+    <Fecha>2015-02-22 18:59:34</Fecha>
+    <IdEstado>Pte. Confirmar</IdEstado>
+    <NItems>3</NItems>
+    <Importe>56.58</Importe>
+  </PedidosCab>
+  <PedidosCab>
+    <IdSucursal>Majadahonda</IdSucursal>
+    <IdUsuario>Super</IdUsuario>
+    <IdCliente>Pérez Sánchez, Sergio</IdCliente>
+    <Fecha>2015-02-22 19:27:38</Fecha>
+    <IdEstado>Pte. Confirmar</IdEstado>
+    <NItems>2</NItems>
+    <Importe>28.70</Importe>
+  </PedidosCab>
+  <PedidosCab>
+    <IdSucursal>Majadahonda</IdSucursal>
+    <IdUsuario>Super</IdUsuario>
+    <IdCliente>Pérez Sánchez, Sergio</IdCliente>
+    <Fecha>2015-02-22 19:28:41</Fecha>
+    <IdEstado>Pte. Confirmar</IdEstado>
+    <NItems>1</NItems>
+    <Importe>9.57</Importe>
+  </PedidosCab>
+  <PedidosCab>
+    <IdSucursal>Majadahonda</IdSucursal>
+    <IdUsuario>Super</IdUsuario>
+    <IdCliente>Pérez Sánchez, Sergio</IdCliente>
+    <Fecha>2015-02-22 19:57:37</Fecha>
+    <IdEstado>Pte. Confirmar</IdEstado>
+    <NItems>1</NItems>
+    <Importe>9.57</Importe>
+  </PedidosCab>
+  <PedidosCab>
+    <IdSucursal>Majadahonda</IdSucursal>
+    <IdUsuario>Super</IdUsuario>
+    <IdCliente>Pérez Sánchez, Sergio</IdCliente>
+    <Fecha>2015-02-22 19:59:22</Fecha>
+    <IdEstado>Pte. Confirmar</IdEstado>
+    <NItems>1</NItems>
+    <Importe>9.57</Importe>
+  </PedidosCab>
+  <PedidosCab>
+    <IdSucursal>Majadahonda</IdSucursal>
+    <IdUsuario>Super</IdUsuario>
+    <IdCliente>Pérez Sánchez, Sergio</IdCliente>
+    <Fecha>2015-02-22 20:02:11</Fecha>
+    <IdEstado>Pte. Confirmar</IdEstado>
+    <NItems>4</NItems>
+    <Importe>53.41</Importe>
+  </PedidosCab>
+  <PedidosCab>
+    <IdSucursal>Majadahonda</IdSucursal>
+    <IdUsuario>Super</IdUsuario>
+    <IdCliente>Pérez Sánchez, Sergio</IdCliente>
+    <Fecha>2015-02-22 20:05:36</Fecha>
+    <IdEstado>Pte. Confirmar</IdEstado>
+    <NItems>1</NItems>
+    <Importe>9.57</Importe>
+  </PedidosCab>
+  <PedidosCab>
+    <IdSucursal>Majadahonda</IdSucursal>
+    <IdUsuario>Super</IdUsuario>
+    <IdCliente>Pérez Sánchez, Sergio</IdCliente>
+    <Fecha>2015-02-22 20:09:21</Fecha>
+    <IdEstado>Pte. Confirmar</IdEstado>
+    <NItems>1</NItems>
+    <Importe>9.57</Importe>
+  </PedidosCab>
+  <PedidosCab>
+    <IdSucursal>Majadahonda</IdSucursal>
+    <IdUsuario>Super</IdUsuario>
+    <IdCliente>Pérez Sánchez, Sergio</IdCliente>
+    <Fecha>2015-02-22 20:14:13</Fecha>
+    <IdEstado>Pte. Confirmar</IdEstado>
+    <NItems>3</NItems>
+    <Importe>56.58</Importe>
+  </PedidosCab>
+  <PedidosCab>
+    <IdSucursal>Majadahonda</IdSucursal>
+    <IdUsuario>Super</IdUsuario>
+    <IdCliente>Pérez Sánchez, Sergio</IdCliente>
+    <Fecha>2015-02-22 20:16:12</Fecha>
+    <IdEstado>Pte. Confirmar</IdEstado>
+    <NItems>1</NItems>
+    <Importe>9.57</Importe>
+  </PedidosCab>
+  <PedidosCab>
+    <IdSucursal>Majadahonda</IdSucursal>
+    <IdUsuario>Super</IdUsuario>
+    <IdCliente>Pérez Sánchez, Sergio</IdCliente>
+    <Fecha>2015-02-22 20:21:06</Fecha>
+    <IdEstado>Pte. Confirmar</IdEstado>
+    <NItems>1</NItems>
+    <Importe>9.57</Importe>
+  </PedidosCab>
+  <PedidosCab>
+    <IdSucursal>Majadahonda</IdSucursal>
+    <IdUsuario>Super</IdUsuario>
+    <IdCliente>Pérez Sánchez, Sergio</IdCliente>
+    <Fecha>2015-02-22 20:35:03</Fecha>
+    <IdEstado>Pte. Confirmar</IdEstado>
+    <NItems>1</NItems>
+    <Importe>9.57</Importe>
+  </PedidosCab>
+  <PedidosCab>
+    <IdSucursal>Majadahonda</IdSucursal>
+    <IdUsuario>Super</IdUsuario>
+    <IdCliente>Pérez Sánchez, Sergio</IdCliente>
+    <Fecha>2015-02-22 20:37:11</Fecha>
+    <IdEstado>Pte. Confirmar</IdEstado>
+    <NItems>2</NItems>
+    <Importe>26.83</Importe>
+  </PedidosCab>
+  <PedidosCab>
+    <IdSucursal>Majadahonda</IdSucursal>
+    <IdUsuario>Super</IdUsuario>
+    <IdCliente>Pérez Sánchez, Sergio</IdCliente>
+    <Fecha>2015-02-22 20:40:12</Fecha>
+    <IdEstado>Pte. Confirmar</IdEstado>
+    <NItems>5</NItems>
+    <Importe>47.85</Importe>
+  </PedidosCab>
+  <PedidosCab>
+    <IdSucursal>Majadahonda</IdSucursal>
+    <IdUsuario>Super</IdUsuario>
+    <IdCliente>Pérez Sánchez, Sergio</IdCliente>
+    <Fecha>2015-02-22 23:48:26</Fecha>
+    <IdEstado>Pte. Confirmar</IdEstado>
+    <NItems>4</NItems>
+    <Importe>57.55</Importe>
+  </PedidosCab>
+  <PedidosCab>
+    <IdSucursal>Majadahonda</IdSucursal>
+    <IdUsuario>Super</IdUsuario>
+    <IdCliente>Pérez Sánchez, Sergio</IdCliente>
+    <Fecha>2015-02-22 23:52:30</Fecha>
+    <IdEstado>Pte. Confirmar</IdEstado>
+    <NItems>5</NItems>
+    <Importe>66.11</Importe>
+  </PedidosCab>
+</root>

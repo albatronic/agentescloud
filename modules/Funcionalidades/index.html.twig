@@ -1,0 +1,28 @@
+{#
+  Module: Funcionalidades
+  Document : modules\Funcionalidades\index.html.twig
+
+  copyright: ALBATRONIC
+  date 16.12.2014 22:23:05
+#}
+
+{% extends layout %}
+
+{% block title parent() ~ ' - '  ~ values.titulo %}
+
+{% block content %}
+	{% include '_global/TituloGenerico.html.twig' with {'controller': values.controller, 'linkValue': values.linkBy.value} %}
+	{% block filtro %}
+	{% if values.permisos.permisosModulo['CO'] and values.tieneListado %}
+		{% include values.controller ~ '/filtro.html.twig' with {'filter': values.listado.filter} %}
+	{% endif %}
+	{% endblock %}
+
+	<div id='div_listado'>
+	{% block listado %}
+	{% endblock %}
+	</div>
+
+	{% block mantenimiento %}
+	{% endblock %}
+{% endblock %}

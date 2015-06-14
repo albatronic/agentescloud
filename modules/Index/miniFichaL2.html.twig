@@ -1,0 +1,17 @@
+{# Minificha L2 #}
+<div class="minificha col-sm-6">
+    <img class="cover" src="{{libro.urlimagen}}" width="110" />
+    <div id="cajaTexto">
+        <h2>{{libro.Titulo}}</h2>
+        <h3>{{libro.Autor}}</h3>
+        <p>{{libro.Editorial}} / {{libro.ISBN}}</p>
+        <p>{{libro.Idioma}} / {% autoescape false%}{{libro.Disponibilidad}}{% endautoescape %}</p>
+        <p>{{libro.NombreDistribuidora}}</p>
+        <p class="price">{{macro.moneda(libro.Precio)}}</p>
+        {% if libro.Comprable %}
+            <input class="btn btn-primary btn-buy" type="button" value="Comprar" onclick="comprar('{{libro|json_encode()}}',1);"/>
+        {% else %}
+            {#<input class="btn btn-primary btn-buy" type="button" value="Solicitar" onclick="solicitar('{{libro|json_encode()}}',1);"/>#}                   
+        {% endif %}
+    </div>
+</div> 

@@ -1,0 +1,15 @@
+{#
+  Module: Provincias
+  Document : modules\Provincias\fields.html.twig
+
+  copyright: ALBATRONIC
+  date 16.12.2014 22:23:06
+#}
+
+{{ macro.select(values.atributos.IdPais,'Etiqueta',values.controller ~ '[IdPais]',values.controller ~ '_IdPais',none,datos.IdPais.Id,datos.IdPais.fetchAll('Pais'),'chzn-select','1')}}
+{{ macro.input(values.atributos.Codigo,'Etiqueta','text',values.controller ~ '[Codigo]',values.controller ~ '_Codigo',datos.Codigo,'5','CampoTextoCorto','2') }}
+{{ macro.input(values.atributos.Provincia,'Etiqueta','text',values.controller ~ '[Provincia]',values.controller ~ '_Provincia',datos.Provincia,'255','CampoTextoLargo','3') }}
+
+{% include '_global/fieldsComunes.html.twig' %}
+
+{{ macro.foco(values.controller ~ '_IdPais') }}

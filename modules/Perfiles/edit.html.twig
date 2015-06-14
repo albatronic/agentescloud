@@ -1,0 +1,10 @@
+{# Template edit.html.twig for Perfiles #}
+{# -------------------------------------------------------#}
+{# EDITAR UN REGISTRO. ACCIONES: GUARDAR Y BORRAR         #}
+{# -------------------------------------------------------#}
+{% extends 'Perfiles/index.html.twig' %}
+
+{% block mantenimiento %}
+<div class="FormManto">
+    {% include '_global/formEdit.html.twig' with {'values': values} %}
+{% endblock %}

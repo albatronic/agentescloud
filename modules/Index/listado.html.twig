@@ -1,0 +1,23 @@
+{# LISTADO DEL RESULTADO DE LA BÚSQUEDA #}
+
+<div role="tabpanel">
+    <!-- Nav tabs -->
+    <ul id="myTab" class="nav nav-tabs" role="tablist">
+	{% for keyDistribuidora,libros in data %}
+        <li role="presentation"><a href="#{{keyDistribuidora}}" aria-controls="{{keyDistribuidora}}" role="tab" data-toggle="tab">{{keyDistribuidora}} ({{data[keyDistribuidora] | length}})</a></li>
+	{% endfor %}
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	{% for keyDistribuidora,libros in data %}
+        <div role="tabpanel" class="tab-pane" id="{{keyDistribuidora}}">
+	{% for libro in libros %}
+            {% include 'Index/miniFichaL2.html.twig' with {'libro': libro} %}
+	{% else %}
+            <h1>Sin resultados</h1>
+	{% endfor %}			
+        </div>
+	{% endfor %}
+    </div>
+</div>

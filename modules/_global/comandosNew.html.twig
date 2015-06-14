@@ -1,0 +1,6 @@
+{# BOTON PARA REGISTROS NUEVO#}
+{% if values.permisos.permisosModulo['IN'] and (values.template != values.controller ~ '/new.html.twig') %}
+    <button class="btn green" onclick="document.location.href = 'http://{{app.url}}/{{controller}}/new/{{linkValue}}'">
+        <i class="fa fa-newspaper-o"></i>&nbsp;Nuevo
+    </button>        
+{% endif %}

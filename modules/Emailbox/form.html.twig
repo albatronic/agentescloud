@@ -1,0 +1,22 @@
+{#
+  Module: Emailbox
+  Document : modules\Emailbox\fields.html.twig
+
+  copyright: ALBATRONIC
+  date 16.12.2014 22:23:05
+#}
+
+{{ macro.input(values.atributos.Ip,'Etiqueta','text',values.controller ~ '[Ip]',values.controller ~ '_Ip',datos.Ip,'20','CampoTextoCorto','1') }}
+{{ macro.input(values.atributos.De,'Etiqueta','text',values.controller ~ '[De]',values.controller ~ '_De',datos.De,'100','CampoTextoLargo','2') }}
+{{ macro.textarea(values.atributos.Para,'Etiqueta',values.controller ~ '[Para]',values.controller ~ '_Para',datos.Para,none,none,'textarea','3')}}
+{{ macro.textarea(values.atributos.CC,'Etiqueta',values.controller ~ '[CC]',values.controller ~ '_CC',datos.CC,none,none,'textarea','4')}}
+{{ macro.textarea(values.atributos.CCO,'Etiqueta',values.controller ~ '[CCO]',values.controller ~ '_CCO',datos.CCO,none,none,'textarea','5')}}
+{{ macro.input(values.atributos.Asunto,'Etiqueta','text',values.controller ~ '[Asunto]',values.controller ~ '_Asunto',datos.Asunto,'100','CampoTextoLargo','6') }}
+{{ macro.textarea(values.atributos.Mensaje,'Etiqueta',values.controller ~ '[Mensaje]',values.controller ~ '_Mensaje',datos.Mensaje,none,none,'textarea','7')}}
+{{ macro.textarea(values.atributos.Adjuntos,'Etiqueta',values.controller ~ '[Adjuntos]',values.controller ~ '_Adjuntos',datos.Adjuntos,none,none,'textarea','8')}}
+{{ macro.select(values.atributos.Ok,'Etiqueta',values.controller ~ '[Ok]',values.controller ~ '_Ok',none,datos.Ok.Ok,datos.Ok.fetchAll(),'chzn-select','9')}}
+{{ macro.textarea(values.atributos.Smtp,'Etiqueta',values.controller ~ '[Smtp]',values.controller ~ '_Smtp',datos.Smtp,none,none,'textarea','10')}}
+
+{% include '_global/fieldsComunes.html.twig' %}
+
+{{ macro.foco(values.controller ~ '_Ip') }}

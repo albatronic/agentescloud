@@ -1,0 +1,35 @@
+# FIXTURES. 
+# !!!!! HAY QUE INDICAR LOS NOMBRES DE LAS CLASES, NO DE LAS TABLAS!!!!!!
+Perfiles:
+  - { Id: 1, Perfil: SuperAdministrador, IsDefault: 1, IsSuper: 1 }
+  - { Id: 2, Perfil: Administrador }
+  - { Id: 3, Perfil: Admon }
+  - { Id: 4, Perfil: Comercial }
+  
+Usuarios:
+  - { Id: 1, Nombre: Sergio, Apellidos: Pérez, EMail: 'info@albatronic.com', Password: 'Piticlis1', IdPerfil: 1, Activo: 1, IsDefault: 1, IsSuper: 1 }
+  - { Id: 2, Nombre: German, Apellidos: Molina de los Rios, EMail: 'german.molinamalaga@gmail.com', Password: '1234', IdPerfil: 2, Activo: 1, IsDefault: 0, IsSuper: 0 }
+
+Funcionalidades:
+  AC: { Codigo: AC, Titulo: Acceder,        Descripcion: Permiso de Acceso, EsEstandar: 1}
+  IN: { Codigo: IN, Titulo: Insertar,       Descripcion: Insertar nuevos valores, EsEstandar: 1}
+  UP: { Codigo: UP, Titulo: Actualizar,     Descripcion: Actualizar información, EsEstandar: 1}
+  DE: { Codigo: DE, Titulo: Borrar,         Descripcion: Eliminar información, EsEstandar: 1}
+  LI: { Codigo: LI, Titulo: Listar,         Descripcion: Listado, EsEstandar: 1}
+  EX: { Codigo: EX, Titulo: Exportar,       Descripcion: Exportar, EsEstandar: 1} 
+  CO: { Codigo: CO, Titulo: Consultar,      Descripcion: Consultar información, EsEstandar: 1}
+  MO: { Codigo: MO, Titulo: Modifcar Orden, Descripcion: Modificar Orden Estandar, EsEstandar: 1}
+  VW: { Codigo: VW, Titulo: Variables WEB,  Descripcion: Variables WEB, EsEstandar: 1}
+  PC: { Codigo: PC, Titulo: Permisos Cpanel,Descripcion: Poder asignar permisos de acceso a nivel registro para los perfiles de usuario del CPanel, EsEstandar: 1}
+  PW: { Codigo: PW, Titulo: Permisos Web,   Descripcion: Poder asignar permisos de acceso a nivel registro para los perfiles de usuario de la web, EsEstandar: 1}
+
+TiposIva:
+  - { Tipo: 'Iva al 21%', Iva: 21, Recargo: 0, Retencion: 0}
+  
+<?php include '../../entities/schema/fixturesPaises.yml'; echoln('');?> 
+<?php include '../../entities/schema/fixturesProvinciasSpain.yml'; echoln('');?> 
+<?php include '../../entities/schema/fixturesMunicipiosSpain.yml'; echoln('');?> 
+<?php include '../../entities/schema/fixturesMonedas.yml'; echoln('');?> 
+<?php include '../../entities/schema/fixturesModulos.yml'; echoln('');?> 
+
+ 

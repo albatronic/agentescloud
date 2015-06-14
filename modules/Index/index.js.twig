@@ -1,0 +1,47 @@
+
+{% extends "_global/js.html.twig" %}
+
+{% block js %}
+    {{ parent() }}
+    <script>
+    $(document).ready(function() {         
+        $('#buscar').click(function(){
+            $('#texto').val( $.trim($('#texto').val()) );
+            if ($('#texto').val() === '') {
+                return false;
+            }
+        });   
+    });
+    
+    function comprar(articulo, unidades) {
+        if (articulo === '' || unidades <= 0)
+            return;
+        var datos = {
+            'Articulo': articulo,
+            'Unidades': unidades
+        };
+        $.ajax({
+            url: appPath + '/lib/carrito.php',
+            dataType: 'html',
+            type: 'post',
+            data: {'parametros': {'accion': 'add', 'datos': datos}},
+            success: function(resultado) {
+                var datos = $.parseJSON(resultado);
+                if (datos.status === 'error') {
+                    $('#mensajes').html(datos.errores);
+                    $('#mensajes').dialog('open');
+                } else {
+                    $('#unidadesMinicarrito').html(datos.totales.Unidades);
+                    $('#cajaMinicarrito').html(datos.htmlMinicarrito);
+                    $('body').addClass('page-quick-sidebar-open');                     
+                    setTimeout(toggleMinicarrito,1500);              
+                }
+            }
+        });
+    }
+    
+    function toggleMinicarrito() {      
+        $('body').removeClass('page-quick-sidebar-open');  
+    }
+    </script>
+{% endblock %}

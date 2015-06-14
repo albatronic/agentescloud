@@ -1,0 +1,27 @@
+# Module: Municipios
+# Document : modules\Municipios\listados.yml
+#
+# @copyright: ALBATRONIC
+# @date 18.12.2014 00:58:11
+#
+---
+listados:
+  -
+    title: Municipios
+    order_by: Id
+    break_field: null
+    idPerfil: null
+    orientation: P
+    unit: mm
+    format: A4
+    margins: '10, 10, 15, 10'
+    body_font: 'Courier, , 8'
+    line_height: 4
+    print_interline: null
+    legend_bottom: null
+    columns:
+      Pais: { field: IdPais, title: País, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      Provincia: { field: Provincia, title: Provincia, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      Codigo: { field: Codigo, title: Codigo, length: '5', align: L, type: string, total: NO, formula: null, format: null }
+      #DigitoControl: { field: DigitoControl, title: DigitoControl, length: '2', align: L, type: string, total: NO, formula: null, format: null }
+      Municipio: { field: Municipio, title: Municipio, length: '255', align: L, type: string, total: NO, formula: null, format: null }

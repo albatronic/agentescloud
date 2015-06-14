@@ -1,0 +1,23 @@
+{#
+  Module: Clientes
+  Document : modules\Clientes\fields.html.twig
+
+  copyright: ALBATRONIC
+  date 16.12.2014 22:23:05
+#}
+
+{{ macro.input(values.atributos.RazonSocial,'Etiqueta','text',values.controller ~ '[RazonSocial]',values.controller ~ '_RazonSocial',datos.RazonSocial,'50','CampoTextoLargo','1') }}
+{{ macro.input(values.atributos.Nif,'Etiqueta','text',values.controller ~ '[Nif]',values.controller ~ '_Nif',datos.Nif,'15','CampoTextoCorto','2') }}
+{{ macro.input(values.atributos.Direccion,'Etiqueta','text',values.controller ~ '[Direccion]',values.controller ~ '_Direccion',datos.Direccion,'50','CampoTextoLargo','3') }}
+{{ macro.input(values.atributos.Pais,'Etiqueta','text',values.controller ~ '[Pais]',values.controller ~ '_Pais',datos.Pais,'100','CampoTextoLargo',none,none,['paises','Pais']) }}
+{{ macro.input(values.atributos.Provincia,'Etiqueta','text',values.controller ~ '[Provincia]',values.controller ~ '_Provincia',datos.Provincia,'100','CampoTextoLargo',none,none,['provincias','Provincia']) }}
+{{ macro.input(values.atributos.Poblacion,'Etiqueta','text',values.controller ~ '[Poblacion]',values.controller ~ '_Poblacion',datos.Poblacion,'100','CampoTextoLargo',none,none,['municipios','Municipio']) }}
+{{ macro.input(values.atributos.CodigoPostal,'Etiqueta','text',values.controller ~ '[CodigoPostal]',values.controller ~ '_CodigoPostal',datos.CodigoPostal,'10','CampoTextoCorto','7') }}
+{{ macro.input(values.atributos.Telefono,'Etiqueta','text',values.controller ~ '[Telefono]',values.controller ~ '_Telefono',datos.Telefono,'30','CampoTextoLargo','8') }}
+{{ macro.input(values.atributos.Movil,'Etiqueta','text',values.controller ~ '[Movil]',values.controller ~ '_Movil',datos.Movil,'30','CampoTextoLargo','9') }}
+{{ macro.input(values.atributos.EMail,'Etiqueta','text',values.controller ~ '[EMail]',values.controller ~ '_EMail',datos.EMail,'50','CampoTextoLargo','10') }}
+{{ macro.select(values.atributos.Sexo,'Etiqueta',values.controller ~ '[Sexo]',values.controller ~ '_Sexo',none,datos.Sexo.IDTipo,datos.Sexo.fetchAll('Descripcion'),'chzn-select','11')}}
+
+{% include '_global/fieldsComunes.html.twig' %}
+
+{{ macro.foco(values.controller ~ '_RazonSocial') }}

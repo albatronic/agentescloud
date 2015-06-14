@@ -1,0 +1,12 @@
+## Index/config.yml
+---
+DashBoard:
+  login_required: true
+  permission_control: true
+  favourite_control: false
+  help_file: help.html.twig
+  title: DashBoard
+  id_video: dashboard
+  url_video: null
+  conection: datos
+  entity: DashBoard
