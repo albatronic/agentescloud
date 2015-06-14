@@ -1,0 +1,19 @@
+{#
+  Module: Agencias
+  Document : modules\Agencias\fields.html.twig
+
+  copyright: ALBATRONIC
+  date 14.06.2015 19:24:25
+#}
+
+{{ macro.input(values.atributos.Agencia,'Etiqueta','text',values.controller ~ '[Agencia]',values.controller ~ '_Agencia',datos.Agencia,'50','CampoTextoLargo','1') }}
+{{ macro.input(values.atributos.Telefono,'Etiqueta','text',values.controller ~ '[Telefono]',values.controller ~ '_Telefono',datos.Telefono,'30','CampoTextoLargo','2') }}
+{{ macro.input(values.atributos.Fax,'Etiqueta','text',values.controller ~ '[Fax]',values.controller ~ '_Fax',datos.Fax,'30','CampoTextoLargo','3') }}
+{{ macro.input(values.atributos.Web,'Etiqueta','text',values.controller ~ '[Web]',values.controller ~ '_Web',datos.Web,'50','CampoTextoLargo','4') }}
+{{ macro.input(values.atributos.EMail,'Etiqueta','text',values.controller ~ '[EMail]',values.controller ~ '_EMail',datos.EMail,'50','CampoTextoLargo','5') }}
+{{ macro.input(values.atributos.CosteEstandar,'Etiqueta','text',values.controller ~ '[CosteEstandar]',values.controller ~ '_CosteEstandar',datos.CosteEstandar,'10','CampoImporte','6') }}
+{{ macro.input(values.atributos.UrlTracking,'Etiqueta','text',values.controller ~ '[UrlTracking]',values.controller ~ '_UrlTracking',datos.UrlTracking,'100','CampoTextoLargo','7') }}
+
+{% include '_global/fieldsComunes.html.twig' %}
+
+{{ macro.foco(values.controller ~ '_Agencia') }}

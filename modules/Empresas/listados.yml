@@ -1,0 +1,41 @@
+# Module: Empresas
+# Document : modules\Empresas\listados.yml
+#
+# @copyright: ALBATRONIC
+# @date 14.06.2015 17:11:50
+#
+---
+listados:
+  -
+    title: Empresas
+    order_by: Id
+    break_field: null
+    idPerfil: null
+    orientation: P
+    unit: mm
+    format: A4
+    margins: '10, 10, 15, 10'
+    body_font: 'Courier, , 8'
+    line_height: 4
+    print_interline: null
+    legend_bottom: null
+    columns:
+      RazonSocial: { field: RazonSocial, title: RazonSocial, length: '100', align: L, type: string, total: NO, formula: null, format: null }
+      Cif: { field: Cif, title: Cif, length: '15', align: L, type: string, total: NO, formula: null, format: null }
+      Direccion: { field: Direccion, title: Direccion, length: '100', align: L, type: string, total: NO, formula: null, format: null }
+      IdMunicipio: { field: IdMunicipio, title: IdMunicipio, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      CodigoPostal: { field: CodigoPostal, title: CodigoPostal, length: '10', align: L, type: string, total: NO, formula: null, format: null }
+      IdProvincia: { field: IdProvincia, title: IdProvincia, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      IdPais: { field: IdPais, title: IdPais, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      Telefono: { field: Telefono, title: Telefono, length: '50', align: L, type: string, total: NO, formula: null, format: null }
+      Fax: { field: Fax, title: Fax, length: '50', align: L, type: string, total: NO, formula: null, format: null }
+      Web: { field: Web, title: Web, length: '50', align: L, type: string, total: NO, formula: null, format: null }
+      EMail: { field: EMail, title: EMail, length: '50', align: L, type: string, total: NO, formula: null, format: null }
+      Iban: { field: Iban, title: Iban, length: '34', align: L, type: string, total: NO, formula: null, format: null }
+      Bic: { field: Bic, title: Bic, length: '11', align: L, type: string, total: NO, formula: null, format: null }
+      SufijoRemesas: { field: SufijoRemesas, title: SufijoRemesas, length: '3', align: L, type: string, total: NO, formula: null, format: null }
+      DigitosCuentaContable: { field: DigitosCuentaContable, title: DigitosCuentaContable, length: '2', align: R, type: integer, total: NO, formula: null, format: null }
+      RegistroMercantil: { field: RegistroMercantil, title: RegistroMercantil, length: '100', align: L, type: string, total: NO, formula: null, format: null }
+      LicenciaActividad: { field: LicenciaActividad, title: LicenciaActividad, length: '100', align: L, type: string, total: NO, formula: null, format: null }
+      NivelJerarquico: { field: NivelJerarquico, title: NivelJerarquico, length: '4', align: R, type: integer, total: NO, formula: null, format: null }
+      Publish: { field: Publish, title: Publish, length: '1', align: L, type: tinyint, total: NO, formula: null, format: null }

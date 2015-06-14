@@ -1,0 +1,500 @@
+# Module: Firmas
+# Document : modules/Firmas/config.yml
+#
+# @author: Sergio Pérez <sergio.perez@albatronic.com>
+# @copyright: Informática ALBATRONIC SL
+# @date 14.06.2015 19:52:10
+#
+---
+Firmas:
+  app: ''
+  isModuleRoot: 0
+  linkModule:
+    fromColumn: ''
+    toEntity: ''
+    toColumn: ''
+  modulosRelacionables: ''
+  translatable: false
+  searchable: false
+  showCommonFields: false
+  numMaxRecords: ''
+  numberOfImages: '0'
+  withMetadata: '0'
+  addMetadata: '0'
+  deleteMetadata: '0'
+  withGalery: '0'
+  withDocuments: '0'
+  withVideos: 0
+  withAudios: '0'
+  maxSizes:
+    image: '400000'
+    document: ''
+    video: ''
+    audio: ''
+  galery:
+    maxWidthImage: '500'
+    maxHeightImage: '400'
+    generateThumbnail: '0'
+    widthThumbnail: '50'
+    heightThumbnail: '50'
+  urlFriendlyManagement: false
+  fieldGeneratorUrlFriendly: RazonSocial
+  metatagTitleManagement: false
+  fieldGeneratorMetatagTitle: RazonSocial
+  fieldGeneratorMetatagDescription: RazonSocial
+  fieldGeneratorMetatagKeywords: RazonSocial
+  controller: Firmas
+  action: Index
+  template: index.html.twig
+  parametros: ''
+  login_required: true
+  permission_control: true
+  favourite_control: false
+  help_file: help.html.twig
+  title: Firmas Representadas
+  id_video: firmas
+  url_video: null
+  feature_list: true
+  conection: datos
+  entity: Firmas
+  table: AgtFirmas
+  primarykey: Id
+  linkBy: ''
+  records_per_page: 15
+  export: 'false'
+  order_by:
+    -
+      title: 'Razón Social a-z'
+      criteria: 'RazonSocial ASC'
+    -
+      title: 'Razón Social z-a'
+      criteria: 'RazonSocial DESC'
+  search_default: Id
+  referenced_entities:
+    - Paises
+    - Provincias
+    - Municipios
+    - Agencias
+    - ValoresSN
+  columns:
+    Id:
+      title: Id
+      visible: false
+      updatable: false
+      filter: false
+      list: false
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+    RazonSocial:
+      title: Razón Social
+      filter: true
+      list: true
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: false, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
+    NombreComercial:
+      title: NombreComercial
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: false, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
+    Cif:
+      title: Cif
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: false, type: string, length: '15', min: null, max: null, message: 'Valor Requerido' }
+    Direccion:
+      title: Dirección
+      filter: true
+      list: true
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: false, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
+    IDPais:
+      title: País
+      filter: false
+      list: false
+      visible: false
+      updatable: true
+      default: 68
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      '#aditional_filter': { order: 1, caption: IDPais, entity: Paises, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
+    IDProvincia:
+      title: Provincia
+      filter: false
+      list: true
+      visible: true
+      updatable: true
+      default: '0'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      aditional_filter: { order: 2, caption: Provincia, entity: Provincias, method: fetchAll, params: Provincia, type: select, operator: '=', event: null }
+      validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
+    IDPoblacion:
+      title: Población
+      filter: false
+      list: true
+      visible: true
+      updatable: true
+      default: '0'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      '#aditional_filter': { order: 3, caption: IDPoblacion, entity: Municipios, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
+    CodigoPostal:
+      title: Código Postal
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: true, type: string, length: '10', min: null, max: null, message: 'Valor Requerido' }
+    ApdoCorreos:
+      title: Apdo. Correos
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: true, type: string, length: '10', min: null, max: null, message: 'Valor Requerido' }
+    Telefono:
+      title: Teléfono
+      filter: true
+      list: true
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: false, type: string, length: '30', min: null, max: null, message: 'Valor Requerido' }
+    Fax:
+      title: Fax
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: false, type: string, length: '30', min: null, max: null, message: 'Valor Requerido' }
+    Movil:
+      title: Móvil
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: false, type: string, length: '30', min: null, max: null, message: 'Valor Requerido' }
+    EMail:
+      title: EMail
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: false, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
+    Web:
+      title: Web
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: false, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
+    Gerente:
+      title: Gerente
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: true, type: string, length: '100', min: null, max: null, message: 'Valor Requerido' }
+    DirectorComercial:
+      title: Director Comercial
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: true, type: string, length: '100', min: null, max: null, message: 'Valor Requerido' }
+    EmailGerente:
+      title: Email Gerente
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: true, type: string, length: '100', min: null, max: null, message: 'Valor Requerido' }
+    EmailPedidos:
+      title: Email Pedidos
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: true, type: string, length: '100', min: null, max: null, message: 'Valor Requerido' }
+    EmailSoporteTecnico:
+      title: Email Soporte Técnico
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: true, type: string, length: '100', min: null, max: null, message: 'Valor Requerido' }
+    CContable:
+      title: Cta. Contable
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: '0000000000'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: false, type: string, length: '10', min: null, max: null, message: 'Valor Requerido' }
+    Banco:
+      title: Banco
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: true, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
+    DireccionBanco:
+      title: Dirección Banco
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: true, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
+    Iban:
+      title: Iban
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: false, type: string, length: '34', min: null, max: null, message: 'Valor Requerido' }
+    Bic:
+      title: Bic
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: false, type: string, length: '11', min: null, max: null, message: 'Valor Requerido' }
+    Mandato:
+      title: Mandato
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: false, type: string, length: '35', min: null, max: null, message: 'Valor Requerido' }
+    FechaMandato:
+      title: Fecha Mandato
+      filter: false
+      list: false
+      visible: true
+      updatable: true
+      default: '0000-00-00'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      '#aditional_filter': { order: 4, caption: FechaMandato, type: range, operator: '>=' }
+      validator: { nullable: false, type: date, length: 10, min: null, max: null, message: 'Valor Requerido' }
+    PlazoEntrega:
+      title: Plazo de Entrega
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: true, type: integer, length: '4', min: null, max: null, message: 'Valor Requerido' }
+    IdAgencia:
+      title: Agencia
+      filter: false
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      '#aditional_filter': { order: 6, caption: IdAgencia, entity: Agencias, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
+    SinPortes:
+      title: Importe Pedido sin Portes
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: '0.00'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: true, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+    Vigente:
+      title: Vigente
+      filter: false
+      list: false
+      visible: true
+      updatable: true
+      default: '1'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      aditional_filter: { order: 7, caption: Vigente, entity: ValoresSN, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      validator: { nullable: false, type: tinyint, length: '1', min: null, max: null, message: 'Valor Requerido' }
+    Observations:
+      title: Observations
+      filter: false
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: true, type: string, length: false, min: null, max: null, message: 'Valor Requerido' }

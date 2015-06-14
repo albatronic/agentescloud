@@ -1,0 +1,29 @@
+{#
+  Module: Empresas
+  Document : modules\Empresas\fields.html.twig
+
+  copyright: ALBATRONIC
+  date 14.06.2015 17:11:50
+#}
+
+{{ macro.input(values.atributos.RazonSocial,'Etiqueta','text',values.controller ~ '[RazonSocial]',values.controller ~ '_RazonSocial',datos.RazonSocial,'100','CampoTextoLargo','1') }}
+{{ macro.input(values.atributos.Cif,'Etiqueta','text',values.controller ~ '[Cif]',values.controller ~ '_Cif',datos.Cif,'15','CampoTextoCorto','2') }}
+{{ macro.input(values.atributos.Direccion,'Etiqueta','text',values.controller ~ '[Direccion]',values.controller ~ '_Direccion',datos.Direccion,'100','CampoTextoLargo','3') }}
+{{ macro.select(values.atributos.IdMunicipio,'Etiqueta',values.controller ~ '[IdMunicipio]',values.controller ~ '_IdMunicipio',none,datos.IdMunicipio.Id,datos.IdMunicipio.fetchAll('Municipio'),'chzn-select','4')}}
+{{ macro.input(values.atributos.CodigoPostal,'Etiqueta','text',values.controller ~ '[CodigoPostal]',values.controller ~ '_CodigoPostal',datos.CodigoPostal,'10','CampoTextoCorto','5') }}
+{{ macro.select(values.atributos.IdProvincia,'Etiqueta',values.controller ~ '[IdProvincia]',values.controller ~ '_IdProvincia',none,datos.IdProvincia.Id,datos.IdProvincia.fetchAll('Provincia'),'chzn-select','6')}}
+{{ macro.select(values.atributos.IdPais,'Etiqueta',values.controller ~ '[IdPais]',values.controller ~ '_IdPais',none,datos.IdPais.Id,datos.IdPais.fetchAll('Pais'),'chzn-select','7')}}
+{{ macro.input(values.atributos.Telefono,'Etiqueta','text',values.controller ~ '[Telefono]',values.controller ~ '_Telefono',datos.Telefono,'50','CampoTextoLargo','8') }}
+{{ macro.input(values.atributos.Fax,'Etiqueta','text',values.controller ~ '[Fax]',values.controller ~ '_Fax',datos.Fax,'50','CampoTextoLargo','9') }}
+{{ macro.input(values.atributos.Web,'Etiqueta','text',values.controller ~ '[Web]',values.controller ~ '_Web',datos.Web,'50','CampoTextoLargo','10') }}
+{{ macro.input(values.atributos.EMail,'Etiqueta','text',values.controller ~ '[EMail]',values.controller ~ '_EMail',datos.EMail,'50','CampoTextoLargo','11') }}
+{{ macro.input(values.atributos.Iban,'Etiqueta','text',values.controller ~ '[Iban]',values.controller ~ '_Iban',datos.Iban,'34','CampoTextoLargo','12') }}
+{{ macro.input(values.atributos.Bic,'Etiqueta','text',values.controller ~ '[Bic]',values.controller ~ '_Bic',datos.Bic,'11','CampoTextoCorto','13') }}
+{{ macro.input(values.atributos.SufijoRemesas,'Etiqueta','text',values.controller ~ '[SufijoRemesas]',values.controller ~ '_SufijoRemesas',datos.SufijoRemesas,'3','CampoTextoCorto','14') }}
+{{ macro.input(values.atributos.DigitosCuentaContable,'Etiqueta','text',values.controller ~ '[DigitosCuentaContable]',values.controller ~ '_DigitosCuentaContable',datos.DigitosCuentaContable,'2','CampoUnidades','15') }}
+{{ macro.input(values.atributos.RegistroMercantil,'Etiqueta','text',values.controller ~ '[RegistroMercantil]',values.controller ~ '_RegistroMercantil',datos.RegistroMercantil,'100','CampoTextoLargo','16') }}
+{{ macro.input(values.atributos.LicenciaActividad,'Etiqueta','text',values.controller ~ '[LicenciaActividad]',values.controller ~ '_LicenciaActividad',datos.LicenciaActividad,'100','CampoTextoLargo','17') }}
+
+{% include '_global/fieldsComunes.html.twig' %}
+
+{{ macro.foco(values.controller ~ '_RazonSocial') }}

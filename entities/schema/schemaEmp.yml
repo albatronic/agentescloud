@@ -1,4 +1,29 @@
 # ESQUEMA EMPRESAS    
+AgtEmpresas:
+  comment: Empresas
+  columns:
+    RazonSocial:           { type: string(100), notnull: true, index: index }
+    Cif:                   { type: string(15), default: NULL }
+    Direccion:             { type: string(100), default: NULL }
+    IdMunicipio:           { type: bigint(11), notnull: false, default: 0, index: index, comment: 'db,Municipios, Id' }
+    CodigoPostal:          { type: string(10), notnull: false, default: 0 }
+    IdProvincia:           { type: bigint(11), notnull: true, default: 18, index: index, comment: 'db,Provincias, Id' }
+    IdPais:                { type: bigint(11), notnull: true, default: 68, index: index, comment: 'db,Paises, Id'}
+    Telefono:              { type: string(50), default: NULL }
+    Fax:                   { type: string(50), default: NULL }
+    Web:                   { type: string(50), default: NULL }
+    EMail:                 { type: string(50), default: NULL }
+    Iban:                  { type: varchar(34), default: null }
+    Bic:                   { type: varchar(11), default: null }
+    SufijoRemesas:         { type: string(3), default: '000' }
+    DigitosCuentaContable: { type: integer(2), notnul: true, default: 10 }
+    RegistroMercantil:     { type: string(100), default: NULL }
+    LicenciaActividad:     { type: string(100), default: NULL }
+    <?php include '../../entities/schema/schemaColumnsCommon.yml'; echoln('');?>
+  relations:
+    IdProvincia : { ForeignEntity: CommProvincias, ForeignId: Id }
+    IdMunicipio : { ForeignEntity: CommMunicipios, ForeignId: Id }
+    IdPais :      { ForeignEntity: CommPaises, ForeignId: Id }
 
 # Aplicaciones del Agt
 AgtAplicaciones:

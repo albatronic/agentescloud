@@ -1,0 +1,54 @@
+# Module: Firmas
+# Document : modules\Firmas\listados.yml
+#
+# @copyright: ALBATRONIC
+# @date 14.06.2015 19:52:10
+#
+---
+listados:
+  -
+    title: Firmas
+    order_by: Id
+    break_field: null
+    idPerfil: null
+    orientation: P
+    unit: mm
+    format: A4
+    margins: '10, 10, 15, 10'
+    body_font: 'Courier, , 8'
+    line_height: 4
+    print_interline: null
+    legend_bottom: null
+    columns:
+      RazonSocial: { field: RazonSocial, title: RazonSocial, length: '50', align: L, type: string, total: NO, formula: null, format: null }
+      NombreComercial: { field: NombreComercial, title: NombreComercial, length: '50', align: L, type: string, total: NO, formula: null, format: null }
+      Cif: { field: Cif, title: Cif, length: '15', align: L, type: string, total: NO, formula: null, format: null }
+      Direccion: { field: Direccion, title: Direccion, length: '50', align: L, type: string, total: NO, formula: null, format: null }
+      IDPais: { field: IDPais, title: IDPais, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      IDProvincia: { field: IDProvincia, title: IDProvincia, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      IDPoblacion: { field: IDPoblacion, title: IDPoblacion, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      CodigoPostal: { field: CodigoPostal, title: CodigoPostal, length: '10', align: L, type: string, total: NO, formula: null, format: null }
+      ApdoCorreos: { field: ApdoCorreos, title: ApdoCorreos, length: '10', align: L, type: string, total: NO, formula: null, format: null }
+      Telefono: { field: Telefono, title: Telefono, length: '30', align: L, type: string, total: NO, formula: null, format: null }
+      Fax: { field: Fax, title: Fax, length: '30', align: L, type: string, total: NO, formula: null, format: null }
+      Movil: { field: Movil, title: Movil, length: '30', align: L, type: string, total: NO, formula: null, format: null }
+      EMail: { field: EMail, title: EMail, length: '50', align: L, type: string, total: NO, formula: null, format: null }
+      Web: { field: Web, title: Web, length: '50', align: L, type: string, total: NO, formula: null, format: null }
+      Gerente: { field: Gerente, title: Gerente, length: '100', align: L, type: string, total: NO, formula: null, format: null }
+      DirectorComercial: { field: DirectorComercial, title: DirectorComercial, length: '100', align: L, type: string, total: NO, formula: null, format: null }
+      EmailGerente: { field: EmailGerente, title: EmailGerente, length: '100', align: L, type: string, total: NO, formula: null, format: null }
+      EmailPedidos: { field: EmailPedidos, title: EmailPedidos, length: '100', align: L, type: string, total: NO, formula: null, format: null }
+      EmailSoporteTecnico: { field: EmailSoporteTecnico, title: EmailSoporteTecnico, length: '100', align: L, type: string, total: NO, formula: null, format: null }
+      CContable: { field: CContable, title: CContable, length: '10', align: L, type: string, total: NO, formula: null, format: null }
+      Banco: { field: Banco, title: Banco, length: '50', align: L, type: string, total: NO, formula: null, format: null }
+      DireccionBanco: { field: DireccionBanco, title: DireccionBanco, length: '50', align: L, type: string, total: NO, formula: null, format: null }
+      Iban: { field: Iban, title: Iban, length: '34', align: L, type: string, total: NO, formula: null, format: null }
+      Bic: { field: Bic, title: Bic, length: '11', align: L, type: string, total: NO, formula: null, format: null }
+      Mandato: { field: Mandato, title: Mandato, length: '35', align: L, type: string, total: NO, formula: null, format: null }
+      FechaMandato: { field: FechaMandato, title: FechaMandato, length: 10, align: R, type: date, total: NO, formula: null, format: null }
+      PlazoEntrega: { field: PlazoEntrega, title: PlazoEntrega, length: '4', align: R, type: integer, total: NO, formula: null, format: null }
+      IdAgencia: { field: IdAgencia, title: IdAgencia, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      SinPortes: { field: SinPortes, title: SinPortes, length: '10', align: R, type: integer, total: NO, formula: null, format: null }
+      Vigente: { field: Vigente, title: Vigente, length: '1', align: L, type: tinyint, total: NO, formula: null, format: null }
+      NivelJerarquico: { field: NivelJerarquico, title: NivelJerarquico, length: '4', align: R, type: integer, total: NO, formula: null, format: null }
+      Publish: { field: Publish, title: Publish, length: '1', align: L, type: tinyint, total: NO, formula: null, format: null }

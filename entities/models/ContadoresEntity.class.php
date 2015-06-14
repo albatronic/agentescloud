@@ -18,13 +18,13 @@ class ContadoresEntity extends EntityComunes {
      * @orm:Column(type="integer")
      * @assert:NotBlank(groups="contadores")
      */
-    protected $IDContador;
+    protected $Id;
     /**
      * @orm:Column(type="tinyint")
      * @assert:NotBlank(groups="contadores")
      * @var entities\TiposContadores
      */
-    protected $IDTipo;
+    protected $IdTipo;
     /**
      * @orm:Column(type="string")
      * @assert:NotBlank(groups="contadores")
@@ -55,13 +55,13 @@ class ContadoresEntity extends EntityComunes {
      * Nombre de la PrimaryKey
      * @var string
      */
-    protected $_primaryKeyName = 'IDContador';
+    protected $_primaryKeyName = 'Id';
     /**
      * Relacion de entidades que dependen de esta
      * @var string
      */
     protected $_parentEntities = array(
-        array('SourceColumn' => 'IDTipo', 'ParentEntity' => 'Contadores', 'ParentColumn' => 'IDTipo'),
+        array('SourceColumn' => 'IdTipo', 'ParentEntity' => 'Contadores', 'ParentColumn' => 'IdTipo'),
     );
     /**
      * Relacion de entidades de las que esta depende
@@ -75,22 +75,22 @@ class ContadoresEntity extends EntityComunes {
     /**
      * GETTERS Y SETTERS
      */
-    public function setIDContador($IDContador) {
-        $this->IDContador = $IDContador;
+    public function setId($Id) {
+        $this->Id = $Id;
     }
 
-    public function getIDContador() {
-        return $this->IDContador;
+    public function getId() {
+        return $this->Id;
     }
 
-    public function setIDTipo($IDTipo) {
-        $this->IDTipo = $IDTipo;
+    public function setIdTipo($IdTipo) {
+        $this->IdTipo = $IdTipo;
     }
 
-    public function getIDTipo() {
-        if (!($this->IDTipo instanceof TiposContadores))
-            $this->IDTipo = new TiposContadores($this->IDTipo);
-        return $this->IDTipo;
+    public function getIdTipo() {
+        if (!($this->IdTipo instanceof TiposContadores))
+            $this->IdTipo = new TiposContadores($this->IdTipo);
+        return $this->IdTipo;
     }
 
     public function setSerie($Serie) {

@@ -1,0 +1,46 @@
+{#
+  Module: Firmas
+  Document : modules\Firmas\fields.html.twig
+
+  copyright: ALBATRONIC
+  date 14.06.2015 19:52:10
+#}
+
+<div class="col-md-6">
+    {{ macro.input(values.atributos.RazonSocial,'Etiqueta','text',values.controller ~ '[RazonSocial]',values.controller ~ '_RazonSocial',datos.RazonSocial,'50','CampoTextoLargo','1') }}
+    {{ macro.input(values.atributos.NombreComercial,'Etiqueta','text',values.controller ~ '[NombreComercial]',values.controller ~ '_NombreComercial',datos.NombreComercial,'50','CampoTextoLargo','2') }}
+    {{ macro.input(values.atributos.Cif,'Etiqueta','text',values.controller ~ '[Cif]',values.controller ~ '_Cif',datos.Cif,'15','CampoTextoCorto','3') }}
+    {{ macro.input(values.atributos.Direccion,'Etiqueta','text',values.controller ~ '[Direccion]',values.controller ~ '_Direccion',datos.Direccion,'50','CampoTextoLargo','4') }}
+    {{ macro.select(values.atributos.IDPais,'Etiqueta',values.controller ~ '[IDPais]',values.controller ~ '_IDPais',none,datos.IDPais.Id,datos.IDPais.fetchAll('Pais'),'chzn-select','5')}}
+    {{ macro.select(values.atributos.IDProvincia,'Etiqueta',values.controller ~ '[IDProvincia]',values.controller ~ '_IDProvincia',none,datos.IDProvincia.Id,datos.IDProvincia.fetchAll('Provincia'),'chzn-select','6')}}
+    {{ macro.select(values.atributos.IDPoblacion,'Etiqueta',values.controller ~ '[IDPoblacion]',values.controller ~ '_IDPoblacion',none,datos.IDPoblacion.Id,datos.IDPoblacion.fetchAll('Municipio'),'chzn-select','7')}}
+    {{ macro.input(values.atributos.CodigoPostal,'Etiqueta','text',values.controller ~ '[CodigoPostal]',values.controller ~ '_CodigoPostal',datos.CodigoPostal,'10','CampoTextoCorto','8') }}
+    {{ macro.input(values.atributos.ApdoCorreos,'Etiqueta','text',values.controller ~ '[ApdoCorreos]',values.controller ~ '_ApdoCorreos',datos.ApdoCorreos,'10','CampoTextoCorto','9') }}
+    {{ macro.input(values.atributos.Telefono,'Etiqueta','text',values.controller ~ '[Telefono]',values.controller ~ '_Telefono',datos.Telefono,'30','CampoTextoLargo','10') }}
+    {{ macro.input(values.atributos.Fax,'Etiqueta','text',values.controller ~ '[Fax]',values.controller ~ '_Fax',datos.Fax,'30','CampoTextoLargo','11') }}
+    {{ macro.input(values.atributos.Movil,'Etiqueta','text',values.controller ~ '[Movil]',values.controller ~ '_Movil',datos.Movil,'30','CampoTextoLargo','12') }}
+    {{ macro.input(values.atributos.EMail,'Etiqueta','text',values.controller ~ '[EMail]',values.controller ~ '_EMail',datos.EMail,'50','CampoTextoLargo','13') }}
+    {{ macro.input(values.atributos.Web,'Etiqueta','text',values.controller ~ '[Web]',values.controller ~ '_Web',datos.Web,'50','CampoTextoLargo','14') }}
+</div>
+<div class="col-md-6">
+    {{ macro.input(values.atributos.Gerente,'Etiqueta','text',values.controller ~ '[Gerente]',values.controller ~ '_Gerente',datos.Gerente,'100','CampoTextoLargo','15') }}
+    {{ macro.input(values.atributos.DirectorComercial,'Etiqueta','text',values.controller ~ '[DirectorComercial]',values.controller ~ '_DirectorComercial',datos.DirectorComercial,'100','CampoTextoLargo','16') }}
+    {{ macro.input(values.atributos.EmailGerente,'Etiqueta','text',values.controller ~ '[EmailGerente]',values.controller ~ '_EmailGerente',datos.EmailGerente,'100','CampoTextoLargo','17') }}
+    {{ macro.input(values.atributos.EmailPedidos,'Etiqueta','text',values.controller ~ '[EmailPedidos]',values.controller ~ '_EmailPedidos',datos.EmailPedidos,'100','CampoTextoLargo','18') }}
+    {{ macro.input(values.atributos.EmailSoporteTecnico,'Etiqueta','text',values.controller ~ '[EmailSoporteTecnico]',values.controller ~ '_EmailSoporteTecnico',datos.EmailSoporteTecnico,'100','CampoTextoLargo','19') }}
+    {{ macro.input(values.atributos.CContable,'Etiqueta','text',values.controller ~ '[CContable]',values.controller ~ '_CContable',datos.CContable,'10','CampoTextoCorto','20') }}
+    {{ macro.input(values.atributos.Banco,'Etiqueta','text',values.controller ~ '[Banco]',values.controller ~ '_Banco',datos.Banco,'50','CampoTextoLargo','21') }}
+    {{ macro.input(values.atributos.DireccionBanco,'Etiqueta','text',values.controller ~ '[DireccionBanco]',values.controller ~ '_DireccionBanco',datos.DireccionBanco,'50','CampoTextoLargo','22') }}
+    {{ macro.input(values.atributos.Iban,'Etiqueta','text',values.controller ~ '[Iban]',values.controller ~ '_Iban',datos.Iban,'34','CampoTextoLargo','23') }}
+    {{ macro.input(values.atributos.Bic,'Etiqueta','text',values.controller ~ '[Bic]',values.controller ~ '_Bic',datos.Bic,'11','CampoTextoCorto','24') }}
+    {{ macro.input(values.atributos.Mandato,'Etiqueta','text',values.controller ~ '[Mandato]',values.controller ~ '_Mandato',datos.Mandato,'35','CampoTextoLargo','25') }}
+    {{ macro.fecha(values.atributos.FechaMandato,'Etiqueta',values.controller ~ '[FechaMandato]',values.controller ~ '_FechaMandato',datos.FechaMandato,'10','datepicker','26')}}
+    {{ macro.input(values.atributos.PlazoEntrega,'Etiqueta','text',values.controller ~ '[PlazoEntrega]',values.controller ~ '_PlazoEntrega',datos.PlazoEntrega,'4','CampoUnidades','27') }}
+    {{ macro.select(values.atributos.IdAgencia,'Etiqueta',values.controller ~ '[IdAgencia]',values.controller ~ '_IdAgencia',none,datos.IdAgencia.Id,datos.IdAgencia.fetchAll('Agencia'),'chzn-select','28')}}
+    {{ macro.input(values.atributos.SinPortes,'Etiqueta','text',values.controller ~ '[SinPortes]',values.controller ~ '_SinPortes',datos.SinPortes,'10','CampoImporte','29') }}
+    {{ macro.select(values.atributos.Vigente,'Etiqueta',values.controller ~ '[Vigente]',values.controller ~ '_Vigente',none,datos.Vigente.Vigente,datos.Vigente.fetchAll('IDTipo'),'chzn-select','30')}}
+</div>
+<div class="clearfix"></div>
+{% include '_global/fieldsComunes.html.twig' %}
+
+{{ macro.foco(values.controller ~ '_RazonSocial') }}

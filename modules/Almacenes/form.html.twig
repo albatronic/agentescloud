@@ -1,0 +1,23 @@
+{#
+  Module: Almacenes
+  Document : modules\Almacenes\fields.html.twig
+
+  copyright: ALBATRONIC
+  date 14.06.2015 22:40:18
+#}
+
+{{ macro.input(values.atributos.Nombre,'Etiqueta','text',values.controller ~ '[Nombre]',values.controller ~ '_Nombre',datos.Nombre,'50','CampoTextoLargo','1') }}
+{{ macro.input(values.atributos.Direccion,'Etiqueta','text',values.controller ~ '[Direccion]',values.controller ~ '_Direccion',datos.Direccion,'50','CampoTextoLargo','2') }}
+{{ macro.select(values.atributos.IdPais,'Etiqueta',values.controller ~ '[IdPais]',values.controller ~ '_IdPais',none,datos.IdPais.Id,datos.IdPais.fetchAll('Pais'),'chzn-select','3')}}
+{{ macro.select(values.atributos.IdProvincia,'Etiqueta',values.controller ~ '[IdProvincia]',values.controller ~ '_IdProvincia',none,datos.IdProvincia.Id,datos.IdProvincia.fetchAll('Provincia'),'chzn-select','4')}}
+{{ macro.select(values.atributos.IdPoblacion,'Etiqueta',values.controller ~ '[IdPoblacion]',values.controller ~ '_IdPoblacion',none,datos.IdPoblacion.Id,datos.IdPoblacion.fetchAll('Municipio'),'chzn-select','5')}}
+{{ macro.input(values.atributos.CodigoPostal,'Etiqueta','text',values.controller ~ '[CodigoPostal]',values.controller ~ '_CodigoPostal',datos.CodigoPostal,'10','CampoTextoCorto','6') }}
+{{ macro.input(values.atributos.Telefono,'Etiqueta','text',values.controller ~ '[Telefono]',values.controller ~ '_Telefono',datos.Telefono,'30','CampoTextoLargo','7') }}
+{{ macro.input(values.atributos.Fax,'Etiqueta','text',values.controller ~ '[Fax]',values.controller ~ '_Fax',datos.Fax,'30','CampoTextoLargo','8') }}
+{{ macro.input(values.atributos.EMail,'Etiqueta','text',values.controller ~ '[EMail]',values.controller ~ '_EMail',datos.EMail,'50','CampoTextoLargo','9') }}
+{{ macro.select(values.atributos.Tipo,'Etiqueta',values.controller ~ '[Tipo]',values.controller ~ '_Tipo',none,datos.Tipo.Tipo,datos.Tipo.fetchAll('IDTipo'),'chzn-select','10')}}
+{{ macro.select(values.atributos.ControlUbicaciones,'Etiqueta',values.controller ~ '[ControlUbicaciones]',values.controller ~ '_ControlUbicaciones',none,datos.ControlUbicaciones.ControlUbicaciones,datos.ControlUbicaciones.fetchAll('IDTipo'),'chzn-select','11')}}
+
+{% include '_global/fieldsComunes.html.twig' %}
+
+{{ macro.foco(values.controller ~ '_Nombre') }}

@@ -1,0 +1,17 @@
+{#
+  Module: FormasPago
+  Document : modules\FormasPago\list.html.twig
+
+  copyright: ALBATRONIC
+  date 14.06.2015 19:46:26
+#}
+
+{% extends values.controller  ~ '/index.html.twig' %}
+
+{% block listado %}
+
+<div class='listado'>
+	{% include '_global/listGenerico.html.twig' with {'listado': values.listado, 'controller': values.controller} %}
+	{% include '_global/paginacion.html.twig' with {'filter': values.listado.filter, 'controller': values.controller, 'position': 'izq'}%}
+</div>
+{% endblock %}

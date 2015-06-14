@@ -12,7 +12,7 @@
 class Contadores extends ContadoresEntity {
 
     public function __toString() {
-        return $this->getIDContador();
+        return $this->getId();
     }
 
     /**
@@ -27,7 +27,7 @@ class Contadores extends ContadoresEntity {
         $this->conecta();
 
         if (is_resource($this->_dbLink)) {
-            $query = "select IDContador as Id, Serie as Value from {$this->_dataBaseName}.{$this->_tableName} where IDTipo='{$idTipo}' order by Predefinido DESC;";
+            $query = "select Id as Id, Serie as Value from {$this->_dataBaseName}.{$this->_tableName} where IdTipo='{$idTipo}' order by Predefinido DESC;";
             $this->_em->query($query);
             $rows = $this->_em->fetchResult();
             $this->_em->desConecta();
@@ -44,22 +44,23 @@ class Contadores extends ContadoresEntity {
      * @param string $serie (opcional)
      * @return Contadores El objeto contador
      */
-    public function dameContador($idTipo, $serie='') {
+    public function dameContador($idTipo, $serie = '') {
 
-        if ($serie != '')
+        if ($serie != '') {
             $filtroSerie = "Serie='{$serie}'";
-        else
+        } else {
             $filtroSerie = "Predefinido='1'";
+        }
 
         $this->conecta();
 
         if (is_resource($this->_dbLink)) {
-            $query = "select IDContador from {$this->_dataBaseName}.{$this->_tableName} where (IDTipo='{$idTipo}') and ({$filtroSerie});";
+            $query = "select Id from {$this->_dataBaseName}.{$this->_tableName} where (IdTipo='{$idTipo}') and ({$filtroSerie});";
             $this->_em->query($query);
             $rows = $this->_em->fetchResult();
             $this->_em->desConecta();
             unset($this->_em);
-            $contador = new Contadores($rows[0]['IDContador']);
+            $contador = new Contadores($rows[0]['Id']);
         }
         return $contador;
     }
@@ -78,4 +79,5 @@ class Contadores extends ContadoresEntity {
 
         return $documento;
     }
+
 }

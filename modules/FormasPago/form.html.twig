@@ -1,0 +1,20 @@
+{#
+  Module: FormasPago
+  Document : modules\FormasPago\fields.html.twig
+
+  copyright: ALBATRONIC
+  date 14.06.2015 19:46:26
+#}
+
+{{ macro.input(values.atributos.Descripcion,'Etiqueta','text',values.controller ~ '[Descripcion]',values.controller ~ '_Descripcion',datos.Descripcion,'50','CampoTextoLargo','1') }}
+{{ macro.input(values.atributos.NumeroVctos,'Etiqueta','text',values.controller ~ '[NumeroVctos]',values.controller ~ '_NumeroVctos',datos.NumeroVctos,'4','CampoUnidades','2') }}
+{{ macro.input(values.atributos.DiaPrimerVcto,'Etiqueta','text',values.controller ~ '[DiaPrimerVcto]',values.controller ~ '_DiaPrimerVcto',datos.DiaPrimerVcto,'4','CampoUnidades','3') }}
+{{ macro.input(values.atributos.DiasIntervalo,'Etiqueta','text',values.controller ~ '[DiasIntervalo]',values.controller ~ '_DiasIntervalo',datos.DiasIntervalo,'4','CampoUnidades','4') }}
+{{ macro.input(values.atributos.CContable,'Etiqueta','text',values.controller ~ '[CContable]',values.controller ~ '_CContable',datos.CContable,'10','CampoTextoCorto','5') }}
+{{ macro.select(values.atributos.AnotarEnCaja,'Etiqueta',values.controller ~ '[AnotarEnCaja]',values.controller ~ '_AnotarEnCaja',none,datos.AnotarEnCaja.AnotarEnCaja,datos.AnotarEnCaja.fetchAll('IDTipo'),'chzn-select','6')}}
+{{ macro.input(values.atributos.RecargoFinanciero,'Etiqueta','text',values.controller ~ '[RecargoFinanciero]',values.controller ~ '_RecargoFinanciero',datos.RecargoFinanciero,'10','CampoImporte','7') }}
+{{ macro.input(values.atributos.DescuentoFinanciero,'Etiqueta','text',values.controller ~ '[DescuentoFinanciero]',values.controller ~ '_DescuentoFinanciero',datos.DescuentoFinanciero,'10','CampoImporte','8') }}
+
+{% include '_global/fieldsComunes.html.twig' %}
+
+{{ macro.foco(values.controller ~ '_Descripcion') }}

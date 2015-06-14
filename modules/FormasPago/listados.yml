@@ -1,0 +1,32 @@
+# Module: FormasPago
+# Document : modules\FormasPago\listados.yml
+#
+# @copyright: ALBATRONIC
+# @date 14.06.2015 19:46:25
+#
+---
+listados:
+  -
+    title: FormasPago
+    order_by: Id
+    break_field: null
+    idPerfil: null
+    orientation: P
+    unit: mm
+    format: A4
+    margins: '10, 10, 15, 10'
+    body_font: 'Courier, , 8'
+    line_height: 4
+    print_interline: null
+    legend_bottom: null
+    columns:
+      Descripcion: { field: Descripcion, title: Descripcion, length: '50', align: L, type: string, total: NO, formula: null, format: null }
+      NumeroVctos: { field: NumeroVctos, title: NumeroVctos, length: '4', align: R, type: integer, total: NO, formula: null, format: null }
+      DiaPrimerVcto: { field: DiaPrimerVcto, title: DiaPrimerVcto, length: '4', align: R, type: integer, total: NO, formula: null, format: null }
+      DiasIntervalo: { field: DiasIntervalo, title: DiasIntervalo, length: '4', align: R, type: integer, total: NO, formula: null, format: null }
+      CContable: { field: CContable, title: CContable, length: '10', align: L, type: string, total: NO, formula: null, format: null }
+      AnotarEnCaja: { field: AnotarEnCaja, title: AnotarEnCaja, length: '1', align: L, type: tinyint, total: NO, formula: null, format: null }
+      RecargoFinanciero: { field: RecargoFinanciero, title: RecargoFinanciero, length: '10', align: R, type: integer, total: NO, formula: null, format: null }
+      DescuentoFinanciero: { field: DescuentoFinanciero, title: DescuentoFinanciero, length: '10', align: R, type: integer, total: NO, formula: null, format: null }
+      NivelJerarquico: { field: NivelJerarquico, title: NivelJerarquico, length: '4', align: R, type: integer, total: NO, formula: null, format: null }
+      Publish: { field: Publish, title: Publish, length: '1', align: L, type: tinyint, total: NO, formula: null, format: null }

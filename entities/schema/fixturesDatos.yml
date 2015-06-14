@@ -1,0 +1,6 @@
+## Fixtures de cada empresa
+
+Contadores:
+  - { IdTipo: 0, Serie: 'A', Contador: 1000, Predefinido: 1}
+  - { IdTipo: 1, Serie: 'A', Contador: 1000, Predefinido: 1}
+  

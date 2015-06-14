@@ -3,14 +3,12 @@
   Document : modules\Clientes\index.html.twig
 
   copyright: ALBATRONIC
-  date 16.12.2014 22:23:05
+  date 14.06.2015 19:52:05
 #}
 
 {% extends layout %}
 
-{% block title %}
-{{ parent() }} - {{values.titulo}}
-{% endblock %}
+{% block title parent() ~ ' - '  ~ values.titulo %}
 
 {% block content %}
 	{% include '_global/TituloGenerico.html.twig' with {'controller': values.controller, 'linkValue': values.linkBy.value} %}

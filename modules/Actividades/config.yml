@@ -1,0 +1,100 @@
+# Module: Actividades
+# Document : modules/Actividades/config.yml
+#
+# @author: Sergio Pérez <sergio.perez@albatronic.com>
+# @copyright: Informática ALBATRONIC SL
+# @date 14.06.2015 19:39:36
+#
+---
+Actividades:
+  app: ''
+  isModuleRoot: 0
+  linkModule:
+    fromColumn: ''
+    toEntity: ''
+    toColumn: ''
+  modulosRelacionables: ''
+  translatable: false
+  searchable: false
+  showCommonFields: false
+  numMaxRecords: ''
+  numberOfImages: '0'
+  withMetadata: '0'
+  addMetadata: '0'
+  deleteMetadata: '0'
+  withGalery: '0'
+  withDocuments: '0'
+  withVideos: 0
+  withAudios: '0'
+  maxSizes:
+    image: '400000'
+    document: ''
+    video: ''
+    audio: ''
+  galery:
+    maxWidthImage: '500'
+    maxHeightImage: '400'
+    generateThumbnail: '0'
+    widthThumbnail: '50'
+    heightThumbnail: '50'
+  urlFriendlyManagement: false
+  fieldGeneratorUrlFriendly: Descripcion
+  metatagTitleManagement: false
+  fieldGeneratorMetatagTitle: Descripcion
+  fieldGeneratorMetatagDescription: Descripcion
+  fieldGeneratorMetatagKeywords: Descripcion
+  controller: Actividades
+  action: Index
+  template: index.html.twig
+  parametros: ''
+  login_required: true
+  permission_control: true
+  favourite_control: false
+  help_file: help.html.twig
+  title: Actividades
+  id_video: actividades
+  url_video: null
+  feature_list: true
+  conection: 'datos'   
+  entity: Actividades
+  table: AgtActividades
+  primarykey: Id
+  linkBy: ''
+  records_per_page: 15
+  export: 'false'
+  order_by:
+    -
+      title: 'Descripción a-z'
+      criteria: 'Descripcion ASC'
+    -
+      title: 'Descripción z-a'
+      criteria: 'Descripcion DESC'
+  search_default: Id
+  referenced_entities:
+    - ValoresSN
+  columns:
+    Id:
+      title: Id
+      visible: false
+      updatable: false
+      filter: false
+      list: false
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+    Descripcion:
+      title: Descripción
+      filter: true
+      list: true
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: false, type: string, length: '100', min: null, max: null, message: 'Valor Requerido' }

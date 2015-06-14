@@ -1,0 +1,13 @@
+{#
+  Module: GruposCompras
+  Document : modules\GruposCompras\fields.html.twig
+
+  copyright: ALBATRONIC
+  date 14.06.2015 22:28:35
+#}
+
+{{ macro.input(values.atributos.Descripcion,'Etiqueta','text',values.controller ~ '[Descripcion]',values.controller ~ '_Descripcion',datos.Descripcion,'100','CampoTextoLargo','1') }}
+
+{% include '_global/fieldsComunes.html.twig' %}
+
+{{ macro.foco(values.controller ~ '_Descripcion') }}

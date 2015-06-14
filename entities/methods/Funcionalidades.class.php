@@ -19,7 +19,7 @@ class Funcionalidades extends FuncionalidadesEntity {
      * @return array Array con las funcionalidades
      */
     public function getArrayFuncionalidades() {
-        return $this->cargaCondicion("Codigo as Id, Titulo as Value", "1", "Codigo ASC");
+        return $this->cargaCondicion("Codigo as Id, Titulo as Value", "1", "Id ASC");
     }
 
     /**
@@ -29,8 +29,9 @@ class Funcionalidades extends FuncionalidadesEntity {
     public function getStringFuncionalidades() {
         $array = $this->getArrayFuncionalidades();
 
-        foreach ($array as $funcionalidad)
+        foreach ($array as $funcionalidad) {
             $string .= $funcionalidad['Id'] . ",";
+        }
 
         $string = substr($string, 0, -1);
 

@@ -1,0 +1,239 @@
+# Module: Almacenes
+# Document : modules/Almacenes/config.yml
+#
+# @author: Sergio Pérez <sergio.perez@albatronic.com>
+# @copyright: Informática ALBATRONIC SL
+# @date 14.06.2015 22:40:18
+#
+---
+Almacenes:
+  app: ''
+  isModuleRoot: 0
+  linkModule:
+    fromColumn: ''
+    toEntity: ''
+    toColumn: ''
+  modulosRelacionables: ''
+  translatable: false
+  searchable: false
+  showCommonFields: false
+  numMaxRecords: ''
+  numberOfImages: '0'
+  withMetadata: '0'
+  addMetadata: '0'
+  deleteMetadata: '0'
+  withGalery: '0'
+  withDocuments: '0'
+  withVideos: 0
+  withAudios: '0'
+  maxSizes:
+    image: '400000'
+    document: ''
+    video: ''
+    audio: ''
+  galery:
+    maxWidthImage: '500'
+    maxHeightImage: '400'
+    generateThumbnail: '0'
+    widthThumbnail: '50'
+    heightThumbnail: '50'
+  urlFriendlyManagement: false
+  fieldGeneratorUrlFriendly: Nombre
+  metatagTitleManagement: false
+  fieldGeneratorMetatagTitle: Nombre
+  fieldGeneratorMetatagDescription: Nombre
+  fieldGeneratorMetatagKeywords: Nombre
+  controller: Almacenes
+  action: Index
+  template: index.html.twig
+  parametros: ''
+  login_required: true
+  permission_control: true
+  favourite_control: false
+  help_file: help.html.twig
+  title: Almacenes
+  id_video: almacenes
+  url_video: null
+  feature_list: true
+  conection: datos
+  entity: Almacenes
+  table: AgtAlmacenes
+  primarykey: Id
+  linkBy: ''
+  records_per_page: 15
+  export: 'false'
+  order_by:
+    -
+      title: 'Nombre a-z'
+      criteria: 'Nombre ASC'
+    -
+      title: 'Nombre z-a'
+      criteria: 'Nombre DESC'
+  search_default: Id
+  referenced_entities:
+    - Paises
+    - Provincias
+    - Municipios
+    - AlmacenesTipos
+    - ValoresSN
+  columns:
+    Id:
+      title: Id
+      visible: false
+      updatable: false
+      filter: false
+      list: false
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+    Nombre:
+      title: Nombre
+      filter: true
+      list: true
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: false, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
+    Direccion:
+      title: Direccion
+      filter: true
+      list: true
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: false, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
+    IdPais:
+      title: País
+      filter: false
+      list: false
+      visible: true
+      updatable: true
+      default: '68'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      '#aditional_filter': { order: 1, caption: IdPais, entity: Paises, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
+    IdProvincia:
+      title: Provincia
+      filter: false
+      list: false
+      visible: true
+      updatable: true
+      default: '0'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      aditional_filter: { order: 2, caption: Provincia, entity: Provincias, method: fetchAll, params: Provincia, type: select, operator: '=', event: null }
+      validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
+    IdPoblacion:
+      title: Población
+      filter: false
+      list: false
+      visible: true
+      updatable: true
+      default: '0'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      '#aditional_filter': { order: 3, caption: IdPoblacion, entity: Municipios, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
+    CodigoPostal:
+      title: Código Postal
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: '0'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: false, type: string, length: '10', min: null, max: null, message: 'Valor Requerido' }
+    Telefono:
+      title: Teléfono
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: false, type: string, length: '30', min: null, max: null, message: 'Valor Requerido' }
+    Fax:
+      title: Fax
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: false, type: string, length: '30', min: null, max: null, message: 'Valor Requerido' }
+    EMail:
+      title: EMail
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: false, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
+    Tipo:
+      title: Tipo
+      filter: false
+      list: false
+      visible: true
+      updatable: true
+      default: '0'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      aditional_filter: { order: 4, caption: Tipo, entity: AlmacenesTipos, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      validator: { nullable: false, type: tinyint, length: '1', min: null, max: null, message: 'Valor Requerido' }
+    ControlUbicaciones:
+      title: Control Ubicaciones
+      filter: false
+      list: false
+      visible: true
+      updatable: true
+      default: '0'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      aditional_filter: { order: 5, caption: Control Ubicaciones, entity: ValoresSN, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      validator: { nullable: false, type: tinyint, length: '1', min: null, max: null, message: 'Valor Requerido' }

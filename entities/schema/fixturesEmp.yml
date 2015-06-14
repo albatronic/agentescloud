@@ -1,5 +1,9 @@
 # FIXTURES. 
 # !!!!! HAY QUE INDICAR LOS NOMBRES DE LAS CLASES, NO DE LAS TABLAS!!!!!!
+
+Empresas:
+  - { RazonSocial: 'Empresa DEMO', IdProvinica: 18, IdPais: 68, DigitosCuentaContable: 10 }
+  
 Perfiles:
   - { Id: 1, Perfil: SuperAdministrador, IsDefault: 1, IsSuper: 1 }
   - { Id: 2, Perfil: Administrador }

@@ -514,7 +514,7 @@ class Fab {
         $result = array();
         foreach ($template->GetTemplates() as $key => $html) {
             if ($html != '') {
-                $fileTemplate = "{$folder}/{$key}.html";
+                $fileTemplate = "{$folder}/{$key}.html.twig";
                 $ok = self::createArchive($fileTemplate, $html);
                 ($ok) ? array_push($result, "Ok, {$fileTemplate} created") : array_push($result, "ERROR creating {$fileTemplate}");
             }
