@@ -18,54 +18,39 @@ class UsuariosController extends Controller {
 
     public function listAction($aditionalFilter = '') {
 
-        if (count($_SESSION['usuarioPortal']['Sucursales']) == 1) {
-            $filtroSucursal = "(IdSucursal='" . $_SESSION['usuarioPortal']['Sucursales'][0]['Id'] . "')";
-        } else {
-            $filtroSucursal = "(1)";
-        }
         // Si el usuario no es el super, no muestro al super
         $filtroUsuario = ($_SESSION['usuarioPortal']['IdPerfil'] <> 1) ? "(Id<>1)" : "(1)";
 
         if ($aditionalFilter != '') {
             $aditionalFilter .= " and ";
         }
-        $aditionalFilter .= "{$filtroUsuario} and {$filtroSucursal}";
+        $aditionalFilter .= "{$filtroUsuario}";
 
         return parent::listAction($aditionalFilter);
     }
 
     public function listadoAction($aditionalFilter = '') {
 
-        if (count($_SESSION['usuarioPortal']['Sucursales']) == 1) {
-            $filtroSucursal = "(IdSucursal='" . $_SESSION['usuarioPortal']['Sucursales'][0]['Id'] . "')";
-        } else {
-            $filtroSucursal = "(1)";
-        }
         // Si el usuario no es el super, no muestro al super
         $filtroUsuario = ($_SESSION['usuarioPortal']['IdPerfil'] <> 1) ? "(Id<>1)" : "(1)";
 
         if ($aditionalFilter != '') {
             $aditionalFilter .= " and ";
         }
-        $aditionalFilter .= "{$filtroUsuario} and {$filtroSucursal}";
+        $aditionalFilter .= "{$filtroUsuario}";
 
         return parent::listadoAction($aditionalFilter);
     }
 
     public function exportarAction($aditionalFilter = '') {
         
-        if (count($_SESSION['usuarioPortal']['Sucursales']) == 1) {
-            $filtroSucursal = "(IdSucursal='" . $_SESSION['usuarioPortal']['Sucursales'][0]['Id'] . "')";
-        } else {
-            $filtroSucursal = "(1)";
-        }
         // Si el usuario no es el super, no muestro al super
         $filtroUsuario = ($_SESSION['usuarioPortal']['IdPerfil'] <> 1) ? "(Id<>1)" : "(1)";
 
         if ($aditionalFilter != '') {
             $aditionalFilter .= " and ";
         }
-        $aditionalFilter .= "{$filtroUsuario} and {$filtroSucursal}";
+        $aditionalFilter .= "{$filtroUsuario}";
 
         return parent::exportarAction($aditionalFilter);
     }

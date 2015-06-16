@@ -22,5 +22,4 @@ listados:
     columns:
       NombreApellidos: { field: NombreApellidos, title: Usuario, length: '50', align: L, type: string, total: NO, formula: null, format: null }
       Perfil: { field: IdPerfil, title: Perfil, length: '25', align: L, type: string, total: NO, formula: null, format: null }
-      Tienda: { field: IdSucursal, title: Tienda, length: '15', align: L, type: string, total: NO, formula: null, format: null }
 

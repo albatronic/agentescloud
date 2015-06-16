@@ -27,14 +27,14 @@
 {{ macro.select(values.atributos.IdGrupoCompras,'Etiqueta',values.controller ~ '[IdGrupoCompras]',values.controller ~ '_IdGrupoCompras',none,datos.IdGrupoCompras.Id,datos.IdGrupoCompras.fetchAll('Descripcion'),'chzn-select','18')}}
 </div>
 <div class="col-md-6">
-{{ macro.select(values.atributos.IdFormaPago,'Etiqueta',values.controller ~ '[IdFormaPago]',values.controller ~ '_IdFormaPago',none,datos.IdFormaPago.IdFormaPago,datos.Id.fetchAll('Descripcion'),'chzn-select','19')}}
+{{ macro.select(values.atributos.IdFormaPago,'Etiqueta',values.controller ~ '[IdFormaPago]',values.controller ~ '_IdFormaPago',none,datos.IdFormaPago.Id,datos.IdFormaPago.fetchAll('Descripcion'),'chzn-select','19')}}
 {{ macro.input(values.atributos.DiaDePago,'Etiqueta','text',values.controller ~ '[DiaDePago]',values.controller ~ '_DiaDePago',datos.DiaDePago,'2','CampoUnidades','20') }}
-{{ macro.select(values.atributos.Iva,'Etiqueta',values.controller ~ '[Iva]',values.controller ~ '_Iva',none,datos.Iva.Iva,datos.Iva.fetchAll('IDTipo'),'chzn-select','21')}}
-{{ macro.select(values.atributos.RecargoEqu,'Etiqueta',values.controller ~ '[RecargoEqu]',values.controller ~ '_RecargoEqu',none,datos.RecargoEqu.RecargoEqu,datos.RecargoEqu.fetchAll('IDTipo'),'chzn-select','22')}}
+{{ macro.select(values.atributos.Iva,'Etiqueta',values.controller ~ '[Iva]',values.controller ~ '_Iva',none,datos.Iva.IDTipo,datos.Iva.fetchAll('Descripcion'),'chzn-select','21')}}
+{{ macro.select(values.atributos.RecargoEqu,'Etiqueta',values.controller ~ '[RecargoEqu]',values.controller ~ '_RecargoEqu',none,datos.RecargoEqu.IDTipo,datos.RecargoEqu.fetchAll('Descripcion'),'chzn-select','22')}}
 {{ macro.textarea(values.atributos.Avisos,'Etiqueta',values.controller ~ '[Avisos]',values.controller ~ '_Avisos',datos.Avisos,none,none,'textarea','23')}}
-{{ macro.select(values.atributos.Vigente,'Etiqueta',values.controller ~ '[Vigente]',values.controller ~ '_Vigente',none,datos.Vigente.Vigente,datos.Vigente.fetchAll('IDTipo'),'chzn-select','24')}}
-{{ macro.select(values.atributos.Sexo,'Etiqueta',values.controller ~ '[Sexo]',values.controller ~ '_Sexo',none,datos.Sexo.Sexo,datos.Sexo.fetchAll('IDTipo'),'chzn-select','25')}}
-{{ macro.select(values.atributos.Tratamiento,'Etiqueta',values.controller ~ '[Tratamiento]',values.controller ~ '_Tratamiento',none,datos.Tratamiento.Tratamiento,datos.Tratamiento.fetchAll('IDTipo'),'chzn-select','26')}}
+{{ macro.select(values.atributos.Vigente,'Etiqueta',values.controller ~ '[Vigente]',values.controller ~ '_Vigente',none,datos.Vigente.IDTipo,datos.Vigente.fetchAll('Descripcion'),'chzn-select','24')}}
+{{ macro.select(values.atributos.Sexo,'Etiqueta',values.controller ~ '[Sexo]',values.controller ~ '_Sexo',none,datos.Sexo.IDTipo,datos.Sexo.fetchAll('Descripcion'),'chzn-select','25')}}
+{{ macro.select(values.atributos.Tratamiento,'Etiqueta',values.controller ~ '[Tratamiento]',values.controller ~ '_Tratamiento',none,datos.Tratamiento.IDTipo,datos.Tratamiento.fetchAll('Descripcion'),'chzn-select','26')}}
 {{ macro.fecha(values.atributos.FechaNacimiento,'Etiqueta',values.controller ~ '[FechaNacimiento]',values.controller ~ '_FechaNacimiento',datos.FechaNacimiento,'10','datepicker','27')}}
 {{ macro.input(values.atributos.Login,'Etiqueta','text',values.controller ~ '[Login]',values.controller ~ '_Login',datos.Login,'50','CampoTextoLargo','28') }}
 {{ macro.input(values.atributos.Password,'Etiqueta','text',values.controller ~ '[Password]',values.controller ~ '_Password',datos.Password,'50','CampoTextoLargo','29') }}

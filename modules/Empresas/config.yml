@@ -171,7 +171,7 @@ Empresas:
       title: País
       filter: false
       list: false
-      visible: true
+      visible: false
       updatable: true
       default: '68'
       help: null

@@ -54,7 +54,7 @@ Usuarios:
   title: Usuarios
   id_video: usuarios
   url_video: null
-  feature_list: YES
+  feature_list: true
   export: true
   conection: emp  
   entity: Usuarios
@@ -67,19 +67,15 @@ Usuarios:
     - {title: 'Apellidos z-a', criteria: 'Apellidos DESC'}
   search_default: Id
   referenced_entities:
-    - Paises
-    - Provincias
-    - Municipios
     - Perfiles
-    - Sucursales
     - ValoresSN
   columns:
     Id:
       title: Id
       visible: false
       updatable: false
-      filter: NO
-      list: NO
+      filter: false
+      list: false
       default: null
       help: null
       permission: null
@@ -88,7 +84,7 @@ Usuarios:
       link: { route: null, param: null, title: null, target: null, link: null }
     Apellidos:
       title: Apellidos
-      filter: YES
+      filter: true
       list: yes
       visible: true
       updatable: true
@@ -98,10 +94,10 @@ Usuarios:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: NO, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
     Nombre:
       title: Nombre
-      filter: YES
+      filter: true
       list: yes
       visible: true
       updatable: true
@@ -111,11 +107,11 @@ Usuarios:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: NO, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
     DNI:
       title: DNI
-      filter: YES
-      list: NO
+      filter: true
+      list: false
       visible: true
       updatable: true
       default: null
@@ -124,11 +120,11 @@ Usuarios:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: YES, type: string, length: '15', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: true, type: string, length: '15', min: null, max: null, message: 'Valor Requerido' }
     Direccion:
       title: Dirección
-      filter: YES
-      list: NO
+      filter: true
+      list: false
       visible: true
       updatable: true
       default: null
@@ -137,12 +133,12 @@ Usuarios:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: YES, type: string, length: '100', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: true, type: string, length: '100', min: null, max: null, message: 'Valor Requerido' }
     Pais:
       title: País
-      filter: YES
-      list: NO
-      visible: true
+      filter: true
+      list: false
+      visible: false
       updatable: true
       default: 'España'
       help: null
@@ -150,11 +146,11 @@ Usuarios:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: YES, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: true, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
     Provincia:
       title: Provincia
-      filter: YES
-      list: NO
+      filter: true
+      list: false
       visible: true
       updatable: true
       default: ''
@@ -163,11 +159,11 @@ Usuarios:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: YES, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: true, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
     Poblacion:
       title: Población
-      filter: YES
-      list: NO
+      filter: true
+      list: false
       visible: true
       updatable: true
       default: ''
@@ -176,11 +172,11 @@ Usuarios:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: YES, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: true, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
     CodigoPostal:
       title: Código Postal
-      filter: YES
-      list: NO
+      filter: true
+      list: false
       visible: true
       updatable: true
       default: null
@@ -189,11 +185,11 @@ Usuarios:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: YES, type: string, length: '10', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: true, type: string, length: '10', min: null, max: null, message: 'Valor Requerido' }
     Telefono:
       title: Teléfono
-      filter: YES
-      list: NO
+      filter: true
+      list: false
       visible: true
       updatable: true
       default: null
@@ -202,11 +198,11 @@ Usuarios:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: YES, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: true, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
     Fax:
       title: Fax
-      filter: YES
-      list: NO
+      filter: true
+      list: false
       visible: true
       updatable: true
       default: null
@@ -215,11 +211,11 @@ Usuarios:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: YES, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: true, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
     Movil:
       title: Móvil
-      filter: YES
-      list: NO
+      filter: true
+      list: false
       visible: true
       updatable: true
       default: null
@@ -228,11 +224,11 @@ Usuarios:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: YES, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: true, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
     EMail:
       title: EMail
-      filter: YES
-      list: YES
+      filter: true
+      list: true
       visible: true
       updatable: true
       default: ''
@@ -241,11 +237,11 @@ Usuarios:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: NO, type: string, length: '100', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: string, length: '100', min: null, max: null, message: 'Valor Requerido' }
     Password:
       title: Password
-      filter: YES
-      list: NO
+      filter: true
+      list: false
       visible: true
       updatable: true
       default: null
@@ -254,11 +250,11 @@ Usuarios:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: YES, type: string, length: '100', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: true, type: string, length: '100', min: null, max: null, message: 'Valor Requerido' }
     TokenLogin:
       title: TokenLogin
-      filter: YES
-      list: NO
+      filter: true
+      list: false
       visible: true
       updatable: true
       default: null
@@ -267,11 +263,11 @@ Usuarios:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: YES, type: string, length: '100', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: true, type: string, length: '100', min: null, max: null, message: 'Valor Requerido' }
     IdPerfil:
       title: Perfil
-      filter: NO
-      list: YES
+      filter: false
+      list: true
       visible: true
       updatable: true
       default: '0'
@@ -281,11 +277,11 @@ Usuarios:
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
       aditional_filter: { order: 4, caption: Perfil, entity: Perfiles, method: fetchAll, params: Perfil, type: select, operator: '=', event: null }
-      validator: { nullable: NO, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
     Activo:
       title: Activo
-      filter: NO
-      list: YES
+      filter: false
+      list: true
       visible: true
       updatable: true
       default: '1'
@@ -295,11 +291,11 @@ Usuarios:
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
       '#aditional_filter': { order: 6, caption: Activo, entity: ValoresSN, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
-      validator: { nullable: NO, type: tinyint, length: '2', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: tinyint, length: '2', min: null, max: null, message: 'Valor Requerido' }
     NLogin:
       title: NLogin
-      filter: YES
-      list: YES
+      filter: true
+      list: true
       visible: true
       updatable: false
       default: '0'
@@ -308,11 +304,11 @@ Usuarios:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: NO, type: integer, length: '4', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: integer, length: '4', min: null, max: null, message: 'Valor Requerido' }
     UltimoLogin:
       title: Último Login
-      filter: YES
-      list: YES
+      filter: true
+      list: true
       visible: true
       updatable: false
       default: '0000-00-00 00:00:00'
@@ -321,4 +317,4 @@ Usuarios:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: NO, type: datetime, length: false, min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: datetime, length: false, min: null, max: null, message: 'Valor Requerido' }
