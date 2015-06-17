@@ -30,9 +30,7 @@ class IndexController extends Controller {
         $this->values['permisos'] = $this->permisos->getPermisos();
         $this->values['enCurso'] = $this->values['permisos']['enCurso'];
         $this->values['request'] = $this->request;
-
     }
-
 
     public function LoginAction() {
 
@@ -163,29 +161,144 @@ class IndexController extends Controller {
 
         unset($variables);
     }
-    
+
     public function importarAction() {
 
-        $filename = 'tmp/TiendasVipsFebrero2015.csv';
-        $data = array();
-        if (file_exists($filename)) {
-            if (($handle = fopen($filename, 'r')) !== FALSE) {
-                while (($item = fgetcsv($handle, 1000, ";")) !== FALSE) {
-                    $row['Codigo'] = str_pad($item[0], 4, "0", STR_PAD_LEFT);
-                    $row['Nombre'] = utf8_encode($item[1]);
-                    $row['Pais'] = "España";
-                    $row['Direccion'] = utf8_encode($item[2]);
-                    $row['CodigoPostal'] = $item[3];
-                    $row['Telefono'] = $item[4];
-                    $data[] = $row;
-                }
-                fclose($handle);
+        $this->importClientes();
+        $this->importFirmas();
+        $this->importRutas();
+        $this->importGruposCompras();
+    }
+
+    private function importGruposCompras() {
+        
+        $file = getcwd() . "/docs/docs1/import/GRUPO_COMPRAS.txt";
+        $array = $this->leeCsv($file);
+        $obj = new GruposCompras();
+        $obj->truncate();
+        foreach ($array as $item) {
+            //print_r($item);
+            $obj = new GruposCompras();
+            $obj->setId($item['IDGrupo']);
+            $obj->setDescripcion(utf8_encode($item['Descripcion']));
+            $id = $obj->create();
+            if (!$id) {
+                print_r($obj->getErrores());
             }
-        } else {
-            echo "No existe el fichero {$filename}";
+        }          
+    }
+    
+    private function importRutas() {
+        
+        $file = getcwd() . "/docs/docs1/import/RUTAS.txt";
+        $array = $this->leeCsv($file);
+        $obj = new Rutas();
+        $obj->truncate();
+        foreach ($array as $item) {
+            //print_r($item);
+            $obj = new Rutas();
+            $obj->setId($item['IDRUTA']);
+            $obj->setDescripcion(utf8_encode($item['NOMBRE']));
+            $obj->setObservations(utf8_encode($item['OBSERVACIONES']));
+            $id = $obj->create();
+            if (!$id) {
+                print_r($obj->getErrores());
+            }
+        }          
+    }
+    
+    private function importFirmas() {
+        
+        $file = getcwd() . "/docs/docs1/import/FIRMAS.txt";
+        $array = $this->leeCsv($file);
+        $obj = new Firmas();
+        $obj->truncate();
+        foreach ($array as $item) {
+            //print_r($item);
+            $obj = new Firmas();
+            $obj->setId($item['IDFIRMA']);
+            $obj->setRazonSocial(utf8_encode($item['RAZON_SOCIAL']));
+            $obj->setCif($item['NIF']);
+            $obj->setDireccion($item['DOMICILIO']);
+            $obj->setCodigoPostal($item['COD_POSTAL']);
+            $obj->setApdoCorreos($item['APDO_CORREOS']);
+            $obj->setTelefono($item['TELEFONOS']);
+            $obj->setFax($item['FAX']);
+            $obj->setWeb($item['WEB']);            
+            $obj->setEmailGerente($item['EMAILGERENTE']);
+            $obj->setEmailPedidos($item['EMAILPEDIDOS']);
+            $obj->setEmailSoporteTecnico($item['EMAILSOPORTETECNICO']);
+            $obj->setGerente(utf8_encode($item['GERENTE']));
+            $obj->setDirectorComercial(utf8_encode($item['DIRECTOR COMERCIAL']));
+            $obj->setPlazoEntrega($item['PLAZO_ENTREGA']);
+            $obj->setSinPortes(utf8_encode($item['SIN PORTES']));
+            //$obj->setIdAgencia($item['AGENCIATTE']);
+            $obj->setObservations(utf8_encode($item['OBSERVACIONES']));
+            $obj->setVigente($item['VIGENTE']);
+            $id = $obj->create();
+            if (!$id) {
+                print_r($obj->getErrores());
+            }
+        }        
+    }
+    
+    private function importClientes() {
+        
+        $file = getcwd() . "/docs/docs1/import/CLIENTES.txt";
+        $array = $this->leeCsv($file);
+        $obj = new Clientes();
+        $obj->truncate();
+        foreach ($array as $item) {
+            //print_r($item);
+            $obj = new Clientes();
+            $obj->setId($item['IDCLIENTE']);
+            $obj->setRazonSocial(utf8_encode($item['RAZONSOCIAL']));
+            $obj->setNombreComercial(utf8_encode($item['NOMBRECOMERCIAL']));
+            $obj->setCif($item['NIF']);
+            $obj->setDireccion($item['DIRECCION']);
+            $obj->setCodigoPostal($item['CODPOSTAL']);
+            $obj->setApdoCorreos($item['APDOCORREOS']);
+            $obj->setTelefono($item['TELEFONOS']);
+            $obj->setFax($item['FAX']);
+            $obj->setEmail($item['EMAIL']);
+            $obj->setWeb($item['WEB']);
+            $obj->setBanco($item['BANCO']);
+            $obj->setDireccionBanco($item['DIRECCION BANCO']);
+            $obj->setIban($item['CUENTA CORRIENTE']);
+            $obj->setAvisos($item['OBSERVACIONES']);
+            $obj->setVigente($item['VIGENTE']);
+            $obj->setCatalogos($item['CATALOGOS']);
+            $obj->setIdRuta($item['IDRUTA']);
+            $obj->setIdGrupoCompras($item['IDGRUPOCOMPRAS']);
+            $id = $obj->create();
+            if (!$id) {
+                print_r($obj->getErrores());
+            }
+        }        
+    }
+    
+    private function leeCsv($file) {
+
+        $archivo = new Archivo($file);
+        $archivo->setColumnsDelimiter(";");
+        $archivo->setColumnsEnclosure("\"");
+
+        $array = array();
+        if ($archivo->open()) {
+            // Leer la cabecera
+            $titulos = $archivo->readLine();
+            // Leer el contenido
+            $i = -1;
+            while ($row = $archivo->readLine()) {
+                $i ++;
+                foreach ($titulos as $key => $titulo) {
+                    $array[$i][$titulo] = $row[$key];
+                }
+            }
+            $archivo->close();
         }
-        //print_r($data);
-        echo sfYaml::dump(array('Sucursales' => $data));
+        unset($archivo);
+        return $array;
     }
 
 }

@@ -1,0 +1,585 @@
+"IDCLIENTE";"RAZONSOCIAL";"NOMBRECOMERCIAL";"NIF";"DIRECCION";"CODPOSTAL";"APDOCORREOS";"POBLACION";"PROVINCIA";"IDRUTA";"TELEFONOS";"FAX";"WEB";"EMAIL";"IDACTIVIDAD";"IDGRUPOCOMPRAS";"RECEQUIVALENCIA";"FORMA DE PAGO";"BANCO";"DIRECCION BANCO";"CUENTA CORRIENTE";"OBSERVACIONES";"VIGENTE";"CATALOGOS"
+"00001";"AUTO SPORT ANDALUCÍA";;"B-11621984";"Avda.  Europa, 56";"11405";;"JEREZ DE LA FRONTERA";"Cádiz";4;"952 002519  - Thais 607515282";"952 235194";;"mgarcia@autosport.24ruedas.com";1;2;0,00;;"BSCH";;"00494975412610021041";;0;12
+"00002";"CIAL. NAVARRO HNOS. S. A.";;"A-29056769";"La Orotava, 4 Polígono San Luis";"29006";;"MALAGA";"Málaga";1;"952 337400 - 337404";"952 337421 - 337504";;"proveedores@navarrohermanos.com";0;2;0,00;;"UNICAJA";;"21031002110030000030";;1;25
+"00003";"ENRIQUE MARTIN S. A.";"EMASA";"A-29028149";"Bahía Blanca, 19 (Pol. San Luis)";"29006";;"MALAGA";"Málaga";1;"952 322090 - 318899";"952 322040";;"emartin@grupomartin.net";0;2;0,00;"PAGARÉ";;;;;1;4
+"00004";"CECAUTO MLG  S. A.";;"A-92111871";"Leopoldo Lugonés, 25 (P. Ind. Guadalhorce)";"29004";;"MALAGA";"Málaga";1;"952 105023";"952 240667";;"mktmlg@cecauto.com";0;27;0,00;;;;;;1;100
+"00005";"SUM. IND. MATALO S. L.";;"B-29116084";"París, 1 (Pol. Ind. San Luis)";"29006";;"MALAGA";"Málaga";1;"952 331800 - 361012";"952 331845";;"alcauzas@gmail.com";0;26;0,00;;"BBVA";;"01824106740000029428";;1;3
+"00006";"EL MOTORISTA MALAGA S. L.";;"B-93167807";"Avenida de la Aurora, 71";"29006";;"MALAGA";"Málaga";1;"952 313562";"952 042207";;"fburgos@motosportnet.com";0;2;0,00;;"BS";;"00494975422517990490";;1;5
+"00007";"CIAL. MALAGUEÑA DEL RODAMIENTO S. L.";;"B-92059989";"Parauta, 20 (Polígono La Estrella)";"29006";;"MALAGA";"Málaga";1;"952 366024 - 362660";"952 627186";;"cmr@cmrsl.e.telefonica.net";0;26;0,00;;"CAJAMAR";;"30580767562720004982";;1;4
+"00008";"RECAMBIOS Y LUBRICANTES DEL SUR S. L.";;"B-29520871";"París, 61 (Pol. San Luis)";"29006";;"MALAGA";"Málaga";1;"952 352379 - 315794";"952 352467";;"josebonilla@relusur.com";0;6;0,00;;"ANDALUCIA";;;;1;20
+"00009";"HNOS. GOMEZ PLEGUEZUELOS S. L.";;"B-29074978";"Veracruz, 51 (Pol. Ind. San Luis)";"29006";;"MALAGA";"Málaga";1;"952 356518";"952 338898";;"apostigo@gomezpleguezuelos.com";0;1;0,00;;"POPULAR";;"00750818600500537960";;1;10
+"00010";"AUTO REC. ALCAZABA S. L.";;"B-29380540";"Gerald Brenan, 52  (Polígono Guadalhorce)";"29004";;"MALAGA";"Málaga";1;"952 240802";"952 242173";;"auto-alcazaba@terra.es";0;26;0,00;;"CAJASUR";"Cuarteles, 2  29002 MALAGA";"20240616453300000461";;1;
+"00011";"RECAMBIOS Y LUBRICANTES MALAGA S. L.";;"B-29438140";"Crta. Azucarera-Intelhorce, Nave-17 D";"29004";;"MALAGA";"Málaga";1;"952 105184";"952 105184";;"recambios@reluma.com";0;26;0,00;;"POPULAR";;"00750818680603508213";;1;2
+"00012";"INDECO AUTOMOCION EUROPA S. L.";;"B-92412162";"París, 47 (Pol. Ind. San Luis)";"29006";;"MALAGA";"Málaga";1;"952 343049 - 322146";"952 322813";;;0;26;0,00;;;;;;1;
+"00013";"RAFAEL OLMEDO GARCIA";"Cial. Maquinaria Olmedo";"24870587-C";"Crta. Azucarera-Intelhorce, 29 (Pol. Guadalhorce)";"29004";;"MALAGA";"Málaga";1;"952 243202 - 243203";"952 243203";;;0;26;0,00;;"BBVA";;"01820484180011000004";;1;
+"00014";"AUTO REC. EUROPA S. A.";;"A-29094547";"Herman Hess, 25 (Pol. Guadalhorce)";"29004";;"MALAGA";"Málaga";1;"952 173128";"952 246541";;"logistica@recambioseuropa.com";0;4;0,00;;"BANKINTER";;"01280779940500000307";;1;
+"00015";"AUTO REC. MALAGA S. L.";;"B-29746765";"Maracay, 36 (Pol. San Luis)";"29006";;"MALAGA";"Málaga";1;"952 314831 - 312839";"952 324806";;"malaga@grupocga.com";0;4;0,00;;"B. SANTANDER";;"30580778762720017683";;1;2
+"00016";"COOP. ANDALUZA  DE FERRETEROS S.C.A.";"COANFE";"F-29064219";"César Vallejo, 27 (Pol.Guadalhorce)";"29004";;"MALAGA";"Málaga";1;"952 176081";"952 243877";;"coop@coanfe.com";0;26;0,00;;"LA GENERAL GRANADA";;"20310231420100120240";;1;
+"00017";"MAYFERSUR S. L.";;"B-29476066";"Escritora Dolores G. de Cádiz, 9 (P. I. Trevenez)";"29196";;"MALAGA";"Málaga";1;"952 241313";"952 246055";;;0;26;0,00;;"POPULAR";;"00750818670603505647";;1;
+"00018";"TRANSFORMADOS Y AUTOMATISMOS S. L.";;"B-29864618";"César Vallejo, 6 (Pol. Guadalhorce)";"29004";;"MALAGA";"Málaga";1;"952 241313";"952 246055";;;0;26;0,00;;"POPULAR";;"00750818650603634263";;1;
+"00019";"ALIAUTO S. A. (MA)";;"A-50030543";"Metalúrgicos, 1 (Barrio de los Pastores)";"11206";;"ALGECIRAS";"Cádiz";1;"952 105695";"952 239272";;"malaga@aliauto.com";0;19;0,00;;"BANKINTER";;"01289478150100004891";;1;1
+"00020";"TORNILLERIAS  MALAGUEÑA S. L.";;"B-92148618";"Avda. Muelle Heredia, 24";"29001";;"MALAGA";"Málaga";1;"952 220876";"952 213353";;;0;26;0,00;;;;;;1;1
+"00021";"RODAJES MALAGA S. A.";"ROMASA";"A-29028156";"Bahia Blanca, 19 (Pol. El Viso)";"29006";;"MALAGA";"Málaga";1;"952 318942";;;;0;2;0,00;;;;;;1;
+"00022";"HERRAMIENTAS PEREZ S. L.";;"B-04246138";"Diderot, 9  Nave 18-B (Polígono Guadalhorce)";"29004";;"MALAGA";"Málaga";1;"952 231637 - 233113";"952 243632";;;0;26;0,00;;"UNICAJA";;"21031003470030001831";;0;
+"00023";"ANDALUZA DE REPUESTOS S. L.";;"B-14474530";"Quilla, 4 (Pol. El Viso)";"29006";;"MALAGA";"Málaga";1;"952 333375";"952 345732";;"andaluza@andaluzaderepuestos.com";0;7;0,00;;"CAJASUR";;"20240180173300015696";"SERCA";1;
+"00024";"MALAGUEÑA DE SOLDADURA S. L.";;"B-29496684";"Ctra.Azucarera-Intelhorce, 27";"29004";;"MALAGA";"Málaga";1;"952 242402";"952 241268";;;0;26;0,00;;"ANDALUCIA";;"00043456890602318410";;1;
+"00025";"ELECTRO REC. CASADO S. L.";;"29708476";"Avda. Ortega y Gasset, 202 Pol. Alameda";"29006";;"MALAGA";"Málaga";1;"952 363090";"952 363091";;;0;22;0,00;;"UNICAJA";;"21033060820030001524";;1;
+"00026";"TOOLRACK S. L.";;"B-92199793";"Santa  Isabel, nave C-5 
+Paseo de la Sierra, 48";"29130";;"ALHAURIN DE LA TORRE";"Málaga";1;"952 417323";"952 413854";;"philip.roy@toolrack.es";0;26;0,00;;;;"30580864592720003491";;1;1
+"00027";"CIAL. ANDALUZA DE TECNICA Y SUM.  S. L.";"CATS SL";"B-29546058";"C/ Guaro, 3 (Pol. Ind. Azucarera)";"29004";;"MALAGA";"Málaga";1;"952 246137";"952 244102";;"cats@catssl.com";0;26;0,00;;"CAJASUR";;"20240133763300000533";;1;
+"00028";"DIST. PROFESIONAL DEL AUTOMOVIL MALAGA S. L.";;"B-92670504";"Diderot, 40  Polígono Guagalhorce";"29004";;"MALAGA";"Málaga";1;;;;;0;24;0,00;;"B. POPULAR";;"00751201700500007692";;0;1
+"00029";"RADIADORES GREGORIO S. L.";;"B-29758836";"Héroe de Sostoa, 166";"29003";;"MALAGA";"Málaga";1;"952 344389";"952 347431";;;0;26;0,00;;"BANESTO";;"00304161600293465273";;1;
+"00030";"RESUR MOP S. L.";;"B-29691771";"Los Sueños, 1  Polígono Santa Cruz";"29190";;"MALAGA";"Málaga";1;"952 171483";"952 232588";;;0;26;0,00;;"UNICAJA";;"21031003450030000280";;1;2
+"00031";"DISTRIBUCIONES MAXIMO S. L.";;"B-29419603";"Avda. de Andalucía, 90 (bajo)";"29007";;"MALAGA";"Málaga";1;"952 323851";"952 361775";;;0;26;0,00;;;;;;1;
+"00032";"AUTO REC. CONFER S. L.";;"B-92721968";"Bielorrusia, 1 Nave-23";"29004";;"MALAGA";"Málaga";1;"952 056732";"952 962591";;"recambiosconfer@terra.es";0;26;0,00;;"UNICAJA";;"21033054960030009944";"ESTE CLIENTE ERA ANTES MOTUL MALAGA";1;
+"00033";"ALEJANDRO ROS PALOMO";"TALLER PEPE";"25713127-R";"E. Salazar Chapela,16 P-5 Nave-6 (Pol.Guadalhorce)";"29004";;"MALAGA";"Málaga";1;"952 245419";"952 105678";;;0;18;0,00;;"BSCH";;"00495933872716047993";"DTO. RECAMBIOS MEGA Y HADU 20%";1;
+"00034";"LUIS MOLEON S. L. (MA)";;"B-18338566";"Crta. de Córdoba, Km. 436 (Junto Mercagranada)";"18080";;"GRANADA";"Granada";1;"952 105555";"952 105555";;"malaga@luismoleon.com";0;20;0,00;;"BBVA";;"01822359080102002769";;1;1
+"00035";"FERRET. JOSE ANTONIO LUQUE S. L.";;"B-92133685";"Ciro Alegría, 10 (Polígono  Ind. Guadalhorce)";"29004";;"MALAGA";"Málaga";1;"95 2247930";"95 2247931";;"mfrancisco@ferreluque.com";0;26;0,00;"CONFIRMING";;;;;1;
+"00036";"MUNDAUTO S. L.";;"B-29374006";"Avda. de los Guindos, 19";"29004";;"MALAGA";"Málaga";1;"952 172233";"952 240658";;"recambios@mundauto.com";0;26;0,00;;"UNICAJA";;"21030180020030004354";;1;
+"00037";"SILVESTRE AUTODISTRIBUCION S. L.";;"B-80082134";"C/ Recreative, 26";"30100";;"ESPINARDO";"Murcia";1;"968879976";"968305444";;;0;26;0,00;;"BANKINTER";;"01289463140500515812";"ESTA FICHA PERTENECIA A AURGI";1;1
+"00038";"PURIFICACION DIAZ RUIZ";"Vda. de Lorenzo Real";"24671121-X";"Avda. Juan XXIII, 2";"29003";;"MALAGA";"Málaga";1;"952 311708 - 313762";"952 350205";;;0;26;0,00;;"UNICAJA";;"21030148850550000668";;1;
+"00039";"ELECTRO FRIO MOTOR S. L.";;"B-29502762";"Avda. Villa Rosa, 19  Polígono Ind. Villa Rosa";"29004";;"MALAGA";"Málaga";1;;;;;0;26;0,00;;"UNICAJA";;"21032030410030000277";;1;1
+"00040";"DANIEL ROS PALOMO";;"25707011-A";"E.Salazar Chapela,20  P-5 Nave-57 (P.Guadalhorce)";"29004";;"MALAGA";"Málaga";1;"952 245357-  646 027236";"952 245357";;"danielrospalomo@hotmail.com";0;18;0,00;;;;;;1;1
+"00041";"ANTONIO OVES VIADERO";;"24772858-H";"Cruz del Molinillo, 10";"29013";;"MALAGA";"Málaga";1;;;;;0;26;0,00;;;;;;0;
+"00042";"TORNILLERIAS MALAGUEÑA S. C. A.";;"F-92127984";"Eduardo Carvajal, 3";"29007";;"MALAGA";"Málaga";1;"952 313050";"952 313089";;;0;26;0,00;;"BSCH";;"00496728882610002452";;1;
+"00043";"EURO RECAMBIOS AL-ANDALUS S. COOP.";;"F-92383868";"Avenida Europa, 15";"29003";;"MALAGA";"Málaga";1;"952 339744";"952 342650";;;0;26;0,00;;;;"21030201090550000939";;0;
+"00044";"FREMAX FRENOS MALAGA S. C.";"RECAMBIOS FREMAX";"J-93183275";"Tomás Escalonilla, 7";"29010";;"MALAGA";"Málaga";1;"951 403034 - 617587861";;"www.fremax.es#http://www.fremax.es#";"recambios@fremax.es";0;26;0,00;;;;"21001995990200097640";"ESTA FICHA ERA DE FRENOS Y EMBRAGUES ALMENARA";1;1
+"00045";"JUAN JOSÉ SEPÚLVEDA JIMÉNEZ";;"24830178-E";"Obsidiana, Edif. Libra, local- 5";"29006";;"MALAGA";"Málaga";1;"952 318781";;;;0;26;0,00;;"LA GENERAL";;"20310396440215095205";;0;
+"00046";"DAVA S. A. (MA)";;"A-30014484";"Gerald Brenan, 40 (Pol. Guadalhorce)";"29004";;"MALAGA";"Málaga";1;"952 176028";"952 174499";"www.davasa.es#http://www.davasa.es#";;0;3;0,00;;;;;;1;
+"00047";"FERRET. INDUST. BENSAN S. L.";;"B-29713658";"Cuevas del Becerro, 13-15 (Pol. La Estrella)";"29006";;"MALAGA";"Málaga";1;"952 315700 - 318527";"952 359441";;;0;26;0,00;;"Andalucía";;"00043240660500027150";;1;1
+"00048";"A. S. C. DISTRIBUCIONES INDUSTRIALES S. L.";"ANTONIO SANTIAGO CABRERA";"B-92318468";"Tajamar, 16 (Pol. El Viso 2ª Fase)";"29006";;"MALAGA";"Málaga";1;"952 334498";"952 332829";;;0;26;0,00;;"DEUTSCHE BANK";;"00190090194010037302";;1;1
+"00049";"DIEGO GRIMALDI DELGADO";"GRIMALAGA";"31182163-M";"Mercedes Llopart, 6   Local-7";"29010";;"MALAGA";"Málaga";1;"952 068737 - 615 984212";"952 361278";;"grimalaga@gmail.com";0;26;0,00;;"UNICAJA";;"21032064400030001853";;1;
+"00050";"JOSE GUTIERREZ LARA";"MARTINEZ AUTOMOCION";"33390848-T";"E.Salazar Chapela,16 P-4 Nave 54 B (P.Guadalhorce)";"29004";;"MALAGA";"Málaga";1;"952 244108 - 639 286364";"952 324675";;;0;26;0,00;;"UNICAJA";;"21032064480030003744";;1;
+"00051";"LUBRICANTES MALAGA S. L.";;"B-92148600";"Francisco de Sarriá, 8";"29006";;"MALAGA";"Málaga";1;"616 429702";;;;0;26;0,00;;"LA CAIXA";;"21004182492200048899";;1;
+"00052";"RADIATERMICO S. L.";;"B-92106350";"Av. Manuel Torres, 7 (Bda. El Torcal)";"29003";;"MALAGA";"Málaga";1;"952 318790";"952 347283";;"juanramon.rodriguez@rbradiatermico.com";0;26;0,00;;"POPULAR ESPAÑOL";;"00750221120600563375";;1;
+"00053";"REC. INDUSTRIALES MOLEON S. A. (MA)";"RIMOSA";"A-18351965";"Molvizar, Parcela R-107 (Pol. Juncaril)";"18220";;"ALBOLOTE";"Granada";2;"958 468400";"958 467571";"www.rimosa.com#http://www.rimosa.com#";;0;2;0,00;;"BBVA";;"01823387560100151924";;1;1
+"00054";"RECAUTO S. C. A.";;"F-92456953";"Escritor Herrera Santa Olalla,16(Pol.el Rompedizo)";"29140";;"CHURRIANA";"Málaga";1;"952 437142";"952 436129";;;0;26;0,00;;"B. PASTOR";;"00720813050000100186";;1;1
+"00055";"LLANTACARS S. L.";;"B-92074780";"Fidias, 5 (Polígono santa Barbara)";"29004";;"MALAGA";"Málaga";1;"952 105519";"952 243970";;"llantacars@llantacars.com";0;26;0,00;;"CAJA AHORROS LA GENERAL GRANADA";;"20310255710115020606";;1;1
+"00056";"RECAMBIOS SERRANO S. L.";;"B-92442235";"Leopoldo Lugones, 47  Nave-15 (Pol. Guadalhorce)";"29004";;"MALAGA";"Málaga";1;"952 174080 - 951 221800";"952 238106";;"auto@recambiosserrano.com";0;26;0,00;;"ANDALUCIA";;"00043240610600113414";;1;1
+"00057";"DISPROAUTO MALAGA S. L. L.";;"B-92846914";"C/ Moraima, 5";"29010";;"MALAGA";"Málaga";1;"952 173714";"952 235221";;;0;24;0,00;;;;"00751201750500009969";;0;1
+"00058";"AUTO RECAMBIOS SAN ALBERTO S. L.";;"B-29834504";"Moraima, 5  bajo (Junto Cno. Suárez)";"29010";;"MALAGA";"Málaga";1;"952 309333";"952 274511";;"admon@sanalberto.comtenido.com";0;24;0,00;;"B. POPULAR";;"00751201740500005719";;1;1
+"00059";"EUROMASTER AUTOMOCION Y SERVICIOS S. A. (MA)";;"A-41014523";"C/ Arenal, parcela-K9 Pol. Guadalhorce";"29004";;"MALAGA";"Málaga";1;;;;;0;26;0,00;;;;;"ANTES FICHA DE MANUEL GORDILLO";1;
+"00060";"PALMOPAL S. C. A.";;"F-92078716";"Av. Ortega y Gasset, 162 (Pol. Ind. Alameda)";"29006";;"MALAGA";"Málaga";1;"952 173020";"952 173172";;;0;26;0,00;;"ANDALUCIA";;"00043240600600075597";;1;
+"00061";"BOMBEO Y DERIVADOS S. A.";"BOMDESA";"A-29164472";"Jacinto Verdaguer, 26";"29002";;"MALAGA";"Málaga";1;"952 310733 - 310797";"952 326558";;;0;26;0,00;;;;;"Nueva sucursal: París, 25 (Pol. San Luis) Telf.2352012 Fax 2352012";1;
+"00062";"ALMACEN DE FERR. ACSA S. A.";;"B-29537891";"Río Gargáliga, 2";"29002";;"MALAGA";"Málaga";1;"952 313145";;;;0;26;0,00;;"BSCH";;"00493200381010354060";;0;
+"00063";"REPUESTOS MALAGUEÑA INTERMAQUINA S. L. L.";;"B-92914241";"C/ La Iliada, 19 (Polígono Santa Cruz)";"29196";;"Málaga";"Málaga";1;"952 172789";"952 962660";;"info@intermaquina.com";0;26;0,00;;"UNICAJA";;"21031003470030009334";;1;1
+"00064";"FEMACON S. L.";;"B-29116407";" Isolda, Parcela-2  (Pol. Alameda)";"29006";;"MALAGA";"Málaga";1;"952 359421";;;;0;26;0,00;;;;"20310131000100047107";"                                                                          ";1;
+"00065";"FEMACON ALQUILERES S. L.";;"B-29794526";" Isolda, Parcela-54 (Polígono Alameda)";"29006";;"MALAGA";"Málaga";1;"952 354008";;;;0;26;0,00;;"POPULAR";;"00750818610603611933";;1;
+"00066";"FERCAM MAQUINARIA Y HERRAMIENTAS S. L. (EHLIS)";;"B-92118017";"Avda. José Ortega y Gasset ,353 (Pol. El Viso)";"29006";;"MALAGA";"Málaga";1;"952 358330";"952 328792";;;0;25;0,00;;"ANDALUCIA";;"00043456880602401376";"Fercam@economistas.org                                                                                   FERZUM: solo en reparaciones de maquinaria";1;
+"00067";"LAUREANA ISABEL ROSELLÓ FONT";"SUMINISTROS VAROCA";"24582476-F";"Conde del Guadalhorce, 10";"29006";;"MALAGA";"Málaga";1;"952 312562";"952 312566";;;0;26;0,00;;"BANKINTER";;"01280780500500521612";;1;
+"00068";"SERMEU S. A.";;"A-80641897";"Concepción Arenal, s/nº Pol.Guadalhorce";"29004";;"MALAGA";"Málaga";1;"952 242847";;;;0;26;0,00;"RECIBO REPRESENTANTE";;;;"Central en Madrid. C/ Marconi,10-12  28810 COSLADA (Madrid)";0;
+"00069";"UTILLAJES Y HERRAMIENTAS ALEX S. L.";;"B-92228493";"C/ Alhambra, 28";"29130";;"ALHAURIN DE LA TORRE";"Málaga";1;;;;;0;26;0,00;;;;"00750391410600263270";;1;1
+"00070";"FERNANDO PUCHE S. L.";;"B-29064292";"Puerto de Málaga, Muelle 1";"29016";;"MALAGA";"Málaga";1;"952 217890";"952 219896";;;0;26;0,00;;"NATWEST";;"00130201070400102983";"SUCURSAL ALGECIRAS: Polígono Ind. Cortijo Real C/ Los Amigos, s/nº                                                    Tlf. 956744400                                                                                                 Fax. 956744049";0;
+"00071";"CLARA ROA FUERTES";;"24891404E";"Plaza del Fuerte, 22 local 1";"29007";;"MALAGA";"Málaga";1;;;;;0;26;0,00;;;;;;0;
+"00072";"COMERCIAL IMPORMOVIL S. A. (MA)";;"A-28805125";"Avda. de la Industria, 25";"28760";;"TRES CANTOS";"Madrid";1;"952 323061";"952 358916";;;0;26;0,00;;;;"00750221140600530069";;1;
+"00073";"INLOGAR S. L.";;"B-29417003";"Camino San Rafael, 44";"29006";;"MALAGA";"Málaga";1;"952 334027 - 315341";;;;0;26;0,00;;;;;"ENVIOS: Esteban Salazar Chapela, 16 nave 2 (Pol.Guadalhorce)";0;
+"00074";"JOSE MANUEL RUA GARCIA";;"25056361-T";"Diderot, 28  Nave-3 (Pol. Guadalhorce)";"29004";;"MALAGA";"Málaga";1;"952244741";;;;0;26;0,00;;;;;;1;1
+"00075";"OCKER PROFESSIONAL FIXING ESPAÑA S. A.";;"A-93044154";"C/ Nazarí, Nave-4B  Polígono Ind. Santa Cruz";"29196";;"BIZCOCHERA";"Málaga";1;"951 014693";;;;0;26;0,00;;"B. SABADELL";;"00817438010001078916";;1;1
+"00076";"AUTO RECAMBIOS ROTISAN  S.L.";;"B-92983857";"César Vallejo, 19 Nave A (P. GUADALHORCE)";"29004";;"MALAGA";"Málaga";1;"952 311785";"951 102379";;"rotisan@cecauto.com";0;26;0,00;;"BBVA";;"01823089390101501228";;1;1
+"00077";"RODAMIENTOS CIRIACO Y JOAQUIN S. L.";;"B-29623139";"Avda. de Velazquez, 8  Local-24";"29003";;"MALAGA";"Málaga";1;"952350940 - 952331713";"952321416";;"rodamientosciriacojoaquin@telefonica.net";0;26;0,00;;;;"21033060853300007414";;1;1
+"00078";"J & J GROUP INTERNATIONAL DISTRIB. S. L.";;"B-93084978";"Serrano Fernández, 12";"29014";;"MALAGA";"Málaga";1;"951 133974 -  607 373840";"951 133974";"www.jjgroup.es#http://www.jjgroup.es#";"jm.jjgroup@gmail.com";0;26;0,00;;;;;;1;1
+"00079";"RECICLANOVA METAL S- L.";;"B-93101178";"Rosa de los Vientos, 40 Pol. Indust. El Viso";"29006";;"MALAGA";"Málaga";1;;;;;0;26;0,00;;;;;;1;1
+"00081";"FERNANDO MARTIN CARRASQUILLA";"SUMINISTROS MARTÍN";"25681568-K";"Nerva, 5";"29004";;"MALAGA";"Málaga";1;"952 231038";"952 231038";;;0;26;4,00;;"UNICAJA";;"21033055350030007311";;1;
+"00082";"SUM. IND. ORTEGA Y GASSET S. L.";;"B-29777158";"Avda. Ortega y Gasset, 107";"29006";;"MALAGA";"Málaga";1;"952 316500";"952 316500";;;0;26;0,00;;"ANDALUCIA";;"00043456820602348442";;0;
+"00090";"SALVADOR GONZALEZ";;;"E. Salazar Chapela, 16 P-5 N-36 (Pol. Guadalhorce)";"29004";;"MALAGA";"Málaga";1;;;;;0;26;0,00;;;;;;1;1
+"00091";"TAXI UNION F. C. A.";;"F-29581196";"C/ Caudal, 70  Polígono Ind. El Viso";"29001";;"MALAGA";"Málaga";1;;;;;0;26;0,00;;;;;;1;1
+"00095";"SUMINISTROS ANDEAL S. L.";;"B-29086099";" Burgos, 8 (Pol. San Luis)";"29006";;"MALAGA";"Málaga";1;"952 320274";"952 041360";;;0;26;0,00;;;;;;0;
+"00100";"ANA Mª MOLINA DE LOS RIOS";;"25046334-R";"Urb. Cortijo de Torres F-16";"29006";;"MALAGA";"Málaga";1;"952 346500";"952 346504";;;0;26;0,00;;;;;;1;
+"00101";"ELECTROAUTO A. MORENO S. L.";;"B-92083187";"Nabucco, 1  (Pol. Alameda)";"29006";;"MALAGA";"Málaga";1;"952 362828";"952 331783";;"amoreno@mercedes-benz.es";0;26;0,00;;"B. POPULAR";;"00751201790600016312";;1;
+"00102";"DOLORES MARIA MONTERO CABRERA";"SUMINISTROS CAMPIYYO";"25101877-E";"Avda. Juan Sebastian El Cano, 158";"29017";;"MALAGA";"Málaga";1;"952 294547";"952 201384";;"suministros@campyyo.es";0;26;0,00;;;;;;1;1
+"00103";"FERRETERIA CASIMIRO LUQUE S. L.";;"B-92196443";"C/ Orotava, 40";"29006";;"MALAGA";"Málaga";1;"952 041990";"952 041991";;"casimiroluque@telefonica.net";0;0;0,00;"PROFORMA";;;;;1;1
+"01101";"COTOCAR S. L.";;"B-29362944";"Av.Mijas,Edf.Serrano/Esq.Circ.Fuengirola";"29650";;"MIJAS COSTA";"Málaga";1;"952 460862";"952 667101";;"ventas@cotocar.com";0;22;0,00;;"POPULAR";;"00753184980600005853";;1;
+"01102";"PREMIER TOOLS  S. L.";;"B-29899002";"Pol. Industrial Cantarranas, s/n";"29100";;"COIN";"Málaga";1;"952 455143";"952 455159";;"ventas@premier-tools.com";0;26;0,00;;"LA CAIXA";;"21001621940200098871";;1;2
+"01103";"AUTO RECAMBIOS CARLOS CUADRADO S. L.";"AUTO RECAMBIOS CARLOS";"B-92988542";"Rio Guadiana, 26 Local-15";"29649";;"MIJAS-COSTA";"Málaga";1;"952 479641";"952 466834";;;0;12;0,00;;"CAJASUR";;"20240624295800317823";"GRUPO UNIREC";1;
+"01104";"RODAMIENTOS FUENGIROLA S. L. L.";;"B-92341189";"Santa Isabel, 2  Polígono Las Cañadas";"29650";;"MIJAS COSTA";"Málaga";1;"952 464409";"952 464409";;;0;26;0,00;;"B. POPULAR";"Avda. Mijas, 44";"00751395420500000767";;1;1
+"01105";"TALLERES LEAL S. A.";;"A-29409128";"Crta. Camino de Coín, s/nº";"29640";;"FUENGIROLA";"Málaga";1;;;;;0;26;0,00;;;;;;1;1
+"01106";"AUTO PINTURAS FUENGIROLA S. L.";;"B-29698784";"Miguel Bueno,12";"29640";;"FUENGIROLA";"Málaga";1;"952 472399";"952 581985";;"fjimenez@autopinturasfuengirola.com";0;26;0,00;;;;"21031079200000021445";;1;1
+"01201";"ACCESORIOS VIPA S. L.";;"B-92115658";"Pol. Ind. La Ermita C/ Bronce, 1-5";"29600";;"MARBELLA";"Málaga";1;"952 770484";"952 765155";;"comercial@accesoriosvipa.com";0;26;0,00;;"LA CAIXA";;"21002486160210086415";;1;2
+"01202";"RECAMBIOS LOMEÑA S. L.";;"B-29251345";"Hierro, 27 ( Pol. La Ermita)";"29600";;"MARBELLA";"Málaga";1;"952 865868 -  826149";"952 766039";;"currolomena@lomena.es";0;7;0,00;;;;;;1;
+"01203";"COMERCIAL IMPORMOVIL S. A. (MRB)";;"A-28805125";"Avenida de la Industria, 25";"28760";;"TRES CANTOS";"Madrid";1;"952 862188";"952 778345";;;0;26;0,00;;;;"00750221140600530069";;1;1
+"01204";"RECAMBIOS CECILIO MARBELLA S. L.";;"B-93066207";"Polígono la Ermita C/ Granito, 20";"29603";;"MARBELLA";"Málaga";1;"952 898791";"952 898513";;"comercialmarbella@autorecambioscecilio.com";0;26;0,00;;"UNICAJA (IBAN ES40)";;"21033012070030018347";;1;1
+"01205";"FERRETERIA Y PISCINAS URBANEJAS S. L. (EHLIS)";;"A-08014813";"Arias de Velasco, Edf. San Francisco";"29600";;"MARBELLA";"Málaga";1;;;;;0;25;0,00;;;;;;1;1
+"01301";"TINEO FERROKEY S. L.";;"B-92030733";"Marqués del Duero, 42";"29670";;"SAN PEDRO ALCANTARA";"Málaga";1;"952 788779";"952 799211";;;0;26;0,00;;"BSCH";;"00190253154010008540";;1;
+"01401";"JUAN SIMON AGUILAR";"Recambios Simón";"74793000-J";"Hernán Cortés, 2";"29680";;"ESTEPONA";"Málaga";1;"952 800383";;;;0;26;0,00;;"BANESTO";;"00304083660868090273";"CECAUTO";0;
+"01501";"SALVADOR RUIZ MORALES";"SOCIO CADENA 88 ELHIS Nº 24078";"32001174-D";"Edificio Atenas, Local 1-2";"29692";;"SAN LUIS DE SABINILLAS";"Málaga";1;"952 890321";"952 890321";;;0;26;0,00;;;;;;1;1
+"01601";"DESARROLLOS TRUCEL S. L.";;"B-84773217";"Ed. Varadero, Puerto deportivo Benalmaneda Costa";"29630";;"BENALMADENA COSTA";"Málaga";1;;;;;0;26;0,00;;;;;;1;1
+"01602";"ADAM TROJANOWSKI";;"X1031692G";"Manuel F. Cubeiro, 37 (Polígono El Pinillo)";"29620";;"TORREMOLINOS";"Málaga";1;"687 524349";;;;0;26;0,00;;;;;;1;1
+"01603";"ANDRES REGUERA ALARCON";"AUTO RECAMBIOS REAL";"25711181-X";"Antonio Nebrija, 1 (Parque Empresarial el Pinillo)";"29620";;"TORREMOLINOS";"Málaga";1;"952050841";"952388733";;"info@autorecambiosreal.com";0;26;0,00;;;;;;1;1
+"02101";"RECAMBIOS ANTEQUERA S. COOP. AND.";;"F-92545979";"Camino de la Quinta, 20";"29200";;"ANTEQUERA";"Málaga";1;"952 841657";"952 841235";;"recambios@recantequera.e.telefonica.net";0;26;0,00;;"UNICAJA";;"21032076020030004749";;1;
+"02102";"SUM. IND. EL MARTILLO S. L.";;"B-29647062";"Lucena, 59";"29200";;"ANTEQUERA ";"Málaga";1;"952 842338";"952 842338";;;0;10;0,00;;"UNICAJA";;"21032001710030001699";;1;
+"02103";"FERRET. LINDE S. L.";;"B-29117603";"Polígono Industrial C/ Papabellota, 15";"29200";;"ANTEQUERA";"Málaga";1;"952 841494";"952 845757";;"ferreterialinde@gmail.com";0;26;0,00;;"B. SABADEL";;"00815568220001002107";;1;1
+"02104";"RECAMBIOS Y SUM. LA PAZ S. L.";;"B-29577392";"Obispo, 2";"29200";;"ANTEQUERA";"Málaga";1;"952 841807";"952 841807";;;0;26;0,00;;"BANESTO";;"00304091480175173172";;1;
+"02105";"JOSE RUBIO MARTIN E HIJOS S. L.";;"B-29150588";"Comedias, 18";"29200";;"ANTEQUERA";"Málaga";1;"952 840652";"952 840812";;;0;26;0,00;;;;;;1;
+"02106";"AUTO SPORT ANDALUCÍA S. L.  (ANT)";;"B-11621984";"Avda. Europa, 56";"11405";;"JEREZ DE LA FRONTERA";"Cádiz";1;"952 706331";"952 704168";;;0;2;0,00;;"BSCH";;"00494975412610021041";;0;1
+"02107";"R. BENET S. L.";;"B-92558584";"Torre del Hacho, 1";"29200";;"ANTEQUERA";"Málaga";1;"952 706686";"952 706688";;"recambios.antequera@rbenet.info";0;26;0,00;"CONTADO EFECTIVO";;;"00751020110500040185";;1;1
+"02111";"TRANS-OLMEDO S. L. (EHLIS)";;"A-08014813";"Polígono Ind. La Fuente, s/nº";"29532";;"MOLLINA";"Málaga";1;;;;;0;25;0,00;;;;;;1;1
+"02151";"ROMEMU S. L. (EHLIS)";"ASOCIADO Nº 25603-2";"A-08014813";"Empedrada, 8";"29300";;"ARCHIDONA";"Málaga";1;;;;;0;25;0,00;;;;;;1;1
+"02301";"ALICIA ASENCIO ROMERO";;"25333586-Y";"Travesia Dolores Ibarruri, 61";"29531";;"HUMILLADERO";"Málaga";1;"952 737472";"952 738025";;;0;26;4,00;;"UNICAJA";;"21032025140030001307";;1;
+"03101";"FRANCISCO GONZÁLEZ LARA";"FERRET. SAN RAFAEL";"25547317-K";"Avda. de Málaga, 32";"29400";;"RONDA";"Málaga";1;"952 873714";;;;0;26;0,00;;"CAJASUR";;"20240614563300000149";;1;
+"03102";"SUMINISTROS SAN RAFAEL S. L.";;"B-92226067";"Guadalquivir, 1 Polígono el Fuerte";"29400";;"RONDA";"Málaga";1;"952 873714";;;;0;10;0,00;"60 DIAS";;;;;1;
+"03201";"AUTO REC. CECILIO S. L.";;"B-29648649";"C/ Del Ferrocarril, 15 (Polígono Ind. Lourdes)";"29100";;"COIN";"Málaga";1;"952 452092";"952 450445";;"comercialarroyo@autorecambioscecilio.com";0;26;0,00;;"UNICAJA";;"21033012000030002327";;1;2
+"03301";"INICIATIVAS PIZARRA S. L. (EHLIS)";"ASOCIADO 19105";"A-08014813";"Progreso, 7";"29560";;"PIZARRA";"Málaga";1;;;;;0;25;0,00;;;;;;1;1
+"04101";"AUTO REC. ANGEL S. L.";;"B-29611803";"Avda. Vivar Téllez, 83 bajo";"29700";;"VELEZ MALAGA ";"Málaga";1;"952 501993";"952 506478";;;0;12;0,00;;"ATLANTICO";;"00080430411400025840";"UNIREC";0;
+"04102";"ANTONIO ROMERO BERMUDEZ (EHLIS)";"SOCIO Nº 08295";"747907774H";"Alcalde Manuel Reina, 2-A";"29700";;"VELEZ MALAGA";"Málaga";1;"952 500450";;;;0;25;0,00;;;;;;1;
+"04103";"DANIEL MARTIN GONZALEZ";"FI-TEC";"53368271-Z";"C/ Retama, 3";"29700";;"VELEZ MALAGA";"Málaga";1;"675 575169";;;"fi-tec@hotmail.com";0;26;0,00;;"BBVA";;"01827363150201587587";;1;1
+"04104";"CENTRAL DE RECAMBIOS VELEZ S. L.";;"B-92763739";"C/ Artesanos - Local 1D";"29700";;"VELEZ MALAGA";"MÁLAGA";1;"952549495";"952549490";;"central@centralderecambios.com";0;26;0,00;;"LA CAIXA";;"21002573230210043562";;1;1
+"10001";"FRENOS SANCHEZ S. L.";;"B-04016143";"Sierra de Castillejo s/n (Pol. Ind. La Juaida)";"04240";"40";"VIATOR";"Almería";2;"950 306568";"950 306569 - 70";;"compras@frenossanchez.com";0;4;0,00;;;;;;1;20
+"10002";"JOSE DELGADO SALDAÑA";"RECAMBIOS COSTASOL";"27194813-G";"C/ Saturno, 7 y 9";"04230";;"HUERCAL DE ALMERIA";"Almería";2;"950 624550";"950 624552";;"gonzalodelgado@recambioscostasol.com";0;2;0,00;;"CAJA RURAL ALMERIA";;"30580081721021003936";;1;7
+"10003";"FRANCISCO SALAS E HIJOS S. L. (AL)";;"B-29901469";"Av. Mare Nostrum, 27 Pol. Ind. Sector 20 (Puche)";"04009";;"ALMERIA";"Almería";2;"950 151734";"950 265257";;"admon@franciscosalas.es";0;1;0,00;;;;;;1;15
+"10004";"NAVARRO HERMANOS ALMERIA S. L.";"NAVARRO HERMANOS";"B-04227948";"Avda. Monserrat, 137";"04005";;"ALMERIA";"Almería";2;"950 222666";"950 222308";;"almeria@navarrohnos.com";0;2;0,00;;"BSCH";;"00493786712314001868";;1;10
+"10005";"REPUESTOS SUAREZ S. L.";;"B-04635637";"Crta. de Ronda (Esquina Blas Infante)";"04006";;"ALMERIA";"Almería";2;"950 229000";"950 229758";;"psuarez@repuestossuarez.com";0;4;0,00;"SIN DOMICILIAR";"ES71";;"00810625450001270930";;1;4
+"10006";"MERCAPINTURAS S. L.";;"B-04101366";"Pol. San Rafael - C/ Rosita s/n";"04230";;"HUERCAL DE ALMERIA";"Almería";2;"950 230751";"950 260694";;"joaquin@mercapinturas.es";0;26;0,00;;;;;;1;
+"10007";"RECAMBIOS BAHIA S. L.";;"B-04778866";"Sol, 40  (Pol. Ind. Venta Alegre)";"04230";;"HUERCAL DE ALMERIA";"Almería";2;"950 144250";"950 143930";;"rba@recambiosbahia.com";0;6;0,00;;"CAJAMAR";;"30580085572720042013";;1;
+"10008";"HERGO SUMINISTROS HUERCAL S. L.";;"B-04248118";"Paraje San Silvestre, C/ Saturno";"04230";;"HUERCAL DE ALMERIA";"Almería";2;"950 143698";"950 143698";;"hergosia@hergosia.com";0;12;0,00;;;;;;1;
+"10009";"ELECTRO RECAMBIOS INDALO S. A. L.";;"A-04217444";"Sierra de Maria, s/nº Polígono Ind. La Juaida";"04240";;"VIATOR";"Almería";2;;;;;0;12;0,00;;"UNICAJA";;"21035016270030000384";;1;
+"10010";"DAVA S. A. (AL)";;"A-30014484";"Camino de la Goleta, 89";"04006";;"ALMERIA";"Almería";2;;;;;0;26;0,00;;;;;;1;1
+"10012";"ANTONIO MILAN S. A. U.";;"A-04027678";" Sierra de Cazorla, s/nº (Pol. Ind. La Juaida)";"04240";;"VIATOR";"Almería";2;"950 306004";"950 305187";;"amilan@antoniomilan.com";0;9;0,00;;"BSCH";;"00492686171310083440";;1;
+"10014";"AURGI S. L.";;"B28284156";" Sol, 123-125 ( Pol. Venta Alegre)";"04230";;"HUERCAL DE ALMERIA";"Almería";2;;;;;0;16;0,00;;;;;;1;
+"10015";"JOSE MIGUEL FORTES GARCIA";;"27238441-R";"Ctra. de Torrecárdenas, 192";"04230";;"HUERCAL DE ALMERIA";"Almería";2;"950 257516";"950 259385";;;0;7;0,00;;"ANDALUCIA";;"00043080800500153396";;1;
+"10016";"MARIA QUIRANTES GAONA";"RODALUZ";"39117790-B";"Dr. Carracido, 7";"04005";;"ALMERÍA";"Almería";2;"950 266162";"950 254126";;;0;26;0,00;;;;;;1;
+"10017";"TALLER REP. JOSE SANCHEZ ALFARO S. L.";;"B-04386090";"Mendez, 11";"04003";;"ALMERIA";"Almería";2;;;;;0;26;0,00;;"CAJA RURAL ALMERIA";;"30580108442720001869";;1;
+"10018";"SUM. IND. SAYGU S. L.";;"B-04116695";"Rosa de Luxemburgo, Nave-4 (Pol. San Rafael)";"04230";;"HUERCAL DE ALMERIA";"Almería";2;"950 624025";"950 624530";;;0;26;0,00;;"CAJA RURAL ALMERIA";;"30580088992720008850";;1;
+"10019";"UTILLAJES MARIN S. L.";;"B-04343034";"Sierra de las Villas, 37 (Pol. La Juaida)";"04240";;"VIATOR";"Almería";2;"950 304667";"950 304667";;"utillajesmarin@cajamar.es";0;26;0,00;;"CAJAMAR";;"30580167371021800019";;1;
+"10020";"AUTO RECAMBIOS UREÑA ALMERIA S. A.";;"A-73236408";"Montenegro, 14 (Polígono San Carlos)";"04008";;"ALMERIA";"Almería";2;"950 262806";"950 275541";;;0;26;0,00;;"CAJA MURCIA";;"20430148740200001753";;1;1
+"10021";"COMPLEMENTOS Y SUMINISTROS CRUZ S. L.";;"B-04568333";"Sierra de las Villas, 31 Pol. Ind. La Juaida";"04240";;"VIATOR";"Almería";2;"950 305340";"950 305338";;;0;26;0,00;;;;"30580191892720003531";;1;1
+"10022";"REC. INDUSTRIALES MOLEON S. A. (AL)";"RIMOSA";"A-18351965";"Molvizar, Parcela R-107 (Pol. Juncaril)";"18220";;"ALBOLOTE";"Granada";2;"958 468400";"958 467571";"www.rimosa.com#http://www.rimosa.com#";;0;2;0,00;;"BBVA";;"01823387560100151924";;1;1
+"10023";"PIQUERSA MAQUINARIA S. A.";;"A-04315362";"Crta. Nacional 340, Km. 445 (Rotonda)";"04009";;"ALMERIA";"Almería";2;"950 625060";"950 624003";;;0;26;0,00;;;;;;1;1
+"10024";"COMERCIAL IMPORMOVIL S. A. (AL)";;"A-28805125";"Avenida de la Industria, 25";"28760";;"TRES CANTOS";"Madrid";2;"950 303444";"950 303450";;;0;26;0,00;;;;"00750221140600530069";;1;1
+"10030";"BAHIA VEHICULOS INDUSTRIALES";;"B-04163655";"Crta. Del Mami, 13";"04120";;"LA CAÑADA";"Almería";2;;;;;0;6;0,00;;"Cajamar";;"30580085571021800270";;0;1
+"11101";"ANTONIO LIROLA LOPEZ";"REPUESTOS LIROLA";"27157760-G";"Ctra. de Málaga, 147";"04700";;"EL EJIDO";"Almería";2;"950 480455";"950 485601";;;0;26;0,00;;"BBVA";;"01822420140010081266";"PROMER";0;
+"11102";"TODOMOTOR EJIDO S. L.";;"B-04249033";"Colonia, 16 (Pol. Ind. La Redonda)";"04710";;"EL EJIDO";"Almería";2;"950 571018";"950 486818";;;0;26;0,00;;"CAJA RURAL ALMERIA";;;"DTO. RECAMBIOS MEGA Y HADU 20%";1;
+"11103";"AGROSISTEMAS DEL SUR S. L.";;"B-29623935";"Pol. Ind. de la Redonda , parcela 13";"04710";;"EL EJIDO";"Almería";2;;;;;0;26;0,00;"REPOSICION";;;;;0;
+"11104";"TALLERES ELECTROMECANICA OMEGA S. L.";;"B-04505962";"Pol. Ind. Cia Vieja   C/ Betica, 40";"04700";;"EL EJIDO";"Almería";2;"950 571152";;;;0;18;0,00;;;;"30580117772720007090";;1;
+"11301";"FERRETERIA FLORES UNO S. L.";;"B-04355236";"Valle Inclán, 5";"04740";;"ROQUETAS DE MAR";"Almería";2;"950 321025";"950 327261";;;0;26;0,00;;;;"30580112462720010008";;1;
+"11302";"Mª ISABEL DEL AGUILA HERNANDEZ";;"27212717-Z";"Crta. de la Mojonera, 285";"04740";;"ROQUETAS DE MAR";"Almería";2;"950 626020";"950 326021";;;0;26;0,00;;;;;;1;
+"11303";"JOSE MANUEL ZAMORA RUIZ";"DROGUEMAR";"27513642-F";"Avda. Pablo Picasso, 77";"04740";"34";"ROQUETAS DE MAR";"Almería";2;"950 320155";"950 320155";;"droguemar01@terra.es";0;26;0,00;;"UNICAJA";;"21035750140300021086";;1;
+"11401";"GAIPER DEL SUR S. L.";;"B-04052098";"Crta. de Málaga, Km. 101";"04720";;"AGUADULCE";"Almería";2;"950 344765";;;;0;26;0,00;;;;;;0;
+"12101";"SUM. IND. GONZALEZ PARRA S. L.";;"B-04073268";"Batallón de Cádiz, 24";"04620";;"VERA";"Almería";2;"950 391210 - 390004";"950 390901";;;0;26;0,00;;;;;;1;
+"12102";"AUTO REC. VERA S. L.";;"B-04021226";"Pol. In. la Mezquita, s/nº Crta. Almería, Km. 206";"04620";;"VERA";"Almería";2;"950 3900041";"950 390312";"www.arvera.es#http://www.arvera.es#";"antonioarvera@serca.es";0;7;0,00;;;;"00753129850600100068";;1;
+"12201";"CIAL. MARHUENDA S. L.";;"B-04044558";"Avda. Almanzora, 25";"04860";;"OLULA DEL RIO";"Almería";2;"950 441185";"950 441185";;"comercial@marhuendasl.com";0;26;0,00;;"POPULAR";;"00750070400500504360";;1;2
+"20001";"SUM. IND. COMASUR S. A.";;"A-18078501";"C/ Baza, Pol. Juncaril, Parcela-352";"18220";;"ALBOLOTE";"Granada";2;"958 490260";"958 467265";"www.comasur.com#http://www.comasur.com#";"comasur@comasur.com";0;26;0,00;;"Popular";;"00750094720600958605";;1;10
+"20002";"SUM. IAÑEZ GALVEZ S. L.";;"B-18412734";"Pol. Juncaril, C/ Loja, Parcela-A126";"18210";;"PELIGROS";"Granada";2;"958 491060";"958 430721";;"pepe@suministrosianez.com";0;26;0,00;;"CAJA RURAL";;"30230042130420155004";;1;6
+"20003";"SUMINISTROS SIMPAR S. L.";;"B-18641613";"P. Ind. Zárate - C/ Extremadura P-58";"18210";;"PELIGROS";"Granada";2;"958 170496";"958 159386";;"simparsl@yahoo.es";0;26;0,00;;;;;;1;2
+"20004";"FRANCISCO SALAS E HIJOS S. L. (GR)";;"B-29901469";"Av.Mare Nostrum,27 Pol.Ind.Sector 20 (Puche)";"04009";;"ALMERIA";"Almería";2;"958 400325";"958 400625";;"jcomprasstop@hotmail.com";0;1;0,00;;;;;;1;7
+"20005";"SUMINISTROS HIPICA S. L.";;"B-18501155";"Pol. Tecnológico, nave 20";"18151";;"OGIJARES";"Granada";2;"958 506515-507019";"958 506844";;;0;9;0,00;"GIRO";"LA GENERAL";;"20310360570100000762";;1;
+"20006";"REPUESTOS ARABIAL S. L.";;"B-18404277";"Polígono Tecnológico, Nave-126";"18151";;"OGIJARES";"Granada";2;"958 509312-17";"958 509329";;"arabial@serca.es";0;7;0,00;;"C. AHORROS Y PENSIONES DE BARCELONA";;"21002294020200142480";;1;
+"20007";"SUMINISTROS SANTOS C. B.";;"E-19535673";"Pol. Juncaril, C/ Loja,  subparcela-57B";"18210";;"PELIGROS";"Granada";2;"958 465289";"958 465289";;"suminstrossantos@hotmail.es";0;26;0,00;;"CAJA GRANADA";;"04873186632000012146";;1;3
+"20008";"TRANSMISIONES GRANADA S. C. L.";;"F-18374538";"Pol. Juncaríl Calle-A parc.122 nave 1";"18220";;"ALBOLOTE";"Granada";2;"958 468360";"958 465514";;;0;26;0,00;;"LA CAIXA";;"21002558000201013318";;1;
+"20009";"SOGESSUR S. L.";;"B-18451484";"Pol. Juncaríl Calle-F-B Parc. R-100 nave 4";"18220";;"ALBOLOTE";"Granada";2;"958 465857";"958 465857";;;0;14;0,00;;"BBVA";;"01820463040011504754";;1;
+"20010";"ESPINOLA SUMINISTROS INDUSTRIALES S. L.";;"B-18841551";"Verdiales, 4 (bajo)";"18014";;"GRANADA";"Granada";2;"958 153719";"958 153719";;;0;26;0,00;;;;"30230131335438640103";;1;
+"20011";"REPUESTOS SUR GRANADA S. L.";;"B-18354613";"Pol. Ind. Juncaríl, Parc. 367 Calle- B";"18220";;"ALBOLOTE";"Granada";2;"958 467472";"958 465476";;"repuestossur@repuestossur.com";0;2;0,00;;"LA GENERAL";;"20310290360100042809";"10-G";1;
+"20012";"JOSE ANTONIO CASTILLO JIMENEZ";"REPUESTOS SUR";"24064492-Y";"Dr. Alejandro Otero, s/n (Parque Genil)";"18004";;"GRANADA";"Granada";2;"958 272460";;;;0;2;0,00;;"LA GENERAL";;"20310290360100044863";"10-G";0;
+"20013";"SIERRA Y ANTEQUERA SUM. Y UTILLAJE S. L.";;"B-18523803";"Pol. Juncaril, Calle-2 Parcela, R-233";"18220";;"ALBOLOTE";"Granada";2;"958 468373";"958 087215";;"sierrayantequera@sierrayantequera.com";0;26;0,00;;"ANDALUCIA";;"00043457200603013913";;1;
+"20014";"RODAMIENTOS Y SERVICIOS S. L. (GR)";;"B-11609856";"Parque Sevilla Industrial C/ Parsi-6 nº 1305-6-7";"41016";;"SEVILLA";"Sevilla";2;"958 467690";"958 467724";;;0;26;0,00;;;;;;1;
+"20015";"SCOA CENTRAL DE COMPRAS S. L.";;"B-18471334";"Jaén, s/n (Pol. Asegra)";"18210";;"PELIGROS ";"Granada";2;"958 400327";"958 402001";;;0;26;0,00;"PAGARÉ";;;;;1;
+"20016";"CSJ EMUCAR S L.";;"B-1905759";"Av. Circunvalación, 15 - Blq. A-1 / 1ºD";"18620";;"ALHENDIN";"Granada";2;"626 891104";;;"caaama@hotmail.com";0;26;0,00;;;;;"ESTA FICHA ERA  ANTES J & J FILTER";1;2
+"20017";"CIAL. LINARES HERMANOS S. A.";;"A-18093310";"Centro Empresarial San Miguel, Nave-7";"18100";;"ARMILLA";"Granada";2;"958 553376";"958 572694";;"manuelarcosduenas@yahoo.es";0;26;0,00;;"BSCH";;"00492443131710577440";;1;2
+"20018";"ROBERTO MORA ALVAREZ";"JEEP HISPANO";"74668083D";"Torre de los Abencerrajes, 1 Local 5";"18008";;"GRANADA";"Granada";2;"958 491525";;;"ventas@jeep-hispano.com";0;26;0,00;;;;;"ESTA FICHA ERA DE ELECTRO REC. G. PARRA S. L.";1;
+"20019";"LUIS MOLEON S. L. (GR)";;"B-18338566";"Ctra. Córdoba km. 436 (Junto Mercagranada)";"18080";"2138";"GRANADA";"Granada";2;"958 282020";"958 281196";"www.luismoleon.com#http://www.luismoleon.com#";"luis@luismoleon.com";0;20;0,00;;"BBVA";;"01822359080102002769";;1;
+"20020";"BERNER MONTAJE Y FIJACION S. L.";;"B-18092957";"Polígono Ind. la Rosa VI  C/ Albert Berner, 2";"18330";;"CHAUCHINA";"Granada";2;"958 060207";"958 060243";;;0;26;0,00;;;;;;1;
+"20021";"REPUESTOS MARIN S. L.";;"B-18321042";"Ctra. Antigua Málaga, Pol. Fatinafar, 1ª Fase N-9";"18015";;"GRANADA";"Granada";2;"958 294950";"958 294150";;"repmarin@infonegocio.com";0;28;0,00;;;;"00490608962711019493";"CERCIORARSE DE QUE EL PEDIDO NO SEA PARA JOSÉ MARÍN                         BIGUISUR";1;
+"20022";"S A T GRAHERMA 96 S. L.";;"B-18780825";"Polígono Juncaril C/ Villanueva de Mesia, 1";"18210";;"PELIGROS";"Granada";2;"958 491060";"958 430721";;"satgraherma@yahoo.es";0;26;0,00;;;;;;1;1
+"20023";"REPUESTOS VELERO S. L.";;"B-18516641";"Crta. de Jaén, 29 'Edificio Velero'";"18013";;"GRANADA";"Granada";2;"958 153806";"958 157110";;"repuestosvelero@hotmail.com";0;12;0,00;;"BSCH";;"00304219150297754273";;1;
+"20024";"JOSE ANDRES VILCHEZ PRIETO";"Maq. y Herramientas Vilchez";"24118205-Z";"Pol. Juncaril  Urb. La Mediana, Parc. 12-K";"18220";;"ALBOLOTE";"Granada";2;"958 465374";"958 468606";;"administracion@vilchezmaquinaria.com";0;26;0,00;;"LA CAIXA";;"21002497160201010301";;1;
+"20025";"FLAMAR MERIDIONAL S. L.";;"B-18353714";"c/ Huelva, Manz. 1, Parc. 9 (POL. LA FUENTE)";"18340";;"FUENTE VAQUEROS";"Granada";2;"958 436918";"958 434601";"www.flagmeridional.com#http://www.flagmeridional.com#";"enrique@flamarmeridional.com";0;26;0,00;;;;"20310051140100056486";"ESTA FICHA ERA DE RECAFREN";1;
+"20026";"REPUESTOS DE LA ROSA S. L.";;"B-18764753";"Ctra. Antigua de Málaga, 136 - Nave 5";"18015";;"GRANADA";"Granada";2;"958 204 114";"958 273 093";;"adelaros@teleline.es";0;26;0,00;"RECIBO NEGOCIABLE";;;;"ESTA FICHA ERA DE AURGI GRANADA (CLIENTE DE TIMKEN)";1;2
+"20027";"AUTO RECAMBIOS GRANADA S. L.";;"B-18366559";"Camino de Purchil, 2";"18004";;"GRANADA";"Granada";2;"958 520808";"958 521666";;"aregra@retemail.es";0;26;0,00;;"CAJA RURAL";;"30230122045388266305";;1;
+"20028";"JOSE GONZALEZ MARIN";;"23616064-D";"Crta. Antigua Málaga (Pol. Fatinafar, 1ª Fase N-9)";"18015";;"GRANADA";"Granada";2;"958 294950";"958 294150";;"repmarin@infonegocio.com";0;22;0,00;;;;"00751398800600014438";;0;
+"20029";"TALLERES Y SUM. PEYMA S. A.";;"A-18097758";"Crta. de Málaga, 189";"18015";;"GRANADA";"Granada";2;"958 277457";"958 206898";;;0;26;0,00;;;;;;1;
+"20030";"TRANSMISIONES Y DIRECCIONES QUERO S. L.";;"B-18913517";"Av. Jacobo Camarero, s/nº nave-2";"18220";;"ALBOLOTE";"Granada";2;"958 490886";;;;0;26;0,00;;;;;"ANTES ERA SUM. AGROFORESTALES";1;
+"20031";"AUTOFRIO GENIL C. B.";;"E18087387";"Espaldas Ribera del Violón, 9";"18006";;"GRANADA";"Granada";2;"958 811355";;;;0;26;0,00;;"BSCH";;"00494947112910623039";;1;
+"20032";"UNION QUALITY INTERNATIONAL SLL";;"B-19512524";"C/ Sierra de Tejeda - Nave 20 (POL. ASEGRA)";"18210";;"PELIGROS";"Granada";2;"858 858028";;;"josemy@unionqualityinternational.com";0;26;0,00;;"ES23";;"04873130212000054898";"ESTA FICHA ERA ANTES DE SUINVA, S. A.  Y DESPUES DE UNEGOCIOS (GRANADA)";1;
+"20033";"TALLERES ELECTROMECANICOS LUPIAÑEZ S. L.";;"B-18694273";"C/ Juncos  s/n (POL. CORTIJO LA PURÍSIMA)";"18006";"3025";"GRANADA";"Granada";2;"958 126020";"958 126019";;"cucas@supercable.es";0;18;0,00;;;;"30230122047000005353";;1;
+"20034";"DAVA S. A. (GR)";;"A-30014484";"Polígono Juncaril, s/nº";"18220";;"ABOLOTE";"Granada";2;"958 468985";;"www.davasa.es#http://www.davasa.es#";;0;3;0,00;;;;;;1;1
+"20035";"ALIAUTO S. A. (GR)";;"A-50030453";"C/ Almuñécar, P-339/4";"18220";;"ALBOLOTE";"Granada";2;"958 430641";"958 430739";;;0;0;0,00;;;;;;1;1
+"20036";"DATACOL HISPANIA S. L. U.";;"B-18884718";"C/ Baza, 347 Polígono Ind. Juncaril";"18220";;"ALBOLOTE";"Granada";2;"958 465946";"958 467796";"www.iftecnica.com#http://www.iftecnica.com#";"isoler@datacolhispania.com";0;30;0,00;;;;"00496729272216163005";;1;1
+"20037";"AUTIBERIA S. L.";;"B-18006668";"Avenida Andalucia, km. 3";"18015";;"GRANADA";"Granada";2;;;;;0;26;0,00;;;;;;1;1
+"20038";"COMERCIAL NEVADA COLOR S. L.";;"B-18738161";"Doctor Victor Escribano, 4-6";"18012";;"GRANADA";"Granada";2;"958 272312";"958 207530";;"nevadacolor@hotmail.com";0;26;0,00;;;;;;1;1
+"20039";"GESALIMO S. L.";"RECAMER";"B-18266437";"C/ Molvizar, Parc. R-107 (Polígono Juncaril)";"18220";;"ALBOLOTE";"Granada";2;"958 468400 - 952 170718";"958 467571";;"amoleon@rimosa.com";0;2;0,00;;"BSCH";"Av. Constitución, 39  18014 GRANADA";"20310290330115139701";;1;
+"20040";"CIAL. REPUESTOS SAMO 2002  S. L.";;"B-18600262";"Santisteban Márquez, 1";"18003";;"GRANADA";"Granada";2;"958 283304";"958 272151";;;0;26;0,00;;"BBV";;"01823387500201543088";;1;
+"20041";"GARCOFREN FJ&E S. L.";;"B-18713727";"Arabial, 70 bajo";"18003";;"GRANADA";"Granada";2;"958 273995 - 273864";"958 273781";;"garcofren@wanadoo.es";0;26;0,00;;"BSCH";;"00490608902211019965";;1;
+"20042";"SANSA AUTOMOCION S. L.";;"B-18460873";"C/ Purullena, Parcela R241 (Pol. Juncaril)";"18220";;"ALBOLOTE";"Granada";2;"958 430343 - 430362";"958 430505";;;0;26;0,00;;"CAJA AHORROS DE GRANADA";;"20310203120100028384";;1;
+"20043";"FIXUNE S. L. ¡¡NO VALIDO!!";;"B-72125289";"C/ Monachil, 18 (Pol. Ind. Juncaril)";"18210";;"PELIGROS";"Granada";2;"958 466732";;;;0;26;0,00;;;;;;0;
+"20044";"REC. INDUSTRIALES MOLEON S. A. (GR)";"RIMOSA";"A-18351965";"Molvizar, parcela R-107 (Pol. Juncaril)";"18220";;"ALBOLOTE";"Granada";2;;"958 467571";"www.rimosa.com#http://www.rimosa.com#";;0;2;0,00;;"BBVA";;"01823387560100151924";;1;1
+"20045";"GARBEGRAN S. L.";;"B-18765651";"C/ Purullena R-240 (Pol. Juncaril)";"18220";;"ALBOLOTE";"Granada";2;"958 430085 - 430087";"958 430088";;"pedidos@garbegran.com";0;26;0,00;;;;"00491710592810101372";"ANTES: FREN-GAR REC. Y AUTOMOCIÓN S. L. U.";1;1
+"20046";"DROGUERIA GRANADA C. B.";;"E-18102327";"Granados, 7  Bajo";"18004";;"GRANADA";"Granada";2;"958 251144";"958 813904";;"drogueriagr@gmail.com";0;26;4,00;;;;"21001616430200006808";;1;1
+"20047";"THUNDRA AUTOMOTIVE S. L.";;"B18973602";"C/ Villanueva de Mesía, 1";"18210";;"PELIGROS";"Granada";2;"958 465715";"958 430721";;"th@suministrosianez.com";0;26;0,00;;;;"21002548340210074025";;0;1
+"20048";"FRANCISCO MARTINEZ PUERTOLLANO";"KILOMETRO. 0";"29078232-E";"C/ Baza, local-7 Parcela-7 (Polígono Juncaril)";"18220";;"ALBOLOTE";"Granada";2;"958 496400";;;"kmpuntocero@gmail.com";0;26;0,00;;;;;;1;1
+"20050";"DARF S. L.";;"B-18387217";"Camino de Albolote, 24 bajo";"18200";;"MARACENA";"Granada";2;"958 404186";"958 404381";;;0;26;0,00;;"CAJASUR";;"20240714983300001381";;0;
+"20051";"FEDERICO LOPEZ CEJA";;"75415789-P";"Padre Claret, 18   P-1  4º-B";"18013";;"GRANADA";"Granada";2;"958 606605";;;"flopezceja@telefonica.net";0;26;0,00;;"CAJA RURAL DE GRANADA";;"30230147895498535805";;1;
+"20052";"FERRET. INDUSTRIAL NEVADA S.  L.";;"B-18436584";"Castilla la Mancha, s/nº Polígono Ind. Zarate";"18210";;"PELIGROS";"Granada";2;"958 405361";"958 401074";;;0;26;0,00;;"CAJA AHORROS DE GRANADA";;"20310291840100026117";;1;
+"20053";"COMERCIAL IMPORMOVIL S. A. (GR)";;"A-28805125";"Avda. de la Industria, 25";"28760";;"TRES CANTOS";"Madrid";2;"958 292716";"958 271017";;;0;26;0,00;;;;"00750221140600530069";;1;1
+"20054";"JOSE ANGEL MERCADO S. A.";;"A-18097352";"Pol. Juncaril C/ Salobreña, Parcela R-96";"18220";;"ALBOLOTE";"Granada";2;"958 466281";"958 466570";;"maquinaria@joseangelmercado.com";0;26;0,00;;"LA CAIXA";;"21002483690201012508";;1;1
+"20061";"DEYMASUR AUTOMOCION S. L.";;"B-18313437";"Camino de Ronda, 122";"18003";;"GRANADA";"Granada";2;"958 200609";"958 206261";;;0;26;0,00;;"BBVA";;"01820442180100150678";"Fras. a Avda. Cervántes, 16 Ed. Madrid";0;
+"20062";"FERNANDO RUIZ";;"24188815-Z";"Gustavo Torre, 3";"18100";;"ARMILLA";"Granada";2;;;;;0;26;0,00;;;;;;1;1
+"20063";"CONCEPCION LUJAN BUENO";"DECARS";"24259565Q";"C/ Madrid, 20";"18194";;"CHURRIANA DE LA VEGA";"Granada";2;"661 363331";;;"damarcon71@hotmail.com";0;26;0,00;;;;"21030911310030009514";;1;1
+"21101";"RECAMBIOS MONTERO S. A.";;"A-18020347";"Haití, s/nº Pol. El Vadillo";"18600";;"MOTRIL ";"Granada";2;"958 601333";"958 603855";;"recambiosmontero@recambiosmontero.es";0;2;0,00;;"POPULAR";;"20310098270100575850";;1;
+"21102";"SUM. IND. TEYMO S. L.";;"B-18042580";"Crta. Celulosa, s/nº";"18613";;"PUERTO DE MOTRIL";"Granada";2;"958  600790";"958 602808";;;0;14;0,00;;"LA GENERAL DE GRANADA";;"20310131000100035543";;1;
+"21103";"REVESTIMIENTOS Y MAQUINARIA S. A.";;"A-18026575";"Plaza San Sebastian, 5";"18600";;"MOTRIL";"Granada";2;"958 602808";;;;0;26;0,00;;;;;;0;
+"21104";"SUM. IND. RODRIGUEZ MORENO S. L.";;"B-18363481";"Avda. Salobreña - La Puchilla, Nave-4";"18600";;"MOTRIL";"Granada";2;"958 821007";"958 604929";;;0;26;0,00;;"LA GENERAL";;"20310098240100571467";;0;
+"22101";"JOSE TORRES RUBIO";;"74556165-D";"Reyes Católicos, 1";"18800";;"BAZA";"Granada";2;"958 701421 - 701220";"958 701421";;;0;26;0,00;;"BANESTO";;"00304055310590325172";;1;
+"22102";"REPUESTOS VICENTE S. L.";;"B-18431965";"Crta. de Murcia,  Km. 176,4";"18800";;"BAZA";"Granada";2;"958 701562";"958 702796";;"vicente@grupocga.com";0;4;0,00;;"BBVA";;"01821101990100300324";;1;
+"22103";"SUM. IND. METAFER S. L.";;"B-18384800";"Ctra. de Murcia Pol. Ind. La Noria";"18800";;"BAZA";"Granada";2;"958 860035";"958 860067";;;0;26;0,00;;"LA GENERAL";;"20310252330100029922";;1;
+"22104";"AGROLABOR S. L.";;"B-18093088";"Ctra. de Granada s/nº";"18800";;"BAZA";"Granada";2;"958 703238";"958 701414";;;0;26;0,00;;"CAJA RURAL";;"30230009437000019600";;1;
+"22106";"GREGORIO DOMENE GARCIA";;"24148077-D";"Crta. de Murcia, 11";"18800";;"BAZA";"Granada";2;"958 700598";;;;0;18;0,00;;;;;"ES SERVICIO TÉCNICO";1;
+"22110";"VICENTE YESTE YESTE";;"B-18431965";"Luis Braille, s/nº";"18800";;"BAZA";"Granada";2;"958 701562";"958 702796";;;0;4;0,00;;"BBVA";;"01821101900000008470";"ESTE CLIENTE NO EXISTE MIRAR EN REPUESTOS VICENTE S. L. ";0;
+"22201";"DISTRIB. ELÉC. LOZANO VILLANUEVA S. L.";;"B-18524892";"C/ Adelantado Pedro de Mendoza y Luján, 3";"18500";;"GUADIX";"Granada";2;"958 661436";"958 660900";;"lozanosl@lozanosl.com";0;0;0,00;;;;;;1;1
+"22202";"CENTRO DE MAQUINARIA TENORIO C. B.";;"E-18401984";"Ctra. de Granada, 226";"18500";;"GUADIX";"Granada";2;"958 660869";"958 660869";;;0;26;0,00;;"LA GENERAL";;"20310274760100020660";;1;
+"22203";"RECAMBIOS MEDIAUTO S. L.";;"B-18507566";"Pol. Ind. de Guadix Parcela M-2 / P-3";"18500";;"GUADIX";"Granada";2;"958 665162";;;;0;26;0,00;;" POPULAR";;"00750464110600251911";"CECAUTO";1;
+"22204";"FERRET. SAN TORCUATO C. B.";;"E-18322230";"Medina Olmos, 39";"18500";;"GUADIX";"Granada";2;"958 660280";;;;0;26;0,00;;;;;;0;
+"22206";"AGROTRACTOR GUADIX C. B.";;;"Ctra. de Murcia, s/nº";"18500";;"GUADIX";"Granada";2;;;;;0;26;0,00;;;;;;0;
+"22210";"REPUESTOS MEDIALDEA C. B.";;"E-18353300";"Avda. Buenos Aires, 6";"18500";;"GUADIX";"Granada";2;"958 660182 - 664735";"958 660182";;;0;26;0,00;;"BANCO POPULAR";;"00750464150500076046";"CECAUTO";1;
+"22211";"EUROMASTER AUTOMOCION Y SERVICIOS S. A. (GR)";;"A-41014523";"Avda. Buenos Aires, s/nº";"18500";;"GUADIX";"Granada";2;;;;;0;26;0,00;;;;;;1;1
+"23101";"AMADOR SANCHEZ SALAS";;"24261293-L";"Avda. de la Hispanidad, s/nº";"18320";;"SANTA FE";"Granada";2;;;;;0;26;0,00;;"LA GENERAL DE GRANADA";;;;1;
+"23102";"DISTRANSA DAF S. A.";;"A-18081331";"Ctra. de Málaga s/nº";"18320";;"SANTA FE";"Granada";2;"958 446500";"958 447438";;;0;26;0,00;"Pagaré 60 días";;;;;0;
+"23201";"MORENO LARA S. L.";;"B-18067363";"Pol. Ind. El Manzanil  Fase-1 Av. Andalucia, 82";"18300";;"LOJA";"Granada";2;"958 320962";"958 327021";;"compras@cotocar.com";0;22;0,00;;"UNICAJA/   IBAN ES09";;"21030910960033044291";;1;
+"23202";"PINTURAS PERALCO S. A.";;;"Plines, Blq.C y H";"18300";;"LOJA";"Granada";2;"958 321502";"958 321259";;;0;26;0,00;;;;;;0;
+"23203";"RECAMBIOS SEYTO S. L.";;"B-18528927";"Polígono Ind. Fuente Santa C/ Plines, 44";"18300";;"LOJA";"Granada";2;"958 327505";"958 327504";;"seytogr@hotmail.com";0;6;0,00;;;;"20310357150115067101";;1;1
+"30001";"REPUESTOS RAMIRO S. L.";;"B-23324593";"Ortega Nieto, 14 Pol. Los Olivares";"23009";;"JAEN";"Jaén";3;"953 280104";"953 280796";"www.repuestosramiro.com#http://www.repuestosramiro.com#";"maramiro@repuestosramiro.com";0;2;0,00;;;;"20920002363001002668";;1;12
+"30002";"REPUESTOS FRAMA S. L.";;"B-23285604";"Escañuela s/nº (Pol. Los Olivares)";"23009";;"JAEN";"Jaén";3;"953 280839";"953 284099";;"frama@grupocga.com";0;4;0,00;;"ES56";;"21030385030030003232";;1;5
+"30003";"DIS. IND. SIDEROMETALURGICA S. A.";"Dis s. a.";"A-23011752";"Mancha Real, 31 (Pol. Los Olivares)";"23009";;"JAEN";"Jaén";3;"953 280990";"953 281380 - 281611";;"compras@dissajaen.com";0;26;0,00;;"BBVA";;;;1;6
+"30004";"GOMAP S. L.";;"B-23014277";"Jabalquinto, s/nº (Pol. Los Olivares)";"23009";;"JAEN";"Jaén";3;"953 281737";"953 281406";;;0;24;0,00;"SIN DOMICILIAR";;;;;1;10
+"30005";"SUM. IND. LUQUE S. L.";;"B-23346554";"Espeluy - Parc. 66 ( Pol. Los Olivares)";"23009";;"JAEN";"Jaén";3;"953 281356";"953 280158";;"suministrosluque@gmail.com";0;26;0,00;;"CAJASUR";;"20240072823300091526";;1;5
+"30006";"TRANSMIFREN 2004 S. L.";;"B-14679963";"Frailes, parcela 14-11  (Polígono Los Olivares)";"23009";;"JAEN";"Jaén";3;"953 258008";"953 264758";;"transmifrenjaen@telefonica.net";0;12;0,00;;"UNICAJA";;"21030304840030004097";;1;2
+"30007";"DIMAUTO MAQUINARIA S. L.";;"B-23334410";"Fuente de Don Diego, 29 bajo";"23001";;"JAEN";"Jaén";3;"953 231300";"953 231300";;;0;26;0,00;;"CAJA AHORROS JAEN";;"20920005713001003776";;1;1
+"30008";"INDUSTRIAL VARYSA S. L.";;"B-23038573";"Cazalilla, parcela 36-B (Pol. Los Olivares)";"23009";;"JAEN";"Jaén";3;"953 281093";"953 249816";;"gerencia@varysa.com";0;26;0,00;;;;"20920010193001017487";;1;5
+"30009";"SUM. IND. J. SANCHEZ S. L.";;"B-23312150";"C/  Villatorres, 42 (Pol.  Los Olivares)";"23009";;"JAEN";"Jaén";3;"953 284107";"953 284108";;;0;26;0,00;;;;"20240128283300005314";;1;1
+"30010";"JUGO IBERICA S. C. A.";;"F-23446099";"Avda. Granada, 37  portal 2-6º-B";"23003";;"JAEN";"Jaén";3;"953 249985";;;;0;26;0,00;;;;;;1;1
+"30011";"COMERCIAL HIDRAMAS S. L.";;;" Alcaudete, 3 (Pol. Los Olivares)";"23009";;"JAEN";"Jaén";3;"953 281252";"953 280586";;;0;26;0,00;;;;;;1;1
+"30012";"FERRET. Y MAQ. SERRANO GAMEZ S. L.";;"B-23265861";"C/ Alcaudete, 12 (Pol. Los Olivares)";"23009";"78";"JAEN";"Jaén";3;"953 280120";"953 280149";;;0;26;0,00;;"BSCH";;"00491888622310011321";;1;1
+"30013";"REPUESTOS ROMA S. L.";"REPUESTOS ROMA";"B-23584147";"C/ Espeluy, P 42-43 Pol. Los Olivares";"23009";;"JAEN";"Jaén";3;"953 280480";"953 281831";;"roma@serca.es";0;7;0,00;;;;"00753272660600673921";;1;1
+"30014";"MIGUEL ANGEL AVILES FUENTES";"SUMINISTROS MAVI";"75021533H";"C/  Cazalilla - Parcela, 527 (Pol. Los Olivares)";"23009";;"JAEN";"Jaén";3;"953 281847";"953 281847";"www.suministrosmavi.com#http://www.suministrosmavi.com#";"representaciones@suministrosmavi.com";0;26;0,00;;"LA CAIXA";;"21002473910210046227";;1;1
+"30015";"GUILLERMO GARCIA MUÑOZ S. L.";;"B-23046840";"Mancha Real, 10 (Pol. Los Olivares)";"23009";;"JAEN";"Jaén";3;;;;;0;26;0,00;;;;;;1;1
+"30016";"EUROMASTER AUTOMOCION Y SERVICOS S. A. (JA)";;"A-41014523";"Espeluy, 10 (Pol. Los Olivares)";"23009";;"JAEN";"Jaén";3;"953 280029";;;;0;26;0,00;;;;;;1;1
+"30017";"A. R. EXPOSITO IZQUIERDO Y OTRO C. B.";"COLORAUTO";"E-23293434";"C/ Huelma, Parcela, 403A (Pol. Olivares)";"23009";;"JAEN";"Jaén";3;"953 885 901";"953 081 301";;"colorauto@colorauto.es";0;26;0,00;;;;"20240140095800253751";;1;2
+"30018";"FRANCISCO ROCA ORTIZ";"HIDROPAMER";"75223970-D";"García Triviño, 3 - Esc. 6 - 4º A";"23008";;"JAEN";"Jaén";3;"953 280155";"953 276902";;"f.roca@hidropamer.com";0;0;0,00;;;;"20385847633000716470";;1;1
+"30020";"MANUEL ALCANTARA JURADO";"RODISUR";"25.920.875-J";"C/ Sebastián Marftínez, 6 Bajo";"23008";;"JAEN";"Jaén";3;"953 083031";"953 260958";;"rodisur@auna.com";0;26;0,00;;"CAJA AHORROS GRANADA";;"20310175810115043909";;1;1
+"30021";"KONZ IBERICA S. A.";;"A-41014523";"C/ Espeluy, 10 (Pol. Olivares)";"23006";;"JAEN";"Jaén";3;;;;;0;26;0,00;;;;;;1;0
+"30024";"COMERCIAL IMPORMOVIL S. A. (JA)";;"A-28805125";"Av. De la Industria, 25";"28760";;"TRES CANTOS";"Madrid";3;;;;;0;26;0,00;;;;;;1;1
+"30025";"DAVA S. A. (JA)";;"A-30014484";"Villatorre, 37 (Pol. Los Olivares)";"23009";;"JAEN";"Jaén";3;"953 224307";;"www.davasa.es#http://www.davasa.es#";;0;3;0,00;;;;;;1;1
+"30033";"TALLERES HIGUERAS S. C. A.";"TALLERES HIGUERAS";"F-23225881";"Ctra. La Guardía 4º Carríl Izquierdo";"23001";;"JAEN";"Jaén";3;"953 239422";"953 239422";;;0;18;0,00;;;;;"DTO. EN RECAMBIOS MEGA Y HADU 20%";1;1
+"31101";"FRANCISCO MORAL MORAL";"REPUESTOS MORAL";"77328393-R";"Pol. Ind. Avda. de los Llanos, parcela - 2";"23640";;"TORREDELCAMPO";"Jaén";3;"953 567133";"953 410608";;"repuestosmoral@gmail.com";0;26;0,00;;;;"21030360370031049472";;1;1
+"31151";"TALLERES GOMEZ S. L.";;"B-23010069";"Avda. de Jaén, 5";"23650";;"TORREDONJIMENO";"Jaén";3;"953 571200";"953 572038";;;0;26;0,00;;"BANESTO";;"00304050040000049172";;1;0
+"31201";"DANIEL ORTEGA OSUNA Y OTRO C. B.";"ACCESORIOS TORRES ORTEGA";"E-23224934";"Avda. Andalucía, 41";"23660";;"ALCAUDETE";"Jaén";3;"953 560930";;;;0;12;0,00;;"LA CAIXA";;"21002499000201006374";;1;0
+"31301";"REPUESTOS GALLEGO";;;"Reyes Católicos, 19";"23600";;"MARTOS";"Jaén";3;"953 551715";;;;0;26;0,00;;;;;;0;0
+"31401";"TRANSMICOCH C. B.";;"E-23276397";"Pol.Tres de Oros  Parcela, 24-25";"23760";;"ARJONA";"Jaén";3;"953 523443";"953 523737";;;0;26;0,00;;"CAJA DE JAEN";;"20920020983001001126";;1;0
+"31501";"RODAJES ANDALUCIA S. A.";"RODANSA";"A-41018755";"Curtidores, 27 (Pol. La Victoria)";"23740";;"ANDUJAR";"Jaén";3;"953 505700";"953 506224";;;0;2;0,00;;" ANDALUCIA";;;"10-G";0;1
+"31502";"SANTISTEBAN ANDUJAR S. A.";;"A-23017239";"Corredera de Capuchinos, 56-A";"23740";;"ANDUJAR";"Jaén";3;"953 500135";;;;0;26;0,00;;;;;;0;1
+"31503";"JOSÉ RECA MEDINA";"REPUESTOS RECA";"25861424-V";"San Bartolomé, 49";"23740";;"ANDUJAR";"Jaén";3;"953 500395";;;;0;26;0,00;;;;"00851115400000320370";;1;
+"31601";"REPUESTOS TODO AUTO S. L.";;;"Calvario, 120 bajo";"23770";;"MARMOLEJO";"Jaén";3;"953 517424";"953 517444";;"alfonsorecambios@hotmail.com";0;26;0,00;;;;;;1;1
+"32101";"DISMAN LINARES S. L.";;"B-23013212";"Pol. Los Jarales, s/nº";"23700";;"LINARES";"Jaén";3;"953 694400 - 694404";"953 694010";;"fvf@disman-linares.com";0;8;0,00;;"BSCH";;"00490041432410795467";"GRUPO DISMAN";1;10
+"32102";"RODAMIENTOS Y SERVICIOS S. L. (LN)";;"B-11609856";"Parque Sevilla Industrial C/ Parsi-6 nº 1305-6-7";"41016";;"SEVILLA";"Sevilla";3;"953 693400";;;;0;26;0,00;;;;;;1;1
+"32104";"ADETEC S. L. U. MAQUINARIA PARA EL VIDRIO";;"B-23438195";"Urbanización la Constancia, 8";"23700";;"LINARES";"Jaén";3;;;;;0;26;0,00;;"CAIXA CATALUÑA";;"20131611760200123620";;1;1
+"32105";"METALES Y MINERALES";;"A-23000839";"Pol. Ins. Los Jarales, s/nº";"23700";;"LINARES";"Jaén";3;"953 690706";"953 696201";;;0;26;0,00;;"BANESTO";;;;0;
+"32106";"UTIL-AIR SUR S. L.";;"B-23582588";"Reino Unido, 10";"23700";;"LINARES";"Jaén";3;"953 704270";"953 704273";;"comercial@utilairsur.com";0;0;0,00;"REPOSICIÓN";;;;;1;1
+"32201";"AD SIRO AUTOMOCION S. L.";;"B-23578594";"Artesania, 6 (Polígono Los Cerros)";"23400";;"UBEDA ";"Jaén";3;"953 796033";"953 751857";"www.suministrossiro.com#http://www.suministrossiro.com#";"paqui@suministrossiro.com";0;1;0,00;;" POPULAR";;"00750188190600518031";;1;10
+"32202";"RECAMBIOS GUADALQUIVIR S.L.L.";;"B-23503956";"Herrerias, nave-98 (Ampliacion Pol.  Los Cerros)";"23400";;"UBEDA";"Jaén";3;"953 796510";"953 796511";;"rosendo@recambiosguadalquivir.com";0;26;0,00;;;;"20310453550115123305";;1;
+"32203";"FERRET. UBETENSE S. A.";;"A-23014871";"Ctra. Córdoba-Valencia km, 151";"23400";;"UBEDA";"Jaén";3;"953 752241 - 752231";"953 752240";;"ferreteriaubetense@ferreteriaubetense.com";0;11;0,00;;;;;;1;
+"32204";"SANTISTEBAN UBEDA S. A.";;"A-23017353";"Ramón y Cajal, 1";"23400";;"UBEDA";"Jaén";3;"953 750654 - 750415";"953 752940";;;0;26;0,00;;"BSCH";;;;1;
+"32205";"AMADEO MARTI CARBONELL S. A.";;"A-12011672";"Pol. Ind. los Cerros, sector-14 C/Soleria, nave-14";"23400";;"UBEDA";"Jaén";3;"953 751447 - 751547";"953 752940";;;0;26;0,00;;;;;;1;
+"32206";"JUAN RUIZ ORCERA S. A.";;"A-23025109";"Avda. de la Libertad, 40";"23400";;"UBEDA ";"Jaén";3;"953 750706 - 750649";;;;0;26;0,00;;" POPULAR";;;;0;
+"32207";"SUMINISTROS FERRET. MILLAN S. L.";;"B-23483225";"Floristería, s/nº  Polígono Los Cerros";"23400";;"UBEDA";"Jaén";3;"953 795348";"953 795348";;;0;26;0,00;;"C. LA GENERAL";;"20310208470115313700";;1;
+"32208";"FRANCISCO LUIS GARCIA TORAL";;"26482290-K";"Virgen del Pilar, 8 bajo";"23400";;"UBEDA";"Jaén";3;"953 750399";;;;0;26;0,00;;;;"20240132273305000368";;1;1
+"32209";"SUMINISTROS SIRO S. L.";;"B-23444144";"Artesanía, 6 (Pol. Los Cerros)";"23400";;"UBEDA";"Jaén";3;"953 796033";"953 751857";;"paqui@suministrossiro.com";0;1;0,00;;"POPULAR";;"00750188140600481683";;1;1
+"32210";"AMADEO MARTI CARBONELL S. A.";;;"Avda. de la Libertad s/n";"23400";;"UBEDA";"Jaén";3;"953 751447";"953 752940";;;0;26;0,00;;;;;;0;
+"32301";"NIBOD S. L.";;"B-23304454";"Ctra. de Baeza, Km. 0,500";"23100";;"MANCHA REAL";"Jaén";3;"953 351210";"953 350322";;;0;26;0,00;;"CAJA RURAL";;;;1;
+"32302";"FRANCISCO AGUILAR CARRASCOSA";"BODEGA AISLAMIENTOS";"25904317-S";"Ctra. Baeza, Km. 1200";"23100";;"MANCHA REAL";"Jaén";3;"953 352162";;;;0;26;0,00;;;;;;1;
+"32401";"EUGENIA PACO GAMEZ";;"75114506-W";"C/ Zabaleta, 19";"23311";;"SANTO TOME";"Jaén";3;"953434217";"953434217";;"crespospg@hotmail.com";0;0;0,00;;;;"30670063661607941018";;1;1
+"33101";"HERFLUID S. C. A.";;"F-23338742";"Avda. Andalucia, 1";"23210";;"GUARROMAN";"Jaén";3;"953 603138";"953 421667";;;0;26;0,00;;;;;;1;
+"33201";"VULCANIZADOS MANOLO S. A.";;"A-23031727";"Ctra. de Madrid, s/nº";"23710";;"BAILEN";"Jaén";3;"953 670918";;;;0;26;0,00;;"BANESTO";;;;1;
+"33202";"ANDRES MEDINA DURILLO";;"26196770-T";"Sevilla, 22";"23710";;"BAILEN";"Jaén";3;"953 670551";"953 670551";;;0;12;0,00;;"BSCH";;"00491280802110261245";;1;
+"33203";"HITRASME RODAMIENTOS S. L.";;"B-23389919";"C/  Sevilla, 2";"23710";"205";"BAILEN";"Jaén";3;"953 673359";"953 672709";;"hitrasme@hitrasme.com";0;26;0,00;;;;"20980368060372001264";;1;1
+"33301";"RICARDO DE LA CHICA TITOS";"CIAL. DE LA CHICA";"26007881-X";"Bailén , 9 bajo";"23620";;"MENGIBAR";"Jaén";3;"953 370078";"953 370078";;;0;26;0,00;;;;"30670050560250001373";;1;
+"40001";"GRUPO PEÑA AUTOMOCION  S. L.";;"B-14651046";"Avda. de la Torrecilla, 12";"14013";;"CORDOBA";"Córdoba";3;"957 297777 - 293377";"957 291285";"www.gpautomocion.com#http://www.gpautomocion.com#";"rafaelcalderon@gpautomocion.com";0;2;0,00;;;;;;1;30
+"40002";"SUMISUR S. L.";;"B-14026280";"Pol. Las Quemadas, P-49A  C/Fausto G. Tena";"14014";;"CORDOBA";"Córdoba";3;"957 201302";"957 201571";"www.sumisur.es#http://www.sumisur.es#";"compras@sumisur.es";0;8;0,00;;"BSCH";;"00490466622110812923";;1;12
+"40003";"VARONA 2008  S. L.";;"B-14847305";"C/ Apreama Parcela-6 Nave-2 (Pol. La Torrecilla)";"14013";;"CORDOBA";"Córdoba";3;"957 413200 - 280412";"957 767757";"www.recambiosvarona.com#http://www.recambiosvarona.com#";"info@recambiosvarona.com";0;22;0,00;;"CAJASUR";;"00304148310297766273";;1;
+"40004";"SUM. TECNICOS DEL SUR S. A.";"S.T.S.";"A-14085393";"Pol. La Torrecilla, s/nº";"14013";;"CORDOBA";"Córdoba";3;"957 760222";"957 202187";;"sts@sts.es";0;26;0,00;;;;;;1;4
+"40005";"BRONITEC  S. L.";;"B-82041443";"Ing.Juan de la Cierva,s/n Pol.Amargacena";"14013";;"CORDOBA";"Córdoba";3;"957 760666";"957 760665";;"pablope@terra.es";0;2;0,00;"SIN DOMICILIAR";;;"00190481104010019015";;0;
+"40006";"REPUESTOS EL PURI S. L.";;"B-14320212";"Esteban de Cabrera, Parc. 84 (Pol. 'Las Quemadas')";"14014";;"CORDOBA";"Córdoba";3;"957 325055";"957 325056";"www.repuestoselpuri.com#http://www.repuestoselpuri.com#";"fco@repuestoselpuri.com";0;4;0,00;;"CAJASUR";;"02370210309156539466";;1;
+"40007";"SUM. IND. SIERRA CUENCA S. L.";;"B-14576342";"P. las Quemadas   J.Bautista Escudero, 262";"14014";;"CORDOBA";"Córdoba";3;"957 325602";"957 326601";"www.suministrossierra.com#http://www.suministrossierra.com#";"comercial@ssierra.es";0;26;0,00;;"LA CAIXA";;"21006272450200020825";;1;2
+"40008";"CIAL. AGROCOR S. A. L.";;"A-14216527";"Ing.Torroja y Miret (Pol. La Torrecilla)";"14013";;"CORDOBA";"Córdoba";3;"957 294057 - 294009";"957 292692";;"torrecilla@agrocor.com";0;26;0,00;;"BSCH";;"00852230110000000009";;1;
+"40009";"AUTO REC. LA VIÑUELA S. L.";;"B-14102339";"C/ Gema, Nave 1-2 (Pol. El Granadal)";"14014";;"CORDOBA";"Córdoba";3;"957 256517 - 260292";"957 764035";;"lavinuela@serca.es";0;7;0,00;;;;"00491874052610082281";"SERCA";1;
+"40010";"ALMANZORA CÓRDOBA S. L.";;"B-14426076";"Pol.Las Quemadas, P.49-A C/Fausto G.Tena";"14014";;"CORDOBA";"Córdoba";3;"957 322213";"957 322425";"www.almanzoracordobasl.es#http://www.almanzoracordobasl.es#";"aux-compras@almanzoracordobasl.es";0;8;0,00;;"CAJASUR";;"20250157023049323577";"GRUPO DISMAN";1;
+"40011";"RODAMIENTOS Y SERVICIOS S. L. (CO)";;"B-11609856";"Parque Sevilla Industrial C/ Parsi-6 nº 1305-6-7";"41016";;"SEVILLA";"Sevilla";3;"957 322009 (954 520992)";"957 322023";;"cordoba@rodamientos.net";0;26;0,00;;;;;;1;6
+"40012";"ALMACENES DE FERRETERIA SAN RAFAEL S. L.";;"B-14550875";"Ollerias, 51";"14001";;"CORDOBA";"Córdoba";3;"957 497940";"957 202202";;"miguel.rubio@almacenes-sanrafael.com";0;26;0,00;;;;"20240179343300013413";;1;
+"40013";"SUMICOR  ANDALUCIA S. L.";;"B-14088512";"Avda. Torrecilla, nave 8";"14013";;"CORDOBA";"Córdoba";3;"957 295722";"957 293805";;"comercial@sumicor.com";0;26;0,00;;"LA CAIXA";;"21002314600200066331";;1;6
+"40014";"DIESEL A. GONZALEZ C. B.";;"E-14637524";"Polígono Amargacena, Nave 'Los Califas', 2";"14013";;"CORDOBA";"Córdoba";3;"957 298600";"957 298700";;"benitomartinmiranda@hotmail.com";0;26;0,00;;"LA CAIXA";;"21002563520201020144";;1;1
+"40015";"CIAL. DE MAQ. Y HERRAMIENTAS S. L.";;"B-14234181";"Pol.Pedroches, Ctra. Almadén, parc.53";"14006";;"CORDOBA";"Córdoba";3;"957 438677";"957 440524";;"ciayhtas@teleline.es";0;26;0,00;;;;;;0;
+"40016";"HERRAMOVIL S. C. P.";;"G-14603351";"Historiador Dominguez Ortiz, 17";"14002";;"CORDOBA";"Córdoba";3;"957 325056";"957 325056";;;0;4;0,00;;"POPULAR";;"00751118260600049411";;1;
+"40017";"EUROPART HISPANOALEMANA CORDOBA S. L.";;"B-14612972";"Imprenta Alborada, Parc.235 A (Pol.las Quemadas)";"14014";;"CORDOBA";"Córdoba";3;"957 322338";"957 322339";"www.europart.es#http://www.europart.es#";;0;26;0,00;;"BBVA";;"01822743010101500685";;1;
+"40018";"COMERCIAL FERRET. CHINASA S. L.";;"B-14268304";"Polígono Chinales, Parcela, 10-C";"14007";;"CORDOBA";"Córdoba";3;"957 278808 - 272593";"957 271926";;;0;26;0,00;;;;;;1;
+"40019";"APLICACIONES ELECTRICAS DEL AUTOMÓVIL S. A.";;"A-14101604";"Gabriel Ramos Bejarano, P-118-A N-1 (Las Quemadas)";"14014";;"CORDOBA";"Córdoba";3;"957 326406";"957 326421";;"aplicaciones@aecordoba.com";0;26;0,00;"90 días";;;"00751118240600041304";;1;
+"40020";"EVA MARIA SANCHEZ CALERO";;"30526129-T";"Crta. Sevilla, Km. 405,5  (Pol. La Torrecilla)";"14013";;"CORDOBA";"Córdoba";3;"957 476642 - 471161";"957 472936";;"ansare@terra.es";0;26;0,00;;"UNICAJA";;"21030833390030000741";;1;
+"40021";"SUM. IND. PROTECCION Y EQUIPAMIENTO S. L.";"SUINPE S. L.";"B-14787303";"Polígono Ind. Tecnocordoba, parcela 75-B";"14014";;"CORDOBA";"Córdoba";3;"957 322996";"957 325745";;;0;26;0,00;;"CAJASUR";;"20240207713300002567";;1;1
+"40022";"DISMAN CORDOBA S. L.";;"B-14876270";"Avenida de la Torrecilla, nave-2";"14013";"3019";"CORDOBA";"Córdoba";3;"957 429834";"957 429835";;"e.paz@dismancordoba.es";0;8;0,00;;;;;;1;1
+"40023";"HERFLUID S. C. A. (CO)";;"F-23338742";"Pol. Ind. Las Quemadas P-245 C/P";"14014";;"CORDOBA";"Córdoba";3;"957 325762";"957 326576";;;0;0;;;;;;;1;1
+"40024";"TRACTORES Y RECAMBIOS S. L.";;"B-14378368";"Ingeniero Torroja y Miret, 5";"14013";;"CORDOBA";"Córdoba";3;"957 420777";"957 420780";;;0;2;0,00;" 0019-0481-19-4010014141";"DEUTSCHE BANK";;"00190481194010014141";;1;
+"40025";"JOSE LARA ALVAREZ";"COMERCIAL GAS G. L. P.";"30000811-W";"Acacias, 6";"14006";;"CORDOBA";"Córdoba";3;"957 273886 - 277654";"957 401691";;;0;12;0,00;;"UNICAJA";;;"BIGUISUR";1;
+"40026";"APLICACIONES ELECTRONICAS DE CORDOBA S. L.";;"B-14606438";"Compositor Ramon Medina, 36";"14010";;"CORDOBA";"Córdoba";3;"957 436898";"957 267382";;"apecor@hotmail.es";0;26;0,00;;"CAJASOL";;"21060159212303307222";"ANTES CORESA";1;
+"40027";"TORGRA MAYAN S. L.";;"B-14532261";"Pol. El Granadal, Calle- Platino";"14014";;"CORDOBA";"Córdoba";3;;;;;0;26;0,00;;;;;;1;
+"40028";"EL MOTORISTA CORDOBA S. L.";;"B-14922322";"Polígono Chinales, parcela-53";"14007";;"Córdoba";"CÓRDOBA";3;"957 049660";;;;0;26;0,00;;;;;;1;1
+"40029";"ERESA AUTOMOCION S. L.";;"B-82155680";"Simón Carpintero, 14 Pol. Las Quemadas";"14044";;"CORDOBA";"Córdoba";3;"957 325351";"957 322060";;;0;26;0,00;;;;;;1;1
+"40030";"CASH FERRETERO LAS QUEMADAS C. B.";;"E-14617344";"Imprenta de la Alborada, Parc. 231";"14014";;"CORDOBA";"Córdoba";3;"957 083675";;;;0;26;0,00;;;;"21030620250030003832";;1;
+"40031";"TORNILLERIAS IND. CORDOBESA S. L.";"TOINCO";"B-14087977";"Avda. Carlos III, 36";"14014";;"CORDOBA";"Córdoba";3;"957 257083";;;;0;26;0,00;;;;;;1;
+"40033";"FRANCISCO JAVIER ROLDAN PEREZ";"MONREHID";"S-30525776";"Gabriel Ramos Bejarano, 278-A Pol. Las Quemadas";"14014";;"CORDOBA";"Córdoba";3;"957 325330";"957 325330";;;0;18;0,00;;;;;;1;
+"40034";"MANUEL HERRERA SANCHEZ";;"29992389-K";"Pol. Amargacena - Naves INCERET H-26";"14013";;"CORDOBA";"Córdoba";3;"957 204230";"957 204230";;;0;26;0,00;;;;;;0;
+"40035";"FERRETERIA M. CUENCA E HIJOS S. L.";;"B-14539621";"Conquistador Benito de Baños, 15 (Local)";"14007";;"CORDODA";"Córdoba";3;"957 250978";"957 250978";;"fermcuencaehijos@hotmail.com";0;10;0,00;;"CAJASUR";;"20246053973305504065";;1;
+"40038";"DAVA S. A. (CO)";;"A-30014484";"C/ Grabriel Ramos Bejarano - P.247";"14014";;"CORDOBA";"Córdoba";3;"957 259308";;"www.davasa.es#http://www.davasa.es#";;0;3;0,00;;;;;;1;1
+"40040";"REPUESTOS RESCATADO";;"29909262-Q";"Avda. de Libia, 43";"14007";;"CORDOBA";"Córdoba";3;"957 256844 - 252231";"957 252231";;;0;26;0,00;;;;;;1;1
+"40041";"COMERCIAL IMPPORMOVIL S. A. (CO)";;"A-28805125";"Avenida de la Industria, 25";"28760";;"TRES CANTOS";"Madrid";3;"957 326077";"957 326589";;;0;26;0,00;;;;"00750221140600530069";;1;1
+"40060";"MANUEL SOMOSIERRA LOPEZ";;"30824022-C";"Don Quijote, 132  2º-C";"14014";;"CORDOBA";"Córdoba";3;;;;;0;26;0,00;;;;;;1;1
+"41101";"AGROINDUSTRIAL VELASCO S. L.";;"B-14421432";"Cuesta del Molino s/n";"14500";;"PUENTE GENIL ";"Córdoba";3;"957 600060";"957 606665";;"agricolavelasco@telefonica.net";0;29;0,00;;"BSCH";;"00490505112910180978";;1;
+"41102";"J. RAMIREZ REYES S. L.";;"B-14342067";"Ctra. del Molino, s/nº";"14500";;"PUENTE GENIL ";"Córdoba";3;"957 600675 - 600108";"957 600675 - 600108";;;0;26;0,00;;"BBVA";;"01825237940101027796";;1;
+"41103";"TORNOS Y SUMINISTROS SANCHEZ S.C.P.";;"E-14519151";"Feria, 2";"14500";;"PUENTE GENIL";"Córdoba";3;"957 604162";"957 604162";;"admon@tornossanchez.es";0;26;0,00;;"EL MONTE";;"20980226960132002644";;1;
+"41104";"MANUEL FERNANDEZ RIVAS";;"30049535-N";"Herrera, 15";"14500";;"PUENTE GENIL";"Córdoba";3;"957 601844";;;;0;26;0,00;;;;;;1;
+"41201";"PINDECAR SUR S. L.";;"B-14399265";"Ejido Plaza de Toros, 20";"14900";;"LUCENA";"Córdoba";3;"957 326874";"957 516768";;;0;26;0,00;;"LA CAIXA";;"21002227310200070616";;1;
+"41202";"GREGORIO DEL PINO LOPEZ";"FERRETERIA DEL PINO";;"C/ LA Viñuela, 24 Pol. Ind. La Viñuela";"14900";;"LUCENA";"Córdoba";3;"957 501206";"957 501206";;;0;26;0,00;;"ANDALUCIA";;;;0;
+"41203";"ARASOIL S. L.";;;"Pol. Ind. ""La Viñuela""  C/ Principal, P-21";"14900";;"LUCENA";"Córdoba";3;"957 513857";"957 514925";;"lucena@arasoil.com";0;26;0,00;;;;;;1;
+"41204";"CIAL. DE MAQUINARIA Y FERRETERIA S. A. L.";;"A-14226989";"Crta. de Cabra, s/nº";"14900";;"LUCENA";"Córdoba";3;"957 502116";"957 591837";;"rramirez@comaferr.es";0;26;0,00;;;;;;1;
+"41205";"AUTOMOCION LABORAL LUCENTINA S. A. L.";;"A-14051437";"Avda. Miguel Cuenca Valdivia, s/nº";"14900";;"LUCENA";"Córdoba";3;;;;;0;26;0,00;;;;;;1;1
+"41206";"ISOTANK IBERICA S. L.";;"B-14859912";"La Viñuela, 12 Pol. Ind. La Viñuela";"14900";;"LUCENA";"Córdoba";3;;;;;0;26;0,00;;;;;;1;1
+"41207";"RAMON SANCHEZ SANCHEZ";"REPUESTOS SANCHEZ";"48871206-R";"Castro del Rio, s/nº";"14900";;"LUCENA";"Córdoba";3;;;;;0;26;0,00;;;;;;1;1
+"41208";"GREGORIO DEL PINO MENDEZ";;"48868491-T";"Erillas Blancas, 39";"14900";;"LUCENA";"Córdoba";3;"957 509179";;"www.delpinox.com#http://www.delpinox.com#";"info@delpinox.com";0;26;0,00;;"BSCH";;"00494965792695043387";;1;1
+"41209";"PEDRO PINEDA GONZALEZ";;"48872475-M";"Huertas, 8";"14900";;"LUCENA";"Córdoba";3;"957 503306";"957 503306";;;0;26;0,00;;;;"20240187183300027748";;1;1
+"41210";"NEUMATICOS LUCENA S. L.";;"B-14394555";"Camino del Galeón, 2";"14900";;"LUCENA";"Córdoba";3;"957 503155";"957 509186";;"neumaticlucena@terra.es";0;26;0,00;;;;;;1;1
+"41211";"LUCEPINTURAS S. L.";;"B-14372262";"Martin Hurtado, 15";"14900";;"LUCENA";"Córdoba";3;"957 502370";"957 502370";;"lucepinturas@teleline.es";0;26;0,00;;;;"20980205140132003943";;1;1
+"41301";"SILES MAQUINARIA S. L.";;"B-14110696";"Pol. Vado Hermoso, parc.40-41";"14940";;"CABRA";"Córdoba";3;"957 524236";"957 522305";;"silesjuan@telefonica.net";0;26;0,00;;"BSCH";;"00851039300000044438";;1;
+"41302";"MAQUINARIA LUQUE S. L.";;"B-14390959";"Polígono Industrial Atalaya, Parcela-38";"14940";;"CABRA";"Córdoba";3;"957 522633 - 667 451703";"957 522375";;"antonio@maquinarialuque.com";0;29;0,00;;"CAJASUR";;"20246011063049212953";;1;1
+"41351";"RAFAEL ESPARTERO PORCURA";;"80138116-K";"Camino del Juncal, 6";"14850";;"BAENA";"Córdoba";3;;;;;0;26;0,00;;;;;;1;1
+"41401";"PROQUISUR S. L.";;"B-14064158";"Pol. Ind. Las Salinas, parcela 26-27";"14960";;"RUTE";"Córdoba";3;"957 538743";"957 538425";;"info@proquisur.com";0;26;0,00;;"CAJA RURAL";;"30630045771146243629";;1;
+"42201";"Mª ANGELES POLONIO LUQUE";"FERRET. CONSTRUYMAQ";"48868132-D";"Av. Marqués de la Vega de Armijo, 70";"14550";;"MONTILLA";"Córdoba";3;"957 650171";"957 650033";;;0;26;0,00;;"BANCO ANDALUCIA";;"00043110080600015748";;1;
+"42202";"REPUESTOS MUÑOZ";;;"Márquez, 24";"14550";;"MONTILLA";"Córdoba";3;"957 641703";;;;0;26;0,00;;;;;;0;
+"42203";"RECAMBIOS MARCASUR S. L.";;"B-14604805";"Avenida Europa, 5";"14550";;"MONTILLA";"Córdoba";3;;;;;0;26;0,00;;;;;;1;1
+"42204";"FERRETERIA LA CADENA S. L.";;"B-14432140";"C/ Fuente Álamo, 33";"14550";;"MONTILLA";"Córdoba";3;"957 656143";;;"manuelespejo@ferreterialacadena.com";0;26;0,00;;;;;;1;1
+"42301";"JUAN MATEO CASTRO";"SUIMAN";"80125075";"Carrera Baja, 23-A";"14540";;"LA RAMBLA";"Córdoba";3;"957 682086";"957 682682";;;0;26;0,00;;"CAJASUR";;"20240037183300008826";;0;
+"42401";"FERRETERIA  NOLI S. L.";;"B-14744064";"Avda. Juan Carlos I, 32";"14520";"16";"FERNAN NUÑEZ";"Córdoba";3;"957 381205";"957 380589";;"contact@noli.es";0;26;0,00;;;;"01825967650201509138";;1;1
+"42501";"SUM. IND. SUIMAN S. L.";;"B-14423883";"Carrera Baja, 23-B";"14540";;"LA RAMBLA";"Córdoba";3;"957 682086";"957 682682";;"suiman@suiman.es";0;26;0,00;;"CAJASUR";;"20246051163305500569";;1;
+"42801";"TALLERES LOPEZ GARRIDO S. A.";;"A-14031066";"Carretera Córdoba, Km. 1";"14130";;"GUADALCAZAR";"Córdoba";3;;;;;0;26;0,00;;;;;;1;1
+"43101";"RECAMBIOS MORENO SANCHEZ S. L.";;"B-14030845";"Soldevilla Vázquez, 5";"14730";;"POSADAS";"Córdoba";3;"957 630495";"957 631494";;;0;26;0,00;;;;;;1;
+"43151";"EUROMASTER AUTOMOCION Y SERVICOS S. A. (CO)";;"A-41014523";"Avda. Gran Via Aulio Cornelio, Km. 2";"14700";;"PALMA DEL RIO";"Córdoba";3;;;;;0;26;0,00;;;;;;1;1
+"43201";"ELEUTERIO GARCIA JURADO";"Repuestos Eleuterio";"75681053-J";"Ronda de los Muñoces, 42";"14400";;"POZOBLANCO";"Córdoba";3;"957 771804";"957 771804";;;0;26;0,00;;;;;;1;
+"43202";"MARIA DEL MAR DIAZ RODRIGUEZ";"Repuestos Eleuterio";"80147060-H";"Ronda de los Muñoces, 42";"14400";;"POZOBLANCO";"Córdoba";3;"957 771804";"957771804";;;0;26;0,00;;"BBVA";;"01821817920100408365";;1;
+"43203";"LEANDRO AMOR MUÑOZ";;"30190159-Z";"Plaza Padres Salesianos, 2";"14400";;"POZOBLANCO";"Córdoba";3;"957 772089";;;;0;26;0,00;"PROFORMA";"UNICAJA";;"21030810530030003228";;1;
+"43204";"NACFRI HNOS. NAVARRO CAZORLA  S. L.";;"B-14908396";"San Juan Bosco, 7";"14400";;"POZOBLANCO";"Córdoba";3;;;;;0;26;0,00;;;;;;1;
+"43205";"TRENAS ASOCIADOS S. L.";;"B-14372759";"Regiones Devastadas, 2";"14830";;"ESPEJO";"Córdoba";3;"957 376377";"957 376377";;;0;26;0,00;;"BANESTO";;"00304018830050198271";;1;1
+"43301";"RECTIFICADOS DEL AUTOMOVIL S. A.";;"A-14031363";"Pol. Industrial La Estrella, Nave-6";"14640";;"VILLA DEL RIO";"Córdoba";3;"957 176201";"957 176439";;"autorec@rectificadosautomovil.com";0;26;0,00;;;;;;1;
+"43302";"FERREXPOR";;;"Miguel de Cervántes, 16";"14640";;"VILLA DEL RIO";"Córdoba";3;;;;;0;26;0,00;;;;;;1;
+"43311";"SUMINISTROS CABRERA C. B.";;"E-14782494";"Matador de toros Antonio José Galán, 35";"14650";;"BUJALANCE";"Córdoba";3;"957 171430";"957 171430";;;0;26;0,00;;;;;;1;1
+"43401";"RAFAEL IGNACIO MACIAS NÚÑEZ";"SUMINISTROS MACIAS";"30204860-H";"C/ Miguel Vigara, 30";"14200";;"PEÑARROYA";"Córdoba";3;"957 560125";;;;0;26;0,00;;;;;;1;
+"43402";"DESGUACES GUAREÑA S. L.";;"B-14690424";"Mina Antolin, s/nº";"14200";;"PEÑARROYA-PUEBLONUEVO";"Córdoba";3;;;;;0;26;0,00;;;;;;1;1
+"43501";"ANTONIO CABALLERO ARCOS (EHLIS)";"SOCIO Nº 10431-5";"A-08014813";"Plaza Lope de Vega, 4";"14290";;"FUENTE OBEJUNA";"CÓRDOBA";3;;;;;0;25;0,00;;;;;;1;1
+"43601";"REPUESTOS LOS LLANOS S. L.";;"B-14676456";"Crta. del Puente, Km. 0";"14720";;"ALMODOVAR DEL RIO";"Córdoba";3;;;;;0;26;0,00;;;;;;1;
+"50001";"RAMON MARTIN S. A.";;"A-41007642";"Rafael Beca Mateos,1 Pol.Ctra. Amarilla";"41007";;"SEVILLA";"Sevilla";4;"954 998684";"954 998688 - 998686";;"ramonmartin@grupomartin.net";0;2;0,00;"PAGARÉ";;;;;0;
+"50002";"TORNILLERIA Y SERVICIOS S. L.";"Torsesa";"B-41111592";"Av. Montes Sierra, 5 - Pol. Ctra. Amarilla";"41007";;"SEVILLA";"Sevilla";4;"95 4670300";"95 4670683";"www.infonegocio.com/torsesa#http://www.infonegocio.com/torsesa#";;0;11;0,00;;;;;;1;
+"50003";"EURORECAMBIOS DEL CAMIÓN S. L.";;"B-90025560";"Autovía Sevilla-Málaga Km. 8,100";"41500";;"ALCALA DE GUADAIRA";"Sevilla";4;"954 350747";"954 367043";;"info@autorecambiosdelcamion.es";0;26;0,00;;"LA CAIXA";;"21001830910200181418";"ANTES TURBOSUR";1;
+"50004";"CECAUTO SUR S.A.";;"A-41695149";"C.T.M.S.  anexo  C/ Ronda de la Negrilla, s/n";"41006";;"SEVILLA";"Sevilla";4;"954 676 033";"95 4524903 - 4521508";;;0;27;0,00;;"BANE";;"00304296460000497271";;1;
+"50005";"DAKOLUB S. L.";;"B-41407214";"Polígono Alcalá X, Calle-1 Manzana-3  Nave-8";"41500";;"ALCALA DE GUADAIRA";"Sevilla";4;"95 4356690";"95 4358143";"www.dakolub.com#http://www.dakolub.com#";"proveedores@dakolub.com";0;26;0,00;"Transferencia Bancaria";;;;;1;
+"50006";"ARETUSA CAR S. L.";"ARETUSA";"B-41699513";"Pol. In. Pagusa  C/ Podenco, 51";"41007";;"SEVILLA";"Sevilla";4;"954 920186";"954 654952";;"aretusacar@supercable.es";0;26;0,00;;;;"20980297460132003973";;1;
+"50007";"MERCAMAQUINAS S. L.";;"B-41388125";"Pol. Ind. Majaravique, Calle-1 Nave-7";"41309";;"LA RINCONADA";"Sevilla";4;"954 915678";"954 903100";;"mercamaquinassl@hotmail.com";0;4;0,00;;;;"01822419540200021607";;1;6
+"50008";"ELECTRO REP. ALBEA S. A.";;"A-41353129";"Pol. Calonge, C/A, parcela 13";"41007";;"SEVILLA";"Sevilla";4;"954 360711 - 4367110";"954 435489";;;0;26;0,00;;"BSCH";;"00493034681810092531";;0;
+"50009";"MUÑOZ Y BRAVO SUM. INDUSTRIALES S. L.";;"B-41598624";"Comercio, 48 (Polígono Crta. Amarilla)";"41007";;"SEVILLA";"Sevilla";4;"954 260730";"954 675170";;"info@mbsuministros.es";0;26;0,00;"VISITAS L a J DE 17 A 19:30";"CAJA MADRID";;"20389835726000026088";;1;
+"50010";"RODAMIENTOS Y SERVICIOS S. L. (SE)";"ROYSE";"B-11609856";"Parque Sevilla Industrial C/PARSI-6 nº 1305-6-7";"41016";;"SEVILLA";"Sevilla";4;"95 4520992";"95 4524665";;;0;26;0,00;;;;;;1;
+"50011";"AUTO CARDAN S. L.";;"B-41001355";"Avda. de la Industria, 101";"41007";;"SEVILLA";"Sevilla";4;"954 518244";"954 527674";;;0;12;0,00;;;;;"G MORUJA - MEGA";1;
+"50012";"ANDEL AUTOMOCION S. A.";;"A-91648014";"Polígono Laguna Larga  C/ Laguna Larga Siete, nº 6";"41500";;"ALCALA DE GUADAIRA";"Sevilla";4;"954 076981";"954 076985 / 83";;"miguel@andelautomocion.com";0;26;0,00;;;;"01825468280201521268";;1;
+"50013";"GARCIA Y PEINADO S. L.";;"B-41012865";"Av. Tartessos, 15 (Pol. Los Girasoles)";"41907";;"VALENCINA DE LA CONCEPCION";"Sevilla";4;"954 391908";"954 392161";;;0;12;0,00;;"ANDALUCÍA";;"00043010730601857302";"OFICINAS EN AUTO CARDAN";1;
+"50014";"AUTO RECAMBIOS GOYA S. A. L.";;"A-41413550";"Pol. Calonge, C/ Azogue, 18";"41007";;"SEVILLA";"Sevilla";4;"954 359044-359149";"954 361304";;;0;12;0,00;;"CAJA MADRID";;"20389890886100005111";"NÚM. 50014 - ANTES CIAL. F. GARCIA";1;
+"50015";"RECHE SUMINISTROS INDUSTRIALES Y TORNILLERIA S. L.";;"B-91602250";"Torres de Albarracín,  63 B";"41016";;"SEVILLA";"Sevilla";4;"954 403057";"954 475278";;"reche@reche.es";0;26;0,00;;"IBAN: ES98";;"01280701100500003932";":";1;
+"50016";"COMERCIAL DOMLEZ S. L.";;"B-41020421";"c/ Torneo, 80";"41002";;"SEVILLA";"Sevilla";4;"954 903776";"954 907928";;"josemanuel@comercialdomlez.com";0;26;0,00;"RECIBO SIN DOMICILIAR";;;;;1;
+"50017";"FYSASUR S. L.";;"B-41479106";"Ali-Al Gomari, 5  Edf. Pineda local-1";"41013";;"SEVILLA";"Sevilla";4;"954 354092 - 352837";"954 352876";;;0;26;0,00;;;;;"INDICARAN DOMICILIO DE PAGO AL ACEPTAR";1;
+"50018";"GOIPE SEVILLA S. A.";;"A-41058801";"Parque Ind.Nuevo Calonge Calle-D Nave-31";"41007";;"SEVILLA";"Sevilla";4;"954 355318";"954 354251";"www.goipe.com#http://www.goipe.com#";"sevilla@goipe.com";0;9;0,00;;"CAJA AHORROS GRANADA";;"20310232970100042805";"CECOFERSA 60% Y 40%";1;
+"50019";"ESP. ELEC. LAUSAN S. A.";;"A-48057467";"Pol. Su Eminencia C/A, n4";"41006";;"SEVILLA";"Sevilla";4;"954 659011";"954 657156";;"joaquin@lausan.es";0;2;0,00;;;;;;1;
+"50020";"TECPRO QUALITY S. L. L.";;"B-91941781";"C/ Seis - Nave 36 - POL. LOS PALILLOS";"41500";;"ALCALA DE GUADAIRA";"Sevilla";4;"955 631521";"955 631521";;;0;26;0,00;;"BBVA";;;"ESTA FICHA ERA DE STD DEL MOTOR";1;
+"50021";"MERCAUTO RCA S. A.";"MERCAUTO";"A-41282393";"Pol. Calonge C/ Metalurgia, 7";"41007";;"SEVILLA";"Sevilla";4;"954 355001";"954 356665";;"jmp@mercautorca.es";0;4;0,00;;"BANKINTER";;"01280718060500000736";;1;
+"50022";"AUTO DISTRIBUCION HISPALIS S. L.";;"B-91327221";"A.Peña López,5-7-9 Pol. Ctra. Amarilla";"41007";;"SEVILLA";"Sevilla";4;"954 999262";"954 255039 - 672324";;;0;24;0,00;;;;;"GECORUSA";1;
+"50023";"ITURRI S. A.";;"A-41050113";"Av. Osborne (Pol. Ctra. Amarilla)";"41007";;"SEVILLA";"Sevilla";4;;;;;0;26;0,00;;;;;;1;
+"50024";"SUM. IND. FERR-MAQ S. A.";;"A-41092206";"Parque Emp. La Red C/ La Red, 13";"41500";;"ALCALA DE GUADAIRA";"Sevilla";4;"955 634390";"955 632059";;"administracion@ferrmaq.es";0;26;0,00;;;;;;1;
+"50025";"LUIS MOLEON S. L. (SE)";;"B-18338566";"Crta. Córdoba, Km. 436 (Junto Mercagranada)";"18080";;"GRANADA";"Granada";4;"955 634006";"955 630212";"www.luismoleon.com#http://www.luismoleon.com#";"sevilla@luismoleon.com";0;20;0,00;;"BBVA";;"01822359080102002769";;1;
+"50026";"M. CASCALES S. L.";;;"C/ Calzada Romana, 44  Empresarial Parque Plata";"41900";;"CAMAS";"Sevilla";4;"954 334357";"954 342635";;"mcascalessl@hotmail.com";0;26;0,00;;;;;;1;
+"50027";"AUTO REC. JIMENEZ S. L.";;"B-41835307";"C/ Evangelista, 63";"41010";;"SEVILLA";"Sevilla";4;;;;;0;7;0,00;;;;;;1;
+"50028";"ALIAUTO S. A.  (SE)";;"A-50030543";"Pol. Ind. Los Palillos Calle-15  Parcela-H";"41500";;"ALCALA DE GUADAIRA";"Sevilla";4;"95 5634732";"95 5630364";;"antonio.esteo@aliauto.com";0;19;0,00;;"BANKINTER";;"01289478150100004891";;1;
+"50029";"M.A. COMPONENTES S. L.";;"B-41300716";"C/ Principal, 22 (Pol. Indust. El Pino)";"41016";;"SEVILLA";"Sevilla";4;"954 510033";"954 510636";;"fajardo@ma-componentes.com";0;26;0,00;;;;;;1;
+"50030";"AUTO DISCO SUR S. A.";;"A-41043019";"Av. Kansas City (Pol. Calonge)";"41007";;"SEVILLA";"Sevilla";4;"954 359639";;;;0;26;0,00;;"BBVA";;;;1;
+"50031";"CAR ELECTRIK, S. L.";;"B-41089350";"Pol. Autopista, Calle-C Nave-5 (Parque Alcosa)";"41020";;"SEVILLA";"Sevilla";4;"954355678";"954529673";;"administrador@carelectriksl.e.telefonica.net";0;26;0,00;;"LA CAIXA";;"21002541170201018989";;1;
+"50032";"JUAN ANTONIO RODRIGUEZ LOPEZ";"J & A DISTRIBUCIONES";"28731842-N";"P.E. Cerro Cabeza Hermosa - Princ Asturias nav 8 N";"41500";;"ALCALA DE GUADAIRA";"Sevilla";4;"955 620702";"954 250364";;"lg@lgaltapresion.com";0;26;0,00;"PAGARÉ";;;;"ESTA FICHA ERA DE HIDRAZA S. L.";1;
+"50033";"ELECTROMECANICA TRIANA S. L.";;"B-41632639";"Dos Hermanas, 50 La Pañoleta";"41900";;"CAMAS";"Sevilla";4;"954 391970";"954 391970";;"triana@electrotriana.jazztel.es";0;18;0,00;"REPOSICION";;;;"DTO. RECAMBIOS MEGA Y HADU 20%";1;
+"50034";"QUIVIRA S. L.";;"B-41665878";"Pol. La Negrilla C/ Imprenta,64 Manzana-9 Nave-4";"41016";;"SEVILLA";"Sevilla";4;"954 523422";"954 255106";;"administracion@quivira.es";0;26;0,00;;"BBVA";;"01825468210011503089";;1;
+"50035";"LOPEZ GALLARDO SERV. ALTA PRESIÓN S. L.";;"B-91184754";"P.E. Cerro Cabeza Hermosa - Princ Asturias nav 8 N";"41500";;"ALCALA DE GUADAIRA";"Sevilla";4;"955 620702";"954 250364";;"lg@lgaltapresion.com";0;26;0,00;"PAGARÉ";;;;;1;
+"50036";"APLICACIONES OLEOHIDRÁULICAS S. A.";"APHISA";"A-41129347";"Pol.Ind. la Red, Parcela-19 Nave-3";"41500";;"ALCALA DE GUADAIRA";"Sevilla";4;"955 634310";"955 630731";;;0;26;0,00;;"BBVA";;"01825468240100100296";;1;
+"50037";"SALUD GARCÍA CRUZ";"DEYGE AUTOMOTIVE";"75349788-V";"C/ Arriba, 35";"41120";;"GELVES";"Sevilla";4;"659 969080";;;"mercagavi@hotmail.com";0;4;0,00;;;;"00495534852995032071";"ESTE NÚM. DE CLIENTE ERA REYSUM SEVILLA Y DESPUÉS ANEXOS, PINTURAS Y MAQUINARIA S. L.";1;
+"50038";"ANGEL GARCIA VEGA";"GARVE SUM. AUTO-DIESEL";"28279646-L";"Po. Ind. Calonge - C/ Zinc, 1";"41007";;"SEVILLA";"Sevilla";4;"954 368065";"954 358138";;"suministrogarve@hotmail.com";0;12;0,00;;;;"20980290270133044963";;1;
+"50039";"AUTO HERRAMIENTAS S. L.";;"B-28004844";"Ctra. de Carmona, 22";"41008";;"SEVILLA";"Sevilla";4;"954 21912";;;;0;26;0,00;;;;;;1;
+"50040";"MAQUINARIA Y SERVICIOS CARMONA S. L.";;"B-91010116";"Pinsapo, 21";"41500";;"ALCALA DE GUADAIRA";"Sevilla";4;;;;;0;26;0,00;;;;;;1;1
+"50041";"DAVA S. A. (SE)";;"A-30014484";"Crta. de Mairena, Km. 0,5 (Pol. Ind. El Chaparral)";"41500";;"ALCALA DE GUADAIRA";"Sevilla";4;"95 4367430";;"www.davasa.es#http://www.davasa.es#";;0;3;0,00;;;;;;1;
+"50042";"SUM. IND. Y FERRETERIA S. L.";"Suminder";"B-41694753";"Pol.Navisa, C/8, n 48";"41006";;"SEVILLA";"Sevilla";4;"954 663036";"954 663044";;;0;26;0,00;"FRA. PROFORMA";;;;;1;
+"50043";"JUAN LOPEZ SERRANO";;"28423804-J";"Alonso de Lugo, 11";"41014";;"SEVILLA";"Sevilla";4;"954 691515";"954 691515";;;0;26;0,00;;"CAJA SAN FERNANDO";;"20710918950000677039";;1;
+"50044";"EMILIO ORTEGA RAMOS";;"28674693-H";"Mar Menor, 3 - 2ºD";"41015";;"SEVILLA";"Sevilla";4;"954 955319";"954 955319";;;0;26;0,00;;;;"20980177630132003035";;1;1
+"50045";"CENTRAL DE AUTOMOCION S. A.";"CAUTOSA";"A-28792984";"Pol. Ind. Store C/ H, 1 Nave 3";"41008";;"SEVILLA";"Sevilla";4;"954 355775";"954 355855";;;0;26;0,00;"REPOSICIÓN - Delegación de Madrid";;;;;1;
+"50046";"FERRETERÍA UNCETA S. A.";;"A-20020277";"C/ Alava, 9 (Pol. Ctra. Amarilla)";"41007";;"SEVILLA";"Sevilla";4;;"954 513637";;;0;26;0,00;"CASA CENTRAL EIBAR";;;;;0;
+"50047";"CASTRO JARANA SEVILLA S. L. U";;"B-41024134";"Pol. Ind. Calonge  C/ Metalurgia, 49";"41007";;"SEVILLA";"Sevilla";4;"954359891";"954359266";;;0;2;0,00;;;;"00494975442117949554";;1;
+"50048";"J. L. GANDARA Y CIA. S. A.  B.";;"A-48006894";"Salmedina, s/nº (Edificio Torrepalmera)";"41012";;"SEVILLA";"Sevilla";4;;;;;0;26;0,00;;;;;;1;1
+"50049";"SANCHEZ PAMPLONA S. L.";;"B-28599082";"Pol. Ind. Store C/B nave 25";"41002";;"SEVILLA";"Sevilla";4;;;;;0;26;0,00;"LETRA ACEPTADA";;;;;1;
+"50050";"DISTRIBUIDORA TORNEO S. A.";;"A-41042599";"Torneo, 78";"41002";;"SEVILLA";"Sevilla";4;"954 215380";"954 907928";;;0;26;0,00;;;;;"FILIAL CIAL. DOMLEZ";1;
+"50051";"GOMAS TRIANA S. L.";;"B-41618752";"Marcos Hiraldez Acosta, 8";"41010";;"SEVILLA";"Sevilla";4;"954 343702";"954 343708";;"gomastriana@hotmail.com";0;26;0,00;;;;;;1;
+"50052";"ENRIQUE ABOZA MARTINEZ";"CAUCHOS ALJARAFE";"27279697-H";"Parroco Pastor Portillo, Blq. 2  L-8";"41950";;"CASTILLEJA DE LA CUESTA";"Sevilla";4;"954 165258 - 164184";"954 164184";;;0;26;0,00;;;;"01823199440201511871";;1;
+"50053";"GOMA MOVIL - GOMA PAZ S. L.";;"B-91023739";"Baltasar de Alcazar, 12  Local-3";"41008";;"SEVILLA";"Sevilla";4;"954 434643 - 361679";"954 430832";;;0;26;0,00;;;;;;1;
+"50054";"CELIA MACHIO ALEXANDRE";"VIMASUR";"28858406-F";"Pol. Ind. La Red Norte, Calle-6  nº 12-14";"41500";"17254";"ALCALA DE GUADAIRA";"Sevilla";4;"955 630 886";"955 334494";;"vimasur1@hotmail.com";0;26;4,00;;;;"20710946180137315035";;1;1
+"50055";"TORNIROD S. L. (EHLIS)";"ASOCIADO Nº 25693-3";"A-08014813";;;;"SEVILLA";"sevilla";4;;;;;0;25;0,00;;;;;;1;1
+"50056";"ROBERTO MANFREDI LORENZO";;"28794840-J";"Baltasar de Alcazar, Bloque-10 Local-2";"41008";;"SEVILLA";"Sevilla";4;;;;;0;26;0,00;;;;;;1;1
+"50057";"MANUEL VAZQUEZ OJEDA";;"28354129-M";"C/ Posadas, 1";"41006";;"SEVILLA";"SEVILLA";4;"678581184";;;"mvazquez2006@hotmail.com";0;26;0,00;;;;;;1;1
+"50058";"GENERAL SUM. IND. Y DISTRIB. ANDALUZA S. C.";"GESDISA";"J-91862284";"Escofina, Blq. 4 nº 5 (Pol. Ind. Store)";"41008";;"Sevilla";"SEVILLA";4;"954 436397";"954 436397";"www.gesdisa.es#http://www.gesdisa.es#";"administracion@gesdisa.es";0;26;0,00;;"LA CAIXA";;"21002409580200107609";;1;1
+"50059";"ANDALUCIA SIN CARNET S. L.";;"B-91794743";"Metalurgia, 53 (Pol. Ind. Calonge)";"41007";;"SEVILLA";"SEVILLA";4;"955 124414";;;"recambios@andaluciasincarnet.es";0;0;0,00;;;;;;1;1
+"50060";"PINO IGLESIAS E HIJO S. L.";;"B-91168344";"Polígono El Malecón, s/nº";"41300";;"SAN JOSE DE LA RINCONADA";"Sevilla";4;;;;;0;4;0,00;;;;;;1;1
+"50061";"MOISES NUÑEZ JIMENEZ";"ELECTROMECANICA Y SERVICIOS";"27298609-R";"Regla León, 11 (Barrio León)";"41010";;"SEVILLA";"Sevilla";4;"670330119 - 954344066";;;;0;26;0,00;;"BS";;"00496175912195069370";"ES SERVICIO TECNICO";1;1
+"51101";"JUAN MANUEL MEDINA GARCÍA";;"28548353-V";"Polígono Fontanar, 25";"41530";;"MORON DE LA FRONTERA";"Sevilla";4;"955 854421";"955 853049";;;0;26;0,00;;"BSCH";;"31870806952330794021";;1;
+"51102";"SUM. FERRET. SOLANO S. L.";;"B-41829045";"Avda,de Pruna, 10";"41530";;"MORON DE LA FRONTERA ";"Sevilla";4;"955 852463";"955 851289";;;0;10;0,00;;"B. PASTOR";;"00720861870000100110";;1;
+"51103";"MEGA MAQUINARIA S. L.";;"B-41954363";"Polígono Fontanar, 25";"41530";;"MORON DE LA FRONTERA";"Sevilla";4;"955 854421";"954 850445";;"juanmanuelmedinagarcia@yahoo.es";0;26;0,00;;;;"00720861850000100492";;1;
+"51104";"FERRETERIA ARRONES S. L. (EHLIS)";;"A-08014813";"Avda. del Pilar, 1";"41530";;"MORON DE LA FRONTERA";"Sevilla";4;;;;;0;25;0,00;;;;;;1;1
+"51201";"SUM. IND. Y AGRÍCOLAS GONVER S. L.";;"B-41237579";"Av. de Andalucía, 79";"41560";;"ESTEPA";"Sevilla";4;"955 912857";"955 913913";;"info@gonver.es";0;10;0,00;;"CAJASOL";;"20980639400372005483";;1;
+"51301";"FERRETERIA RIVERO S. L. U.";;"B-91441790";"Av. Costaleros, 9";"41590";;"LA RODA DE ANDALUCIA";"Sevilla";4;"954 016431 - 016294";"954 015038";;"ferreteriariveropedidos@gmail.com";0;26;0,00;;"UNICAJA";;"21030714110030001209";;1;
+"51501";"FERREARAHAL S. L. L. (EHLIS)";"SOCIO Nº 25126";"B-91563387";"Pol. Ind. Huerto Ordóñez C/ Caleros, 12";"41600";;"ARAHAL";"Sevilla";4;"954840216";;;"ferre-arahal@hotmail.com";0;25;0,00;;;;;;1;1
+"52101";"TRANSMIAUTO DOS S. L.";;"B-41490616";"Pol. Ind. CADESA C/ Terral, 17";"41700";;"DOS HERMANAS";"Sevilla";4;"954 721083";"955 676159";;"transmiauto@transmiauto.com";0;26;0,00;;"BSCH";;"00491323122810176794";;1;
+"52102";"SUMINISTROS BEZABALA S. A.";;"A-48092886";"Iruña, 1-bis Bajo";"48014";;"BILBAO";"Vizcaya";4;"954 690132";"954 690206";;"sevilla@bezabala.com";0;26;0,00;;"B. PASTOR";;"00720816440000100363";;1;
+"52103";"JIMENEZ MAÑA RECAMBIOS  S. L. U.";;"B-41679713";"Pol. Ind. La Isla C/ Rio Viejo, 81 - Parc. 16";"41703";;"DOS HERMANAS";"Sevilla";4;"954  937753 - 937707";"954 937701";;"maquinaria@jimenezmana.es";0;1;0,00;;"ANDALUCIA";;"00753445530500007093";;1;
+"52104";"ALMACENES MOLERO E HIJOS S. L.";;"B-41292814";"Armeros, 27-29";"41700";;"DOS HERMANAS";"Sevilla";4;"955 668216 -668208";"955 666376";;;0;26;0,00;;;;;;1;
+"52105";"ALMACENES MORA SUCESORES S. L.";;"B-41126640";"Plaza Emigrante, 10";"41700";;"DOS HERMANAS";"Sevilla";4;"954 720320";"954 724647";;;0;26;0,00;;;;;;1;
+"52106";"SUM. DE FERRETERIA IDEAL S. L. U.";;"B-91418756";"Burgos, 41";"41700";;"DOS HERMANAS";"Sevilla";4;"95 4725812";"95 5667111";;"idealdistribuidora@telefonica.net";0;26;0,00;;;;;;1;1
+"52201";"CAMGUT S. L.";"REPUESTOS UTRERA";"B-41351180";"Carretera Utrera-Carmona, 34";"41710";;"UTRERA";"Sevilla";4;"954 860039";"955 860631";;;0;26;0,00;;"BBVA";;"01826460850201502318";;1;
+"52202";"LAUSAN S. A.";"EUROTIENDA LAUSAN";"A-48057467";"Avda. de los Palacios, 2";"41710";;"UTRERA";"Sevilla";4;"955 867760";"955 687761";;"oficinautrera@lausan.es";0;2;0,00;"90 DÍAS";"PAGARÉ";;;;1;
+"52203";"JOSE LUIS RODRIGUEZ SALORIO";;"32607748-G";"Avda. la Fontanilla, 83";"41710";;"UTRERA";"Sevilla";4;"955 861366";;;;0;26;0,00;;"CAJA Y PENSIONES DE BARCELONA";;"21004213142200005657";;1;1
+"52301";"SUMINISTROS HERMANOS BILLETES  S. L.";;"B-41643461";"José Fernadez Ruiz, 71";"41740";;"LEBRIJA";"Sevilla";4;"95 5972918";"95 5975555";;"lebrija@suministrosherbi.com";0;10;0,00;;"BANESTO";;"00304067170172000079";;1;
+"53101";"SUM. IND. DEL ALJARAFE S. L.";;"B-41580671";"Polígono P.I.B.O. A-49 Av. Mairena del Aljarafe, 3";"41110";"70";"BOLLULLOS DE LA MITACIÓN";"Sevilla";4;"954 717288";"954 714602";;"comercial@sumaljarafe.es";0;26;0,00;;"BBVA";;"01825518180100936918";;1;
+"53102";"MAQUIDOSA S. L.";;"B-41783127";"Polígono Navexpo, 34";"41907";;"VALENCINA DE LA CONCEPCION";"Sevilla";4;"955 998220";"955 998219";;"maquidosa@terra.es";0;26;0,00;;"BSCH";;"00493730302814004161";;1;
+"53103";"RECAMBIOS ORTA S. L.";;"B-41125469";"Pol. NAVEXPO, 28 (Ctra. Camas-Santiponce)";"41907";;"VALENCINA DE LA CONCEPCIÓN";"Sevilla";4;"955 996633";"955 996615";;"reorta@recambiosorta.com";0;26;0,00;"Giro vto. 20";"CAJA SUR";;"20240305113300028879";;0;
+"53201";"EQUINSE S. A.";;"A-41211220";"Horizonte, 3";"41927";;"MAIRENA DEL ALJARAFE";"Sevilla";4;"954 183412";"954 184561";;"rmartinez@equinse.com";0;26;0,00;;;;;;1;
+"53202";"SEVILLANA DE MAQUINARIA S. A.";;"A-41164666";"Parq. Ind. P.I.S.A. Nobel 2 nave";"41927";;"MAIRENA DEL ALJARAFE";"Sevilla";4;;;;;0;26;0,00;;;;;;1;
+"53203";"FERROSUR";;;"Pol. PISA C/ Horizonte, 3";"41927";;"MAIRENA DEL ALJARAFE";"Sevilla";4;"954 183111";"954 184561";;;0;26;0,00;;;;;;1;
+"53301";"MISPALIS DE SUMINISTROS S. L. U. (EHLIS)";;"A-08014813";"Pol. Ind.  Av. Mairena del Aljarafe, 4";"41110";;"BOLLULLOS DE LA MITACION";"Sevilla";4;;;;;0;25;0,00;;;;;;1;1
+"53401";"REPUESTOS EL TORUÑO S. L.";;"B-41779943";"Pol. Isla Mayor, Ctra. El Toruño Nave 1";"41140";;"VILLAFRANCO DEL GUADALQUIVIR";"Sevilla";4;"955 773039";"955 773039";;;0;26;0,00;;"CAJA RURAL";;"30790207570201790009";;1;
+"53501";"TECNOALBEA S. A.";;"A-91218487";"Pol. Ind. Calonge, C/ Acero, nave - 6";"41007";;"SEVILLA";"Sevilla";4;"954 367467";"954 354491";;"asanchez@grupoalbea.com";0;21;0,00;;;;;;0;
+"53502";"EQUIPOS Y RECAMBIOS CCM S. L.";;"B-91923383";"Pol. Ind. La Estrella   C/ Carnicero, nave - 16";"41100";;"CORIA DEL RIO";"Sevilla";4;"954 775775";"954 779158";"www.megatest.es#http://www.megatest.es#";"administracion@ccmautomocion.com";0;26;0,00;;"CAJASUR";;"02370314509166971568";;1;1
+"54101";"AUTO REC. LOS MIRADORES S. C.";;"G-41659178";"Urb.Los Miradores, 63-A";"41400";;"ECIJA";"Sevilla";4;;;;;0;26;0,00;;;;;;1;
+"54201";"FRANCISCO MACIAS NAVARRO";;"28912883C";"Virgen de los Reyes, 55";"41410";;"CARMONA";"Sevilla";4;"954 191858";"954 191858";;;0;26;0,00;;"BBVA";;"01821750240102223940";;0;
+"54202";"JOSE ENRIQUE ROJAS CARRETON";;"30222477-V";"Urb. Torre Palma, 104 bis";"41410";;"CARMONA";"Sevilla";4;"605 625757 - 651 428912";;;"rr_kike@hotmail.es";0;26;0,00;;;;;;1;1
+"54203";"AUTO RECAMBIOS CARMO S. L.";;"B-91640292";"Polígono Ind. El Pilero C/ Calero, 1";"41410";;"CARMONA";"Sevilla";4;"954 196026";;;;0;25;0,00;;;;;;1;1
+"60001";"PINTURAS IND. BARBERA S. A.";;"A-11044047";"Ronda Vigilancia, s/n (Pol. Zona Franca)";"11011";;"CADIZ";"Cádiz";4;"956 256956 - 279616";"956 272632";;"barbera@pinturasbarbera.net";0;26;0,00;;;;;"LETRA ACEPTADA";1;2
+"60002";"HIERROS CERVERA S. A.";;"A-11006665";"Villa de Rota, Local-D  (Pol. Zona Franca)";"11011";;"CADIZ";"Cádiz";4;"956 263502 - 251216";"956 251216";;;0;26;0,00;;;;;;0;
+"60003";"BIGUISUR S. L.";;;"Ronda Vigilancia, s/n";"11011";;"CADIZ";"Cádiz";4;"956 278042";"956 274568";;;0;26;0,00;;;;;;0;
+"60004";"GANDARA Y CIA S. A.";;"A-48006894";"Linea de La Concepción, 11 P. Zona Franc";"11011";;"CADIZ";"Cádiz";3;;;;;0;26;0,00;;;;;;1;
+"60005";"PAULINO FREIRE S. A.";;"A-11000538";"Santo Domingo, 1";"11006";;"CADIZ";"Cádiz";4;"956 274400 - 274404";"956 259516";;;0;26;0,00;;;;;;0;
+"60006";"SUM. IND. RAME S. L.";;"B-11411139";"Parque Ind Poniente C/Bulgaria-1.6 P. Zona Franca";"11011";;"CADIZ";"Cádiz";4;"956 264659-010943-074747";"956 279657";;;0;26;0,00;;"UNICAJA";;"21030642980030004294";;1;1
+"61101";"CIAL. RAMON MARTIN S. A.";"RAMASA";"A-11607140";"Córdoba, 22";"11405";;"JEREZ DE LA FRONTERA ";"Cádiz";4;"956 313732 - 306763";"956 308714";;"ramasa@telefonica.net";0;26;0,00;"SIN DOMICILIAR";;;"01280714250500000305";;0;4
+"61102";"AUTO SPORT ANDALUCIA S. L. (JR)";;"B-11621984";"Avda.  Europa, 56";"11405";;"JEREZ DE LA FRONTERA";"Cádiz";4;"956 358515";"956 313416 - 184959";"www.auto-sport.es#http://www.auto-sport.es#";"mgarcia@autosport.24ruedas.com";0;2;0,00;;"BSCH";;"00494975412610021041";;0;5
+"61103";"MAQUIHERSA S. L.";;"B-11668696";"Polígono Autopista, 47";"11405";;"JEREZ DE LA FRONTERA ";"Cádiz";4;"956 307532 - 307543";"956 307901";;"info@maquihersa.es";0;26;0,00;;"ES 27";;"00753040810602218034";;1;2
+"61104";"AUTO MOTO NAVARRO S. L.";;"B-29556396";"Avda. Blas Infante, 12";"11401";;"JEREZ DE LA FRONTERA";"Cádiz";4;"956 140433 - 140200";"956 142315";;"automoto@navarrohnos.com";0;2;0,00;;"BANCO ANDALUCIA";;"00043040940500396502";;0;2
+"61105";"JPM GESTION DE RECAMBIOS S. L.";;"B-11759776";"Polígono Ind. El Portal, nave-6  manzana-13C";"11406";;"JEREZ DE LA FRONTERA";"Cádiz";4;"956 147073-74";"956 140057";;;0;6;0,00;;"UNICAJA";;"00043040900602576524";"ANTES JOSÉ PUYOL VARGAS";1;2
+"61106";"MAQ. AGRICOLA PICO";;;"Av. Fernando Portillo, nave 5";"11405";;"JEREZ DE LA FRONTERA ";"Cádiz";4;"956 182776";"956 182776";;;0;26;0,00;;;;;;1;
+"61107";"RODAPROIN S. L. (JER)";;"B-11488533";"C/ Marruecos s/n  Fase III Nave 1 (Pol. El Portal)";"11408";;"JEREZ DE LA FRONTERA";"Cádiz";4;"956 353236";"956 353276";;"rodaproin@hotmail.com";0;26;0,00;;"BANESTO";;"00304088910001265271";;1;2
+"61108";"SUMIJEREZ S. L.";;"B-11739703";"Av. Europa-Polígono Autopista, Parcela-B  Nave-19";"11405";;"JEREZ DE LA FRONTERA";"Cádiz";4;"956 313105";"956 181408";;"comercial@sumijerez.net";0;26;0,00;"CONFIRMING";;;;;1;1
+"61109";"RECASUR S. L.";;;"Ctra. de Arcos, Km.2,5 Naviarcos nave 6";"0";;"JEREZ DE LA FRONTERA ";"Cádiz";4;"956 322152";"956 322161";;;0;26;0,00;;;;;;1;
+"61110";"EL MOTORISTA S. L.";;"B-11606761";"Avenida de Europa, 58";"11405";;"JEREZ DE LA FRONTERA ";"Cádiz";4;"956358500";"956358501";;"alonso@elmotorista.es";0;2;0,00;;"BS";;"00494975492910055728";;1;
+"61111";"CASH DE LUBRICANTES S. L.";;"B-11688603";"Pol.Ind.Guadalquivir, nave 40";"11402";;"JEREZ DE LA FRONTERA";"Cádiz";4;"956 140322";"956 141167";;;0;26;0,00;;"CAJASUR";;"20240403693300030757";;0;
+"61112";"LA CASA DE LA HERRAMIENTA S. A.";;"A-11614948";"Ctra. de Cortes Km 1,2";"11405";;"JEREZ DE LA FRONTERA ";"Cádiz";4;"956 348614";"956 168209";;;0;26;0,00;;;;;;1;
+"61113";"DIRABA";;"E-117200513";"Arquitecto José Vargas, Nave-1";"11408";;"JEREZ DE LA FRONTERA";"Cádiz";4;"956 144425";"956 141738";;;0;26;0,00;;"CAJA SAN FERNANDO SEVILLA Y JEREZ";;"20711192280000105039";;0;
+"61114";"FERRETERIA DEL GUADALETE S. A.";;"A-11612371";"Avenida Europa, 7";"11405";;"JEREZ DE LA FRONTERA";"Cádiz";4;"956 319612";"956317938";;"ferreteria@fegusa.net";0;9;0,00;"90 días";;;;;1;1
+"61115";"LUBRINTER S. L.";;"B-11656220";"Parque Empresarial - Av. de la Ilustración, 20";"11407";;"JEREZ DE LA FRONTERA";"Cádiz";4;"956 300800-313408";"956 312969";;"comercial@lubrinter.es";0;26;0,00;;;;"00810329150001072708";;1;1
+"61116";"REC. Y SUM. GALVEZ S. L.";;"B-11822517";"Parque Empresarial - C/ Einstein, 7";"11407";;"JEREZ DE LA FRONTERA";"Cádiz";4;"956 302929 - 900 702802";"956 308981";;"info@recambiosgalvez.es";0;0;0,00;;"ES63";;"00753041280600735251";;1;1
+"61117";"BAHIA SIERRA S. L.";;"B-11713732";"Batalla de Sotillo, 14";"11405";;"JEREZ DE LA FRONTERA";"Cádiz";4;"956 339915";"956 325615";;;0;26;0,00;;"CAJASOL";;"20711200100021850031";;1;1
+"61120";"DAVA S. A. (CA)";;"A-30014484";"Parque Empresarial, Av. Tecnologia,  parcela B-6";"11407";;"JEREZ DE LA FRONTERA";"Cádiz";4;"956 182462";;"www.davasa.es#http://www.davasa.es#";;0;3;0,00;;;;;;1;1
+"61121";"RECAMBIOS MANUEL SANCHEZ S. L.";;"B-11861408";"Parque Empresarial Oeste, Avda.  Rota, 13";"11408";;"JEREZ DE LA FRONTERA";"Cádiz";4;"956 353637";"956 353639";;"recambiosmanuelsanchez@gmail.com";0;26;0,00;;"B. ANDALUCIA";"C/ Larga, 18";"00753040820602620666";;1;1
+"61122";"RUBYSAN S. C.";;"J-11913498";"Pol. Ind. El Portal C/ Marruecos, 7";"11408";;"JEREZ DE LA FRONTERA";"Cádiz";4;"956353391";"956143574";;"info@rubysan.es";0;26;0,00;;;;;;1;1
+"61133";"SANROTEC S. L.";;"B-11826138";"Avda. Sanlúcar, naves Regia nº 8";"11408";;"JEREZ DE LA FRONTERA ";"Cádiz";4;"956 140937";"956 147021";;"sanrotec@sanrotec.com";0;18;0,00;;"BANCO ATLANTICO";"Santa María, 9";"00080411491100334356";"SERVICIO TECNICO DTO. RECAMBIOS MEGA Y HADU 20 %";1;1
+"61201";"SUM. PINTURAS Y MAQ. S.  L.";"SUPIMA";"B-11279098";"Pol. El Palmar P-9 E-C N-12";"11500";;"PUERTO DE SANTA MARIA";"Cádiz";4;"956 872537";"956 543900";;"supimasl@telefonica.net";0;26;0,00;;"BBVA";;"01821602190010101907";;1;3
+"61202";"RECAMBIOS GARRIDO";;"31322467-D";"Avda. Valencia, 15 A (Bda. Las Nieves)";"11500";;"PUERTO DE SANTA MARIA";"Cádiz";4;"956 873803";"956 543507";;;0;26;0,00;;"UNICAJA";;"21034049630030002000";;1;
+"61203";"SUM. IND. BAHIA S. L.";;"B-11042777";"Los Toreros, 26";"11500";;"PUERTO DE SANTA MARIA";"Cádiz";4;"956 854022 - 870853";"956 873352";;;0;10;0,00;;;;;;1;
+"61204";"PEDRO ALVAREZ CHIA";;"27600866-S";"Carmen Campos Panice, 5";"11500";;"PUERTO DE SANTA MARIA";"Cádiz";4;"956 852576";"956 852576";;;0;26;0,00;;;;;;0;
+"61205";"GESTION Y SERVICIO DEL COLOR S. L.";"GESECO";"B-91156265";"C/ Telar - nave, 12 (Pol. Ind. El Palmar)";"11500";;"PUERTO DE SANTA MARIA";"Cádiz";4;"956 872537";"956 543900";;;0;26;0,00;;;;"01825477580201502711";;1;
+"61206";"MOTOCAR S. A.";;"A-11042660";"Virgen de los Milagros, 41-43";"11500";;"PUERTO DE SANTA MARIA";"Cádiz";4;"956 541219";"956 540729";;;0;2;0,00;;;;;;1;
+"61207";"REC. MORALES E HIJOS S. L.";;"B-7209952";"C/ Matías Balseras, 20";"11500";;"PUERTO DE SANTA MARIA";"Cádiz";4;"956 852626";"956 852630";;"direccion@recambiosmorales.es";0;25;0,00;"60 días";;;;;1;1
+"61301";"DRAGADOS OFFSHORE S. A.";;"A-78109402";"Bajo de la Cabezuela, s/nº";"11510";;"PUERTO REAL";"Cádiz";4;;;;;0;26;0,00;;;;;;1;
+"61302";"SERFLUID S. L.";;"B-11315587";"Mayor, 7 (Urbanización Río San Pedro)";"11519";;"PUERTO REAL";"Cádiz";4;"956 478429";"956 478856";"www.serfluid.com#http://www.serfluid.com#";"info@serfluid.com";0;26;0,00;;;;;;1;
+"61303";"HESPERIA INTERNACIONAL S. L.";;"B-28567659";"Polígono Ind. Aguacate, C/ Haya, 7";"28044";;"MADRID";"Madrid";4;;;;;0;26;0,00;;;;;;1;1
+"61401";"CRISTOBAL GUERRERO NIÑO";"AUTO RECAMBIOS CRISTOBAL";"31628975-L";"Avda. Carretera del Puerto, 6";"11540";;"SANLUCAR DE BARRAMEDA";"Cádiz";4;"956 380087";"956 382319";;"administracion@autorecambioscristobal.com";0;26;0,00;"60 días";"CAJA SAN FERNANDO";;"20711245340002273033";;1;1
+"61501";"INDUSTRIAS GARRUCHO S. A.";;"A-11614682";"Doctor Fleming, 3-7";"11648";;"ESPERA";"Cádiz";4;"956 720012";;;;0;26;0,00;;;;;;1;1
+"62101";"RECAMBIOS SEBASTIAN S. L.";;"B-11264934";"Avda. Reyes Católicos, 8";"11130";;"CHICLANA DE LA FRONTERA ";"Cádiz";4;"956 401452";"956 405630";;"comercial@recambiossebastian.com";0;26;0,00;;;;"00304074310000018172";;1;2
+"62102";"DIEGO GARCÍA BAIZAN";"SUM. IND. BAIZAN";"31397369-T";"Artesanos, 49 (Pol. Indust. El Torno)";"11130";;"CHICLANA DE LA FRONTERA";"Cádiz";4;"956 530662";"956 408499";;;0;26;0,00;"PAGARE";;;;;1;
+"62103";"FERRETERIA MONTERO S. L.";;"B-11207503";"Antonio Biondi, 1";"11130";;"CHICLANA DE LA FRONTERA";"Cádiz";4;"956 400658";"956 532952";;;0;26;0,00;;"BSCH";;"00490793532311035606";"domicilio de envio: Pol. Indust. Urbisur - C/ Fernando Magallanes, 11-12";1;
+"62104";"RODAPROIN S. L. (CH)";;"B-11488533";"Avda. Cádiz, 23 (Pol. Ind. Pelagatos)";"11130";;"CHICLANA DE LA FRONTERA";"Cádiz";4;"956 532281";"956 537370";;"chiclana@rodaproin.com";0;26;0,00;;"BANESTO";;"00304088910001265271";;0;2
+"62105";"SUYFA S. L.";;"B84995711";"Pol. Ind. Pelagatos, Nave 1-A (Mod. 3B-24)";"11130";;"CHICLANA DE LA FRONTERA";"Cádiz";4;;;;;0;;;;;;;;1;1
+"62106";"FIXUNE S. L.";;"B-72125289";"C/ de la Unión, 35 (Pol. Ind. Pelagatos)";"11130";;"CHICLANA DE LA FRONTERA";"Cádiz";4;"956 066876";"856 101992";;"davidperez@fixune.es";0;26;0,00;;;;;;1;1
+"62201";"MANUEL LUNA VERDUGO";"SUMINISTROS AMERICANOS";"31404130-E";"General García de la Herranz, 12";"11100";;"SAN FERNANDO";"Cádiz";4;"956 881817";"956 885752";;"comercial@suministrosamericanos.es";0;26;0,00;;;;;;1;
+"62203";"JOSE LUNA NUÑEZ";;"31341449-Q";"General García Herranz, 12";"11100";;"SAN FERNANDO";"Cádiz";4;"956 881817";"956 881817";;;0;26;0,00;;"BANCO ATLANTICO";;"00080415241150050000";;1;
+"62301";"CARLOS LEAL DE LA FLOR";"CAMPO Y HOGAR";"52.301.422-C";"Pascual Junquera, 42";"11140";;"CONIL DE LA FRONTERA";"Cádiz";4;"956 444243";"956 441413";;;0;26;4,00;"PAGARÉ";;;;;1;
+"63101";"AUTO SPORT ANDALUCIA S. L. (ALG)";;"B-11621984";"Avda. Europa, 56";"11405";;"JEREZ DE LA FRONTERA";"Cádiz";4;"956 661888 - 662848";"956 662746";;;0;2;0,00;;"BSCH";;"00494975412610021041";;0;4
+"63102";"REPUESTOS ALGESUR S. L.";;"B-11466208";"Los Arbolitos, s/nº (Crta. Málaga, Km. 108)";"11205";;"ALGECIRAS";"Cádiz";4;"956 630634";"956 654005";;"paco@algesur.es";0;4;0,00;;"BSCH";;"00494186722214004613";;1;5
+"63103";"FRANCISCA MEJIAS PRIETO";;"31830797-Q";"Los Arbolitos, s/nº (Crta. Málaga, Km. 108)";"11205";;"ALGECIRAS";"Cádiz";4;"956 630634";"956 654005";;"ricardo@algesur.es";0;4;4,00;;"BSCH";;"01280733260500004783";;1;
+"63104";"ALIAUTO S. A. (ALG)";;"A-50030543";"Metalúrgicos, 1 (Barrio de los Pastores)";"11206";;"ALGECIRAS";"Cádiz";4;"956 572867 - 572744";"956 603333";;"aliauto@aliauto.com";0;19;0,00;;"BANKINTER";;"01289478150100004891";;1;2
+"63105";"ALMACENES METALURGICOS S. A.";;"B-11073418";"Av Algeciras,parc. H-9 Pol.Cortijo Real";"11206";;"ALGECIRAS";"Cádiz";4;"956 573968";"956 574088";;;0;26;0,00;;;;;;1;
+"63106";"AUTO PEDEMA S. L.";;"B-11079779";"Avda.Virgen del Carmen, 20";"11204";;"ALGECIRAS";"Cádiz";4;"956 660560";"956 660560";;"pedema@ono.com";0;26;0,00;;"SANTANDER";;"00303368350000278271";;1;
+"63107";"REPUESTOS ORCHA S. L.";;"B-72135890";"Ctra. Cádiz-Málaga, Km. 108";"11205";;"ALGECIRAS";"Cádiz";4;"956 587241";"956 631707";;"repuestosorcha@cecauto.com";0;27;0,00;;"POPULAR";;"00750595130500062214";;1;
+"63108";"DISCARROCERIA S. L.";;"B-11431210";"Los Arbolitos, s/nº (Crta. Málaga, Km. 108)";"11205";;"ALGECIRAS";"Cádiz";4;"956 630634";"956 654005";;"algesur@grunosur.com";0;4;0,00;;"BSCH";;"00490132512511815999";;1;1
+"63110";"SUPINSUR S. L.";;"B-11486396";"Ctra. Nacional 340,  Km. 108";"11205";;"ALGECIRAS";"Cádiz";4;"956 634095";"956 634095";;"supinsur@hotmail.com";0;26;0,00;;"BBVA";;"01825477510100000666";;1;
+"63111";"SUM. Y MANTENIMIENTOS TORINSUR";;"B-72092695";"C/ Ubrique, 1";"11206";;"ALGECIRAS";"Cádiz";4;"956 603344";"956 605400";;"comercial@torinsur.com";0;26;0,00;;;;"21034034630030002374";;1;
+"63112";"DISTRIBUCIONES Y SUM. EL GLOBO S. L. (EHLIS)";;;"Avda. de Bruxelas, 8";"11205";;"ALGECIRAS";"Cádiz";4;;;;;0;25;0,00;;;;;;1;1
+"63113";"CASA PASTOR S. A.";;;"Avda. Virgen del Carmen, 7";"11201";;"ALGECIRAS";"Cádiz";4;"956 652400 - 652500";;;"cristina@casapastor.es";0;9;0,00;;;;;;1;
+"63133";"ELECTROMECANICA RIOS S. L.";;"B-11544392";"Nuevas Colinas, Blq. 8 1º-A";"11205";;"ALGECIRAS";"Cádiz";4;"956 605726 - 629478441";"956 571404";;"elctromecanicarios@wanadoo.es";0;18;0,00;;"BBVA";;"01825528720201505050";;1;1
+"63201";"REP. DE MAQUINARIA CAMPO DE GIBRALTAR SLL";;"B-72194483";"Crta.Térmica,s/n - Nave-1 Pol.Palmones II";"11379";;"LOS BARRIOS";"Cádiz";4;"856 099743";"856 099744";"www.yuba.es#http://www.yuba.es#";"comercial@remacagi.es";0;26;0,00;;;;"00753154710602179426";"ANTES YUBA";1;5
+"63203";"RODAPROIN S. L. (LB)";;"B-11488533";"C/ Galeón, 26 (Pol. Ind. Palmones)";"11379";;"LOS BARRIOS";"Cádiz";4;"956 677548";"956 677950";;"rodaproin@hotmail.com";0;26;0,00;;"BANESTO";;"00304088910001265271";;1;2
+"63204";"RANELL LOGISTICS S. L.";;"B-29753357";"Pol. Ind. Palmones II  C/ Velero, 6";"11370";;"LOS BARRIOS";"Cádiz";4;"956 677970";"956 677942";;;0;26;0,00;;;;"00043281190600061765";;1;
+"63205";"MATERIALES Y GASES INDUSTRIALES S. L.";"M Y G S. L.";"B-11073574";"Fragata, 29-32 (Polígono Palmones I)";"11370";;"LOS BARRIOS";"Cádiz";4;"956 677488";"956 677480";;;0;26;0,00;;;;;;1;
+"63206";"SUM. Y GASES DEL CAMPO DE GIBRALTAR S. L.";"SUMYGAS";"B-11409232";"Pol. Palmones I  C/ Bergantin, 4";"11379";;"LOS BARRIOS";"Cádiz";4;"956 677604";"956 678314";;"joaquin@sumygas.com";0;26;0,00;;;;"20711603190000027037";;1;
+"63207";"MAQUINARIA PALMONES S. L. L.";"SUMINISTROS MAQUIPAL";"B-11585809";"Velero, 6  Pol. Industrial Palmones II";"11370";;"LOS BARRIOS";"Cádiz";4;"956 677970";"956 677942";;"makipal@olanet.net";0;26;0,00;;;;"00043281190600061765";;1;
+"63208";"MOVITRANS ESPACIO HAT S. L.";;"B-11573078";"El Barquero, 13";"11370";;"LOS BARRIOS";"Cádiz";4;"956 620682";;;"movitrans@movitranshat.com";0;26;0,00;;;;;;1;1
+"63301";"JUAN CARLOS FERNANDEZ CANTOS S. L.";"PINTURAS JUMA";"B-11369873";"Polígono Zabal Bajo, s/n";"11315";"238";"LA LINEA DE LA CONCEPCION";"Cádiz";4;"956 643543";"956 643543";"www.pinturasjuma.com#http://www.pinturasjuma.com#";"info@pinturasjuma.com";0;26;0,00;;"CAJA MADRID";;"20389825136000056077";;1;2
+"63302";"SUMINISTROS BANQUETA S. L.";;"B-11416245";"Avda. La Banqueta, 49";"11300";;"LA LINEA DE LA CONCEPCION";"Cádiz";4;"956 625885";"956 625890";;"banqueta49@hotmail.com";0;26;0,00;;"LA CAIXA";;"21002361900100376534";;1;1
+"63303";"JUAN VAZQUEZ MORENO";"REPUESTOS VAZQUEZ";"32005373-E";"Goleta, 32  Polígono Ind. Zabal Bajo";"11300";;"LA LINEA DE LA CONCEPCION";"Cádiz";4;"956 644025";"956 643694";;;0;26;0,00;;"BBVA";;"01820485450011504596";;1;
+"63401";"FERRETERIA DROGUERIA EL MOTOR II  S. L.";;"B-11506136";"Avda. de los Canos s/n";"11311";;"P. N. DE GUADIARO";"Cádiz";4;"956 796047";"956 794385";;"compras@elmotor2.com";0;26;0,00;"90 días";"CAJA SAN FERNANDO";;"20711240020131696034";;1;1
+"63501";"FERROTEK SUMINISTROS S. A.";;"A-11819844";"Pol. San Roque C/ Olmo, 10 Edf. Ferrotek";"11369";"128";"SAN ROQUE";"Cádiz";4;"956 612239";"956 612381";;"compras@ferrotek.net";0;10;0,00;;"BANKINTER";;"01280739130500500907";;1;1
+"70001";"AUTO REPUESTOS SUR S. L.";;"B-21020284";"Avda. Alemania, 116 - 118";"21002";;"HUELVA";"Huelva";4;"959 247666";"959 256670";;"autorepuestosur@gmail.com";0;22;0,00;;;;;;1;
+"70002";"HIDRACOR S. L.";;"B-21052519";"Paseo de la Palmera, 7";"21002";;"HUELVA";"Huelva";4;"959 262028";"959 250789";;"hidracorsl@gmail.com";0;26;0,00;;"Caja Rural Huelva";;"31870001721086189329";;1;
+"70003";"ANTONIO CORNEJO RODRIGUEZ";"ELECTRO DIESEL";"29315650-B";"Avda. Alemania, 116";"21002";;"HUELVA";"Huelva";4;"959 254681";"959 263989";;;0;26;0,00;;;;"30650001170000102793";;1;
+"70004";"FRANCISCO GIL CORNEJO";"FERRACOR";"29778827-Z";"Avda. Alemania, 110";"21002";;"HUELVA";"Huelva";4;"959 285401";"959 263989";;;0;26;0,00;;;;"31870083401090858729";;1;
+"70005";"GADISA MAQUINARIA S. L.";;"B-21229216";"Pol. Polirrosa, naves 264 y 265";"21007";;"HUELVA";"Huelva";4;"959 233002 - 959 814521";"959 236549";;"info@gadisamaquinaria.es";0;26;0,00;;;;"21030570870030000025";;1;
+"70006";"TECNIMAR DEL ODIEL S. L.";;"B-21279708";"Avda. Alonso Ojeda, s/nº";"21002";;"HUELVA";"Huelva";4;"956 242234 - 242399";;;;0;26;0,00;;"LA CAIXA";;"21002692610210009661";"Antiguo Rotini y Cia.";1;
+"70007";"GOIPE HUELVA S. A.";;"A-21008693";"Avda. Fco. Montenegro, 2ª transversal";"21001";;"HUELVA";"Huelva";4;"959 242700";"959 242143";"www.goipe.com#http://www.goipe.com#";"huelva@goipe.com";0;9;0,00;;;;;;1;4
+"70008";"REPUESTOS VIDA S. A.";;"A-21019765";"Av. de Italia, 85";"21003";;"HUELVA";"Huelva";4;"959 540340";"959 540341";;;0;4;0,00;;;;;"GRUNOSUR";1;
+"70009";"SUM. IND. PEREZ Y PEREZ S. L.";;;"Polígono el Rincón, nº 46, Naves 1-1C";"21007";;"HUELVA";"Huelva";4;"959 281100";"959 281101";;;0;26;0,00;;" POPULAR";;"00750478500600214668";;1;
+"70010";"AUTO RECAMBIOS HUELVA S. L.";;"B-21465687";"Ctra. Huelva - Gibraleón (Pol. Ind. Las Yucas)";"21005";;"HUELVA";"Huelva";4;"959 151680";"959 151803";;"arhuelva@arhuelva.com";0;26;0,00;;"BBVA";;;;1;1
+"70011";"JOSE MARIA PICON PICHARDO";"AUTO REPUESTOS PICÓN";"29744135-Y";"Avda. Cristobal Colón, 146 Bajo";"21002";;"HUELVA";"Huelva";4;"959 282445 - 253135";;;;0;12;0,00;;;;;;1;
+"70012";"SULUCAS S. L.";;"B-21187398";"Pol. Ind. Polirrosa, Nave 269";"21007";;"HUELVA";"Huelva";4;"959 270944";"959 270946";;;0;26;0,00;;"LA CAIXA";;"21002586360201034255";;1;
+"70013";"LOPEZ MUÑOZ E HIJOS S. A.";;"A-21010624";"Santiago Apostol, 47";"21002";;"HUELVA";"Huelva";4;"959 240022 - 244022";"959 259682";;;0;26;0,00;"PAGARÉ";;;;;1;
+"70014";"ONUSUINTEC SLL";;"B-21527999";"Polígono 'La Paz', 18";"21007";;"HUELVA";"Huelva";4;"610 221776";;;"oscar@onusuintec.com";0;26;0,00;"PROFORMA";;;;"Esta ficha era de REYMA S. L.
+(Cliente de LIZARTE)";1;
+"70015";"LOGOMOTOR S. L.";;"B-21395538";"Parque Empresarial La Raya C/ Fomento, 50";"21011";;"ALJARAQUE";"Huelva";4;"959 520023";"959 520023";;"antonio@logomotor.e.telefonica.net";0;26;0,00;;;;;;1;1
+"70016";"AUTORECAMBIOS CORONEL S. L. U.";;"B-21481205";"Avda. Alemania, 13-15";"21002";;"HUELVA";"Huelva";4;"959 280194";"959 282886";;"coronel@serca.es";0;7;0,00;;"ES60";;"21007916630200032389";"GRUPO SERCA";1;
+"70017";"ONUBENSE DE SUM. Y MAQUINARIA S. L. U";;"B-21374293";"Carretera de Sevilla, Km. 636";"21007";;"HUELVA";"Huelva";4;"959 367297";"959 230222";;"charoflores@sumo.es";0;26;0,00;;;;;;1;1
+"70018";"DAVA S. A. (HU)";;"A-30014484";"Avda. de Alemania, 69";"21002";;"HUELVA";"Huelva";4;"959 283284";;"www.davasa.es#http://www.davasa.es#";;0;3;0,00;;;;;;1;1
+"70019";"AUTO RECAMBIOS EMILIO";;"29692072-S";"Avda. de Alemania, 26";"21002";;"HUELVA";"Huelva";4;"959 246094";"959 249591";;;0;26;0,00;;;;"00043050600601222522";;1;1
+"70020";"LA COMERIAL ANDALUZA S. A.";;"A-21012620";"Pd. Pesquero Norte, s/nº";"21002";;"HUELVA";"Huelva";4;"959 253034";"959 245876";;;0;26;0,00;;;;;;1;
+"70021";"CASTRO JARANA HUELVA S.A.";;"A-21057690";"Avda. Alemania, 54- 56";"21002";;"HUELVA";"HUELVA";4;"959 245100";;;"fsampedro@castrojaranahuelva.com";0;26;0,00;;;;"00496772792616004790";;1;1
+"70022";"AUTO RECAMBIOS LA CINTA S. L.";;"B-21481411";"Paula Santiago, Portal-6 Local 3-4";"21002";;"HUELVA";"Huelva";4;"959 151220 - 959 151320";"959 151308";;"ventas@recambioslacinta.es";0;26;0,00;;;;;;1;1
+"70024";"CIAL. ONUBENSE VALVULAS Y ACC. S. L.";"COVAC S.L.";"B-21261276";"Paseo de la Glorieta, 24";"21002";;"HUELVA";"Huelva";4;"959 258070";"959 255124";;;0;26;0,00;;"ANDALUCIA";;"00043051010600389925";;1;
+"70025";"RECAMBIOS INDUST. DEL SUR S. L.";;"B-21101605";"Avda. del Tráfico Pesado, 18";"21007";;"HUELVA";"Huelva";4;"959 232841";"959 262511";;;0;26;0,00;;"BBVA";;"01825452870101001153";;1;
+"70026";"LABORAL TEAM S. L.";;"B-21183975";"Joaquín Turina, 21 ";"21001";;"HUELVA";"Huelva";4;"959 285082 - 256061";"959 257712";;"direccion@laboralteam.com";0;26;0,00;;;;;;1;
+"70033";"ELECTROMECANICA JUMAN C. B.";;"E-21122122";"Polígono Pavipresa, nave-14";"21007";;"HUELVA";"Huelva";4;"959 230541";"959 270158";;;0;18;0,00;;;;;;1;
+"70035";"EUROMASTER AUTOMOCION Y SERVICOS S. A. (HU)";;"A-41014523";"Polígono Ind. San Diego, Nave-34";"21007";;"HUELVA";"Huelva";4;;;;;0;26;0,00;;;;;;1;1
+"71101";"CIAL. AGRICOLA DEL CONDADO S. L.";;"B-21055033";"Crta. Circunvalación, s/nº";"21700";;"LA PALMA DEL CONDADO";"Huelva";4;"959 400118";"959 401504";;;0;26;0,00;;;;;;1;
+"71201";"LORVIN S. L.";"LORVIN S.L.";"B-21159934";"Pol. Ind. El Monete - nave, 47";"21600";;"VALVERDE DEL CAMINO";"Huelva";4;"959 551515";"959 552022";;"lorvinsl47@gmail.com";0;26;0,00;"Pagaré";;;;;1;
+"71202";"SUMINISTROS MAQUIVAL S. L.";;"B-21182332";"Av. Alcalde Américo Santos, 10";"21600";;"VALVERDE DEL CAMINO";"Huelva";4;"959 551342";"959 551881";;;0;26;0,00;;;;"21002690740201025611";;1;
+"71301";"ALMACENES SAN BLAS S. A.";;"A-21011903";"C/ Zulema, 1";"21200";;"ARACENA";"Huelva";4;"959 126334";"959 126818";"www.almacenes-sanblas.com#http://www.almacenes-sanblas.com#";"raul@almacenes-sanblas.com";0;26;0,00;;"CAJA RURAL DEL SUR";;"31870011461086976725";;1;
+"72101";"SUMINISTROS LEPTIS S. L.";;"B-21173984";"Avda. de Andalucía, 5 bajo";"21440";;"LEPE";"Huelva";4;"959 383223";"959 381667";;;0;10;0,00;;"LA CAIXA";;;;1;
+"72102";"JOSE GARCIA E HIJOS DE LEPE S. L.";;"B-21109467";"C/ Las Moreras, 2";"21440";;"LEPE";"Huelva";4;"959 383460";"959 383412";;"josegarciaehijos@gmail.com";0;10;1,00;;"Popular";;"00753057750600244100";;1;1
+"72201";"UTILCAMPO S. L.";;"B-21267612";"Avda. de la Feria, 56";"21450";;"CARTAYA";"Huelva";4;"959 392535";"959 392424";;;0;26;0,00;;"BSCH";;"00491887182210041524";"¡¡¡PROFORMA MEGA!!!";1;
+"73101";"FERRET. MAQUINARIA Y GASES S. L.";"FEMAGAS";"B-13144522";"Pol. Ind. San Jorge C/ D, 54";"21810";;"PALOS DE LA FRONTERA";"Huelva";4;"959 350113";"959 350057";;;0;9;0,00;;;;;;1;
+"90001";"MELCHOR GABILONDO S. A.";;"A-48053177";"Polígono Industrial Eitua";"48240";;"BERRIZ";"Vizcaya";1;"946 225030";;;;0;26;0,00;;;;;;1;
+"90002";"LIZARTE S. A.";;"A-31147358";"Polígono agustinos, Calle-B";"31013";;"PAMPLONA";"Navarra";1;"948 303436";"948 303422";;;0;26;0,00;;;;;;1;
+"40050";"FELIPE RUIZ JURADO";"HIDRAULICOR";"30964293-Z";"Hermanos Luján, 1  Esc. 5-4º/1";"14014";;"CORDOBA";"Córdoba";3;;;;;0;18;0,00;;;;;"DTO. RECAMBIOS MEGA Y HADU 20%";1;1
+"51401";"BRICOPUEBLA S. L. L. (EHLIS)";;"A-08014813";"Plaza de las Melias (Jto. Polideportivo)";"41540";;"LA PUEBLA DE CAZALLA";"Sevilla";4;;;;;0;25;0,00;;;;;;1;1
+"52204";"AGRIAUTO EL TORNO S. L.";;"B-91580605";"Ronda de los Torneros, 51 Pol. El Torno";"41710";;"UTRERA";"Sevilla";4;"955861974";"955098970";;"agriautoutrera@gmail.com";0;26;0,00;;"B. Popular";;"00753289580600016519";;1;1
+"63202";"SUMITECNI RODAMIENTOS S. L.";;"B-72252638";"Corbeta, 3 (Polígono Ind. Palmones)";"11370";;"LOS BARRIOS";"Cádiz";4;"956 020666";;;;0;26;0,00;;"La Caixa";;"21008518250200029982";;1;1
+"54204";"ELECTRO ROCIO S. L. (EHLIS)";;"A08014813";"Jara, 18";"41410";;"CARMONA";"Sevilla";4;;;;"g.carmo@andelautomocion.com";0;25;0,00;;;;;;1;1
+"52107";"FERRETERIA LOZANO S. L. (EHLIS)";;"A-08014813";"Crta. Isla Menor, Km. 1";"41700";;"DOS HERMANAS";"Sevilla";4;"954982112";;;;0;25;0,00;;;;;;1;1
+"52205";"FERRET. Y FUNDICIONES NAVARRO (EHLIS)";;"A08014813";"Constelación Cefeo, 5-4";"41710";;"UTRERA";"Sevilla";4;;;;;0;25;0,00;;;;;;1;1
+"20049";"MARIO IAÑEZ GALVEZ";;"29082340-J";"San Juan de Dios, 10";"18194";;"CHURRIANA DE LA VEGA";"Granada";2;"622255207";;;"marioianezgalvez@hotmail.com";0;26;0,00;;;;;;1;1
+"52206";"MARTINEZ FERRETERIA Y SUMINSTROS S. L.";;"B-91205930";"Pol Indust. El Torno  C/ Ronda Torneros, 10-T";"41710";;"UTRERA";"Sevilla";4;"955867640";;;"administracion@ferreteriamartinez.com";0;4;0,00;;;;;;1;1
+"61123";"FERRETERIA XEREZ S. L.";;"B-11668878";"Crta. Sanlúcar P. E. Oeste, parcela 2.1 - 2.3 -2.5";"11405";;"JEREZ DE LA FRONTERA";"Cádiz";4;"956 325100";"956 321636";"www.ferreteriaxerez.com#http://www.ferreteriaxerez.com#";"pilarruiz@ferreteriaxerez.com";0;26;0,00;;;;;;1;1
+"50062";"RECALVI ANDALUCIA S. L.";;"B-90088311";"Av. Fernández Murube, 36-B  Pol. Crta. Amarilla";"41007";;"SEVILLA";"Sevilla";4;"955 000555";;;"andalucia@recalvi.es";0;26;0,00;;;;"01823278970208517443";;1;1

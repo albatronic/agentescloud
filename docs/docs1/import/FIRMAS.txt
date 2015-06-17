@@ -1,0 +1,46 @@
+"IDFIRMA";"RAZON_SOCIAL";"NIF";"DOMICILIO";"COD_POSTAL";"APDO_CORREOS";"POBLACION";"PROVINCIA";"PAIS";"TELEFONOS";"FAX";"WEB";"EMAILGERENTE";"EMAILPEDIDOS";"EMAILSOPORTETECNICO";"GERENTE";"DIRECTOR_COMERCIAL";"PLAZO_ENTREGA";"AGENCIATTE";"SINPORTES";"OBSERVACIONES";"VIGENTE"
+"01";"MELCHOR GABILONDO S. A.";"A-48053177";"Poligono Industrial Eitua, s/n";"48240";;"BERRIZ";"Vizcaya";"España";"946 225030";"946 225278";"www.mega-sa.com#http://www.mega-sa.com#";;"interior@mega-sa.com";;"Miguel Gallastegui";"José Luís Sáiz";0;"DHL";700,00 €;"BBVA 0182-5557-42-0000027496";1
+"02";"HADU IMPORT S. A.";"A-48166425";"Polígono Industrial Eitua, s/n";"48240";;"BERRIZ";"Vizcaya";"España";"946 225590";"946 225611";"www.hadu.es#http://www.hadu.es#";;"chema@mega-sa.com";;;"José Luís Sáiz";0;"DHL";500,00 €;"BS 0049-1904-32-2610067623";1
+"03";"CONS.ELECTRICAS LUJAN S. A.";"A-08393456";"Alfonso Masera, s/nº";"43713";;"SANT JAUME DELS DOMENYS";"Tarragona";"España";"977 677518 - 677 455644";"977 677050";"www.lujan.es#http://www.lujan.es#";;"sarrau@lujan.es";;"Antonio Sarrau";;0;"DHL";625,00 €;"DOMICILIO FISCAL.NAVAS DE TOLOSA 326 08027 BARCELONA
+CTA. TRANSFERENCIAS
+2100-0155-91-0200063757";1
+"05";"LIZARTE  FRÍO S. A.";"A-31664980";"Polígono Agustinos, c/ B";"31013";;"PAMPLONA";"Navarra";"España";"948 309107";"948 306168";"www.lizarte.com#http://www.lizarte.com#";;"lescalada@lizarte.com";;"Oscar Huarte";"Eneko Gómez";0;"DHL";420,00 €;"Nº CTA. TRANSFERENCIAS
+2054-0081-76-9122314326";1
+"06";"TIMKEN IRB S. A.";"A-08136491";"Dr. Díaz Emparanza, 3";"48002";;"BILBAO";"Vizcaya";"España";"944 431400 - 4703338";"944 440905";;;"ainara.otero@timken.com";;;;0;"AZKAR";600,00 €;"JEFE DE VENTAS
+Juan Luís Díaz de Basurto - 94 470 33 79
+605 711256
+
+ATENCIÓN AL CLIENTE
+Ainara Otero
+
+INFORMACIÓN VENTAS
+Borja Domingo
+
+MAIL FINANZAS
+sonia.de.miguel@timken.com";0
+"07";"GALA GAR S. A.";"A-50045285";"Jaime Ferrán, 19 nave 30 P. Cogullada";"50014";"5058";"ZARAGOZA";"Zaragoza";"España";"976 473410";"976 472450";"www.galagar.com#http://www.galagar.com#";;"ventas@galagar.com";;"Luís Gardeta";"Benito Agulled";0;"BUYTRAGO";1200,00 €;;0
+"08";"SAMOA INDUSTRIAL S.A.";"A-33689530";"Pol. Ind. Porceyo,  I-14  Camino del Fontan 831";"33392";"103";"GIJON ";"Asturias";"España";"985 381488";"985 384163";"www.samoaindustrial.com#http://www.samoaindustrial.com#";;"ventas@samoaindustrial.com";;"Alberto Moratiel";"Javier Cueto";0;"LA DE SAMOA";600,00 €;"Departamento Técino: Sr. Alberto Fresno
+Departamento Comercial: Asunción Perez";1
+"09";"LIZARTE S. A.";"A-31147358";"Polígono Agustinos, Calle-B";"31013";;"PAMPLONA";"Navarra";"España";"948 303436";"948 303422";"www.lizarte.com#http://www.lizarte.com#";"info@lizarte.com";"lescalada@lizarte.com";"cristigar1@hotmail.com";"Oscar Huarte";"Mónica Fuentes";0;"DHL";420,00 €;"nº cuenta para transferencias
+2054-0081-71-3000003228
+CAJA AHORROS DE NAVARRA
+
+(Contabilidad: Alvaro)";1
+"10";"MUROPAPEL S. A.";"A-03504628";"Partida el  Plá, s/n";"03840";"77";"GAYANES ";"Alicante";"España";"965 515568 - 515578";"965 515432";;;"compras@muropapel.es";;"José Barber (639-605081)";;0;;600,00 €;"0042 0153 89 0109934673
+
+Jorge - Almacén / Expediciones
+Macu -  Pedidos e-mail
+Noelia - Pedidos 
+Silvia  - Facturas a clientes
+Rosa - Comisiones / Cobros";1
+"11";"CONTINENTAL AUTOMOTIVE SPAIN S. A.";"A-58387887";"c/ Sepúlveda, 11";"28108";;"ALCOBENDAS";"Madrid";"España";"91 6603659";;"contiteves-am.com#http://contiteves-am.com#";"manel.real@continental-corporation.com";"carolina.sanchez-rueda@continental-corporation.com";"Susana.Doliwa@contiteves.com";"Manel Real";"Susana Doliwa - 91 6603645";0;"UPS";2000,00 €;;0
+"12";"MECANIZADOS LUNA GREGORIO S. A.";"A-50047448";"Aut. Logroño, Km.7,8 (Pol. Arcos Nave-7)";"50011";;"ZARAGOZA";"Zaragoza";"España";"976 334332";"976 334591";;;"mecanizadoslunagregorio@hotmail.com";;"Pedro Gregorio";"Pedro Jesús Gregorio";0;"TRANSXTAR";275,00 €;;1
+"14";"NORDPACK S. L.";"B-03495470";"Buzón nº  50205 C/  Watt, 11  Pol. Ind. La Pedrera";"03720";;"BENISSA";"Alicante";"España";"96 5732988";"96 5733464";"www.nordpack.com#http://www.nordpack.com#";"juan@nordpack.com";"info@nordpack.com";;"Nicklas Ljungström";"Juan Soler Cruañes 669361929";0;;200,00 €;;1
+"15";"MATRICULAS EUROPEAS S. L.";"B-60918257";"C/ Obradors, 6-10 Nave 14 (P. Ind. Santida)";"08130";;"STA. PERPETUA DE MOGODA";"BARCELONA";"España";"93 7180161";"93 7184969";;;"me@matriculaseuropeas.com";;"Juan Ventura";;;"AZKAR";810,00 €;;0
+"16";"ADITIVOS CYCLO S. L.";"B-45583663";"C/  Roble, 50 (Pol. Ind. Borox)";"45222";;"BOROX";"Toledo";"España";"925 528295";"925 528293";"www.aditivoscyclo.com#http://www.aditivoscyclo.com#";;"igarcia@aditivoscyclo.es";;"Juan Antonio García Sáez";"José Luís González Salas";;"TRANSAHER";300,00 €;"Nº CUENTA PARA TRANSFERENCIAS
+0030-1311-16-0293605273";0
+"17";"ANEXOS PARA CHAPA Y PINTURA 4CR S. L.";"B-45650942";"C/ Roble, 50 (Pol. Ind. Borox)";"45222";;"BOROX";"Toledo";"España";"925 528295";"925 528293";;"jgarcia@4criberica.es";"pedidos@4criberica.es";;"Juan Antonio";;;"TRANSAHER";1000,00 €;;0
+"18";"FARE S. A.";"A-58102963";"Pintor Vila Cinca, 3 (Pol. In. Can Humet d' Adalt)";"08213";;"POLINYÁ";"Barcelona";"España";"93 7134360";"93 7132219";"www.fare-auto.com#http://www.fare-auto.com#";;"fare@grn.es";;;"Rubén Foixench";;"SOUTO";360,00 €;"CTA. TRANSFERENCIAS
+CAIXA CATALUNYA
+2013-0181-87-0200642321";1
+"19";"CIPISA S. L.";"B-96244959";"C/ Palmeres, 1 (POL. IND. VIRGEN DE LA SALUD)";"46950";;"XIRIVELLA";"Valencia";"España";"963590888";"963597192";"www.cipisa.com#http://www.cipisa.com#";;"comercial@cipisa.com";;"Francisco Fuertes";"Javier Fuertes";;;300,00 €;;1

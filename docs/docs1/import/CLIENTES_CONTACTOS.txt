@@ -1,0 +1,517 @@
+"IDCLIENTE";"IDCONTACTO";"CARGO";"NOMBRE";"TELEFONO";"FAX";"MOVIL";"EMAIL"
+"00001";3;"COMPRAS";"Thais";"952 002519";;"607 515282";
+"00001";132;;;;;;
+"00002";101;"GERENTE";"Baltasar Navarro";;;;
+"00002";102;"COMPRAS MAQUINARIA";"Jesús";;"952 337504";;"jesus.diaz@navarrohermanos.com"
+"00002";157;"COMPRAS RECAMBIOS";"Francis";;;;
+"00002";158;"COMPRAS LH (RF)";"Rafael Ardilas";;;;
+"00002";164;"URGENCIAS LIZARTE";"Paco González";;;;
+"00002";313;"ADJUNTA GERENCIA";"Maria José Navarro";;;"607 918928";
+"00002";314;"COORDINADOR COMERCIAL";"Sergio";;;"669 821436";
+"00002";344;"MECÁNICO";"Antonio Arroyo";;;"617 310824";
+"00002";508;"P. URGENTES";"Toñi";;;;"antonia.delcampo@navarrohnos.com"
+"00002";509;"P. URGENTES";"Fran";;;;"fran.pedidos@navarrohnos.com"
+"00002";510;"P. URGENTES";"Paco González";;;;"paco.gonzalez@navarrohnos.com"
+"00002";511;"P. URGENTES";"Paco de los Ríos";;;;"fco.delosrios@navarrohnos.com"
+"00003";159;"APODERADO";"Antonio Alba";;;"687 881 260";"alba@grupomartin.net"
+"00003";160;"JEFE ADMON.";"José Mª Senent";;;;
+"00003";161;"COMPRAS";"Raimundo";;;;
+"00003";307;"VENDEDOR 1";"Juan Álvarez";;;;
+"00005";220;"GERENTE";"Antonio López Buendía";;;;
+"00005";221;"COMPRAS / DEPÓSITOS";"Miguel Millán";;;;
+"00005";463;"VENTAS";"Antonio López (hijo)";;;;"alcauzas@gmail.com"
+"00006";69;"GERENTE";"Juan García Jarana";;;;
+"00006";461;"ENCARGADO";"Gregorio Moreno";;;"619760592";
+"00007";43;"VENTAS";"JUAN MANUEL";;;"607753128";
+"00008";317;"PRESIDENTE";"Carlos Pedrosa";;;;
+"00008";318;"GERENTE";"Juan Carlos Pedrosa";;;;"relusur@ctv.es"
+"00008";319;"COMPRAS";"José Bonilla";;;"653902576";"josebonilla@relusur.com"
+"00008";491;"PINTURAS";"Juan Romero";;;;"juanromero@relusur.com"
+"00009";125;"GERENTE";"Francisco Gómez";;;;
+"00009";126;"COMPRAS MAQ.";"Juan Barcelo";;;"619 300726";"barcelo@gomezpleguezuelos.com"
+"00009";360;"COMPRAS REC.";"Antonio Postigo";;;;"a.postigo@gomezpleguezuelos.com"
+"00010";226;"GERENTE";"Juan Vallejos";;;"600488338";
+"00011";337;"GERENTE";"Oscar Pedrosa";;;;
+"00011";338;"COMPRAS";"Salvador Pedrosa";;;;
+"00013";48;"GERENTE";"Rafael Olmedo";"952 243202";;"699 489378";
+"00014";215;"GERENTE";"Juan González";;;;
+"00014";216;"COMPRAS";"Cuenca";;;;
+"00015";323;"ENCARGADO";"José Luís";;;;
+"00015";346;"VENDEDOR";"Luismi";;;"610 712255";
+"00016";341;"COMPRAS";"Carlos Fernández";;;;
+"00019";336;"COMPRAS";"Carlos de la Fuente";;;"616278512";
+"00022";196;"GERENTE";"Francisco Pérez Alvarez";;;;
+"00023";398;;"Manuel Nebro";;;;
+"00024";56;"GERENTE";"José Romero";;;;
+"00026";356;"Gerente";"Philip Roy";;;"692 697653";
+"00027";270;"DTOR. COMERCIAL";"Rafael Castillo";"952 246137";"952 244102";"654 516404";"rcastillo@catssl.com"
+"00027";293;"ENCARGADO";"Gabino";;;;
+"00029";150;"COMPRAS";"Paco";;;;
+"00030";347;"ventas";"Juan";"952 960990";;;
+"00032";4;;"Isaac";;;"607 580026";
+"00035";285;"GERENTE";"José Antonio Luque";;;;
+"00035";372;"COMPRAS";"Paco Luque";;;;
+"00036";377;"PEDIDOS";"Srta. Xania";;;;
+"00043";277;"SOCIO 1";"Cachi";"952 339744";;"659 136306";
+"00043";278;"SOCIO 2";"Rafael Valdivia";;;;
+"00044";432;;;;;;
+"00046";404;"ENCARGADO";"Javier";;;;
+"00048";97;"GERENTE";"Antonio Santiago Cabrera";;;;
+"00051";228;"GERENTE";"Francisco Vera Campano";;;"616 429702";
+"00052";59;"GERENTE";"Juan Ramón Rodríguez";;;;
+"00052";124;"HERMANO";"Javier Rodríguez";;;;
+"00054";383;"ventas";"Nito";"952 437142";"952 436129";"666 369370";
+"00055";394;"DUEÑO";"Miguel Borrego";;;"657 957300";
+"00057";424;"COMPRAS";"Pablo Rodríguez";;;;
+"00058";362;"GERENTE";"Pablo Rodríguez";;;;
+"00058";363;"COMERCIAL";"Juan Ariza";;;;
+"00063";480;"COMPRAS";"Juan Pino";;;;
+"00067";460;"Ventas";"José Manuel Gallego";;;;
+"00072";449;"DELEGADO";"Juan José Rebollo";"952 323061";"952 358916";;
+"00075";369;"Gerente";"Julio Cadavid";"951 014693";"952 960806";"649 345144";
+"00076";458;"COMPRAS";"Enrique Román";;;;
+"00077";462;"Ventas";"Alberto";"952350940";"952321416";"629761437";
+"00090";446;"Ventas";"Salvador Gonzalez";;;;
+"00101";213;"GERENTE";"Antonio Moreno";;;;
+"00102";457;"GERENTE";"Juan Florentino";;;;
+"00103";466;"COMERCIAL";"Miguel Torreblanca";;;;
+"01101";168;"GERENTE";"José Moreno Lara";;;;
+"01101";169;"COMPRAS COTOCAR";"Samuel Moreno";;;;
+"01102";29;"COMPRAS";"Philip Roy";"952 455143";"952 455159";"658923151";"philroy68@hotmail.com"
+"01102";310;"PAGOS";"Daniel";;;"658923152";
+"01201";248;"GERENTE";"Juan Villalba";;;;
+"01201";249;"COMPRAS";"Cándido Villalba";;;;
+"01202";145;"GERENTE";"Francisco Lomeña Urbaneja";;;;
+"01202";246;"PEDIDOS";"Juan Antonio Lomeña Osorio";;;;
+"01202";247;"ADMON";"Mª Carmen Roldán";;;;
+"01202";376;"HIJO";"Curro Lomeña";;;;"currolomena@lomena.es"
+"01203";452;"DELEGADO";"José Matias Rodriguez";"952 862188";;;
+"01204";486;"Ventas";"Antonio";;;;
+"02107";368;;"José Rico ó José Real";"952 706686";"952 706688";;
+"03201";366;"COMPRAS";"Antonio Alba";"952 562280";;"690 852 854";"comercialarroyo@autorecambioscecilio.com"
+"03201";438;"CECILIO COIN";"Jesus";;;"605869191";
+"03201";515;"COMERCIAL";"Felipe";;;"649596340";
+"04104";520;"VENTAS";"Juan Pablo";;;"670039320";"juanpablo@centralderecambios.com"
+"10001";8;"GERENTE";"Joaquín Sánchez";;;;
+"10001";9;"JEFE COMPRAS - 1";"Fernando de la Calle";;;;
+"10001";321;"DTOR. COMERCIAL";"José María Sánchez";;;;"josemaria@frenossanchez.com"
+"10001";517;"COMPRAS";"Agustin Amat";;;;
+"10002";6;"GERENTE";"José Delgado";;;;
+"10002";7;"JEFE COMPRAS";"Gonzalo Delgado";;;;"gdelgado@recambios-costasol.com"
+"10002";305;"VENDEDOR 1";"Paco Delgado";;;;
+"10002";306;"VENDEDOR 2";"Luís";;;;
+"10003";217;"GERENTE";"Antonio Salas";;;;
+"10003";218;"COORDINADOR";"Francisco Salas";;;;
+"10004";5;"GERENTE";"Rafael Navarro";"950 222666";;;
+"10004";279;"COMPRAS";"Antonio Uclés";"950 222666";;;
+"10005";147;"GERENTE";"Francisco Suárez";;;;
+"10006";177;"GERENTE";"Juan Segura Plaza";;;;
+"10006";178;"DTOR. COMERCIAL";"Miguel Segura";;;;
+"10007";57;"GERENTE 1";"Antonio Jurado (Moreno)";;;;
+"10007";58;"GERENTE 1";"Antonio Jiménez (Rizos)";;;;
+"10008";340;"COMPRAS";"José Luís Hermoso";;;;
+"10012";503;"COMPRAS";"Manuel Arcos";;;;"compras@antoniomilan.com"
+"10015";146;;;;;;
+"10019";10;"GERENTE";"Antonio Marín";;;"630 803990";
+"10021";393;"Ventas";"Juan Cruz";;;;
+"10023";444;"Ventas";"Juanjo Moreno";"950 625060";"950 624003";;
+"10024";451;"DELEGADO";"Luis Fernadez Fernandez";"950 303444";"950 303450";;
+"11104";116;"socio";"Jose Manuel";;;"607 304623";
+"11104";117;"socio";"Miguel Angel";;;"630 937167";
+"11303";121;"Dueño";"José Manuel Zamora Ruiz";"950 320155";"650 320155";"629 571293";
+"12102";497;"COMPRAS";"Antonio Gérez";;;;
+"12201";325;"COMPRAS";"José González";;;;
+"20001";84;"GERENTE";"Rafael Dumont Jaimez";;;;
+"20001";85;"HIJA";"Mª José Dumont";;;;
+"20001";86;"HIJO";"Rafael Dumont";;;;
+"20002";175;"GERENTE";"José Luís Iáñez";"958 491060";;"667706902";
+"20002";176;"COMPRAS";"Pepe Jimenez";"958 491060";;"667706904";"pepe@suministrosianez.com"
+"20002";519;"ADMON.";;;;;"contable@suministrosianez.com"
+"20003";231;"SOCIO";"Lorenzo";;;"617 330 954";
+"20003";232;"SOCIO";"Juan Parra";;;;
+"20004";103;"GERENTE";"José Peña";;;;
+"20004";104;"COMPRAS MAQUINARIA";"Roberto Iáñez";;;;
+"20004";105;"COMPRAS RECAMBIO";"Paco Fernández";;;;
+"20004";331;"VENTAS";"Enrique";;;"635 429 111";
+"20005";348;"VENTASJOSE LUIS";;;;;
+"20006";214;"GERENTE";"Manuel Varo";;;"609 037 770";
+"20006";476;"HIJO 1";"Manolo";;;;
+"20009";308;"GERENTE";"Paco Martínez";;;;
+"20010";328;"GERENTE / COMPRAS";"Juan Espínola";;;"654 400 179";
+"20013";407;;;;;"619 154491";
+"20016";403;"COMPRAS";"Carlos Sánchez";"626891 104";;;
+"20017";94;"COMPRAS";"Manuel Arcos";;;"677 410 970";
+"20017";391;"VENTAS";"Andrés Ruiz";;;"627 945642";
+"20018";184;"GERENTE";"Roberto Mora";;;;
+"20018";185;;;;;;
+"20018";186;;;;;;
+"20020";399;"COMPRAS";"Srta. Eva";;;;"eva.alfocea@berner.es"
+"20020";502;"COMPRAS";"Antonio Díaz";;;;"antonio.diaz@berner.es"
+"20021";118;"GERENTE";"José Marín";;;;
+"20024";488;"GERENTE";"José Andrés Vilchez";;;;
+"20024";489;"ADMINISTRACIÓN";"David";;;;
+"20026";428;"GERENTE / COMPRAS";"Ángel de la Rosa";;;;
+"20027";55;"GERENTE";"Rafael González";;;"615 465110";
+"20027";212;"COMPRAS";"Salva";;;;
+"20028";254;"GERENTE";"José Marín";;;;
+"20029";40;"Gerente";"Miguel Angel González";;;;
+"20030";521;"DUEÑO";"José Garrido Quero";;;;
+"20032";420;;"DAVID MARCOS";;;;
+"20033";289;"GERENTE";"Enrique Pérez";;;;
+"20036";495;"COMPRAS";"Ignacio Soler";"958 465946";;;"isoler@iftecnica.com"
+"20038";440;"GERENTE";"Elisa Isabel Caballero Gálvez";"958 272312";"958 207530";"649 468138";"nevadacolor@hotmail.com"
+"20039";229;"GERENTE";"José Luís Moleón";;;;
+"20039";230;"ENCARGADO MALAGA";"Paco Sánchez";;;;
+"20040";354;"GERENTE";"José Otero";;;;
+"20040";355;"ENCARGADO";" Miguel Gilabert";;;;
+"20041";11;"GERENTE";"Evaristo García Copado";;;;
+"20042";447;"Ventas";"Amador";"958 430343";"958 430505";"687 950075";
+"20043";434;"COMPRAS";"David Marcos";;;;
+"20045";374;"GERENTE";"Juan de la Cruz García";;;"647 670 499";
+"20046";448;"VENTAS";"MANOLO PEÑA";"958 251144";;;"drogueriagr@gmail.com"
+"20047";498;"DIRECTOR";"Benjamín Megías";;;"673 147993";
+"20051";439;"VENTAS";"Federico López Ceja";"958 606605";;"650 040707";"flopezceja@telefonica.net"
+"20052";352;"Compras";"Miguel Abril";;;;
+"20053";450;"DELEGADO";"Francisco José Guerrero Bueno";"958 292716";"958 271017";;
+"20063";530;"GERENTE";"David Marcos";;;;
+"21101";359;"COMPRAS";"Paco Ferres";;;;
+"22102";25;"GERENTE";"Vicente Yeste";"958 861406";;;
+"22102";26;"COMPRAS TIENDA";"Vicente Yeste Jr.";"958 701562";;;
+"22102";27;"COMPRAS ALMACEN";"Sergio Yeste";"958 702659";;;
+"22102";179;"COMPRAS NAVE";"Juanjo";"958 702239";;;
+"22201";525;"Gerente";"Javier Lozano";;;;
+"22201";526;"Teléfono";"Inma";;;;
+"22201";527;"Contabilidad";"Antonio Leiva";;;;
+"23201";299;"GERENTE";"Marcos";;;;
+"23203";386;"GERENTE";"Jorge Seller Segura";"958 327505";"958 327504";"658 840152";"recambiosseyto@telefonica.net"
+"30001";38;"GERENTE";"Miguel Angel Ramiro";"953 280104";;"619 607042";"maramiro@repuestosramiro.com"
+"30001";39;"COORDINADOR MAQ.";"Antonio Vega Yagüe";"953 280104";;"660 476697";"antoniovega@repuestosramiro.com"
+"30001";357;"TÉCNICO MAQ.";"Juan Nesús Sánchez";"953 280104";;;
+"30002";259;"GERENTE / COMPRAS";"Antonio Díaz";;;;
+"30002";260;"ENCARGADO";"Juan";;;;
+"30002";402;"VENTAS";"Emilio";;;"647 422667";
+"30003";413;;"Norberto Vilchez";;;;
+"30005";95;"COMPRAS";"Jorge Luque";;;"661 269163";"suministrosluque@gmail.com"
+"30005";96;"S/C";"Oscar Luque";;;;"oscarluque323@hotmail.com"
+"30007";227;"GERENTE";"José Martos";;;"617 481108";
+"30008";131;"GERENTE / COMPRAS";"Pedro Vargas Rus";;;"654 363961";
+"30009";425;;"JUAN";;;"669 885720";
+"30010";411;"COMPRAS";"Eduardo";;;"656858227";
+"30010";412;"ADMON";"Juan de Dios";;;;
+"30013";471;"COMPRAS REPUESTOS";;;;;
+"30014";367;"GERENTE / COMPRAS";"Miguel Angel Avilés";"953 281 847";;"679 498 638";"comercial@suministrosmavi.com"
+"30016";409;"compras";"Luis López Guerrero";"953 280029";;;
+"30017";429;"GERENTE";"A. R. Expósito";"953 885 901";;;
+"30017";430;"APLICADOR";"Tomás Jiménez";;;"658 984 701";
+"30018";470;"PROPIETARIO";;;;"651 669580";
+"30020";350;"GERENTE";"Manuel Alcántara";;;;
+"30033";139;"SOCIO 1";"Floren";;;;
+"30033";140;"SOCIO 2";"Miguel";;;"669 796486";
+"31101";198;"GERENTE";"Francisco Moral";;;;
+"31101";199;;;;;;
+"31151";113;"GERENTE";"Felipe Gómez";;;;
+"31401";505;"GERENTE";"Lorenzo Garrido";;;;
+"31601";400;"GERENTE";"Fco. Javier de Torres Gómez";"953 517424";"953 517444";"630 486015";
+"31601";401;"COMERCIAL";"Alfonso Martinez Soto";"953 517424";"953 517444";"628 050582";"alfonsorecambios@hotmail.com"
+"32101";22;"COMPRAS";"Francisco Villanueva";"953 694400";"953 694010";;"fvf@disman-linares.com"
+"32101";334;"ENCARGADO EN MARTOS";"Antonio Luis Delgado";"953 703018";"953 550764";;
+"32102";395;"Encargado";"Manuel Díaz";"953 693400";;;
+"32201";180;"GERENTE";"Manuel Moreno";;;;
+"32201";181;"HIJO DE JEFE";"Pedro Angel Moreno";;;;"pedroangel@suministrossiro.com"
+"32201";182;"COMPRAS";"Paqui Moreno";;;;"paqui@suministrossiro.com"
+"32201";183;"VENTAS MAQUINARIA";"Roberto";;;"661412104";
+"32201";523;"ADMINISTRACION";"Mariló";;;;"mescobar@adsiro.com"
+"32202";250;"COMPRAS RECAMBIOS";"Paco";;;;
+"32202";251;"COMPRAS MAQUINARIA";"Antonio Berlanga";;;"665 618080";
+"32203";201;"GERENTE";"Juan Angel Biedma";;;;
+"32203";202;"COMPRAS (Hija)";"Maribel Biedma";;;;
+"32207";138;"ENCARGADO";"Celestino Fernández";;;"699 941853";
+"32209";504;"COMPRAS";"Paqui Moreno";;;;
+"32401";492;"COMPRAS";"Angel Crespo";"633784800";;;
+"33203";335;"COMPRAS";"Luís Jiménez";;;;
+"40001";122;"PEDIDOS MAQUINARIA";"Rafael Calderón";;;;"rafaelcalderon@gpautomocion.com"
+"40001";123;"PEDIDOS REPUESTOS";"Rafael Huertes";;;;"rafaelhuertes@gpautomocion.com"
+"40001";166;"PEDIDOS PINTURA";"Javier Fernández";;;;"javierfernandez@gpatomocion.com"
+"40001";167;"VENDEDOR 1";"José Martínez";;;"606 990047";
+"40001";252;"JEFE COMPRAS";"Rafael Morales";;;;"rafaelmoralesperez@gpautomocion.com"
+"40001";253;"MAQUINARIA";"Paco Galán";;;"630 356454";"franciscogalan@gpautomocion.com"
+"40001";257;"MARKETING / PROMO";"Javier García";;;;"javiergarcia@gpautomocion.com"
+"40001";271;"GERENTE";"Antonio Peña Ortiz";;;;"apo@gpautomocion.com"
+"40001";294;"ADJUNTO GERENCIA";"José Luís Montes";;;;"joseluismontes@gpautomocion.com"
+"40001";295;"DTOR COMERCIAL";"Pablo Peña";;;"609 512081";"pablope@gpautomocion.com"
+"40001";364;"LOGÍSTICA";"Jerónimo";;;;"jeronimogarcia@gpautomocion.com"
+"40001";365;"CATALOGOS";"Manuel de la Rica";;;;"manueldelarica@gpautomocion.com"
+"400019";320;"GERENTE";"Francisco Alba";;;;
+"40002";41;"GERENTE";"Francisco Romero";"957 201302";;"696 977010";"fromero@sumisur.es"
+"40002";42;"COMPRAS";"Jesús Molina";"957 201302";;;"compras@sumisur.es"
+"40002";127;"ADMINISTRACIÓN";"Manuel Ruiz Pedregosa";"957 201302";;"629 936271";
+"40002";290;"COMPRAS AUTOMOCION";"Manuel Muñoz (Torrecilla)";;;"696 977024";"automocion@sumisur.es"
+"40002";291;"DTOR COMERCIAL";"Antonio Pulgarín";;;;"ventas@sumisur.es"
+"40002";292;"DTOR TECNICO";"Juan José Zurita";;;;
+"40002";529;;"Jesus Mas";;;"652875717";"mas@sumisur.es"
+"40003";235;"GERENTE";"Luis Varona";;;"619 215 558";
+"40003";236;"COMPRAS MAQ.";"Bauti";"957 413200";;;
+"40003";237;;;;;;
+"40004";44;"GERENCIA";"Esteban / Fernando Luque";;;;
+"40004";45;"COMPRAS MEGA";"Pablo Mediavilla";;;;
+"40004";66;"COORDINADOR COMPRAS";"Francisco Sánchez Medina";"957 760639";;"629 337140";"f.medina@sts.es"
+"40004";262;"ALMACEN SAMOA";"Juan Carlos (Estrella)";;;;
+"40004";281;"ADJUNTO COMPRAS";"Paco Cánovas";"957 760639";;;
+"40004";345;"COMPRAS SAMOA";"Javier de la Fuente";"957 760639";;;"j.delafuente@sts.es"
+"40005";30;"GERENTE";"Pablo Peña";;;"609512081";"pablope@terra.es"
+"40005";31;"COMPRAS";"Rafael Calderón";;;;
+"40005";32;"RESP. MAQUINARIA";"Eduardo Moreno";;;"630 215872";
+"40006";49;"GERENTE";"Agustín Castellano ""El Puri""";"957 325055";"957 436892";;
+"40006";50;"HIJO";"Francisco Castellano";"957 325055";"957 436892";"687 805490";"fco@repuestoselpuri.com"
+"40006";255;"HIJO 2";"Agustín Castellano";"957 325055";;;
+"40006";256;"VENTAS";"Juan Félix";"655 831721";;"609 547005";
+"40006";261;"COMPRAS";"Jaime";"957 322797";;;"jaime@repuestoselpuri.com"
+"40006";379;"COBROS";"Mª Dolores o Manolo";"957 325055";"957 325056";;
+"40007";282;"GERENTE";"Rafael Sierra Cuenca";;;;
+"40007";283;"HIJO";"Javier Sierra";;;;
+"40008";189;"GERENTE";"Antonio Dios";;;;
+"40008";190;"DTOR. COMERCIAL";"Antonio Porras";;;;
+"40008";191;"COMPRAS";"Gabi";;;;
+"40008";192;"RECLAMACIONES";"Rafael";;;;
+"40009";87;"GERENTE";"Antonio Gutiérrez";"957 764019";;;
+"40009";88;"CONTABILIDAD";"Srta. Toñi";;;;
+"40009";89;"IMPAGADOS";"Srta. Beatriz";"957 764019";;;
+"40010";35;"COMPRAS";"Miguel Angel Rodríguez";;;"696977011";
+"40011";71;"COMPRAS";"Pedro Cuenca";;;;
+"40012";107;"COMPRAS";"Rafael Grande";;;;
+"40012";479;"DIRECTOR GRAL.";"Miguel Rubio";;;;
+"40013";342;"COMPRAS";"Francisco Estévez";;;;
+"40014";408;"COMPRAS MAQUINARIA";"Benito Martín";"957 298600";;"656 853208";"benitomartinmiranda@hotmail.com"
+"40014";464;"COMPRAS DIESEL";"Miguel Roldán Gallardo";"957 298600";;"656 853207";
+"40015";82;"GERENTE";"Juan Contíñez";;;;
+"40017";51;"DIRECTOR COMERCIAL";"Julián Hernández";"957 322338";;"607 317910";
+"40018";211;"COMPRAS";"Nicolá Notario";;;;
+"40021";426;"VENTAS";"Vicente Pérez Pareja";"957 322996";"957 325745";"649 406236";
+"40021";427;"ADMINISTRACION";"Ascensión García Castillo";"957 322996";"957 325745";;
+"40022";465;"Jefe Servicio";"Enrique Paz";"957 429834";"957 429835";"629 657 791";"e.paz@dismancordoba.es"
+"40022";467;"Administración Técnico";"Juan Cruz";"957 429834";"957 429835";"690 829471";"j.cruz@dismancordoba.es"
+"40022";468;"Jefe de Productos";"Juan José Zurita";"957 429834";"957 429835";"969 926483";"jjzurita@dismancordoba.es"
+"40022";469;"Técnicos de Servicio";;"957 429834";"957 429835";;"sat@dismancordoba.es"
+"40030";119;"COMPRAS";"Paco ó José Polonio";;;;
+"40033";13;"GERENTE";"Fco. Javier Roldán";;;"639 714523";
+"40034";12;"GERENTE";"Manuel Herrera";;;"608 555517";
+"40040";445;"Ventas";"Julio sanchez";"957 256844";"957 252231";;
+"40041";453;"DELEGADO";"Antonio Luna";"957 326077";"957 326589";;
+"41101";200;"GERENTE - COMPRAS";"Francisco Velasco";;;;
+"41103";81;"GERENTE";"Salvador Sánchez";;;;
+"41201";92;"GERENTE";"Manuel Gomez";;;;
+"41201";456;"VENTAS";"Bienvenida";;;;
+"41202";14;"GERENTE";"Gregorio del Pino";;;"653 942814";
+"41203";63;"COMPRAS";"Juan Antonio Prieto";;;;
+"41203";474;"GERENTE";"Jesús Moreno";;;;
+"41204";109;"GERENTE";"José Carrasquilla";;;;
+"41208";392;"DUEÑO";"Gregorio del Pino";"957 509179";;"661 963379";"info@delpinox.com"
+"41210";478;"ENCARGADO";"Juan Luís Ramírez";;;;
+"41211";435;"GERENTE";"Antonio Corredera";;;"649 411051";
+"41302";475;"COMPRAS";"Antonio Luque";;;"667451703";"antonio@maquinarialuque.com"
+"41401";351;"GERENTE";"Juan Antonio Arcos";;;;
+"41401";353;"OFICINA";"Mª Angeles";;;;
+"42203";390;"COMPRAS";"Javier";;;"630 358 434";
+"42204";531;"GERENTE / COMPRAS";"Manuel Espejo";;;;
+"42401";64;"COMPRAS";"Manuel Raya";;;;
+"42401";65;"COMPRAS";"Antonio Yuste";;;;
+"42501";61;"GERENTE";"Juan Mantero Castro";;;;
+"42501";62;"COMPRAS";"Rafi";;;;
+"43205";384;"VENTAS";"MIGUELINA";"957 376377";"957 376377";;
+"43301";326;"GERENTE";"Paco Molina";;;;
+"43302";483;"DUEÑO";"Paco";;;;
+"43302";484;"HIJO";"Carlos";;;;
+"43302";485;"COMPRAS";"Conchita";;;;
+"43311";397;"GERENTE";"Javier";;;"687 749 190";
+"43601";371;"ventas";"José Perez Ramirez";;;;
+"50001";23;"GERENTE";"Enrique Martín";"954 998684";;;
+"50001";24;"COMPRAS";"Manuel Arrayas";;;;
+"50002";141;"COMPRAS";;;;;
+"50002";142;"COMPRAS OFIC.";"Jose / Montse / Sandra / Monica";;;;"jose_mg_tor@hotmail.com"
+"50002";269;"GERENTE";"Antonio Vargas";;;;
+"50002";490;"CO-GERENCIA";"Juan Manuel López";;;;
+"50002";493;"DTOR. COMERCIAL";"Rafael Alfaro Viejo";;;;
+"50003";74;;;;;;
+"50003";421;;;;;;
+"50004";15;"JEFE COMPRAS";"Antonio Huertes";;"954 521508";;
+"50004";327;"GERENTE";;;;;
+"50005";46;"GERENTE";"Antonio Martín";"95 4356690";;;
+"50005";47;"COMPRAS";"Nicolás Martín";"95 4356690";;"609 532404";"nmartin@dakolub.com"
+"50005";242;"CONTABILIDAD";"José Antonio";"95 4356690";;;
+"50006";239;"GERENTE";"Manuel Caballero";;;"607 513 787";
+"50006";240;"ENCARGADO TIENDA";"Emilio";;;"647 933 411";
+"50007";99;"GERENTE";"Francisco Domínguez";"954 915678";;"659 969077";
+"50007";100;"COMPRAS";"Marilu";"954 915678";;;"ROMA1961@terra.es"
+"50007";223;"VENTAS";"Rafael Domínguez";"954 915678";;"659969081";
+"50009";136;"COMPRAS";"Antonio Tirado Muñoz";;;;
+"50009";137;"SOCIO";"Antonio Bravo Jurado";;;;
+"50011";135;"COMPRAS";"Eliseo García";;;;
+"50012";416;"Compras";"Miguel Mosquero";"954 076981";;;"miguel@andelautomocion.com"
+"50012";417;"Administración General";"Maria";"954 076981";"954 076985";;"administracion@andelautomocion.com"
+"50012";422;"Administración Sevilla";"Teresa García";;;;"teresa@andelautomocion.com"
+"50012";423;"Administración Málaga";"Mercedes";;;;"mercedes@andelautomocion.com"
+"50012";507;"Dpto. Ventas";"Raúl Oyonarte";;;"675878282";"raul@andelautomocion.com"
+"50013";258;"GERENTE";"Fran Zuro";;;;
+"50014";358;"COMPRAS";"ENRIQUE MARTINEZ";"657 963737";;;
+"50015";487;"COMERCIAL";"Antonio Sánchez";;;"605673345";
+"50016";339;"COMPRAS";"José Manuel";;;"673 074452";
+"50019";114;"GERENTE";"Joaquín Bernárdez";;;;
+"50021";193;"GERENTE";"José Manuel Pino";;;;
+"50022";162;"GERENTE";"José Antonio Pérez de la Rosa";;;;
+"50022";163;"FACTURAS / PAGOS";"Ernesto Prieto";;;;
+"50025";52;"COMPRAS";"Mariano";;;;
+"50025";112;;;;;;
+"50026";67;"HERMANO 1";"Manuel Cascales";;"95 4521330";;
+"50026";68;"HERMANO 2";"Carlos Cascales";;"65 4521330";;
+"50028";77;"GERENCIA";"Jorge Vazquez";;;;
+"50028";78;"COMERCIAL";"Antonio Esteo";;;;
+"50028";494;"COMPRAS";;;;;
+"50029";396;"COMPRAS";"Juan Carlos Fajardo";;;;
+"50030";128;"GERENTE";;;;;
+"50030";129;"COMPRAS";;;;;
+"50030";130;"COMPRAS MALAGA";"Tomás Luna";;;"639 333355";
+"50031";238;"GERENTE";"Clemente Ceballos";;;;
+"50031";241;"HIJO DE";"Clemente Ceballos Jr.";;;;
+"50032";194;"GERENTE";"Juan Antonio Rodríguez";;;;
+"50032";195;"COMPRAS";"Julia";;;;
+"50035";224;"SOCIO 1";"Juan Antonio Rodríguez";"902 195680";;"670 751000";
+"50035";244;"SOCIO 2";"Simón Pedro Ávila";"902 195680";;"670 351925";
+"50035";245;"COMPRAS";"Srta. Julia";"902 195680";;"687 781181";
+"50035";284;"VENDEDOR";"José Carlos Caro";;;"667 543673";
+"50035";406;"OTRO";"Juan Carlos";;;"667 543 673";
+"50037";83;"SOCIO 1";"Anastasio Gaviño";"659 969080";;;
+"50037";506;"SOCIO 2";"Rafael Domínguez";;;;
+"50038";93;"GERENTE";"Angel García";;;;
+"50043";16;;"Juan López Serrano";;;"670 703315";
+"50044";431;"PROPIETARIO";"EMILIO ORTEGA RAMOS";;;"679 411095";
+"50051";443;"Ventas";"Eduardo";"954 343702";"954 343708";;"gomastriana@hotmail.com"
+"50052";441;"Ventas";"Enrique";"954 165258";"954 164184";"666 712210 - 670 744434";
+"50053";209;"Ventas";"Monchi";"954 434643";"954 430832";;
+"50054";375;"COMPRAS";"José Manuel Vidal";;;"658 886926";"vimasur1@hotmail.com"
+"50058";499;"COMPRAS";"Guillermo Javier Torres Moreno";;;;
+"50058";500;"COMPRAS";"Antonio Trigo Martínez";;;;
+"50059";512;"COMPRAS";"Manuel Sánchez";;;;
+"51102";207;"COMPRAS";"Juan";;;;
+"51103";110;"GERENTE";"Juan Manuel Medina";;;"607 328788";
+"51103";111;"CONTABILIDAD";"Almudena";;;;
+"51301";286;"COMPRAS";"José Manuel Rivero";"954 016431";;;
+"52101";455;"Ventas";"Jose Luis Rodriguez";;;;
+"52102";268;"GERENTE";"Sr. Ceballos";;;;
+"52103";296;"1 GERENTE";"Manuel Jiménez";;;;
+"52103";297;"2 MAQUINARIA";"Rafael Jiménez";;;;"rafael@jimenezmana.es"
+"52103";300;"4 MAQUINARIA OFI";"David";"954 937753";;;
+"52103";516;"VENTAS";"Diana Pereira";;;;"dianapereira@jimenezmana.es"
+"52201";273;"ENCARGADO";"Antonio Caro";;;;
+"52202";53;"ENCARGADO";"Juan Ant. Quesada";"955 867760";"955 687761";"669 298811";"oficinautrera@lausan.es"
+"52203";382;"dueño";"Jose Luis Rodriguez Salorio";;;;
+"52301";513;"GERENTE Y COMPRAS";"José María Castillo";;;;
+"53101";208;"GERENTE";"Antonio Lahoz";;;"610 781888";
+"53101";280;"VENTAS / COMPRAS";"Cristóbal";;;"610 781887";
+"53102";90;"GERENTE";"Antonio Sánchez";;;;
+"53102";91;"OFICINA";"Esperanza Domínguez";;;;
+"53103";72;"COMPRAS";"Alfredo";;;;
+"53201";287;"JEFE COMPRAS";"Rosendo Martínez";;;"676 989694";"rmartinez@equinse.com"
+"53201";288;"SECRETARIA COMPRAS";"Mª José";;;;"mjbenitez@equinse.com"
+"53501";316;"ENCARGADO";"Paco Tenorio";;;;
+"53501";419;"VENDEDOR";"Emilio";;;;
+"53502";454;"Compras";"Andrés Sánchez";"954 775775";"954 779158";;"administracion@ccmautomocion.com"
+"53502";473;"Gerente";"Carlos Calero";;;"639785236";
+"60001";79;"GERENTE";"Pedro Barberá";;;;
+"60001";80;"ENCARGADO";"Antonio Herrera";;;;
+"60006";381;"Dueño";"Salvador Menacho";"956 264959-074747";"956 279657";;
+"61101";275;"GERMAN";"David Ulecia";;;;
+"61101";276;"COMPRAS";"Angel Mateos";;;;
+"61102";143;"COORDINADOR";"Antonio Cintado";;;;"auto@auto-sport.es"
+"61102";151;"GERENTE";"Rafael Aguilera Vera";;;"627938302";"rafaelaguilera@gpautomocion.com"
+"61102";152;"COMPRAS MAQUINARIA";"Manuel García";;;;"mgarcia@autosport.24ruedas.com"
+"61102";333;"VENTAS";"Cutilla";;;;"cutilla@auto-sport.es"
+"61102";378;"PORCULO";"Antonio Cintado Jr.";;;;"acintado@auto.sport.24ruedas.com"
+"61103";418;"HIJA";"Pilar";;;;"pilarsanchez.maquihersa@telefonica.net"
+"61103";472;;"Antonio Sanchez";;;"608557707";
+"61104";233;"COMPRAS";"Manuel Jesús";;;;
+"61105";54;"GERENTE";"Juan Pedro Marquez";;;;
+"61107";170;"DTOR. COMERCIAL";"Lino Muñoz Beato";;;;
+"61107";173;"VENTAS";"Antonio Rubiales";;;;
+"61107";174;;;;;;
+"61108";380;"Ventas";"Alfonso";;;;
+"61111";165;"GERENTE";"Pedro Giraldo";;;;
+"61115";385;"GERENTE";"José Mª  León";;;;
+"61116";415;"GERENTE";"Paco Gálvez";"696988241";;;
+"61117";436;;;;;;
+"61117";437;;"Adrian Iniesta";;;"616 433936";
+"61121";496;;"Manuel Sánchez";"686993987";;;
+"61201";264;"GERENTE - COMPRAS";"Manuel Herrera";;;"630 099828";
+"61202";204;"GERENTE";"Antonio García Garrido";"639 784405";;;
+"61205";302;"GERENTE";"Manuel Herrera";;;;
+"61207";522;"Gerente y cmpras";"Antonio Morales";;;;
+"61401";389;"GERENTE / COMPRAS";"Cristóbal Guerrero";"956 380087";;"619 115 306";
+"61501";349;"Compras";"Juanma";;;;
+"62101";148;"PAGOS";"Sánchez";;;;"administracion@recambiossebastian.com"
+"62101";149;"COMPRAS";"David Sigüenza";;;"615 064730";"david@recambiossebastian.com"
+"62104";315;"Encargado";"Basilio";"956 532281";;;
+"62301";324;"COMPRAS";"José Joaquín";;;;
+"63101";304;"GERENTE";"Julio";;"956 652456";;
+"63101";332;"VENTAS";"Salvador Saltalindes";"649 843 927";;;
+"63102";155;"GERENTE";"Ricardo Medina";;;"629 577972";
+"63102";156;"COMPRAS";"Paco Ramírez";;;;
+"63102";187;"PAGOS B";"Pepi";;;;
+"63102";197;"COMPRAS";"José Antonio";;;;
+"63103";153;"GERENTE";"Ricardo Medina";;;"629 577972";
+"63103";154;"COMPRAS";"Paco Ramírez";;;;
+"63103";188;"PAGOS B";"Pepi";;;;
+"63104";60;"GERENTE";"José Mª Vázquez";;;;
+"63107";28;"GERENTE";"Rafael Orcha";;;"629 215 863";
+"63108";414;"GERENTE";"Ricardo Medina";;;;
+"63110";265;"EMPLEADO 1";"Emilio";;;;
+"63110";266;"EMPLEADO 2";"Pedro";;;;
+"63111";433;"COMPRAS";"Raúl";;;;
+"63112";482;"Ventas";"Sr. Joaquin";;;;
+"63133";243;"GERENTE";"Sergio Ríos";;;;
+"63201";19;"ADMINISTRACION";"José Luís Temprano";;;"652 638435";"administracion@remacagi.es"
+"63201";20;"TIENDA / ALMACÉN";"Jorge Barrera";;;"652 648960";"comercial@remacagi.es"
+"63201";21;"VENTAS";"Javier Ramos";;;"653 386836";
+"63201";33;;;;;;
+"63201";34;;;;;;
+"63203";171;"DTOR. COMERCIAL";"Lino Muñoz Beato";"956 677548";;"616 400929";
+"63203";172;"DPTO. VENTAS";"Juan Antonio Ramos";"956 677548";;;
+"63203";459;"PAGOS";;;;;
+"63204";17;;;;;"670 625621";
+"63205";18;;;;;;
+"63206";120;"Jefe ventas";"Joaquin Portilla";"956 677604";;"646 982925";
+"63208";518;"Compras";"Luis Miguel Tapia";;;"626 326105";"movitrans@movitranshat.com"
+"63301";311;"GERENTE";"Juan Carlos Fernández";;;;
+"63301";312;"VENDEDOR";"Marcos";;;"654 547 910";
+"63303";203;"GERENTE";"Juan Vázquez";;;;
+"63501";410;"COMPRAS";"René Rojas";;;;
+"70001";329;"GERENTE";"Pedro Marín";"959 247666";;;
+"70001";330;"VENTAS";"Angel";;;"637 405 794";
+"70005";36;"GERENTE";"José Luís";;;"629 711910";"gadisaauto@hotmail.es"
+"70005";37;"CONTABILIDAD";"Carmen";;;;
+"70007";115;"GERENTE";"Diego Linares";"959 242700";;;"linares@goipe.com"
+"70007";205;"COMPRAS 1";"Cira Linares";;;;
+"70007";206;"COMPRAS 2";"Ponce";;;;
+"70010";524;"MAQUINARIA";"Ángel";;;;
+"70012";309;"DTOR COMERCIAL";"Lucas Rebollo";;;;
+"70013";405;"COMPRAS";"Sergio López";;;"669 137 669";
+"70015";387;"ENCARGADO";"Antonio de los Reyes";;;"651072418";"antonio@logomotor.e.telefonica.net"
+"70016";210;"ADMINISTRADOR";"Juán Martín Coronel";;;;
+"70016";388;;"José Rodriguez";;;;
+"70017";481;"Ventas";"Charo";;;;
+"70019";477;"GERENTE";"Manuel Aranda";;;;
+"70021";501;"ENCARGADO";"Francisco Samedro";;;;
+"70026";528;"Ventas";"Carlos Alem";;;;
+"70033";303;"Socio 1";"Juan";;;;
+"72101";370;"Ventas";"Juan Franco";"959 383223";"959 381667";;
+"72102";514;"GERENTE";"Diego García";;;;
+"73101";70;"COMPRAS";"Jose Carlos";;;;
+"20016";532;"ADMON";"Ezequiel Alcocer";"667 693 431";;;
+"01603";533;"COMPRAS";"Andrés Reguera";;;"617406205";
+"01603";534;"ADMINISTRACIÓN";"Ignacio García";;;;
+"00009";535;"COMPRAS MAQ.";"Juan Carlos Molina";;;"639 713376";"jcmc@gomezpleguezuelos.com"
+"63202";536;;"Juan Antonio Ramos Garcia";;;;
+"00009";537;"COMERCIAL";"Andrés";;;"658 907330";
+"20002";538;"VENTAS";"Andrés";;;;"andres@suministrosianez.com"
+"61116";539;"ADMINISTRACIÓN";"Estefanía Galvez";;;;"info@recambiosgalvez.es"
+"20008";540;;"Pascual";;;"616837201";
+"50062";541;"Gerente";"Arturo Estévez";;;;
+"50062";542;"Administracion";;;;;"mbernal@recalvi.es"

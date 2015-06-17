@@ -64,11 +64,11 @@ Rutas:
   export: 'false'
   order_by:
     -
-      title: 'Id a-z'
-      criteria: 'Id ASC'
+      title: 'Descripción a-z'
+      criteria: 'Descripcion ASC'
     -
-      title: 'Id z-a'
-      criteria: 'Id DESC'
+      title: 'Descripción z-a'
+      criteria: 'Descripcion DESC'
   search_default: Id
   referenced_entities:
     - ValoresSN
@@ -86,7 +86,7 @@ Rutas:
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
     Descripcion:
-      title: Descripcion
+      title: Descripción
       filter: true
       list: yes
       visible: true
@@ -99,7 +99,7 @@ Rutas:
       link: { route: null, param: null, title: null, target: null, link: null }
       validator: { nullable: false, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
     Observations:
-      title: Observations
+      title: Observaciones
       filter: false
       list: false
       visible: true

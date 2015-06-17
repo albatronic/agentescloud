@@ -132,20 +132,20 @@ AgtClientes:
   comment: Clientes
   columns:   
     RazonSocial:         { type: varchar(50), notnull: true, index: index }
-    NombreComercial:     { type: varchar(50), notnull: false, index: index }
+    NombreComercial:     { type: varchar(50), default: null, index: index }
     Cif:                 { type: varchar(15), notnull: true, index: index }
-    Direccion:           { type: varchar(50), notnull: true }
+    Direccion:           { type: varchar(50), default: null }
     IdPais:              { type: bigint(11), notnull: true, default: 68, index: index, comment: 'emp,Paises,Id' }
     IdProvincia:         { type: bigint(11), notnull: true, default: 0, index: index, comment: 'emp,Provincias,Id' }
     IdPoblacion:         { type: bigint(11), notnull: true, default: 0, index: index, comment: 'emp,Municipios,Id' }
-    CodigoPostal:        { type: varchar(10), notnull: true, default: '' }
-    ApdoCorreos:         { type: varchar(10), notnull: true, default: '' }
-    Telefono:            { type: varchar(30), notnull: false }
-    Fax:                 { type: varchar(30), notnull: false }    
-    Movil:               { type: varchar(30), notnull: false }    
-    EMail:               { type: varchar(50), notnull: false }    
-    Web:                 { type: varchar(50), notnull: false }    
-    CContable:           { type: varchar(10), notnull: false, default: '0000000000' } 
+    CodigoPostal:        { type: varchar(10), default: null }
+    ApdoCorreos:         { type: varchar(10), default: null }
+    Telefono:            { type: varchar(30), default: null }
+    Fax:                 { type: varchar(30), default: null }    
+    Movil:               { type: varchar(30), default: null }    
+    EMail:               { type: varchar(50), defatul: null }    
+    Web:                 { type: varchar(50), default: null }    
+    CContable:           { type: varchar(10), default: null } 
     IdRuta:              { type: bigint(11), notnull: true, default: 0, index: index, comment: 'datos,Rutas,Id' }    
     IdActividad:         { type: bigint(11), notnull: true, default: 0, index: index, comment: 'datos,Actividades,Id' }    
     IdGrupoCompras:      { type: bigint(11), notnull: true, default: 0, index: index, comment: 'datos,GruposCompras,Id' }    
@@ -153,13 +153,13 @@ AgtClientes:
     DiaDePago:           { type: int(2), notnull: true, defatul: 0 }
     Iva:                 { type: boolean, notnull: true, default: 0, index: index, comment: 'datos,ValoresSN,IDTipo' }
     RecargoEqu:          { type: boolean, notnull: true, default: 0, index: index, comment: 'datos,ValoresSN,IDTipo' }
-    Avisos:              { type: text, notnull: false, default: NULL }
-    Vigente:             { type: boolean, notnull: true, default: 0, index: index, comment: 'datos,ValoresSN,IDTipo' }
+    Avisos:              { type: text, default: null }
+    Vigente:             { type: boolean, notnull: true, default: 1, index: index, comment: 'datos,ValoresSN,IDTipo' }
     Sexo:                { type: tinyint(1), notnull: true, default: 1, index: index, comment: 'Abstract,Sexos,IDTipo' }
     Tratamiento:         { type: tinyint(1), notnull: true, default: 1, index: index, comment: 'Abstract,Tratamientos,IDTipo' }
     FechaNacimiento:     { type: date, notnull: true, default: '0000-00-00' }
-    Login:               { type: varchar(50), default: NULL, index: index }
-    Password:            { type: varchar(50), default: NULL } 
+    Login:               { type: varchar(50), default: null, index: index }
+    Password:            { type: varchar(50), default: null } 
     Catalogos:           { type: bigint(11), default: null }
     Banco:               { type: varchar(60), default: null }
     DireccionBanco:      { type: varchar(60), default: null }
@@ -238,30 +238,30 @@ AgtFirmas:
   comment: Firmas
   columns:    
     RazonSocial:         { type: varchar(50), notnull: true, index: index }
-    NombreComercial:     { type: varchar(50), notnull: false, index: index }
+    NombreComercial:     { type: varchar(50), default: null, index: index }
     Cif:                 { type: varchar(15), notnull: true, index: index }
-    Direccion:           { type: varchar(50), notnull: true }
+    Direccion:           { type: varchar(50), default: null }
     IDPais:              { type: bigint(11), notnull: true, default: 68, index: index, comment: 'datos,Paises,Id' }
     IDProvincia:         { type: bigint(11), notnull: true, default: 0, index: index, comment: 'datos,Provincias,Id' }
     IDPoblacion:         { type: bigint(11), notnull: true, default: 0, index: index, comment: 'datos,Municipios,Id' }
     CodigoPostal:        { type: varchar(10), default: null }
     ApdoCorreos:         { type: varchar(10), default: null }
-    Telefono:            { type: varchar(30), notnull: false }
-    Fax:                 { type: varchar(30), notnull: false }    
-    Movil:               { type: varchar(30), notnull: false }    
-    EMail:               { type: varchar(50), notnull: false }    
-    Web:                 { type: varchar(50), notnull: false } 
+    Telefono:            { type: varchar(30), default: null }
+    Fax:                 { type: varchar(30), default: null }    
+    Movil:               { type: varchar(30), default: null }    
+    EMail:               { type: varchar(50), default: null }    
+    Web:                 { type: varchar(50), default: null } 
     Gerente:             { type: varchar(100), default: null }
     DirectorComercial:   { type: varchar(100), default: null }
     EmailGerente:        { type: varchar(100), default: null }
     EmailPedidos:        { type: varchar(100), default: null }
     EmailSoporteTecnico: { type: varchar(100), default: null }
-    CContable:           { type: varchar(10), notnull: false, default: '0000000000' } 
+    CContable:           { type: varchar(10), default: null } 
     Banco:               { type: varchar(50), default: null }
     DireccionBanco:      { type: varchar(50), default: null }        
-    Iban:                { type: varchar(34), notnull: false, default: null }
-    Bic:                 { type: varchar(11), notnull: false, default: null }
-    Mandato:             { type: varchar(35), notnull: false, default: null }
+    Iban:                { type: varchar(34), default: null }
+    Bic:                 { type: varchar(11), default: null }
+    Mandato:             { type: varchar(35), default: null }
     FechaMandato:        { type: date, notnull: true, default: '0000-00-00' }
     PlazoEntrega:        { type: int(4), default: null }
     IdAgencia:           { type: bigint(11), deafult: 0, index: index, comment: 'datos,Agencias,Id' }

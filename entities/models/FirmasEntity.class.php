@@ -173,7 +173,7 @@ class FirmasEntity extends EntityComunes {
     /**
      * @var entities\Agencias
      */
-    protected $IdAgencia;
+    protected $IdAgencia = '0';
 
     /**
      * @var integer

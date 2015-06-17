@@ -65,10 +65,10 @@ Clientes:
   export: 'false'
   order_by:
     -
-      title: 'Nombre a-z'
+      title: 'Razón Social a-z'
       criteria: 'RazonSocial ASC'
     -
-      title: 'Nombre z-a'
+      title: 'Razón Social z-a'
       criteria: 'RazonSocial DESC'
   search_default: Id
   referenced_entities:
@@ -120,7 +120,7 @@ Clientes:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: false, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: true, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
     Cif:
       title: Cif
       filter: true
@@ -146,7 +146,7 @@ Clientes:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: false, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: true, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
     IdPais:
       title: País
       filter: false
@@ -195,13 +195,13 @@ Clientes:
       list: false
       visible: true
       updatable: true
-      default: ''
+      default: null
       help: null
       permission: null
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: false, type: string, length: '10', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: true, type: string, length: '10', min: null, max: null, message: 'Valor Requerido' }
     ApdoCorreos:
       title: Apdo Correos
       filter: true
@@ -214,7 +214,7 @@ Clientes:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: false, type: string, length: '10', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: true, type: string, length: '10', min: null, max: null, message: 'Valor Requerido' }
     Telefono:
       title: Teléfono
       filter: true
@@ -227,7 +227,7 @@ Clientes:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: false, type: string, length: '30', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: true, type: string, length: '30', min: null, max: null, message: 'Valor Requerido' }
     Fax:
       title: Fax
       filter: true
@@ -240,7 +240,7 @@ Clientes:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: false, type: string, length: '30', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: true, type: string, length: '30', min: null, max: null, message: 'Valor Requerido' }
     Movil:
       title: Móvil
       filter: true
@@ -253,7 +253,7 @@ Clientes:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: false, type: string, length: '30', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: true, type: string, length: '30', min: null, max: null, message: 'Valor Requerido' }
     EMail:
       title: EMail
       filter: true
@@ -266,7 +266,7 @@ Clientes:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: false, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: true, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
     Web:
       title: Web
       filter: true
@@ -279,24 +279,24 @@ Clientes:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: false, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: true, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
     CContable:
       title: Cta. Contable
       filter: true
       list: false
       visible: true
       updatable: true
-      default: '0000000000'
+      default: null
       help: null
       permission: null
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: false, type: string, length: '10', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: true, type: string, length: '10', min: null, max: null, message: 'Valor Requerido' }
     IdRuta:
       title: Ruta
       filter: false
-      list: false
+      list: true
       visible: true
       updatable: true
       default: '0'
@@ -306,7 +306,7 @@ Clientes:
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
       aditional_filter: { order: 4, caption: Ruta, entity: Rutas, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
-      validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: integer, length: '20', min: null, max: null, message: 'Valor Requerido' }
     IdActividad:
       title: Actividad
       filter: false
@@ -347,7 +347,7 @@ Clientes:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      '#aditional_filter': { order: 7, caption: IdFormaPago, entity: FormasPago, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      aditional_filter: { order: 7, caption: Forma de Pago, entity: FormasPago, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
       validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
     DiaDePago:
       title: Día De Pago
@@ -355,7 +355,7 @@ Clientes:
       list: false
       visible: true
       updatable: true
-      default: null
+      default: 0
       help: null
       permission: null
       translatable: false
@@ -402,7 +402,7 @@ Clientes:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: false, type: string, length: false, min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: true, type: string, length: false, min: null, max: null, message: 'Valor Requerido' }
     Vigente:
       title: Vigente
       filter: false

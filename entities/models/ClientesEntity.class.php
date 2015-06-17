@@ -106,7 +106,7 @@ class ClientesEntity extends EntityComunes {
      * @var string
      * @assert NotBlank(groups="AgtClientes")
      */
-    protected $CContable = '0000000000';
+    protected $CContable;
 
     /**
      * @var entities\Rutas
@@ -136,7 +136,7 @@ class ClientesEntity extends EntityComunes {
      * @var integer
      * @assert NotBlank(groups="AgtClientes")
      */
-    protected $DiaDePago;
+    protected $DiaDePago = '0';
 
     /**
      * @var entities\ValoresSN

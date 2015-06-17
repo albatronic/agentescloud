@@ -38,7 +38,7 @@
     {{ macro.input(values.atributos.PlazoEntrega,'Etiqueta','text',values.controller ~ '[PlazoEntrega]',values.controller ~ '_PlazoEntrega',datos.PlazoEntrega,'4','CampoUnidades','27') }}
     {{ macro.select(values.atributos.IdAgencia,'Etiqueta',values.controller ~ '[IdAgencia]',values.controller ~ '_IdAgencia',none,datos.IdAgencia.Id,datos.IdAgencia.fetchAll('Agencia'),'chzn-select','28')}}
     {{ macro.input(values.atributos.SinPortes,'Etiqueta','text',values.controller ~ '[SinPortes]',values.controller ~ '_SinPortes',datos.SinPortes,'10','CampoImporte','29') }}
-    {{ macro.select(values.atributos.Vigente,'Etiqueta',values.controller ~ '[Vigente]',values.controller ~ '_Vigente',none,datos.Vigente.Vigente,datos.Vigente.fetchAll('IDTipo'),'chzn-select','30')}}
+    {{ macro.select(values.atributos.Vigente,'Etiqueta',values.controller ~ '[Vigente]',values.controller ~ '_Vigente',none,datos.Vigente.IDTipo,datos.Vigente.fetchAll('Descripcion'),'chzn-select','30')}}
 </div>
 <div class="clearfix"></div>
 {% include '_global/fieldsComunes.html.twig' %}

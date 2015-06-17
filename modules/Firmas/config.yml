@@ -103,7 +103,7 @@ Firmas:
       link: { route: null, param: null, title: null, target: null, link: null }
       validator: { nullable: false, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
     NombreComercial:
-      title: NombreComercial
+      title: Nombre Comercial
       filter: true
       list: false
       visible: true
@@ -114,7 +114,7 @@ Firmas:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: false, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: true, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
     Cif:
       title: Cif
       filter: true
@@ -140,7 +140,7 @@ Firmas:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: false, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: true, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
     IDPais:
       title: País
       filter: false
@@ -221,7 +221,7 @@ Firmas:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: false, type: string, length: '30', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: true, type: string, length: '30', min: null, max: null, message: 'Valor Requerido' }
     Fax:
       title: Fax
       filter: true
@@ -234,7 +234,7 @@ Firmas:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: false, type: string, length: '30', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: true, type: string, length: '30', min: null, max: null, message: 'Valor Requerido' }
     Movil:
       title: Móvil
       filter: true
@@ -247,7 +247,7 @@ Firmas:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: false, type: string, length: '30', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: true, type: string, length: '30', min: null, max: null, message: 'Valor Requerido' }
     EMail:
       title: EMail
       filter: true
@@ -260,7 +260,7 @@ Firmas:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: false, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: true, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
     Web:
       title: Web
       filter: true
@@ -273,7 +273,7 @@ Firmas:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: false, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: true, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
     Gerente:
       title: Gerente
       filter: true
@@ -345,13 +345,13 @@ Firmas:
       list: false
       visible: true
       updatable: true
-      default: '0000000000'
+      default: null
       help: null
       permission: null
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: false, type: string, length: '10', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: true, type: string, length: '10', min: null, max: null, message: 'Valor Requerido' }
     Banco:
       title: Banco
       filter: true
@@ -390,7 +390,7 @@ Firmas:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: false, type: string, length: '34', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: true, type: string, length: '34', min: null, max: null, message: 'Valor Requerido' }
     Bic:
       title: Bic
       filter: true
@@ -403,7 +403,7 @@ Firmas:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: false, type: string, length: '11', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: true, type: string, length: '11', min: null, max: null, message: 'Valor Requerido' }
     Mandato:
       title: Mandato
       filter: true
@@ -416,7 +416,7 @@ Firmas:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: false, type: string, length: '35', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: true, type: string, length: '35', min: null, max: null, message: 'Valor Requerido' }
     FechaMandato:
       title: Fecha Mandato
       filter: false
@@ -450,7 +450,7 @@ Firmas:
       list: false
       visible: true
       updatable: true
-      default: null
+      default: 0
       help: null
       permission: null
       translatable: false
