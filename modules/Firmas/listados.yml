@@ -24,11 +24,11 @@ listados:
       NombreComercial: { field: NombreComercial, title: NombreComercial, length: '50', align: L, type: string, total: NO, formula: null, format: null }
       Cif: { field: Cif, title: Cif, length: '15', align: L, type: string, total: NO, formula: null, format: null }
       Direccion: { field: Direccion, title: Direccion, length: '50', align: L, type: string, total: NO, formula: null, format: null }
-      IDPais: { field: IDPais, title: IDPais, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
-      IDProvincia: { field: IDProvincia, title: IDProvincia, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
-      IDPoblacion: { field: IDPoblacion, title: IDPoblacion, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
-      CodigoPostal: { field: CodigoPostal, title: CodigoPostal, length: '10', align: L, type: string, total: NO, formula: null, format: null }
-      ApdoCorreos: { field: ApdoCorreos, title: ApdoCorreos, length: '10', align: L, type: string, total: NO, formula: null, format: null }
+      IdPais: { field: IdPais, title: IdPais, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      IdProvincia: { field: IdProvincia, title: IdProvincia, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      IdPoblacion: { field: IdPoblacion, title: IdPoblacion, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      CodigoPostal: { field: Cod.Postal, title: CodigoPostal, length: '10', align: L, type: string, total: NO, formula: null, format: null }
+      ApdoCorreos: { field: Apdo Correos, title: ApdoCorreos, length: '10', align: L, type: string, total: NO, formula: null, format: null }
       Telefono: { field: Telefono, title: Telefono, length: '30', align: L, type: string, total: NO, formula: null, format: null }
       Fax: { field: Fax, title: Fax, length: '30', align: L, type: string, total: NO, formula: null, format: null }
       Movil: { field: Movil, title: Movil, length: '30', align: L, type: string, total: NO, formula: null, format: null }

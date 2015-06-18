@@ -46,19 +46,19 @@ class FirmasEntity extends EntityComunes {
      * @var entities\Paises
      * @assert NotBlank(groups="AgtFirmas")
      */
-    protected $IDPais = '68';
+    protected $IdPais = '68';
 
     /**
      * @var entities\Provincias
      * @assert NotBlank(groups="AgtFirmas")
      */
-    protected $IDProvincia = '0';
+    protected $IdProvincia = '0';
 
     /**
      * @var entities\Municipios
      * @assert NotBlank(groups="AgtFirmas")
      */
-    protected $IDPoblacion = '0';
+    protected $IdPoblacion = '0';
 
     /**
      * @var string
@@ -272,37 +272,37 @@ class FirmasEntity extends EntityComunes {
         return $this->Direccion;
     }
 
-    public function setIDPais($IDPais) {
-        $this->IDPais = ($IDPais instanceof Paises) ? $IDPais->getPrimaryKeyValue() : $IDPais;
+    public function setIdPais($IdPais) {
+        $this->IdPais = ($IdPais instanceof Paises) ? $IdPais->getPrimaryKeyValue() : $IdPais;
     }
 
-    public function getIDPais() {
-        if (!($this->IDPais instanceof Paises)) {
-            $this->IDPais = new Paises($this->IDPais);
+    public function getIdPais() {
+        if (!($this->IdPais instanceof Paises)) {
+            $this->IdPais = new Paises($this->IdPais);
         }
-        return $this->IDPais;
+        return $this->IdPais;
     }
 
-    public function setIDProvincia($IDProvincia) {
-        $this->IDProvincia = ($IDProvincia instanceof Provincias) ? $IDProvincia->getPrimaryKeyValue() : $IDProvincia;
+    public function setIdProvincia($IdProvincia) {
+        $this->IdProvincia = ($IdProvincia instanceof Provincias) ? $IdProvincia->getPrimaryKeyValue() : $IdProvincia;
     }
 
-    public function getIDProvincia() {
-        if (!($this->IDProvincia instanceof Provincias)) {
-            $this->IDProvincia = new Provincias($this->IDProvincia);
+    public function getIdProvincia() {
+        if (!($this->IdProvincia instanceof Provincias)) {
+            $this->IdProvincia = new Provincias($this->IdProvincia);
         }
-        return $this->IDProvincia;
+        return $this->IdProvincia;
     }
 
-    public function setIDPoblacion($IDPoblacion) {
-        $this->IDPoblacion = ($IDPoblacion instanceof Municipios) ? $IDPoblacion->getPrimaryKeyValue() : $IDPoblacion;
+    public function setIdPoblacion($IdPoblacion) {
+        $this->IdPoblacion = ($IdPoblacion instanceof Municipios) ? $IdPoblacion->getPrimaryKeyValue() : $IdPoblacion;
     }
 
-    public function getIDPoblacion() {
-        if (!($this->IDPoblacion instanceof Municipios)) {
-            $this->IDPoblacion = new Municipios($this->IDPoblacion);
+    public function getIdPoblacion() {
+        if (!($this->IdPoblacion instanceof Municipios)) {
+            $this->IdPoblacion = new Municipios($this->IdPoblacion);
         }
-        return $this->IDPoblacion;
+        return $this->IdPoblacion;
     }
 
     public function setCodigoPostal($CodigoPostal) {

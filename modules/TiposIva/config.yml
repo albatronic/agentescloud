@@ -51,7 +51,7 @@ TiposIva:
   conection: emp
   entity: TiposIva
   table: AgtTiposIva
-  primarykey: IDIva
+  primarykey: Id
   linkBy: ''
   records_per_page: 10
   order_by:
@@ -63,8 +63,8 @@ TiposIva:
       criteria: Tipo DESC
   search_default: Tipo
   columns:
-    IDIva:
-      title: Codigo
+    Id:
+      title: Id
       filter: false
       list: false
       visible: false

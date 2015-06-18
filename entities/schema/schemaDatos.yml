@@ -1,6 +1,5 @@
 # ESQUEMA DE CADA EMPRESA
       
-      
 # Almacenes
 AgtAlmacenes:
   comment: Almacenes
@@ -67,32 +66,31 @@ AgtEmailBox:
 # Articulos
 AgtArticulos:
   comment: Artículos
-  columns:
-    IDArticulo:        { type: bigint(11), notnull: true, index: PRIMARY, autoIncrement: true}    
+  columns:   
     Codigo:            { type: string(25), notnull: true, index: unique}
     Descripcion:       { type: string(255), notnull: true, index: index }
-    Subtitulo:         { type: string(255), notnull: false, index: index }
-    Resumen:           { type: string(500), notnull: false, index: index }
-    ReclamoCorto:      { type: string(255), notnull: false, index: index }
-    ReclamoLargo:      { type: string(500), notnull: false, index: index }      
-    IDCategoria:       { type: bigint(11), notnull: true, default: 0, index: index, comment: 'datos,Familias,IDFamilia' }
-    IDFamilia:         { type: bigint(11), notnull: true, default: 0, index: index, comment: 'datos,Familias,IDFamilia' }
-    IDSubfamilia:      { type: bigint(11), notnull: true, default: 0, index: index, comment: 'datos,Familias,IDFamilia' }
-    IDFabricante:      { type: bigint(11), notnull: true, default: 0, index: index, comment: 'datos,Fabricantes,IDFabricante' }
+    Subtitulo:         { type: string(255), default: null }
+    Resumen:           { type: string(500), default: null }
+    ReclamoCorto:      { type: string(255), default: null }
+    ReclamoLargo:      { type: string(500), default: null }    
+    IdCategoria:       { type: bigint(11), notnull: true, default: 0, index: index, comment: 'datos,Familias,Id' }
+    IdFamilia:         { type: bigint(11), notnull: true, default: 0, index: index, comment: 'datos,Familias,Id' }
+    IdSubfamilia:      { type: bigint(11), notnull: true, default: 0, index: index, comment: 'datos,Familias,Id' }
+    IdFirma:           { type: bigint(11), notnull: true, default: 0, index: index, comment: 'datos,Firmas,Id' }
     Pvd:               { type: decimal(3), notnull: true, default: 0}
     Pvp:               { type: decimal(3), notnull: true, default: 0}
     Margen:            { type: decimal(3), notnull: true, default: 0}
     Pmc:               { type: decimal(3), notnull: true, default: 0}
-    IDIva:             { type: bigint(11), notnull: true, default: 0, index: index, comment: 'datos,TiposIva,IDIva'}    
+    IdIva:             { type: bigint(11), notnull: true, default: 0, index: index, comment: 'datos,TiposIva,Id'}    
     PvpAnterior:       { type: decimal(3), notnull: true, default: 0}
-    Etiqueta:          { type: string(30), notnull: false, default: NULL, index: index }
-    CodigoEAN:         { type: string(13), notnull: false, defatul: NULL }
+    Etiqueta:          { type: string(30), default: null, index: index }
+    CodigoEAN:         { type: string(13), defatul: null }
     Caducidad:         { type: integer(4), notnull: true, default: 0 }
-    Garantia:          { type: string(10), notnull: true, default: NULL }
+    Garantia:          { type: string(10), default: null }
     Peso:              { type: decimal(), notnull: true, default: 0 }
     Volumen:           { type: decimal(), notnull: true, default: 0 }
-    Caracteristicas:   { type: text, notnull: false }
-    FechaUltimoPrecio: { type: datetime, notnull: false, default: NULL }
+    Caracteristicas:   { type: text, defatul: null }
+    FechaUltimoPrecio: { type: datetime, defatul: null }
     Vigente:           { type: tinyint(1), notnull: true, default: 1, index: index, comment: 'abstract,ValoresSN,IDTipo' }
     Inventario:        { type: tinyint(1), notnull: true, default: 1, index: index, comment: 'abstract,ValoresSN,IDTipo' }
     Trazabilidad:      { type: tinyint(1), notnull: true, default: 0, index: index, comment: 'abstract,ValoresSN,IDTipo' }    
@@ -101,11 +99,11 @@ AgtArticulos:
     PackingVentas:     { type: decimal(), notnull: true, default: 1 } 
     Merma:             { type: decimal(), notnull: true, default: 0 } 
     BloqueoStock:      { type: tinyint(1), notnull: true, default: 0, index: index, comment: 'abstract,ValoresSN,IDTipo' } 
-    IDEstado1:         { type: bigint(11), notnull: true, default: 0, index: index, comment: 'datos,ArticulosEstados,IDEstado' }
-    IDEstado2:         { type: bigint(11), notnull: true, default: 0, index: index, comment: 'datos,ArticulosEstados,IDEstado' }
-    IDEstado3:         { type: bigint(11), notnull: true, default: 0, index: index, comment: 'datos,ArticulosEstados,IDEstado' }
-    IDEstado4:         { type: bigint(11), notnull: true, default: 0, index: index, comment: 'datos,ArticulosEstados,IDEstado' }
-    IDEstado5:         { type: bigint(11), notnull: true, default: 0, index: index, comment: 'datos,ArticulosEstados,IDEstado' }
+    IdEstado1:         { type: bigint(11), notnull: true, default: 0, index: index, comment: 'datos,ArticulosEstados,Id' }
+    IdEstado2:         { type: bigint(11), notnull: true, default: 0, index: index, comment: 'datos,ArticulosEstados,Id' }
+    IdEstado3:         { type: bigint(11), notnull: true, default: 0, index: index, comment: 'datos,ArticulosEstados,Id' }
+    IdEstado4:         { type: bigint(11), notnull: true, default: 0, index: index, comment: 'datos,ArticulosEstados,Id' }
+    IdEstado5:         { type: bigint(11), notnull: true, default: 0, index: index, comment: 'datos,ArticulosEstados,Id' }
     StockMinimo:       { type: decimal(), notnull: true, default: 0 } 
     StockMaximo:       { type: decimal(), notnull: true, default: 0 }
     MinimoVentaAlto:   { type: decimal(), notnull: true, default: 0 }
@@ -121,12 +119,29 @@ AgtArticulos:
     CUMA:              { type: decimal(), notnull: true, default: 1 }  
     UMV:               { type: bigint(11), notnull: true, default: 0, index: index, comment: 'datos,UnidadesMedida,Id' }    
     CUMV:              { type: decimal(), notnull: true, default: 1 } 
-    AvisosPedidos:     { type: text, notnull: false }    
-    AvisosPresupuestos: { type: text, notnull: false }    
-    AvisosAlbaranes:   { type: text, notnull: false }    
+    AvisosPedidos:     { type: text, defatul: null }
+    AvisosPresupuestos: { type: text, defatul: null }
+    AvisosAlbaranes:    { type: text, defatul: null }
+    AvisosFacturas:     { type: text, defatul: null }
     <?php include '../../entities/schema/schemaColumnsCommon.yml'; echoln('');?>    
   relations:
-
+ 
+# Estados de los artículos
+AgtArticulosEstados:
+  comment: Estados de los artículos
+  columns:   
+    Estado:   { type: string(50), notnull: true }
+    <?php include '../../entities/schema/schemaColumnsCommon.yml'; echoln('');?>
+  relations:
+      
+# Unidades de medida de los articulos
+AgtUnidadesMedida:
+  comment: Unidades de medida de los articulos
+  columns:
+    UnidadMedida: { type: string(10), notnull: true }
+    <?php include '../../entities/schema/schemaColumnsCommon.yml'; echoln('');?>   
+  relations:  
+      
 # Clientes
 AgtClientes:
   comment: Clientes
@@ -177,10 +192,10 @@ AgtClientesContactos:
     IdCliente:  { type: bigint(11), notnull: true, index: index, comment: 'datos,Clientes,Id' }
     Cargo:      { type: varchar(30), notnull: false }
     Nombre:     { type: varchar(50), notnull: true }
-    Telefono:   { type: varchar(50), notnull: false }
-    Fax:        { type: varchar(50), notnull: false }    
-    Movil:      { type: varchar(50), notnull: false }    
-    EMail:      { type: varchar(50), notnull: false }    
+    Telefono:   { type: varchar(50), default: null }
+    Fax:        { type: varchar(50), default: null } 
+    Movil:      { type: varchar(50), default: null }   
+    EMail:      { type: varchar(50), default: null } 
     <?php include '../../entities/schema/schemaColumnsCommon.yml'; echoln('');?>     
   relations:    
     
@@ -191,24 +206,33 @@ AgtClientesDentrega:
     IdCliente:                { type: bigint(11), notnull: true, index: index, comment: 'datos,Clientes,Id' }
     Nombre:                   { type: varchar(50), notnull: true }    
     Direccion:                { type: varchar(50), notnull: true }
-    IdPais:                   { type: bigint(11), notnull: true, default: 0, index: index, comment: 'datos,Paises,Id' }
+    IdPais:                   { type: bigint(11), notnull: true, default: 68, index: index, comment: 'datos,Paises,Id' }
     IdProvincia:              { type: bigint(11), notnull: true, default: 0, index: index, comment: 'datos,Provincias,Id' }
     IdPoblacion:              { type: bigint(11), notnull: true, default: 0, index: index, comment: 'datos,Municipios,Id' }
-    CodigoPostal:             { type: varchar(10), notnull: true, default: '' }
-    Telefono:                 { type: varchar(30), notnull: false }
-    Fax:                      { type: varchar(30), notnull: false }    
-    Movil:                    { type: varchar(30), notnull: false }    
-    EMail:                    { type: varchar(50), notnull: false }    
-    PersonaContacto:          { type: varchar(50), notnull: false }
+    CodigoPostal:             { type: varchar(10), default: null }
+    Telefono:                 { type: varchar(30), default: null }
+    Fax:                      { type: varchar(30), default: null } 
+    Movil:                    { type: varchar(30), default: null } 
+    EMail:                    { type: varchar(50), default: null }
+    PersonaContacto:          { type: varchar(50), default: null }
     EnviarCopiaFactura:       { type: boolean, notnull: true, default: 1, index: index, comment: 'datos,ValoresSN,IDTipo' }    
     FacturacionIndependiente: { type: boolean, notnull: true, default: 0, index: index, comment: 'datos,ValoresSN,IDTipo' }    
-    AgenciaHabitual:          { type: varchar(50), notnull: false }
-    Horario:                  { type: varchar(50), notnull: false }    
-    HorarioLlamadas:          { type: varchar(50), notnull: false }    
+    AgenciaHabitual:          { type: bigint(11), default: 0, index: index, comment: 'datos,Agencias,Id' } 
+    Horario:                  { type: varchar(50), default: null } 
+    HorarioLlamadas:          { type: varchar(50), default: null }
     Vigente:                  { type: tinyint(1), notnull: true, default: 1, index: index, comment: 'Abstract,ValoresSN,IDTipo' }    
     <?php include '../../entities/schema/schemaColumnsCommon.yml'; echoln('');?>     
   relations:   
     
+# Familias
+AgtFamilias:
+  comment: Familias
+  columns:  
+    IdFirma:     { type: bigint(11), notnull: true, index: index, comment: 'datos,Firmas,Id' }
+    Descripcion: { type: varchar(100), notnull: true }
+    <?php include '../../entities/schema/schemaColumnsCommon.yml'; echoln('');?>     
+  relations:
+      
 # Grupos de Compras
 AgtGruposCompras:
   comment: Grupos de Compras
@@ -242,8 +266,8 @@ AgtFirmas:
     Cif:                 { type: varchar(15), notnull: true, index: index }
     Direccion:           { type: varchar(50), default: null }
     IDPais:              { type: bigint(11), notnull: true, default: 68, index: index, comment: 'datos,Paises,Id' }
-    IDProvincia:         { type: bigint(11), notnull: true, default: 0, index: index, comment: 'datos,Provincias,Id' }
-    IDPoblacion:         { type: bigint(11), notnull: true, default: 0, index: index, comment: 'datos,Municipios,Id' }
+    IdProvincia:         { type: bigint(11), notnull: true, default: 0, index: index, comment: 'datos,Provincias,Id' }
+    IdPoblacion:         { type: bigint(11), notnull: true, default: 0, index: index, comment: 'datos,Municipios,Id' }
     CodigoPostal:        { type: varchar(10), default: null }
     ApdoCorreos:         { type: varchar(10), default: null }
     Telefono:            { type: varchar(30), default: null }

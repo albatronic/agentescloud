@@ -1,0 +1,14 @@
+{#
+  Module: Familias
+  Document : modules\Familias\fields.html.twig
+
+  copyright: ALBATRONIC
+  date 18.06.2015 21:32:23
+#}
+
+{{ macro.select(values.atributos.IdFirma,'Etiqueta',values.controller ~ '[IdFirma]',values.controller ~ '_IdFirma',none,datos.IdFirma.Id,datos.IdFirma.fetchAll('RazonSocial'),'chzn-select','1')}}
+{{ macro.input(values.atributos.Descripcion,'Etiqueta','text',values.controller ~ '[Descripcion]',values.controller ~ '_Descripcion',datos.Descripcion,'100','CampoTextoLargo','2') }}
+
+{% include '_global/fieldsComunes.html.twig' %}
+
+{{ macro.foco(values.controller ~ '_IdFirma') }}

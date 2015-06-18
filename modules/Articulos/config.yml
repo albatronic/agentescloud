@@ -1,0 +1,840 @@
+# Module: Articulos
+# Document : modules/Articulos/config.yml
+#
+# @author: Sergio Pérez <sergio.perez@albatronic.com>
+# @copyright: Informática ALBATRONIC SL
+# @date 18.06.2015 23:33:42
+#
+---
+Articulos:
+  app: ''
+  isModuleRoot: 0
+  linkModule:
+    fromColumn: ''
+    toEntity: ''
+    toColumn: ''
+  modulosRelacionables: ''
+  translatable: false
+  searchable: false
+  showCommonFields: false
+  numMaxRecords: ''
+  numberOfImages: '0'
+  withMetadata: '0'
+  addMetadata: '0'
+  deleteMetadata: '0'
+  withGalery: '0'
+  withDocuments: '0'
+  withVideos: 0
+  withAudios: '0'
+  maxSizes:
+    image: '400000'
+    document: ''
+    video: ''
+    audio: ''
+  galery:
+    maxWidthImage: '500'
+    maxHeightImage: '400'
+    generateThumbnail: '0'
+    widthThumbnail: '50'
+    heightThumbnail: '50'
+  urlFriendlyManagement: false
+  fieldGeneratorUrlFriendly: Codigo
+  metatagTitleManagement: false
+  fieldGeneratorMetatagTitle: Codigo
+  fieldGeneratorMetatagDescription: Codigo
+  fieldGeneratorMetatagKeywords: Codigo
+  controller: Articulos
+  action: Index
+  template: index.html.twig
+  parametros: ''
+  login_required: true
+  permission_control: true
+  favourite_control: false
+  help_file: help.html.twig
+  title: Artículos
+  id_video: articulos
+  url_video: null
+  feature_list: true
+  conection: datos
+  entity: Articulos
+  table: AgtArticulos
+  primarykey: Id
+  linkBy: ''
+  records_per_page: 15
+  export: 'false'
+  order_by:
+    -
+      title: 'Descripción a-z'
+      criteria: 'Descripcion ASC'
+    -
+      title: 'Descripción z-a'
+      criteria: 'Descripcion DESC'
+  search_default: Id
+  referenced_entities:
+    - Familias
+    - Firmas
+    - TiposIva
+    - ValoresSN
+    - ArticulosEstados
+    - UnidadesMedida
+  columns:
+    Id:
+      title: Id
+      visible: false
+      updatable: false
+      filter: false
+      list: false
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+    Codigo:
+      title: Código
+      filter: true
+      list: true
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: false, type: string, length: '25', min: null, max: null, message: 'Valor Requerido' }
+    Descripcion:
+      title: Descripción
+      filter: true
+      list: true
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: false, type: string, length: '255', min: null, max: null, message: 'Valor Requerido' }
+    Subtitulo:
+      title: Subtitulo
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: true, type: string, length: '255', min: null, max: null, message: 'Valor Requerido' }
+    Resumen:
+      title: Resumen
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: true, type: string, length: '500', min: null, max: null, message: 'Valor Requerido' }
+    ReclamoCorto:
+      title: Reclamo Corto
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: true, type: string, length: '255', min: null, max: null, message: 'Valor Requerido' }
+    ReclamoLargo:
+      title: Reclamo Largo
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: true, type: string, length: '500', min: null, max: null, message: 'Valor Requerido' }
+    IdCategoria:
+      title: Categoria
+      filter: false
+      list: false
+      visible: true
+      updatable: true
+      default: '0'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      '#aditional_filter': { order: 1, caption: IdCategoria, entity: Familias, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
+    IdFamilia:
+      title: Familia
+      filter: false
+      list: false
+      visible: true
+      updatable: true
+      default: '0'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      '#aditional_filter': { order: 2, caption: IdFamilia, entity: Familias, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
+    IdSubfamilia:
+      title: Subfamilia
+      filter: false
+      list: false
+      visible: true
+      updatable: true
+      default: '0'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      '#aditional_filter': { order: 3, caption: IdSubfamilia, entity: Familias, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
+    IdFirma:
+      title: Firma
+      filter: false
+      list: true
+      visible: true
+      updatable: true
+      default: '0'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      aditional_filter: { order: 4, caption: Firma, entity: Firmas, method: fetchAll, params: RazonSocial, type: select, operator: '=', event: null }
+      validator: { nullable: false, type: integer, length: 25, min: null, max: null, message: 'Valor Requerido' }
+    Pvd:
+      title: Pvd
+      filter: true
+      list: true
+      visible: true
+      updatable: true
+      default: '0.000'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: false, type: currency, length: '10', min: null, max: null, message: 'Valor Requerido' }
+    Pvp:
+      title: Pvp
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: '0.000'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: false, type: currency, length: '10', min: null, max: null, message: 'Valor Requerido' }
+    Margen:
+      title: Margen
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: '0.000'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+    Pmc:
+      title: Pmc
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: '0.000'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+    IdIva:
+      title: Iva
+      filter: false
+      list: false
+      visible: true
+      updatable: true
+      default: '0'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      '#aditional_filter': { order: 5, caption: IdIva, entity: TiposIva, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
+    PvpAnterior:
+      title: Pvp Anterior
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: '0.000'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+    Etiqueta:
+      title: Etiqueta
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: true, type: string, length: '30', min: null, max: null, message: 'Valor Requerido' }
+    CodigoEAN:
+      title: CodigoEAN
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: true, type: string, length: '13', min: null, max: null, message: 'Valor Requerido' }
+    Caducidad:
+      title: Caducidad
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: '0'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: false, type: integer, length: '4', min: null, max: null, message: 'Valor Requerido' }
+    Garantia:
+      title: Garantia
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: true, type: string, length: '10', min: null, max: null, message: 'Valor Requerido' }
+    Peso:
+      title: Peso
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: '0.00'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+    Volumen:
+      title: Volumen
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: '0.00'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+    Caracteristicas:
+      title: Caracteristicas
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: true, type: string, length: false, min: null, max: null, message: 'Valor Requerido' }
+    FechaUltimoPrecio:
+      title: FechaUltimoPrecio
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: true, type: datetime, length: false, min: null, max: null, message: 'Valor Requerido' }
+    Vigente:
+      title: Vigente
+      filter: false
+      list: false
+      visible: true
+      updatable: true
+      default: '1'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      aditional_filter: { order: 6, caption: Vigente, entity: ValoresSN, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      validator: { nullable: false, type: tinyint, length: '1', min: null, max: null, message: 'Valor Requerido' }
+    Inventario:
+      title: Inventario
+      filter: false
+      list: false
+      visible: true
+      updatable: true
+      default: '1'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      '#aditional_filter': { order: 7, caption: Inventario, entity: ValoresSN, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      validator: { nullable: false, type: tinyint, length: '1', min: null, max: null, message: 'Valor Requerido' }
+    Trazabilidad:
+      title: Trazabilidad
+      filter: false
+      list: false
+      visible: true
+      updatable: true
+      default: '0'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      '#aditional_filter': { order: 8, caption: Trazabilidad, entity: ValoresSN, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      validator: { nullable: false, type: tinyint, length: '1', min: null, max: null, message: 'Valor Requerido' }
+    BajoPedido:
+      title: BajoPedido
+      filter: false
+      list: false
+      visible: true
+      updatable: true
+      default: '0'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      '#aditional_filter': { order: 9, caption: BajoPedido, entity: ValoresSN, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      validator: { nullable: false, type: tinyint, length: '1', min: null, max: null, message: 'Valor Requerido' }
+    PackingCompras:
+      title: PackingCompras
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: '1.00'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+    PackingVentas:
+      title: PackingVentas
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: '1.00'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+    Merma:
+      title: Merma
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: '0.00'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+    BloqueoStock:
+      title: BloqueoStock
+      filter: false
+      list: false
+      visible: true
+      updatable: true
+      default: '0'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      '#aditional_filter': { order: 10, caption: BloqueoStock, entity: ValoresSN, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      validator: { nullable: false, type: tinyint, length: '1', min: null, max: null, message: 'Valor Requerido' }
+    IdEstado1:
+      title: IdEstado1
+      filter: false
+      list: false
+      visible: true
+      updatable: true
+      default: '0'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      '#aditional_filter': { order: 11, caption: IdEstado1, entity: ArticulosEstados, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
+    IdEstado2:
+      title: IdEstado2
+      filter: false
+      list: false
+      visible: true
+      updatable: true
+      default: '0'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      '#aditional_filter': { order: 12, caption: IdEstado2, entity: ArticulosEstados, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
+    IdEstado3:
+      title: IdEstado3
+      filter: false
+      list: false
+      visible: true
+      updatable: true
+      default: '0'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      '#aditional_filter': { order: 13, caption: IdEstado3, entity: ArticulosEstados, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
+    IdEstado4:
+      title: IdEstado4
+      filter: false
+      list: false
+      visible: true
+      updatable: true
+      default: '0'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      '#aditional_filter': { order: 14, caption: IdEstado4, entity: ArticulosEstados, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
+    IdEstado5:
+      title: IdEstado5
+      filter: false
+      list: false
+      visible: true
+      updatable: true
+      default: '0'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      '#aditional_filter': { order: 15, caption: IdEstado5, entity: ArticulosEstados, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
+    StockMinimo:
+      title: Stock Minimo
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: '0.00'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+    StockMaximo:
+      title: Stock Maximo
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: '0.00'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+    MinimoVentaAlto:
+      title: Minimo Venta Alto
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: '0.00'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+    MinimoVentaAncho:
+      title: Minimo Venta Ancho
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: '0.00'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+    MinimoVenta:
+      title: Minimo Venta
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: '0.00'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+    MultiploAlto:
+      title: Multiplo Alto
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: '0.00'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+    MultiploAncho:
+      title: Multiplo Ancho
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: '0.00'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+    RecargoEnergetico:
+      title: Recargo Energetico
+      filter: false
+      list: false
+      visible: true
+      updatable: true
+      default: '0'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      '#aditional_filter': { order: 16, caption: RecargoEnergetico, entity: ValoresSN, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      validator: { nullable: false, type: tinyint, length: '1', min: null, max: null, message: 'Valor Requerido' }
+    UMB:
+      title: UMB
+      filter: false
+      list: false
+      visible: true
+      updatable: true
+      default: '0'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      '#aditional_filter': { order: 17, caption: UMB, entity: UnidadesMedida, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
+    UMC:
+      title: UMC
+      filter: false
+      list: false
+      visible: true
+      updatable: true
+      default: '0'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      '#aditional_filter': { order: 18, caption: UMC, entity: UnidadesMedida, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
+    CUMC:
+      title: CUMC
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: '1.00'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+    UMA:
+      title: UMA
+      filter: false
+      list: false
+      visible: true
+      updatable: true
+      default: '0'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      '#aditional_filter': { order: 19, caption: UMA, entity: UnidadesMedida, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
+    CUMA:
+      title: CUMA
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: '1.00'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+    UMV:
+      title: UMV
+      filter: false
+      list: false
+      visible: true
+      updatable: true
+      default: '0'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      '#aditional_filter': { order: 20, caption: UMV, entity: UnidadesMedida, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
+    CUMV:
+      title: CUMV
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: '1.00'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+    AvisosPedidos:
+      title: Avisos Pedidos
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: true, type: string, length: false, min: null, max: null, message: 'Valor Requerido' }
+    AvisosPresupuestos:
+      title: Avisos Presupuestos
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: true, type: string, length: false, min: null, max: null, message: 'Valor Requerido' }
+    AvisosAlbaranes:
+      title: Avisos Albaranes
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: true, type: string, length: false, min: null, max: null, message: 'Valor Requerido' }
+    AvisosFacturas:
+      title: Avisos Facturas
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: true, type: string, length: false, min: null, max: null, message: 'Valor Requerido' }

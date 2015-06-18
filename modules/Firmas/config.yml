@@ -141,7 +141,7 @@ Firmas:
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
       validator: { nullable: true, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
-    IDPais:
+    IdPais:
       title: País
       filter: false
       list: false
@@ -153,9 +153,9 @@ Firmas:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      '#aditional_filter': { order: 1, caption: IDPais, entity: Paises, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      '#aditional_filter': { order: 1, caption: IdPais, entity: Paises, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
       validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
-    IDProvincia:
+    IdProvincia:
       title: Provincia
       filter: false
       list: true
@@ -169,7 +169,7 @@ Firmas:
       link: { route: null, param: null, title: null, target: null, link: null }
       aditional_filter: { order: 2, caption: Provincia, entity: Provincias, method: fetchAll, params: Provincia, type: select, operator: '=', event: null }
       validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
-    IDPoblacion:
+    IdPoblacion:
       title: Población
       filter: false
       list: true
@@ -181,7 +181,7 @@ Firmas:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      '#aditional_filter': { order: 3, caption: IDPoblacion, entity: Municipios, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      '#aditional_filter': { order: 3, caption: Población, entity: Municipios, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
       validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
     CodigoPostal:
       title: Código Postal

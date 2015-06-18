@@ -2,7 +2,7 @@
 
 /**
  * @copyright ALBATRONIC
- * @date 14.06.2015 18:44:15
+ * @date 18.06.2015 22:39:29
  */
 
 /**
@@ -40,7 +40,7 @@ class ClientesDEntregaEntity extends EntityComunes {
      * @var entities\Paises
      * @assert NotBlank(groups="AgtClientesDEntrega")
      */
-    protected $IdPais = '0';
+    protected $IdPais = '68';
 
     /**
      * @var entities\Provincias
@@ -56,37 +56,31 @@ class ClientesDEntregaEntity extends EntityComunes {
 
     /**
      * @var string
-     * @assert NotBlank(groups="AgtClientesDEntrega")
      */
     protected $CodigoPostal;
 
     /**
      * @var string
-     * @assert NotBlank(groups="AgtClientesDEntrega")
      */
     protected $Telefono;
 
     /**
      * @var string
-     * @assert NotBlank(groups="AgtClientesDEntrega")
      */
     protected $Fax;
 
     /**
      * @var string
-     * @assert NotBlank(groups="AgtClientesDEntrega")
      */
     protected $Movil;
 
     /**
      * @var string
-     * @assert NotBlank(groups="AgtClientesDEntrega")
      */
     protected $EMail;
 
     /**
      * @var string
-     * @assert NotBlank(groups="AgtClientesDEntrega")
      */
     protected $PersonaContacto;
 
@@ -103,20 +97,17 @@ class ClientesDEntregaEntity extends EntityComunes {
     protected $FacturacionIndependiente = '0';
 
     /**
-     * @var string
-     * @assert NotBlank(groups="AgtClientesDEntrega")
+     * @var entities\Agencias
      */
-    protected $AgenciaHabitual;
+    protected $AgenciaHabitual = '0';
 
     /**
      * @var string
-     * @assert NotBlank(groups="AgtClientesDEntrega")
      */
     protected $Horario;
 
     /**
      * @var string
-     * @assert NotBlank(groups="AgtClientesDEntrega")
      */
     protected $HorarioLlamadas;
 
@@ -167,6 +158,7 @@ class ClientesDEntregaEntity extends EntityComunes {
         'Provincias',
         'Municipios',
         'ValoresSN',
+        'Agencias',
     );
 
     /**
@@ -311,10 +303,13 @@ class ClientesDEntregaEntity extends EntityComunes {
     }
 
     public function setAgenciaHabitual($AgenciaHabitual) {
-        $this->AgenciaHabitual = trim($AgenciaHabitual);
+        $this->AgenciaHabitual = ($AgenciaHabitual instanceof Agencias) ? $AgenciaHabitual->getPrimaryKeyValue() : $AgenciaHabitual;
     }
 
     public function getAgenciaHabitual() {
+        if (!($this->AgenciaHabitual instanceof Agencias)) {
+            $this->AgenciaHabitual = new Agencias($this->AgenciaHabitual);
+        }
         return $this->AgenciaHabitual;
     }
 

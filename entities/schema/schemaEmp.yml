@@ -176,7 +176,6 @@ AgtUsuarios:
 AgtTiposIva:
   comment: Tipos de iva
   columns:
-    IDIva:     { type: bigint(11), notnull: true, index: PRIMARY, autoIncrement: true}
     Tipo :     { type: string(255), notnull: true }
     Iva:       { type: decimal(2), notnull: true, default: '0.00' }
     Recargo:   { type: decimal(2), notnull: true, default: '0.00' }

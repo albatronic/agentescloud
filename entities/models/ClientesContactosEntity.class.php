@@ -2,7 +2,7 @@
 
 /**
  * @copyright ALBATRONIC
- * @date 14.06.2015 18:44:00
+ * @date 18.06.2015 22:39:21
  */
 
 /**
@@ -38,25 +38,21 @@ class ClientesContactosEntity extends EntityComunes {
 
     /**
      * @var string
-     * @assert NotBlank(groups="AgtClientesContactos")
      */
     protected $Telefono;
 
     /**
      * @var string
-     * @assert NotBlank(groups="AgtClientesContactos")
      */
     protected $Fax;
 
     /**
      * @var string
-     * @assert NotBlank(groups="AgtClientesContactos")
      */
     protected $Movil;
 
     /**
      * @var string
-     * @assert NotBlank(groups="AgtClientesContactos")
      */
     protected $EMail;
 

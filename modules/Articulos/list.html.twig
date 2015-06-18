@@ -1,0 +1,17 @@
+{#
+  Module: Articulos
+  Document : modules\Articulos\list.html.twig
+
+  copyright: ALBATRONIC
+  date 18.06.2015 23:33:42
+#}
+
+{% extends values.controller  ~ '/index.html.twig' %}
+
+{% block listado %}
+
+<div class='listado'>
+	{% include '_global/listGenerico.html.twig' with {'listado': values.listado, 'controller': values.controller} %}
+	{% include '_global/paginacion.html.twig' with {'filter': values.listado.filter, 'controller': values.controller, 'position': 'izq'}%}
+</div>
+{% endblock %}

@@ -17,7 +17,7 @@ class TiposIvaEntity extends EntityComunes {
      * @orm:Column(type="integer")
      * @assert:NotBlank(groups="TiposIva")
      */
-    protected $IDIva;
+    protected $Id;
     /**
      * @orm:Column(type="string")
      * @assert:NotBlank(groups="TiposIva")
@@ -52,24 +52,24 @@ class TiposIvaEntity extends EntityComunes {
      * Nombre de la primaryKey
      * @var string
      */
-    protected $_primaryKeyName = 'IDIva';
+    protected $_primaryKeyName = 'Id';
     /**
      * Relacion de entidades que dependen de esta
      * @var array
      */
     protected $_parentEntities = array(
-        array('SourceColumn' => 'IDIva', 'ParentEntity' => 'Articulos', 'ParentColumn' => 'IDIva'),
+        array('SourceColumn' => 'Id', 'ParentEntity' => 'Articulos', 'ParentColumn' => 'Id'),
     );
 
     /**
      * GETTERS Y SETTERS
      */
-    public function setIDIva($IDIva) {
-        $this->IDIva = $IDIva;
+    public function setId($Id) {
+        $this->Id = $Id;
     }
 
-    public function getIDIva() {
-        return $this->IDIva;
+    public function getId() {
+        return $this->Id;
     }
 
     public function setTipo($Tipo) {

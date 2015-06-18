@@ -11,9 +11,9 @@
     {{ macro.input(values.atributos.NombreComercial,'Etiqueta','text',values.controller ~ '[NombreComercial]',values.controller ~ '_NombreComercial',datos.NombreComercial,'50','CampoTextoLargo','2') }}
     {{ macro.input(values.atributos.Cif,'Etiqueta','text',values.controller ~ '[Cif]',values.controller ~ '_Cif',datos.Cif,'15','CampoTextoCorto','3') }}
     {{ macro.input(values.atributos.Direccion,'Etiqueta','text',values.controller ~ '[Direccion]',values.controller ~ '_Direccion',datos.Direccion,'50','CampoTextoLargo','4') }}
-    {{ macro.select(values.atributos.IDPais,'Etiqueta',values.controller ~ '[IDPais]',values.controller ~ '_IDPais',none,datos.IDPais.Id,datos.IDPais.fetchAll('Pais'),'chzn-select','5')}}
-    {{ macro.select(values.atributos.IDProvincia,'Etiqueta',values.controller ~ '[IDProvincia]',values.controller ~ '_IDProvincia',none,datos.IDProvincia.Id,datos.IDProvincia.fetchAll('Provincia'),'chzn-select','6')}}
-    {{ macro.select(values.atributos.IDPoblacion,'Etiqueta',values.controller ~ '[IDPoblacion]',values.controller ~ '_IDPoblacion',none,datos.IDPoblacion.Id,datos.IDPoblacion.fetchAll('Municipio'),'chzn-select','7')}}
+    {{ macro.select(values.atributos.IdPais,'Etiqueta',values.controller ~ '[IdPais]',values.controller ~ '_IdPais',none,datos.IdPais.Id,datos.IdPais.fetchAll('Pais'),'chzn-select','5')}}
+    {{ macro.select(values.atributos.IdProvincia,'Etiqueta',values.controller ~ '[IdProvincia]',values.controller ~ '_IdProvincia',none,datos.IdProvincia.Id,datos.IdProvincia.fetchAll('Provincia'),'chzn-select','6')}}
+    {{ macro.select(values.atributos.IdPoblacion,'Etiqueta',values.controller ~ '[IdPoblacion]',values.controller ~ '_IdPoblacion',none,datos.IdPoblacion.Id,datos.IdPoblacion.fetchAll('Municipio'),'chzn-select','7')}}
     {{ macro.input(values.atributos.CodigoPostal,'Etiqueta','text',values.controller ~ '[CodigoPostal]',values.controller ~ '_CodigoPostal',datos.CodigoPostal,'10','CampoTextoCorto','8') }}
     {{ macro.input(values.atributos.ApdoCorreos,'Etiqueta','text',values.controller ~ '[ApdoCorreos]',values.controller ~ '_ApdoCorreos',datos.ApdoCorreos,'10','CampoTextoCorto','9') }}
     {{ macro.input(values.atributos.Telefono,'Etiqueta','text',values.controller ~ '[Telefono]',values.controller ~ '_Telefono',datos.Telefono,'30','CampoTextoLargo','10') }}

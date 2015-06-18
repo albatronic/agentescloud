@@ -1,0 +1,74 @@
+{#
+  Module: Articulos
+  Document : modules\Articulos\fields.html.twig
+
+  copyright: ALBATRONIC
+  date 18.06.2015 23:33:42
+#}
+<div class="col-md-6">
+    {{ macro.input(values.atributos.Codigo,'Etiqueta','text',values.controller ~ '[Codigo]',values.controller ~ '_Codigo',datos.Codigo,'25','CampoTextoCorto','1') }}
+    {{ macro.input(values.atributos.Descripcion,'Etiqueta','text',values.controller ~ '[Descripcion]',values.controller ~ '_Descripcion',datos.Descripcion,'255','CampoTextoLargo','2') }}
+    {{ macro.select(values.atributos.IdCategoria,'Etiqueta',values.controller ~ '[IdCategoria]',values.controller ~ '_IdCategoria',none,datos.IdCategoria.IdCategoria,datos.IdCategoria.fetchAll('Id'),'chzn-select','7')}}
+    {{ macro.select(values.atributos.IdFamilia,'Etiqueta',values.controller ~ '[IdFamilia]',values.controller ~ '_IdFamilia',none,datos.IdFamilia.IdFamilia,datos.IdFamilia.fetchAll('Id'),'chzn-select','8')}}
+    {{ macro.select(values.atributos.IdSubfamilia,'Etiqueta',values.controller ~ '[IdSubfamilia]',values.controller ~ '_IdSubfamilia',none,datos.IdSubfamilia.IdSubfamilia,datos.IdSubfamilia.fetchAll('Id'),'chzn-select','9')}}
+    {{ macro.select(values.atributos.IdFirma,'Etiqueta',values.controller ~ '[IdFirma]',values.controller ~ '_IdFirma',none,datos.IdFirma.Id,datos.IdFirma.fetchAll('RazonSocial'),'chzn-select','10')}}
+    {{ macro.input(values.atributos.Pvd,'Etiqueta','text',values.controller ~ '[Pvd]',values.controller ~ '_Pvd',datos.Pvd,'10','CampoImporte','11') }}
+    {{ macro.input(values.atributos.Pvp,'Etiqueta','text',values.controller ~ '[Pvp]',values.controller ~ '_Pvp',datos.Pvp,'10','CampoImporte','12') }}
+    {{ macro.input(values.atributos.Margen,'Etiqueta','text',values.controller ~ '[Margen]',values.controller ~ '_Margen',datos.Margen,'10','CampoImporte','13') }}
+    {{ macro.select(values.atributos.IdIva,'Etiqueta',values.controller ~ '[IdIva]',values.controller ~ '_IdIva',none,datos.IdIva.Id,datos.IdIva.fetchAll('Iva'),'chzn-select','15')}}
+    {{ macro.input(values.atributos.Etiqueta,'Etiqueta','text',values.controller ~ '[Etiqueta]',values.controller ~ '_Etiqueta',datos.Etiqueta,'30','CampoTextoLargo','17') }}
+    {{ macro.input(values.atributos.CodigoEAN,'Etiqueta','text',values.controller ~ '[CodigoEAN]',values.controller ~ '_CodigoEAN',datos.CodigoEAN,'13','CampoTextoCorto','18') }}
+    {{ macro.input(values.atributos.Garantia,'Etiqueta','text',values.controller ~ '[Garantia]',values.controller ~ '_Garantia',datos.Garantia,'10','CampoTextoCorto','20') }}
+    {{ macro.input(values.atributos.Peso,'Etiqueta','text',values.controller ~ '[Peso]',values.controller ~ '_Peso',datos.Peso,'10','CampoImporte','21') }}
+    {{ macro.input(values.atributos.Volumen,'Etiqueta','text',values.controller ~ '[Volumen]',values.controller ~ '_Volumen',datos.Volumen,'10','CampoImporte','22') }}
+    {{ macro.select(values.atributos.Vigente,'Etiqueta',values.controller ~ '[Vigente]',values.controller ~ '_Vigente',none,datos.Vigente.IDTipo,datos.Vigente.fetchAll('Descripcion'),'chzn-select','25')}}
+    {{ macro.input(values.atributos.PackingCompras,'Etiqueta','text',values.controller ~ '[PackingCompras]',values.controller ~ '_PackingCompras',datos.PackingCompras,'10','CampoImporte','29') }}
+    {{ macro.input(values.atributos.MinimoVenta,'Etiqueta','text',values.controller ~ '[MinimoVenta]',values.controller ~ '_MinimoVenta',datos.MinimoVenta,'10','CampoImporte','42') }}
+</div>
+<div class="col-md-6">
+    {{ macro.textarea(values.atributos.Caracteristicas,'Etiqueta',values.controller ~ '[Caracteristicas]',values.controller ~ '_Caracteristicas',datos.Caracteristicas,none,none,'textarea','23')}}
+    {{ macro.textarea(values.atributos.AvisosPedidos,'Etiqueta',values.controller ~ '[AvisosPedidos]',values.controller ~ '_AvisosPedidos',datos.AvisosPedidos,none,none,'textarea','53')}}
+    {{ macro.textarea(values.atributos.AvisosFacturas,'Etiqueta',values.controller ~ '[AvisosFacturas]',values.controller ~ '_AvisosFacturas',datos.AvisosFacturas,none,none,'textarea','56')}}
+</div>
+<div class="clearfix"></div>
+{% include '_global/fieldsComunes.html.twig' %}
+
+{{ macro.foco(values.controller ~ '_Codigo') }}
+
+{#
+{{ macro.fecha(values.atributos.FechaUltimoPrecio,'Etiqueta',values.controller ~ '[FechaUltimoPrecio]',values.controller ~ '_FechaUltimoPrecio',datos.FechaUltimoPrecio,'19','datepicker','24')}}
+{{ macro.input(values.atributos.Caducidad,'Etiqueta','text',values.controller ~ '[Caducidad]',values.controller ~ '_Caducidad',datos.Caducidad,'4','CampoUnidades','19') }}
+{{ macro.input(values.atributos.Pmc,'Etiqueta','text',values.controller ~ '[Pmc]',values.controller ~ '_Pmc',datos.Pmc,'10','CampoImporte','14') }}
+{{ macro.input(values.atributos.PvpAnterior,'Etiqueta','text',values.controller ~ '[PvpAnterior]',values.controller ~ '_PvpAnterior',datos.PvpAnterior,'10','CampoImporte','16') }}
+{{ macro.input(values.atributos.PackingVentas,'Etiqueta','text',values.controller ~ '[PackingVentas]',values.controller ~ '_PackingVentas',datos.PackingVentas,'10','CampoImporte','30') }}
+{{ macro.input(values.atributos.StockMinimo,'Etiqueta','text',values.controller ~ '[StockMinimo]',values.controller ~ '_StockMinimo',datos.StockMinimo,'10','CampoImporte','38') }}
+{{ macro.input(values.atributos.StockMaximo,'Etiqueta','text',values.controller ~ '[StockMaximo]',values.controller ~ '_StockMaximo',datos.StockMaximo,'10','CampoImporte','39') }}
+{{ macro.input(values.atributos.MinimoVentaAlto,'Etiqueta','text',values.controller ~ '[MinimoVentaAlto]',values.controller ~ '_MinimoVentaAlto',datos.MinimoVentaAlto,'10','CampoImporte','40') }}
+{{ macro.input(values.atributos.MinimoVentaAncho,'Etiqueta','text',values.controller ~ '[MinimoVentaAncho]',values.controller ~ '_MinimoVentaAncho',datos.MinimoVentaAncho,'10','CampoImporte','41') }}
+{{ macro.input(values.atributos.MultiploAlto,'Etiqueta','text',values.controller ~ '[MultiploAlto]',values.controller ~ '_MultiploAlto',datos.MultiploAlto,'10','CampoImporte','43') }}
+{{ macro.input(values.atributos.MultiploAncho,'Etiqueta','text',values.controller ~ '[MultiploAncho]',values.controller ~ '_MultiploAncho',datos.MultiploAncho,'10','CampoImporte','44') }}
+{{ macro.select(values.atributos.RecargoEnergetico,'Etiqueta',values.controller ~ '[RecargoEnergetico]',values.controller ~ '_RecargoEnergetico',none,datos.RecargoEnergetico.RecargoEnergetico,datos.RecargoEnergetico.fetchAll('IDTipo'),'chzn-select','45')}}
+{{ macro.input(values.atributos.Subtitulo,'Etiqueta','text',values.controller ~ '[Subtitulo]',values.controller ~ '_Subtitulo',datos.Subtitulo,'255','CampoTextoLargo','3') }}
+{{ macro.input(values.atributos.Resumen,'Etiqueta','text',values.controller ~ '[Resumen]',values.controller ~ '_Resumen',datos.Resumen,'500','CampoTextoLargo','4') }}
+{{ macro.input(values.atributos.ReclamoCorto,'Etiqueta','text',values.controller ~ '[ReclamoCorto]',values.controller ~ '_ReclamoCorto',datos.ReclamoCorto,'255','CampoTextoLargo','5') }}
+{{ macro.input(values.atributos.ReclamoLargo,'Etiqueta','text',values.controller ~ '[ReclamoLargo]',values.controller ~ '_ReclamoLargo',datos.ReclamoLargo,'500','CampoTextoLargo','6') }}
+{{ macro.select(values.atributos.Inventario,'Etiqueta',values.controller ~ '[Inventario]',values.controller ~ '_Inventario',none,datos.Inventario.Inventario,datos.Inventario.fetchAll('IDTipo'),'chzn-select','26')}}
+{{ macro.select(values.atributos.Trazabilidad,'Etiqueta',values.controller ~ '[Trazabilidad]',values.controller ~ '_Trazabilidad',none,datos.Trazabilidad.Trazabilidad,datos.Trazabilidad.fetchAll('IDTipo'),'chzn-select','27')}}
+{{ macro.select(values.atributos.BajoPedido,'Etiqueta',values.controller ~ '[BajoPedido]',values.controller ~ '_BajoPedido',none,datos.BajoPedido.BajoPedido,datos.BajoPedido.fetchAll('IDTipo'),'chzn-select','28')}}
+{{ macro.input(values.atributos.Merma,'Etiqueta','text',values.controller ~ '[Merma]',values.controller ~ '_Merma',datos.Merma,'10','CampoImporte','31') }}
+{{ macro.select(values.atributos.BloqueoStock,'Etiqueta',values.controller ~ '[BloqueoStock]',values.controller ~ '_BloqueoStock',none,datos.BloqueoStock.BloqueoStock,datos.BloqueoStock.fetchAll('IDTipo'),'chzn-select','32')}}
+{{ macro.select(values.atributos.IdEstado1,'Etiqueta',values.controller ~ '[IdEstado1]',values.controller ~ '_IdEstado1',none,datos.IdEstado1.IdEstado1,datos.IdEstado1.fetchAll('Id'),'chzn-select','33')}}
+{{ macro.select(values.atributos.IdEstado2,'Etiqueta',values.controller ~ '[IdEstado2]',values.controller ~ '_IdEstado2',none,datos.IdEstado2.IdEstado2,datos.IdEstado2.fetchAll('Id'),'chzn-select','34')}}
+{{ macro.select(values.atributos.IdEstado3,'Etiqueta',values.controller ~ '[IdEstado3]',values.controller ~ '_IdEstado3',none,datos.IdEstado3.IdEstado3,datos.IdEstado3.fetchAll('Id'),'chzn-select','35')}}
+{{ macro.select(values.atributos.IdEstado4,'Etiqueta',values.controller ~ '[IdEstado4]',values.controller ~ '_IdEstado4',none,datos.IdEstado4.IdEstado4,datos.IdEstado4.fetchAll('Id'),'chzn-select','36')}}
+{{ macro.select(values.atributos.IdEstado5,'Etiqueta',values.controller ~ '[IdEstado5]',values.controller ~ '_IdEstado5',none,datos.IdEstado5.IdEstado5,datos.IdEstado5.fetchAll('Id'),'chzn-select','37')}}
+{{ macro.textarea(values.atributos.AvisosPresupuestos,'Etiqueta',values.controller ~ '[AvisosPresupuestos]',values.controller ~ '_AvisosPresupuestos',datos.AvisosPresupuestos,none,none,'textarea','54')}}
+{{ macro.textarea(values.atributos.AvisosAlbaranes,'Etiqueta',values.controller ~ '[AvisosAlbaranes]',values.controller ~ '_AvisosAlbaranes',datos.AvisosAlbaranes,none,none,'textarea','55')}}
+{{ macro.select(values.atributos.UMB,'Etiqueta',values.controller ~ '[UMB]',values.controller ~ '_UMB',none,datos.UMB.UMB,datos.UMB.fetchAll('Id'),'chzn-select','46')}}
+{{ macro.select(values.atributos.UMC,'Etiqueta',values.controller ~ '[UMC]',values.controller ~ '_UMC',none,datos.UMC.UMC,datos.UMC.fetchAll('Id'),'chzn-select','47')}}
+{{ macro.input(values.atributos.CUMC,'Etiqueta','text',values.controller ~ '[CUMC]',values.controller ~ '_CUMC',datos.CUMC,'10','CampoImporte','48') }}
+{{ macro.select(values.atributos.UMA,'Etiqueta',values.controller ~ '[UMA]',values.controller ~ '_UMA',none,datos.UMA.UMA,datos.UMA.fetchAll('Id'),'chzn-select','49')}}
+{{ macro.input(values.atributos.CUMA,'Etiqueta','text',values.controller ~ '[CUMA]',values.controller ~ '_CUMA',datos.CUMA,'10','CampoImporte','50') }}
+{{ macro.select(values.atributos.UMV,'Etiqueta',values.controller ~ '[UMV]',values.controller ~ '_UMV',none,datos.UMV.UMV,datos.UMV.fetchAll('Id'),'chzn-select','51')}}
+{{ macro.input(values.atributos.CUMV,'Etiqueta','text',values.controller ~ '[CUMV]',values.controller ~ '_CUMV',datos.CUMV,'10','CampoImporte','52') }}
+#}

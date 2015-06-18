@@ -15,5 +15,3 @@ class TiposIva extends TiposIvaEntity {
     }
 
 }
-
-?>

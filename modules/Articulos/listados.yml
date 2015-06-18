@@ -1,0 +1,80 @@
+# Module: Articulos
+# Document : modules\Articulos\listados.yml
+#
+# @copyright: ALBATRONIC
+# @date 18.06.2015 23:33:42
+#
+---
+listados:
+  -
+    title: Articulos
+    order_by: Id
+    break_field: null
+    idPerfil: null
+    orientation: P
+    unit: mm
+    format: A4
+    margins: '10, 10, 15, 10'
+    body_font: 'Courier, , 8'
+    line_height: 4
+    print_interline: null
+    legend_bottom: null
+    columns:
+      Codigo: { field: Codigo, title: Codigo, length: '25', align: L, type: string, total: NO, formula: null, format: null }
+      Descripcion: { field: Descripcion, title: Descripcion, length: '255', align: L, type: string, total: NO, formula: null, format: null }
+      Subtitulo: { field: Subtitulo, title: Subtitulo, length: '255', align: L, type: string, total: NO, formula: null, format: null }
+      Resumen: { field: Resumen, title: Resumen, length: '500', align: L, type: string, total: NO, formula: null, format: null }
+      ReclamoCorto: { field: ReclamoCorto, title: ReclamoCorto, length: '255', align: L, type: string, total: NO, formula: null, format: null }
+      ReclamoLargo: { field: ReclamoLargo, title: ReclamoLargo, length: '500', align: L, type: string, total: NO, formula: null, format: null }
+      IdCategoria: { field: IdCategoria, title: IdCategoria, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      IdFamilia: { field: IdFamilia, title: IdFamilia, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      IdSubfamilia: { field: IdSubfamilia, title: IdSubfamilia, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      IdFirma: { field: IdFirma, title: IdFirma, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      Pvd: { field: Pvd, title: Pvd, length: '10', align: R, type: integer, total: NO, formula: null, format: null }
+      Pvp: { field: Pvp, title: Pvp, length: '10', align: R, type: integer, total: NO, formula: null, format: null }
+      Margen: { field: Margen, title: Margen, length: '10', align: R, type: integer, total: NO, formula: null, format: null }
+      Pmc: { field: Pmc, title: Pmc, length: '10', align: R, type: integer, total: NO, formula: null, format: null }
+      IdIva: { field: IdIva, title: IdIva, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      PvpAnterior: { field: PvpAnterior, title: PvpAnterior, length: '10', align: R, type: integer, total: NO, formula: null, format: null }
+      Etiqueta: { field: Etiqueta, title: Etiqueta, length: '30', align: L, type: string, total: NO, formula: null, format: null }
+      CodigoEAN: { field: CodigoEAN, title: CodigoEAN, length: '13', align: L, type: string, total: NO, formula: null, format: null }
+      Caducidad: { field: Caducidad, title: Caducidad, length: '4', align: R, type: integer, total: NO, formula: null, format: null }
+      Garantia: { field: Garantia, title: Garantia, length: '10', align: L, type: string, total: NO, formula: null, format: null }
+      Peso: { field: Peso, title: Peso, length: '10', align: R, type: integer, total: NO, formula: null, format: null }
+      Volumen: { field: Volumen, title: Volumen, length: '10', align: R, type: integer, total: NO, formula: null, format: null }
+      Caracteristicas: { field: Caracteristicas, title: Caracteristicas, length: 20, align: L, type: string, total: NO, formula: null, format: null }
+      FechaUltimoPrecio: { field: FechaUltimoPrecio, title: FechaUltimoPrecio, length: 10, align: R, type: datetime, total: NO, formula: null, format: null }
+      Vigente: { field: Vigente, title: Vigente, length: '1', align: L, type: tinyint, total: NO, formula: null, format: null }
+      Inventario: { field: Inventario, title: Inventario, length: '1', align: L, type: tinyint, total: NO, formula: null, format: null }
+      Trazabilidad: { field: Trazabilidad, title: Trazabilidad, length: '1', align: L, type: tinyint, total: NO, formula: null, format: null }
+      BajoPedido: { field: BajoPedido, title: BajoPedido, length: '1', align: L, type: tinyint, total: NO, formula: null, format: null }
+      PackingCompras: { field: PackingCompras, title: PackingCompras, length: '10', align: R, type: integer, total: NO, formula: null, format: null }
+      PackingVentas: { field: PackingVentas, title: PackingVentas, length: '10', align: R, type: integer, total: NO, formula: null, format: null }
+      Merma: { field: Merma, title: Merma, length: '10', align: R, type: integer, total: NO, formula: null, format: null }
+      BloqueoStock: { field: BloqueoStock, title: BloqueoStock, length: '1', align: L, type: tinyint, total: NO, formula: null, format: null }
+      IdEstado1: { field: IdEstado1, title: IdEstado1, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      IdEstado2: { field: IdEstado2, title: IdEstado2, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      IdEstado3: { field: IdEstado3, title: IdEstado3, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      IdEstado4: { field: IdEstado4, title: IdEstado4, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      IdEstado5: { field: IdEstado5, title: IdEstado5, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      StockMinimo: { field: StockMinimo, title: StockMinimo, length: '10', align: R, type: integer, total: NO, formula: null, format: null }
+      StockMaximo: { field: StockMaximo, title: StockMaximo, length: '10', align: R, type: integer, total: NO, formula: null, format: null }
+      MinimoVentaAlto: { field: MinimoVentaAlto, title: MinimoVentaAlto, length: '10', align: R, type: integer, total: NO, formula: null, format: null }
+      MinimoVentaAncho: { field: MinimoVentaAncho, title: MinimoVentaAncho, length: '10', align: R, type: integer, total: NO, formula: null, format: null }
+      MinimoVenta: { field: MinimoVenta, title: MinimoVenta, length: '10', align: R, type: integer, total: NO, formula: null, format: null }
+      MultiploAlto: { field: MultiploAlto, title: MultiploAlto, length: '10', align: R, type: integer, total: NO, formula: null, format: null }
+      MultiploAncho: { field: MultiploAncho, title: MultiploAncho, length: '10', align: R, type: integer, total: NO, formula: null, format: null }
+      RecargoEnergetico: { field: RecargoEnergetico, title: RecargoEnergetico, length: '1', align: L, type: tinyint, total: NO, formula: null, format: null }
+      UMB: { field: UMB, title: UMB, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      UMC: { field: UMC, title: UMC, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      CUMC: { field: CUMC, title: CUMC, length: '10', align: R, type: integer, total: NO, formula: null, format: null }
+      UMA: { field: UMA, title: UMA, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      CUMA: { field: CUMA, title: CUMA, length: '10', align: R, type: integer, total: NO, formula: null, format: null }
+      UMV: { field: UMV, title: UMV, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      CUMV: { field: CUMV, title: CUMV, length: '10', align: R, type: integer, total: NO, formula: null, format: null }
+      AvisosPedidos: { field: AvisosPedidos, title: AvisosPedidos, length: 20, align: L, type: string, total: NO, formula: null, format: null }
+      AvisosPresupuestos: { field: AvisosPresupuestos, title: AvisosPresupuestos, length: 20, align: L, type: string, total: NO, formula: null, format: null }
+      AvisosAlbaranes: { field: AvisosAlbaranes, title: AvisosAlbaranes, length: 20, align: L, type: string, total: NO, formula: null, format: null }
+      AvisosFacturas: { field: AvisosFacturas, title: AvisosFacturas, length: 20, align: L, type: string, total: NO, formula: null, format: null }
+      NivelJerarquico: { field: NivelJerarquico, title: NivelJerarquico, length: '4', align: R, type: integer, total: NO, formula: null, format: null }
+      Publish: { field: Publish, title: Publish, length: '1', align: L, type: tinyint, total: NO, formula: null, format: null }

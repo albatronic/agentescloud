@@ -1,0 +1,26 @@
+# Module: Familias
+# Document : modules\Familias\listados.yml
+#
+# @copyright: ALBATRONIC
+# @date 18.06.2015 21:32:23
+#
+---
+listados:
+  -
+    title: Familias
+    order_by: Id
+    break_field: null
+    idPerfil: null
+    orientation: P
+    unit: mm
+    format: A4
+    margins: '10, 10, 15, 10'
+    body_font: 'Courier, , 8'
+    line_height: 4
+    print_interline: null
+    legend_bottom: null
+    columns:
+      IdFirma: { field: IdFirma, title: IdFirma, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      Descripcion: { field: Descripcion, title: Descripcion, length: '100', align: L, type: string, total: NO, formula: null, format: null }
+      NivelJerarquico: { field: NivelJerarquico, title: NivelJerarquico, length: '4', align: R, type: integer, total: NO, formula: null, format: null }
+      Publish: { field: Publish, title: Publish, length: '1', align: L, type: tinyint, total: NO, formula: null, format: null }

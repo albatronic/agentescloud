@@ -1,0 +1,42 @@
+# Module: ClientesDEntrega
+# Document : modules\ClientesDEntrega\listados.yml
+#
+# @copyright: ALBATRONIC
+# @date 18.06.2015 22:39:29
+#
+---
+listados:
+  -
+    title: ClientesDEntrega
+    order_by: Id
+    break_field: null
+    idPerfil: null
+    orientation: P
+    unit: mm
+    format: A4
+    margins: '10, 10, 15, 10'
+    body_font: 'Courier, , 8'
+    line_height: 4
+    print_interline: null
+    legend_bottom: null
+    columns:
+      IdCliente: { field: IdCliente, title: IdCliente, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      Nombre: { field: Nombre, title: Nombre, length: '50', align: L, type: string, total: NO, formula: null, format: null }
+      Direccion: { field: Direccion, title: Direccion, length: '50', align: L, type: string, total: NO, formula: null, format: null }
+      IdPais: { field: IdPais, title: IdPais, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      IdProvincia: { field: IdProvincia, title: IdProvincia, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      IdPoblacion: { field: IdPoblacion, title: IdPoblacion, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      CodigoPostal: { field: CodigoPostal, title: CodigoPostal, length: '10', align: L, type: string, total: NO, formula: null, format: null }
+      Telefono: { field: Telefono, title: Telefono, length: '30', align: L, type: string, total: NO, formula: null, format: null }
+      Fax: { field: Fax, title: Fax, length: '30', align: L, type: string, total: NO, formula: null, format: null }
+      Movil: { field: Movil, title: Movil, length: '30', align: L, type: string, total: NO, formula: null, format: null }
+      EMail: { field: EMail, title: EMail, length: '50', align: L, type: string, total: NO, formula: null, format: null }
+      PersonaContacto: { field: PersonaContacto, title: PersonaContacto, length: '50', align: L, type: string, total: NO, formula: null, format: null }
+      EnviarCopiaFactura: { field: EnviarCopiaFactura, title: EnviarCopiaFactura, length: '1', align: L, type: tinyint, total: NO, formula: null, format: null }
+      FacturacionIndependiente: { field: FacturacionIndependiente, title: FacturacionIndependiente, length: '1', align: L, type: tinyint, total: NO, formula: null, format: null }
+      AgenciaHabitual: { field: AgenciaHabitual, title: AgenciaHabitual, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      Horario: { field: Horario, title: Horario, length: '50', align: L, type: string, total: NO, formula: null, format: null }
+      HorarioLlamadas: { field: HorarioLlamadas, title: HorarioLlamadas, length: '50', align: L, type: string, total: NO, formula: null, format: null }
+      Vigente: { field: Vigente, title: Vigente, length: '1', align: L, type: tinyint, total: NO, formula: null, format: null }
+      NivelJerarquico: { field: NivelJerarquico, title: NivelJerarquico, length: '4', align: R, type: integer, total: NO, formula: null, format: null }
+      Publish: { field: Publish, title: Publish, length: '1', align: L, type: tinyint, total: NO, formula: null, format: null }

@@ -1,0 +1,32 @@
+{#
+  Module: ClientesDEntrega
+  Document : modules\ClientesDEntrega\fields.html.twig
+
+  copyright: ALBATRONIC
+  date 18.06.2015 22:39:29
+#}
+
+{{ macro.select(values.atributos.IdCliente,'Etiqueta',values.controller ~ '[IdCliente]',values.controller ~ '_IdCliente',none,datos.IdCliente.IdCliente,datos.IdCliente.fetchAll('Id'),'chzn-select','1')}}
+{{ macro.input(values.atributos.Nombre,'Etiqueta','text',values.controller ~ '[Nombre]',values.controller ~ '_Nombre',datos.Nombre,'50','CampoTextoLargo','2') }}
+{{ macro.input(values.atributos.Direccion,'Etiqueta','text',values.controller ~ '[Direccion]',values.controller ~ '_Direccion',datos.Direccion,'50','CampoTextoLargo','3') }}
+{{ macro.select(values.atributos.IdPais,'Etiqueta',values.controller ~ '[IdPais]',values.controller ~ '_IdPais',none,datos.IdPais.IdPais,datos.IdPais.fetchAll('Id'),'chzn-select','4')}}
+{{ macro.select(values.atributos.IdProvincia,'Etiqueta',values.controller ~ '[IdProvincia]',values.controller ~ '_IdProvincia',none,datos.IdProvincia.IdProvincia,datos.IdProvincia.fetchAll('Id'),'chzn-select','5')}}
+{{ macro.select(values.atributos.IdPoblacion,'Etiqueta',values.controller ~ '[IdPoblacion]',values.controller ~ '_IdPoblacion',none,datos.IdPoblacion.IdPoblacion,datos.IdPoblacion.fetchAll('Id'),'chzn-select','6')}}
+{{ macro.input(values.atributos.CodigoPostal,'Etiqueta','text',values.controller ~ '[CodigoPostal]',values.controller ~ '_CodigoPostal',datos.CodigoPostal,'10','CampoTextoCorto','7') }}
+{{ macro.input(values.atributos.Telefono,'Etiqueta','text',values.controller ~ '[Telefono]',values.controller ~ '_Telefono',datos.Telefono,'30','CampoTextoLargo','8') }}
+{{ macro.input(values.atributos.Fax,'Etiqueta','text',values.controller ~ '[Fax]',values.controller ~ '_Fax',datos.Fax,'30','CampoTextoLargo','9') }}
+{{ macro.input(values.atributos.Movil,'Etiqueta','text',values.controller ~ '[Movil]',values.controller ~ '_Movil',datos.Movil,'30','CampoTextoLargo','10') }}
+{{ macro.input(values.atributos.EMail,'Etiqueta','text',values.controller ~ '[EMail]',values.controller ~ '_EMail',datos.EMail,'50','CampoTextoLargo','11') }}
+{{ macro.input(values.atributos.PersonaContacto,'Etiqueta','text',values.controller ~ '[PersonaContacto]',values.controller ~ '_PersonaContacto',datos.PersonaContacto,'50','CampoTextoLargo','12') }}
+{{ macro.select(values.atributos.EnviarCopiaFactura,'Etiqueta',values.controller ~ '[EnviarCopiaFactura]',values.controller ~ '_EnviarCopiaFactura',none,datos.EnviarCopiaFactura.EnviarCopiaFactura,datos.EnviarCopiaFactura.fetchAll('IDTipo'),'chzn-select','13')}}
+{{ macro.select(values.atributos.FacturacionIndependiente,'Etiqueta',values.controller ~ '[FacturacionIndependiente]',values.controller ~ '_FacturacionIndependiente',none,datos.FacturacionIndependiente.FacturacionIndependiente,datos.FacturacionIndependiente.fetchAll('IDTipo'),'chzn-select','14')}}
+{{ macro.select(values.atributos.AgenciaHabitual,'Etiqueta',values.controller ~ '[AgenciaHabitual]',values.controller ~ '_AgenciaHabitual',none,datos.AgenciaHabitual.AgenciaHabitual,datos.AgenciaHabitual.fetchAll('Id'),'chzn-select','15')}}
+{{ macro.input(values.atributos.Horario,'Etiqueta','text',values.controller ~ '[Horario]',values.controller ~ '_Horario',datos.Horario,'50','CampoTextoLargo','16') }}
+{{ macro.input(values.atributos.HorarioLlamadas,'Etiqueta','text',values.controller ~ '[HorarioLlamadas]',values.controller ~ '_HorarioLlamadas',datos.HorarioLlamadas,'50','CampoTextoLargo','17') }}
+{{ macro.select(values.atributos.Vigente,'Etiqueta',values.controller ~ '[Vigente]',values.controller ~ '_Vigente',none,datos.Vigente.Vigente,datos.Vigente.fetchAll('IDTipo'),'chzn-select','18')}}
+{{ macro.input(values.atributos.NivelJerarquico,'Etiqueta','text',values.controller ~ '[NivelJerarquico]',values.controller ~ '_NivelJerarquico',datos.NivelJerarquico,'4','CampoUnidades','19') }}
+{{ macro.select(values.atributos.Publish,'Etiqueta',values.controller ~ '[Publish]',values.controller ~ '_Publish',none,datos.Publish.Publish,datos.Publish.fetchAll('IDTipo'),'chzn-select','20')}}
+
+{% include '_global/fieldsComunes.html.twig' %}
+
+{{ macro.foco(values.controller ~ '_IdCliente') }}

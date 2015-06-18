@@ -1,0 +1,334 @@
+# Module: ClientesDEntrega
+# Document : modules/ClientesDEntrega/config.yml
+#
+# @author: Sergio Pérez <sergio.perez@albatronic.com>
+# @copyright: Informática ALBATRONIC SL
+# @date 18.06.2015 22:39:29
+#
+---
+ClientesDEntrega:
+  app: ''
+  isModuleRoot: 0
+  linkModule:
+    fromColumn: ''
+    toEntity: ''
+    toColumn: ''
+  modulosRelacionables: ''
+  translatable: false
+  searchable: false
+  showCommonFields: false
+  numMaxRecords: ''
+  numberOfImages: '0'
+  withMetadata: '0'
+  addMetadata: '0'
+  deleteMetadata: '0'
+  withGalery: '0'
+  withDocuments: '0'
+  withVideos: 0
+  withAudios: '0'
+  maxSizes:
+    image: '400000'
+    document: ''
+    video: ''
+    audio: ''
+  galery:
+    maxWidthImage: '500'
+    maxHeightImage: '400'
+    generateThumbnail: '0'
+    widthThumbnail: '50'
+    heightThumbnail: '50'
+  urlFriendlyManagement: false
+  fieldGeneratorUrlFriendly: IdCliente
+  metatagTitleManagement: false
+  fieldGeneratorMetatagTitle: IdCliente
+  fieldGeneratorMetatagDescription: IdCliente
+  fieldGeneratorMetatagKeywords: IdCliente
+  controller: ClientesDEntrega
+  action: Index
+  template: index.html.twig
+  parametros: ''
+  login_required: true
+  permission_control: true
+  favourite_control: false
+  help_file: help.html.twig
+  title: Direcciones de entrega
+  id_video: clientesdentrega
+  url_video: null
+  feature_list: true
+  conection: datos
+  entity: ClientesDEntrega
+  table: AgtClientesDEntrega
+  primarykey: Id
+  linkBy: ''
+  records_per_page: 15
+  export: 'false'
+  order_by:
+    -
+      title: 'Id a-z'
+      criteria: 'Id ASC'
+    -
+      title: 'Id z-a'
+      criteria: 'Id DESC'
+  search_default: Id
+  referenced_entities:
+    - Clientes
+    - Paises
+    - Provincias
+    - Municipios
+    - ValoresSN
+    - Agencias
+  columns:
+    Id:
+      title: Id
+      visible: false
+      updatable: false
+      filter: false
+      list: false
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+    IdCliente:
+      title: IdCliente
+      filter: false
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      '#aditional_filter': { order: 1, caption: IdCliente, entity: Clientes, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
+    Nombre:
+      title: Nombre
+      filter: true
+      list: true
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: false, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
+    Direccion:
+      title: Dirección
+      filter: true
+      list: true
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: false, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
+    IdPais:
+      title: IdPais
+      filter: false
+      list: false
+      visible: false
+      updatable: true
+      default: '68'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      '#aditional_filter': { order: 2, caption: IdPais, entity: Paises, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
+    IdProvincia:
+      title: Provincia
+      filter: false
+      list: true
+      visible: true
+      updatable: true
+      default: '0'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      '#aditional_filter': { order: 3, caption: IdProvincia, entity: Provincias, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
+    IdPoblacion:
+      title: Población
+      filter: false
+      list: true
+      visible: true
+      updatable: true
+      default: '0'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      '#aditional_filter': { order: 4, caption: IdPoblacion, entity: Municipios, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
+    CodigoPostal:
+      title: Código Postal
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: true, type: string, length: '10', min: null, max: null, message: 'Valor Requerido' }
+    Telefono:
+      title: Teléfono
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: true, type: string, length: '30', min: null, max: null, message: 'Valor Requerido' }
+    Fax:
+      title: Fax
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: true, type: string, length: '30', min: null, max: null, message: 'Valor Requerido' }
+    Movil:
+      title: Móvil
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: true, type: string, length: '30', min: null, max: null, message: 'Valor Requerido' }
+    EMail:
+      title: EMail
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: true, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
+    PersonaContacto:
+      title: Persona Contacto
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: true, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
+    EnviarCopiaFactura:
+      title: Enviar Copia Factura
+      filter: false
+      list: false
+      visible: true
+      updatable: true
+      default: '1'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      '#aditional_filter': { order: 5, caption: EnviarCopiaFactura, entity: ValoresSN, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      validator: { nullable: false, type: tinyint, length: '1', min: null, max: null, message: 'Valor Requerido' }
+    FacturacionIndependiente:
+      title: Facturacion Independiente
+      filter: false
+      list: false
+      visible: true
+      updatable: true
+      default: '0'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      '#aditional_filter': { order: 6, caption: FacturacionIndependiente, entity: ValoresSN, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      validator: { nullable: false, type: tinyint, length: '1', min: null, max: null, message: 'Valor Requerido' }
+    AgenciaHabitual:
+      title: Agencia Habitual
+      filter: false
+      list: false
+      visible: true
+      updatable: true
+      default: '0'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      '#aditional_filter': { order: 7, caption: AgenciaHabitual, entity: Agencias, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
+    Horario:
+      title: Horario
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: true, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
+    HorarioLlamadas:
+      title: Horario Llamadas
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: true, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
+    Vigente:
+      title: Vigente
+      filter: false
+      list: false
+      visible: true
+      updatable: true
+      default: '1'
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      '#aditional_filter': { order: 8, caption: Vigente, entity: ValoresSN, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      validator: { nullable: false, type: tinyint, length: '1', min: null, max: null, message: 'Valor Requerido' }

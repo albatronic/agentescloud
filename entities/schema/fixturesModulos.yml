@@ -34,7 +34,8 @@ Modulos:
   - { Id: 30, CodigoApp: Fich, NombreModulo: Fich,   Nivel: 0, BelongsTo: 0,   Titulo: Ficheros, Funcionalidades: AC, Icon: 'glyphicon glyphicon-th' }  
   - { CodigoApp: Fich, NombreModulo: Clientes,       Nivel: 1, BelongsTo: 30,  Titulo: Clientes, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}  
   - { CodigoApp: Fich, NombreModulo: Firmas,         Nivel: 1, BelongsTo: 30,  Titulo: Firmas Representadas, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}  
-  - { CodigoApp: Fich, NombreModulo: Ariculos,       Nivel: 1, BelongsTo: 30,  Titulo: Artículos, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}  
+  - { CodigoApp: Fich, NombreModulo: Familias,        Nivel: 1, BelongsTo: 30,  Titulo: Familias, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}  
+  - { CodigoApp: Fich, NombreModulo: Articulos,       Nivel: 1, BelongsTo: 30,  Titulo: Artículos, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}  
   - { CodigoApp: Fich, NombreModulo: Subagentes,     Nivel: 1, BelongsTo: 30,  Titulo: Subagentes, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}    
   - { CodigoApp: Fich, NombreModulo: Agencias,       Nivel: 1, BelongsTo: 30,  Titulo: Agencia Transporte, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}  
   - { CodigoApp: Fich, NombreModulo: Actividades,    Nivel: 1, BelongsTo: 30,  Titulo: Actividades, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}  
@@ -43,26 +44,26 @@ Modulos:
   - { CodigoApp: Fich, NombreModulo: Rutas,          Nivel: 1, BelongsTo: 30,  Titulo: Rutas, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}
   
   # GESTIÓN COMERCIAL
-  - { Id: 40, CodigoApp: Gesco, NombreModulo: Gesco,    Nivel: 0, BelongsTo: 0,  Titulo: Gestión Comercial, Funcionalidades: AC, Icon: 'glyphicon glyphicon-eur' }
-  - { CodigoApp: Gesco, NombreModulo: PedidosCab,       Nivel: 1, BelongsTo: 40, Titulo: Pedidos, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}  
-  - { CodigoApp: Gesco, NombreModulo: FactuFirmasCab,   Nivel: 1, BelongsTo: 40, Titulo: Facturas de Firmas, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}  
-  - { CodigoApp: Gesco, NombreModulo: Liquidacion,      Nivel: 1, BelongsTo: 40, Titulo: Liquidación de Comisiones, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}  
-  - { CodigoApp: Gesco, NombreModulo: FactuEmitidasCab, Nivel: 1, BelongsTo: 40, Titulo: Facturas Emitidas, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}  
-  - { CodigoApp: Gesco, NombreModulo: CondiComerciales, Nivel: 1, BelongsTo: 40, Titulo: Condiciones Comerciales, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}  
-  - { CodigoApp: Gesco, NombreModulo: Gastos,           Nivel: 1, BelongsTo: 40, Titulo: Gastos, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}  
+  - { Id: 50, CodigoApp: Gesco, NombreModulo: Gesco,    Nivel: 0, BelongsTo: 0,  Titulo: Gestión Comercial, Funcionalidades: AC, Icon: 'glyphicon glyphicon-eur' }
+  - { CodigoApp: Gesco, NombreModulo: PedidosCab,       Nivel: 1, BelongsTo: 50, Titulo: Pedidos, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}  
+  - { CodigoApp: Gesco, NombreModulo: FactuFirmasCab,   Nivel: 1, BelongsTo: 50, Titulo: Facturas de Firmas, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}  
+  - { CodigoApp: Gesco, NombreModulo: Liquidacion,      Nivel: 1, BelongsTo: 50, Titulo: Liquidación de Comisiones, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}  
+  - { CodigoApp: Gesco, NombreModulo: FactuEmitidasCab, Nivel: 1, BelongsTo: 50, Titulo: Facturas Emitidas, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}  
+  - { CodigoApp: Gesco, NombreModulo: CondiComerciales, Nivel: 1, BelongsTo: 50, Titulo: Condiciones Comerciales, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}  
+  - { CodigoApp: Gesco, NombreModulo: Gastos,           Nivel: 1, BelongsTo: 50, Titulo: Gastos, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}  
 
   # ALMACEN
-  - { Id: 50, CodigoApp: Alma, NombreModulo: Alma,    Nivel: 0, BelongsTo: 0,  Titulo: Almacén, Funcionalidades: AC, Icon: 'glyphicon glyphicon-barcode' }
-  - { CodigoApp: Alma, NombreModulo: Almacenes,       Nivel: 1, BelongsTo: 50, Titulo: Almacenes, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}   
-  - { CodigoApp: Alma, NombreModulo: EntradasAlmacen, Nivel: 1, BelongsTo: 50, Titulo: Entradas de Almacén, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}   
+  - { Id: 60, CodigoApp: Alma, NombreModulo: Alma,    Nivel: 0, BelongsTo: 0,  Titulo: Almacén, Funcionalidades: AC, Icon: 'glyphicon glyphicon-barcode' }
+  - { CodigoApp: Alma, NombreModulo: Almacenes,       Nivel: 1, BelongsTo: 60, Titulo: Almacenes, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}   
+  - { CodigoApp: Alma, NombreModulo: EntradasAlmacen, Nivel: 1, BelongsTo: 60, Titulo: Entradas de Almacén, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}   
 
   # INFORMES
-  - { Id: 60, CodigoApp: Repor, NombreModulo: Repor, Nivel: 0, BelongsTo: 0,  Titulo: Informes, Funcionalidades: AC, Icon: 'glyphicon glyphicon-list-alt' }  
-  - { CodigoApp: Repor, NombreModulo: Informes,      Nivel: 1, BelongsTo: 60, Titulo: Informes, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}    
+  - { Id: 70, CodigoApp: Repor, NombreModulo: Repor, Nivel: 0, BelongsTo: 0,  Titulo: Informes, Funcionalidades: AC, Icon: 'glyphicon glyphicon-list-alt' }  
+  - { CodigoApp: Repor, NombreModulo: Informes,      Nivel: 1, BelongsTo: 70, Titulo: Informes, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}    
 
   # UTILIDADES
-  - { Id: 70, CodigoApp: Util, NombreModulo: Util,    Nivel: 0, BelongsTo: 0,  Titulo: Utilidades, Funcionalidades: AC, Icon: 'glyphicon glyphicon-tasks' }
-  - { CodigoApp: Util, NombreModulo: ImportarTarfias, Nivel: 1, BelongsTo: 70, Titulo: Importar Tarfias, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}    
+  - { Id: 80, CodigoApp: Util, NombreModulo: Util,    Nivel: 0, BelongsTo: 0,  Titulo: Utilidades, Funcionalidades: AC, Icon: 'glyphicon glyphicon-tasks' }
+  - { CodigoApp: Util, NombreModulo: ImportarTarfias, Nivel: 1, BelongsTo: 80, Titulo: Importar Tarfias, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}    
   
 Permisos:
   # PERMISOS PARA EL SUPERADMINSITRADOR
@@ -83,6 +84,7 @@ Permisos:
   - { IdPerfil: 1, NombreModulo: Fich, Funcionalidades: 'AC,VW' }  
   - { IdPerfil: 1, NombreModulo: Clientes, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}   
   - { IdPerfil: 1, NombreModulo: Firmas, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}   
+  - { IdPerfil: 1, NombreModulo: Familias, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}   
   - { IdPerfil: 1, NombreModulo: Articulos, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}   
   - { IdPerfil: 1, NombreModulo: Subagentes, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}   
   - { IdPerfil: 1, NombreModulo: Agencias, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}   
@@ -127,6 +129,7 @@ Permisos:
   - { IdPerfil: 2, NombreModulo: Fich, Funcionalidades: 'AC,VW' } 
   - { IdPerfil: 2, NombreModulo: Clientes, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}   
   - { IdPerfil: 2, NombreModulo: Firmas, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}   
+  - { IdPerfil: 2, NombreModulo: Familias, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}   
   - { IdPerfil: 2, NombreModulo: Articulos, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}   
   - { IdPerfil: 2, NombreModulo: Subagentes, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}   
   - { IdPerfil: 2, NombreModulo: Agencias, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}   
