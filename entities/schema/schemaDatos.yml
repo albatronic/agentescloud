@@ -67,7 +67,8 @@ AgtEmailBox:
 AgtArticulos:
   comment: Artículos
   columns:   
-    Codigo:            { type: string(25), notnull: true, index: unique}
+    IdFirma:           { type: bigint(11), notnull: true, index: index, comment: 'datos,Firmas,Id' }      
+    Codigo:            { type: string(25), notnull: true, index: index }
     Descripcion:       { type: string(255), notnull: true, index: index }
     Subtitulo:         { type: string(255), default: null }
     Resumen:           { type: string(500), default: null }
@@ -76,7 +77,6 @@ AgtArticulos:
     IdCategoria:       { type: bigint(11), notnull: true, default: 0, index: index, comment: 'datos,Familias,Id' }
     IdFamilia:         { type: bigint(11), notnull: true, default: 0, index: index, comment: 'datos,Familias,Id' }
     IdSubfamilia:      { type: bigint(11), notnull: true, default: 0, index: index, comment: 'datos,Familias,Id' }
-    IdFirma:           { type: bigint(11), notnull: true, default: 0, index: index, comment: 'datos,Firmas,Id' }
     Pvd:               { type: decimal(3), notnull: true, default: 0}
     Pvp:               { type: decimal(3), notnull: true, default: 0}
     Margen:            { type: decimal(3), notnull: true, default: 0}
@@ -125,6 +125,8 @@ AgtArticulos:
     AvisosFacturas:     { type: text, defatul: null }
     <?php include '../../entities/schema/schemaColumnsCommon.yml'; echoln('');?>    
   relations:
+  index:
+    Firma_Codigo: { type: unique, columns: 'IdFirma,Codigo'}      
  
 # Estados de los artículos
 AgtArticulosEstados:

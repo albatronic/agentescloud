@@ -23,6 +23,7 @@
     {{ macro.input(values.atributos.Web,'Etiqueta','text',values.controller ~ '[Web]',values.controller ~ '_Web',datos.Web,'50','CampoTextoLargo','14') }}
 </div>
 <div class="col-md-6">
+    {{ macro.input(values.atributos.Vigente,'Etiqueta','checkbox',values.controller ~ '[Vigente]',values.controller ~ '_Vigente',datos.Vigente.IDTipo,'chzn-select','25')}}     
     {{ macro.input(values.atributos.Gerente,'Etiqueta','text',values.controller ~ '[Gerente]',values.controller ~ '_Gerente',datos.Gerente,'100','CampoTextoLargo','15') }}
     {{ macro.input(values.atributos.DirectorComercial,'Etiqueta','text',values.controller ~ '[DirectorComercial]',values.controller ~ '_DirectorComercial',datos.DirectorComercial,'100','CampoTextoLargo','16') }}
     {{ macro.input(values.atributos.EmailGerente,'Etiqueta','text',values.controller ~ '[EmailGerente]',values.controller ~ '_EmailGerente',datos.EmailGerente,'100','CampoTextoLargo','17') }}
@@ -38,7 +39,6 @@
     {{ macro.input(values.atributos.PlazoEntrega,'Etiqueta','text',values.controller ~ '[PlazoEntrega]',values.controller ~ '_PlazoEntrega',datos.PlazoEntrega,'4','CampoUnidades','27') }}
     {{ macro.select(values.atributos.IdAgencia,'Etiqueta',values.controller ~ '[IdAgencia]',values.controller ~ '_IdAgencia',none,datos.IdAgencia.Id,datos.IdAgencia.fetchAll('Agencia'),'chzn-select','28')}}
     {{ macro.input(values.atributos.SinPortes,'Etiqueta','text',values.controller ~ '[SinPortes]',values.controller ~ '_SinPortes',datos.SinPortes,'10','CampoImporte','29') }}
-    {{ macro.select(values.atributos.Vigente,'Etiqueta',values.controller ~ '[Vigente]',values.controller ~ '_Vigente',none,datos.Vigente.IDTipo,datos.Vigente.fetchAll('Descripcion'),'chzn-select','30')}}
 </div>
 <div class="clearfix"></div>
 {% include '_global/fieldsComunes.html.twig' %}

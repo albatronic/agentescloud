@@ -10,7 +10,6 @@
  * @since 27.05.2011
  */
 
-
 include_once "../bin/albatronic/autoloader.inc.php";
 
 $v = $_GET;

@@ -6,12 +6,10 @@
   date 18.06.2015 23:33:42
 #}
 <div class="col-md-6">
+    {{ macro.select(values.atributos.IdFirma,'Etiqueta',values.controller ~ '[IdFirma]',values.controller ~ '_IdFirma',none,datos.IdFirma.Id,datos.IdFirma.fetchAll('RazonSocial'),'chzn-select',none,"putFamilias(this.value,'Articulos_IdFamilia')")}} 
+    {{ macro.select(values.atributos.IdFamilia,'Etiqueta',values.controller ~ '[IdFamilia]',values.controller ~ '_IdFamilia',none,datos.IdFamilia.Id,datos.IdFirma.getFamilias('Descripcion'),'chzn-select','8')}}    
     {{ macro.input(values.atributos.Codigo,'Etiqueta','text',values.controller ~ '[Codigo]',values.controller ~ '_Codigo',datos.Codigo,'25','CampoTextoCorto','1') }}
     {{ macro.input(values.atributos.Descripcion,'Etiqueta','text',values.controller ~ '[Descripcion]',values.controller ~ '_Descripcion',datos.Descripcion,'255','CampoTextoLargo','2') }}
-    {{ macro.select(values.atributos.IdCategoria,'Etiqueta',values.controller ~ '[IdCategoria]',values.controller ~ '_IdCategoria',none,datos.IdCategoria.IdCategoria,datos.IdCategoria.fetchAll('Id'),'chzn-select','7')}}
-    {{ macro.select(values.atributos.IdFamilia,'Etiqueta',values.controller ~ '[IdFamilia]',values.controller ~ '_IdFamilia',none,datos.IdFamilia.IdFamilia,datos.IdFamilia.fetchAll('Id'),'chzn-select','8')}}
-    {{ macro.select(values.atributos.IdSubfamilia,'Etiqueta',values.controller ~ '[IdSubfamilia]',values.controller ~ '_IdSubfamilia',none,datos.IdSubfamilia.IdSubfamilia,datos.IdSubfamilia.fetchAll('Id'),'chzn-select','9')}}
-    {{ macro.select(values.atributos.IdFirma,'Etiqueta',values.controller ~ '[IdFirma]',values.controller ~ '_IdFirma',none,datos.IdFirma.Id,datos.IdFirma.fetchAll('RazonSocial'),'chzn-select','10')}}
     {{ macro.input(values.atributos.Pvd,'Etiqueta','text',values.controller ~ '[Pvd]',values.controller ~ '_Pvd',datos.Pvd,'10','CampoImporte','11') }}
     {{ macro.input(values.atributos.Pvp,'Etiqueta','text',values.controller ~ '[Pvp]',values.controller ~ '_Pvp',datos.Pvp,'10','CampoImporte','12') }}
     {{ macro.input(values.atributos.Margen,'Etiqueta','text',values.controller ~ '[Margen]',values.controller ~ '_Margen',datos.Margen,'10','CampoImporte','13') }}
@@ -21,11 +19,11 @@
     {{ macro.input(values.atributos.Garantia,'Etiqueta','text',values.controller ~ '[Garantia]',values.controller ~ '_Garantia',datos.Garantia,'10','CampoTextoCorto','20') }}
     {{ macro.input(values.atributos.Peso,'Etiqueta','text',values.controller ~ '[Peso]',values.controller ~ '_Peso',datos.Peso,'10','CampoImporte','21') }}
     {{ macro.input(values.atributos.Volumen,'Etiqueta','text',values.controller ~ '[Volumen]',values.controller ~ '_Volumen',datos.Volumen,'10','CampoImporte','22') }}
-    {{ macro.select(values.atributos.Vigente,'Etiqueta',values.controller ~ '[Vigente]',values.controller ~ '_Vigente',none,datos.Vigente.IDTipo,datos.Vigente.fetchAll('Descripcion'),'chzn-select','25')}}
     {{ macro.input(values.atributos.PackingCompras,'Etiqueta','text',values.controller ~ '[PackingCompras]',values.controller ~ '_PackingCompras',datos.PackingCompras,'10','CampoImporte','29') }}
     {{ macro.input(values.atributos.MinimoVenta,'Etiqueta','text',values.controller ~ '[MinimoVenta]',values.controller ~ '_MinimoVenta',datos.MinimoVenta,'10','CampoImporte','42') }}
 </div>
 <div class="col-md-6">
+    {{ macro.input(values.atributos.Vigente,'Etiqueta','checkbox',values.controller ~ '[Vigente]',values.controller ~ '_Vigente',datos.Vigente.IDTipo,'chzn-select','25')}}   
     {{ macro.textarea(values.atributos.Caracteristicas,'Etiqueta',values.controller ~ '[Caracteristicas]',values.controller ~ '_Caracteristicas',datos.Caracteristicas,none,none,'textarea','23')}}
     {{ macro.textarea(values.atributos.AvisosPedidos,'Etiqueta',values.controller ~ '[AvisosPedidos]',values.controller ~ '_AvisosPedidos',datos.AvisosPedidos,none,none,'textarea','53')}}
     {{ macro.textarea(values.atributos.AvisosFacturas,'Etiqueta',values.controller ~ '[AvisosFacturas]',values.controller ~ '_AvisosFacturas',datos.AvisosFacturas,none,none,'textarea','56')}}
@@ -33,9 +31,11 @@
 <div class="clearfix"></div>
 {% include '_global/fieldsComunes.html.twig' %}
 
-{{ macro.foco(values.controller ~ '_Codigo') }}
+{{ macro.foco(values.controller ~ '_IdFirma') }}
 
 {#
+{{ macro.select(values.atributos.IdCategoria,'Etiqueta',values.controller ~ '[IdCategoria]',values.controller ~ '_IdCategoria',none,datos.IdCategoria.Id,datos.IdCategoria.fetchAll('Descripcion'),'chzn-select','7')}}
+{{ macro.select(values.atributos.IdSubfamilia,'Etiqueta',values.controller ~ '[IdSubfamilia]',values.controller ~ '_IdSubfamilia',none,datos.IdSubfamilia.If,datos.IdSubfamilia.fetchAll('Descripcion'),'chzn-select','9')}}
 {{ macro.fecha(values.atributos.FechaUltimoPrecio,'Etiqueta',values.controller ~ '[FechaUltimoPrecio]',values.controller ~ '_FechaUltimoPrecio',datos.FechaUltimoPrecio,'19','datepicker','24')}}
 {{ macro.input(values.atributos.Caducidad,'Etiqueta','text',values.controller ~ '[Caducidad]',values.controller ~ '_Caducidad',datos.Caducidad,'4','CampoUnidades','19') }}
 {{ macro.input(values.atributos.Pmc,'Etiqueta','text',values.controller ~ '[Pmc]',values.controller ~ '_Pmc',datos.Pmc,'10','CampoImporte','14') }}

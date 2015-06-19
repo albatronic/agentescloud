@@ -7,17 +7,17 @@
  * @since 22/01/2012
  */
 
-$(function(){
+$(function () {
     $.datepicker.regional['es'] = {
         closeText: 'Cerrar',
         prevText: '<Ant',
         nextText: 'Sig>',
         currentText: 'Hoy',
         monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
-        monthNamesShort: ['Ene','Feb','Mar','Abr', 'May','Jun','Jul','Ago','Sep', 'Oct','Nov','Dic'],
+        monthNamesShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
         dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
-        dayNamesShort: ['Dom','Lun','Mar','Mié','Juv','Vie','Sáb'],
-        dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','Sá'],
+        dayNamesShort: ['Dom', 'Lun', 'Mar', 'Mié', 'Juv', 'Vie', 'Sáb'],
+        dayNamesMin: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sá'],
         weekHeader: 'Sm',
         dateFormat: 'dd/mm/yy',
         firstDay: 1,
@@ -26,55 +26,55 @@ $(function(){
         yearSuffix: ''
     };
     $.datepicker.setDefaults($.datepicker.regional['es']);
-    
+
     /**
      * Para las solapas
      */
-    $( "#tabbable" ).tabs({active: parseInt($('#solapaActiva').val(),10)});
-    $('#tabbable ul li').click(function(){
-        $('#solapaActiva').val( $("#tabbable").tabs("option","active") );
-    });     
-    $( "#tabs1" ).tabs(); 
-    $( "#tabsMostrarEnMenu" ).tabs();
-    
+    $("#tabbable").tabs({active: parseInt($('#solapaActiva').val(), 10)});
+    $('#tabbable ul li').click(function () {
+        $('#solapaActiva').val($("#tabbable").tabs("option", "active"));
+    });
+    $("#tabs1").tabs();
+    $("#tabsMostrarEnMenu").tabs();
+
     /**
      * Diálogo para el filtro avanzado
      */
-    $( "#filtroAvanzado" ).dialog({
+    $("#filtroAvanzado").dialog({
         autoOpen: false,
         width: 340,
         //height: 420,
-        position: ['right','center'],
+        position: ['right', 'center'],
         closeOnEscape: true,
         show: 'slide',
         resizable: false,
         buttons: {
-            "Consultar" : function() {
+            "Consultar": function () {
                 $('#div_listado').html('<div class=ListadoAnimation><img src={{app.path}}/images/loadingAnimation.gif /></div>');
                 $('#formFiltroAvanzado').submit();
-                },
-            "Cancelar" : function(){
+            },
+            "Cancelar": function () {
                 $(this).dialog('close');
             }
 
-        }            
+        }
     });
-        
+
     /**
      * Diálogo popup variables de entorno
      */
-    $( "#filtroAvanzado1" ).dialog({
+    $("#filtroAvanzado1").dialog({
         autoOpen: false,
         modal: false,
         width: 350,
         height: 540,
-        position: ['right','center'],
+        position: ['right', 'center'],
         closeOnEscape: true,
         buttons: {
-            "Consultar" : function() {
+            "Consultar": function () {
                 // Enviar el formulario por ajax
                 var $formulario = $('#filtro');
-                $(formulario).submit(function(e){
+                $(formulario).submit(function (e) {
                     var valores = $formulario.serialize();
                     alert(valores);
                     var $envio = $.ajax({
@@ -82,79 +82,80 @@ $(function(){
                         data: valores,
                         type: 'POST'
                     });
-                    
-                    $envio.done(function(){
+
+                    $envio.done(function () {
                         $(this).dialog('close');
                     });
                 });
             },
-            
-            "Cancelar" : function(){
+            "Cancelar": function () {
                 $(this).dialog('close');
             }
 
         }
     });
-    
-    $( "#accordion" ).accordion({
+
+    $("#accordion").accordion({
         autoHeight: false,
         navigation: true,
         collapsible: true
-    });    
-    
+    });
+
     /**
      * Diálogo popup variables de entorno
      */
-    $( "#dialogoVarEnv" ).dialog({
+    $("#dialogoVarEnv").dialog({
         autoOpen: false,
         modal: false,
         width: 400,
         height: 350,
-        position: ['right','center'],
+        position: ['right', 'center'],
         closeOnEscape: true
     });
 
     /**
      * Diálogo popup para ordenaciones
      */
-    $( "#dialogOrdenar" ).dialog({
+    $("#dialogOrdenar").dialog({
         autoOpen: false,
         width: 500,
         height: 500,
-        /*position: ['right','center'],*/     
+        /*position: ['right','center'],*/
         closeOnEscape: true
     });
- 
+
     /**
      * Diálogo para notificaciones
      */
-    $( "#notificacion" ).dialog({                       
+    $("#notificacion").dialog({
         resizable: true,
         modal: true,
         buttons: {
-        Aceptar: function() { $(this).dialog( "close" ); }
-        },        
+            Aceptar: function () {
+                $(this).dialog("close");
+            }
+        },
         autoOpen: false,
-        dialogClass: "alert",        
+        dialogClass: "alert",
         width: 400,
         height: 200,
-        position: ['center','center'],     
+        position: ['center', 'center'],
         closeOnEscape: true
     });
-    
+
     /**
      * Para el efecto acordeón
      */
-    
-    $( "#acordeonVW" ).accordion({
+
+    $("#acordeonVW").accordion({
         autoHeight: false,
         navigation: true,
         collapsible: true,
         active: false,
         heightStyle: "content"
-    });    
-    
-    $( "#acordeonOrdenesWeb" ).accordion({
+    });
+
+    $("#acordeonOrdenesWeb").accordion({
         autoHeight: false,
         navigation: true,
         collapsible: true,
@@ -183,34 +184,34 @@ $(function(){
  * @param {type} idEntidad
  * @returns {undefined}
  */
-function pintaTotales(entidad,idEntidad) {
-    var url = appPath +"/lib/getObjeto.php?formato=JSON&entidad="+entidad+"&idEntidad="+idEntidad;
- 
-    $.getJSON( url, function( data ) {
+function pintaTotales(entidad, idEntidad) {
+    var url = appPath + "/lib/getObjeto.php?formato=JSON&entidad=" + entidad + "&idEntidad=" + idEntidad;
 
-        parent.document.getElementById(entidad+"_LiteralTotal").innerHTML="TOTAL "+data['Total'];
-        parent.document.getElementById(entidad+"_Importe").value=data['Importe'];
-        parent.document.getElementById(entidad+"_Descuento").value=data['Descuento'];
-        parent.document.getElementById(entidad+"_BaseImponible1").value=data['BaseImponible1'];
-        parent.document.getElementById(entidad+"_BaseImponible2").value=data['BaseImponible2'];
-        parent.document.getElementById(entidad+"_BaseImponible3").value=data['BaseImponible3'];
-        parent.document.getElementById(entidad+"_Iva1").value=data['Iva1'];
-        parent.document.getElementById(entidad+"_Iva2").value=data['Iva2'];
-        parent.document.getElementById(entidad+"_Iva3").value=data['Iva3'];
-        parent.document.getElementById(entidad+"_CuotaIva1").value=data['CuotaIva1'];
-        parent.document.getElementById(entidad+"_CuotaIva2").value=data['CuotaIva2'];
-        parent.document.getElementById(entidad+"_CuotaIva3").value=data['CuotaIva3'];
-        parent.document.getElementById(entidad+"_Recargo1").value=data['Recargo1'];
-        parent.document.getElementById(entidad+"_Recargo2").value=data['Recargo2'];
-        parent.document.getElementById(entidad+"_Recargo3").value=data['Recargo3'];
-        parent.document.getElementById(entidad+"_CuotaRecargo1").value=data['CuotaRecargo1'];
-        parent.document.getElementById(entidad+"_CuotaRecargo2").value=data['CuotaRecargo2'];
-        parent.document.getElementById(entidad+"_CuotaRecargo3").value=data['CuotaRecargo3'];
-        parent.document.getElementById(entidad+"_TotalBases").value=data['TotalBases'];
-        parent.document.getElementById(entidad+"_TotalIva").value=data['TotalIva'];
-        parent.document.getElementById(entidad+"_TotalRecargo").value=data['TotalRecargo'];
+    $.getJSON(url, function (data) {
 
-    }); 
+        parent.document.getElementById(entidad + "_LiteralTotal").innerHTML = "TOTAL " + data['Total'];
+        parent.document.getElementById(entidad + "_Importe").value = data['Importe'];
+        parent.document.getElementById(entidad + "_Descuento").value = data['Descuento'];
+        parent.document.getElementById(entidad + "_BaseImponible1").value = data['BaseImponible1'];
+        parent.document.getElementById(entidad + "_BaseImponible2").value = data['BaseImponible2'];
+        parent.document.getElementById(entidad + "_BaseImponible3").value = data['BaseImponible3'];
+        parent.document.getElementById(entidad + "_Iva1").value = data['Iva1'];
+        parent.document.getElementById(entidad + "_Iva2").value = data['Iva2'];
+        parent.document.getElementById(entidad + "_Iva3").value = data['Iva3'];
+        parent.document.getElementById(entidad + "_CuotaIva1").value = data['CuotaIva1'];
+        parent.document.getElementById(entidad + "_CuotaIva2").value = data['CuotaIva2'];
+        parent.document.getElementById(entidad + "_CuotaIva3").value = data['CuotaIva3'];
+        parent.document.getElementById(entidad + "_Recargo1").value = data['Recargo1'];
+        parent.document.getElementById(entidad + "_Recargo2").value = data['Recargo2'];
+        parent.document.getElementById(entidad + "_Recargo3").value = data['Recargo3'];
+        parent.document.getElementById(entidad + "_CuotaRecargo1").value = data['CuotaRecargo1'];
+        parent.document.getElementById(entidad + "_CuotaRecargo2").value = data['CuotaRecargo2'];
+        parent.document.getElementById(entidad + "_CuotaRecargo3").value = data['CuotaRecargo3'];
+        parent.document.getElementById(entidad + "_TotalBases").value = data['TotalBases'];
+        parent.document.getElementById(entidad + "_TotalIva").value = data['TotalIva'];
+        parent.document.getElementById(entidad + "_TotalRecargo").value = data['TotalRecargo'];
+
+    });
 
 }
 
@@ -230,8 +231,8 @@ function AcordeonActivo(acordeon) {
  */
 function ocultarElemento(id) {
 
-    if ($('#'+id).length){
-        $('#'+id).css("display", "none");
+    if ($('#' + id).length) {
+        $('#' + id).css("display", "none");
     }
 }
 
@@ -242,8 +243,8 @@ function ocultarElemento(id) {
  */
 function mostrarElemento(id) {
 
-    if ($('#'+id).length){
-        $('#'+id).css("display", "block");
+    if ($('#' + id).length) {
+        $('#' + id).css("display", "block");
     }
 }
 
@@ -251,10 +252,10 @@ function mostrarElemento(id) {
  * Muestra/oculta el elemento id
  */
 function switchDisplay(id) {
-    if ($('#'+id).css('display') == 'block') {
-        $('#'+id).css('display','none');
+    if ($('#' + id).css('display') == 'block') {
+        $('#' + id).css('display', 'none');
     } else {
-        $('#'+id).css('display','block')        
+        $('#' + id).css('display', 'block')
     }
 }
 /**
@@ -280,31 +281,31 @@ function popUpVariablesEnv(tipo, ambito, modulo_columna) {
     var url = '<iframe src="' + appPath + '/CpanVariables/EditNode/' + ambito + '/' + tipo + '/' + modulo + '/' + columna + '" width="100%" height="98%"></iframe>';
 
     $('#dialogoVarEnv').html(url);
-    $('#dialogoVarEnv').dialog('open');  
+    $('#dialogoVarEnv').dialog('open');
 }
 
 /**
  * Muestra el popUp de ordenacion
  */
-function popUpOrdenar(controller,columna,key,columnaMostrar) {
-    
+function popUpOrdenar(controller, columna, key, columnaMostrar) {
+
     var url = '<iframe src="' + appPath + '/Ordenar/Index/' + controller + '/' + columna + '/' + key + '/' + columnaMostrar + '" width="100%" height="98%"></iframe>';
 
     $('#dialogOrdenar').html(url);
-    $('#dialogOrdenar').dialog('open');   
+    $('#dialogOrdenar').dialog('open');
 }
 
-function cargaEtiquetasRelacionadas(idDiv,idModulo,primaryKey) {
+function cargaEtiquetasRelacionadas(idDiv, idModulo, primaryKey) {
 
     var url = '<iframe src="' + appPath + '/EtiqRelaciones/list/' + idModulo + '/' + primaryKey + '" width="100%" height="520"><p>Tu navegador no soporta iframes</p></iframe>';
 
-    $('#'+idDiv).html(url);
+    $('#' + idDiv).html(url);
 }
 
 function Confirma(mensaje) {
     var dialogo = $('<div title="Confirmación"><p>' + mensaje + '</p></div>');
     // a workaround for a flaw in the demo system (http://dev.jqueryui.com/ticket/4375), ignore!
-    $( "#dialog:ui-dialog" ).dialog( "destroy" );
+    $("#dialog:ui-dialog").dialog("destroy");
 
     dialogo.dialog({
         autoOpen: true,
@@ -315,12 +316,12 @@ function Confirma(mensaje) {
         show: "fold",
         hide: "scale",
         buttons: {
-            Aceptar: function() {
-                $( this ).dialog( "close" );
+            Aceptar: function () {
+                $(this).dialog("close");
                 return true;
             },
-            Cancelar: function() {
-                $( this ).dialog( "close" );
+            Cancelar: function () {
+                $(this).dialog("close");
                 return false;
             }
         }
@@ -334,19 +335,21 @@ function Confirma(mensaje) {
  * @return void
  */
 function submitForm(formulario) {
-    
+
     // Coger el número de acordeon que está activo
     //var acordeonActivo = $( "#accordion" ).accordion( "option", "active" );
-    
+
     // Poner el número acordeon activo para que se submitee
     //$('#acordeonActivo').val(acordeonActivo);
-    
-    $('#'+formulario).submit();
+
+    $('#' + formulario).submit();
 }
 
-function Confirma1(mensaje){
-    if (confirm(mensaje)) return true;
-    else return false;
+function Confirma1(mensaje) {
+    if (confirm(mensaje))
+        return true;
+    else
+        return false;
 }
 
 function CerrarVentana() {
@@ -356,163 +359,180 @@ function CerrarVentana() {
 function Redondear(cantidad, decimales) {
     var vcantidad = parseFloat(cantidad);
     var vdecimales = parseFloat(decimales);
-    
+
     vdecimales = (!vdecimales ? 2 : vdecimales);
-    
+
     return Math.round(vcantidad * Math.pow(10, vdecimales)) / Math.pow(10, vdecimales);
 }
 
-function borraMetadato(entidad,metadato) {
-    var url        = appPath + '/lib/metaDatos.php';
-    var parametros = 'entidad='+entidad+'&metadato='+metadato+'&accion=B';
+function borraMetadato(entidad, metadato) {
+    var url = appPath + '/lib/metaDatos.php';
+    var parametros = 'entidad=' + entidad + '&metadato=' + metadato + '&accion=B';
     var html;
-    
-    // Coloco un gif "Cargando..." en la capa
-    html = $('#div_metaDato_'+metadato).html();    
-    $('#div_metaDato_'+metadato).html("<img src='"+appPath+"/images/loading.gif'>");
 
-    $('#resultadoMetaDatos').load(url, parametros, function(){
+    // Coloco un gif "Cargando..." en la capa
+    html = $('#div_metaDato_' + metadato).html();
+    $('#div_metaDato_' + metadato).html("<img src='" + appPath + "/images/loading.gif'>");
+
+    $('#resultadoMetaDatos').load(url, parametros, function () {
         if ($('#resultadoMetaDatos').html() === '1') {
-            $('#div_metaDato_'+metadato).html('');        
+            $('#div_metaDato_' + metadato).html('');
         } else {
-            $('#div_metaDato_'+metadato).html(html);        
-        }        
+            $('#div_metaDato_' + metadato).html(html);
+        }
     });
 
 }
 
-function creaMetadato(entidad,metadato,idEntidad) {
-    
+function creaMetadato(entidad, metadato, idEntidad) {
+
     // Sustituir todos los espacios con guiones bajos
-    metadato = metadato.replace(/ /g,"_");
-    
-    var url        = appPath + '/lib/metaDatos.php';
-    var parametros = 'entidad='+entidad+'&metadato='+metadato+'&idEntidad='+idEntidad+'&accion=C';
+    metadato = metadato.replace(/ /g, "_");
+
+    var url = appPath + '/lib/metaDatos.php';
+    var parametros = 'entidad=' + entidad + '&metadato=' + metadato + '&idEntidad=' + idEntidad + '&accion=C';
     var html, htmlNuevo;
 
     if (metadato !== '') {
-        $('#resultadoMetaDatos').load(url,parametros,function(){
+        $('#resultadoMetaDatos').load(url, parametros, function () {
             if ($('#resultadoMetaDatos').html() === '1') {
                 $('#metaDato_nuevo').val('');
                 html = $('#div_metaDatos').html();
-                htmlNuevo = "<div id='div_metaDato_"+metadato+"' class='Item'><span class='Etiqueta'><span>"+metadato+"</span></span><textarea name='metaDato["+metadato+"]' id='metaDato_"+metadato+"' class='TextAreaMeta' rows='2' columns='75'></textarea></div></div>";
+                htmlNuevo = "<div id='div_metaDato_" + metadato + "' class='Item'><span class='Etiqueta'><span>" + metadato + "</span></span><textarea name='metaDato[" + metadato + "]' id='metaDato_" + metadato + "' class='TextAreaMeta' rows='2' columns='75'></textarea></div></div>";
                 html = html + htmlNuevo;
                 $('#div_metaDatos').html(html);
             }
             if ($('#resultadoMetaDatos').html() === '2') {
                 alert("Ese campo ya existe");
-            }            
+            }
         });
     } else {
         alert('Debe indicar un nombre');
     }
 }
 
+function putFamilias(idFirma, divFamilias) {
+    
+    $('#' + divFamilias).html('');
+    
+    $.ajax({
+        url: appPath + '/lib/getFamilias.php?idFirma=' + idFirma,
+        dataType: 'html',
+        type: 'get',
+        success: function (resultado) {
+            var datos = $.parseJSON(resultado);
+            $.each(datos, function (key, value) {
+                $('#' + divFamilias).append("<option value='"+value.Id+"'>"+value.Value+"</option>");
+            });
+        }
+    });
+}
+
 function ValidaNif(idDiv) {
     cadena = "TRWAGMYFPDXBNJZSQVHLCKET";
-    mensaje='';
-    caracteres = $('#'+idDiv).val().length;
-    if ((caracteres < 7) || ( caracteres > 9)) {
+    mensaje = '';
+    caracteres = $('#' + idDiv).val().length;
+    if ((caracteres < 7) || (caracteres > 9)) {
         mensaje = 'Faltan caracteres';
     }
     else {
-        nif=$('#'+idDiv).val();
-        primero=nif.substring(0,1);
-        if (!isNaN(primero)){
-            numeros=nif.substring(0,8);
-            letra=nif.substring(8,1);
-            posicion=numeros % 23;
-            letraok=cadena.substring(posicion,posicion+1);
-            $('#'+idDiv).val(numeros + letraok);
+        nif = $('#' + idDiv).val();
+        primero = nif.substring(0, 1);
+        if (!isNaN(primero)) {
+            numeros = nif.substring(0, 8);
+            letra = nif.substring(8, 1);
+            posicion = numeros % 23;
+            letraok = cadena.substring(posicion, posicion + 1);
+            $('#' + idDiv).val(numeros + letraok);
         }
     }
-    if(mensaje!==''){
+    if (mensaje !== '') {
         $('#notificacion').html(mensaje);
-        $('#notificacion').dialog('open');    
+        $('#notificacion').dialog('open');
     }
 }
 
-function esNumero(numero){
-    
- return (/^([0-9])*.([0-9])*$/.test(numero));
- 
+function esNumero(numero) {
+
+    return (/^([0-9])*.([0-9])*$/.test(numero));
+
 }
- 
-function IsNumeric(valor){   
+
+function IsNumeric(valor) {
     return !isNaN(valor);
 }
 
-var primerslap=false;
-var segundoslap=false;
+var primerslap = false;
+var segundoslap = false;
 
-function formateafecha(fecha){
+function formateafecha(fecha) {
     var longitud = fecha.length;
     var dia;
     var mes;
     var ano;
-    if ((longitud>=2) && (primerslap==false)) {
-        dia=fecha.substr(0,2);
-        if ((IsNumeric(dia)==true) && (dia<=31) && (dia!="00")) {
-            fecha=fecha.substr(0,2)+"/"+fecha.substr(3,7);
-            primerslap=true;
+    if ((longitud >= 2) && (primerslap == false)) {
+        dia = fecha.substr(0, 2);
+        if ((IsNumeric(dia) == true) && (dia <= 31) && (dia != "00")) {
+            fecha = fecha.substr(0, 2) + "/" + fecha.substr(3, 7);
+            primerslap = true;
         }
         else {
-            fecha="";
-            primerslap=false;
+            fecha = "";
+            primerslap = false;
         }
     }
     else
     {
-        dia=fecha.substr(0,1);
-        if (IsNumeric(dia)==false)
+        dia = fecha.substr(0, 1);
+        if (IsNumeric(dia) == false)
         {
-            fecha="";
+            fecha = "";
         }
-        if ((longitud<=2) && (primerslap=true)) {
-            fecha=fecha.substr(0,1);
-            primerslap=false;
+        if ((longitud <= 2) && (primerslap = true)) {
+            fecha = fecha.substr(0, 1);
+            primerslap = false;
         }
     }
-    if ((longitud>=5) && (segundoslap==false))
+    if ((longitud >= 5) && (segundoslap == false))
     {
-        mes=fecha.substr(3,2);
-        if ((IsNumeric(mes)===true) &&(mes<=12) && (mes!=="00")) {
-            fecha=fecha.substr(0,5)+"/"+fecha.substr(6,4);
-            segundoslap=true;
+        mes = fecha.substr(3, 2);
+        if ((IsNumeric(mes) === true) && (mes <= 12) && (mes !== "00")) {
+            fecha = fecha.substr(0, 5) + "/" + fecha.substr(6, 4);
+            segundoslap = true;
         }
         else {
-            fecha=fecha.substr(0,3);
-            segundoslap=false;
+            fecha = fecha.substr(0, 3);
+            segundoslap = false;
         }
     }
     else {
-        if ((longitud<=5) && (segundoslap==true)) {
-            fecha=fecha.substr(0,4);
-            segundoslap=false;
+        if ((longitud <= 5) && (segundoslap == true)) {
+            fecha = fecha.substr(0, 4);
+            segundoslap = false;
         }
     }
-    if (longitud>=7)
+    if (longitud >= 7)
     {
-        ano=fecha.substr(6,4);
-        if (IsNumeric(ano)==false) {
-            fecha=fecha.substr(0,6);
+        ano = fecha.substr(6, 4);
+        if (IsNumeric(ano) == false) {
+            fecha = fecha.substr(0, 6);
         }
         else {
-            if (longitud === 10){
-                if ((ano === 0) || (ano<1900) || (ano>2100)) {
-                    fecha=fecha.substr(0,6);
+            if (longitud === 10) {
+                if ((ano === 0) || (ano < 1900) || (ano > 2100)) {
+                    fecha = fecha.substr(0, 6);
                 }
             }
         }
     }
-    if (longitud>=10){
-        fecha=fecha.substr(0,10);
-        dia=fecha.substr(0,2);
-        mes=fecha.substr(3,2);
-        ano=fecha.substr(6,4);
+    if (longitud >= 10) {
+        fecha = fecha.substr(0, 10);
+        dia = fecha.substr(0, 2);
+        mes = fecha.substr(3, 2);
+        ano = fecha.substr(6, 4);
         // Año no viciesto y es febrero y el dia es mayor a 28
-        if ( (ano%4 !== 0) && (mes === 02) && (dia > 28) ) {
-            fecha=fecha.substr(0,2)+"/";
+        if ((ano % 4 !== 0) && (mes === 02) && (dia > 28)) {
+            fecha = fecha.substr(0, 2) + "/";
         }
     }
     return (fecha);
@@ -520,8 +540,8 @@ function formateafecha(fecha){
 
 function loading(iddiv) {
     // Coloco un gif "Cargando..." en la capa
-    var html = "<img src='"+appPath+"/images/loadingAnimation.gif'/>";
-    $('#'+iddiv).html(html);
+    var html = "<img src='" + appPath + "/images/loadingAnimation.gif'/>";
+    $('#' + iddiv).html(html);
 }
 
 /*
@@ -536,14 +556,14 @@ function loading(iddiv) {
  * tipo         -> indica el tipo de select. O sea la tabla que se empleará. Ver script 'desplegableAjax.php'
  * filtro       -> elemento html que contiene el valor por el que filtrar los datos.
  */
-function DesplegableAjax(iddiv,idselect,nameselect,tipo,filtro) {
-    var url        = appPath + '/lib/desplegableAjax.php';
-    var parametros = 't='+tipo+'&filtro='+filtro+'&idselect='+idselect+'&nameselect='+nameselect;
+function DesplegableAjax(iddiv, idselect, nameselect, tipo, filtro) {
+    var url = appPath + '/lib/desplegableAjax.php';
+    var parametros = 't=' + tipo + '&filtro=' + filtro + '&idselect=' + idselect + '&nameselect=' + nameselect;
 
     // Coloco un gif "Cargando..." en la capa
-    $('#'+iddiv).html("<img src='"+appPath+"/images/loading.gif'>");
+    $('#' + iddiv).html("<img src='" + appPath + "/images/loading.gif'>");
 
-    jQuery('#'+iddiv).load(url, parametros);
+    jQuery('#' + iddiv).load(url, parametros);
 
 }
 
@@ -557,12 +577,12 @@ function DesplegableAjax(iddiv,idselect,nameselect,tipo,filtro) {
  * idSucursal           -> valor de la sucursal, es opcional
  * desplegableAjax      -> array con parametros adicionales para disparar desplegables en cascada
  */
-function autoCompletar(campoAutoCompletar,campoId,campoTexto,entidad,idSucursal,desplegableAjax) {
-    $( "#"+campoAutoCompletar).autocomplete({
+function autoCompletar(campoAutoCompletar, campoId, campoTexto, entidad, idSucursal, desplegableAjax) {
+    $("#" + campoAutoCompletar).autocomplete({
         source: appPath + "/lib/autoCompletar.php?idSucursal=" + idSucursal + "&entidad=" + entidad,
         minLength: 2,
-        select: function( event, ui ) {
-            devuelve( campoId, ui.item.id, campoTexto, ui.item.value, desplegableAjax );
+        select: function (event, ui) {
+            devuelve(campoId, ui.item.id, campoTexto, ui.item.value, desplegableAjax);
         }
     });
 }
@@ -578,38 +598,38 @@ function autoCompletar(campoAutoCompletar,campoId,campoTexto,entidad,idSucursal,
  * filtroAdicional      -> valor para un filtro adicional, es opcional
  * desplegableAjax      -> array con parametros adicionales para disparar desplegables en cascada
  */
-function autoComplete(campoAutoCompletar,campoId,campoTexto,entidad,columna,filtroAdicional,desplegableAjax) {
+function autoComplete(campoAutoCompletar, campoId, campoTexto, entidad, columna, filtroAdicional, desplegableAjax) {
 
     var url = appPath + "/lib/autoCompletar.php?entidad=" + entidad + "&columna=" + columna + "&filtroAdicional=" + filtroAdicional;
 
-    $("#"+campoAutoCompletar).autocomplete({
+    $("#" + campoAutoCompletar).autocomplete({
         source: url,
         minLength: 2,
-        select: function( event, ui ) {
-            devuelve( campoId, ui.item.id, campoTexto, ui.item.value, desplegableAjax );
+        select: function (event, ui) {
+            devuelve(campoId, ui.item.id, campoTexto, ui.item.value, desplegableAjax);
         }
     });
 }
 
-function devuelve( campoId, id, campoTexto, value, desplegableAjax) {
-    $( "#"+campoId ).val(id);
-    $( "#"+campoTexto ).val(value);
+function devuelve(campoId, id, campoTexto, value, desplegableAjax) {
+    $("#" + campoId).val(id);
+    $("#" + campoTexto).val(value);
     if (desplegableAjax.length > 0) {
         var params = desplegableAjax;
-        DesplegableAjax(params[0],params[1],params[2],params[3],id);
+        DesplegableAjax(params[0], params[1], params[2], params[3], id);
     }
-    $( "#"+campoTexto ).focus();
+    $("#" + campoTexto).focus();
 }
 
-function autoCompleteSoloTexto(campoAutoCompletar,entidad,columna,filtroAdicional) {
+function autoCompleteSoloTexto(campoAutoCompletar, entidad, columna, filtroAdicional) {
 
     var url = appPath + "/lib/autoCompletar.php?entidad=" + entidad + "&columna=" + columna + "&filtroAdicional=" + filtroAdicional;
 
-    $("#"+campoAutoCompletar).autocomplete({
+    $("#" + campoAutoCompletar).autocomplete({
         source: url,
         minLength: 2,
-        select: function( event, datos ) {
-            $( "#"+campoAutoCompletar ).val(datos.item.value);
+        select: function (event, datos) {
+            $("#" + campoAutoCompletar).val(datos.item.value);
         }
     });
 }
@@ -620,9 +640,9 @@ function autoCompleteSoloTexto(campoAutoCompletar,entidad,columna,filtroAdiciona
  * con un valor dado vía ajax
  * 
  */
-function actualizaColumna(entidad,idEntidad,columna,valor) {
+function actualizaColumna(entidad, idEntidad, columna, valor) {
 
-    var parametros = 'entidad='+entidad+'&idEntidad='+idEntidad+'&columna='+columna+'&valor='+valor;
+    var parametros = 'entidad=' + entidad + '&idEntidad=' + idEntidad + '&columna=' + columna + '&valor=' + valor;
 
     $.ajax({
         url: appPath + "/lib/actualizaColumna.php",
@@ -635,61 +655,61 @@ function actualizaColumna(entidad,idEntidad,columna,valor) {
 /**
  * Actualiza las variables de entorno de las columnas de las entidades
  */
-function actualizaVarEntorno(entidadColumnaPropiedad,valor) {
-    var parametros = 'entidadColumnaPropiedad='+entidadColumnaPropiedad+'&valor='+valor;
+function actualizaVarEntorno(entidadColumnaPropiedad, valor) {
+    var parametros = 'entidadColumnaPropiedad=' + entidadColumnaPropiedad + '&valor=' + valor;
 
     $.ajax({
         url: appPath + "/lib/actualizaVarEntorno.php",
         type: 'GET',
         async: true,
         data: parametros
-    });    
+    });
 }
 
 /**
  * Asigna/Quita permiso a los módulos y perfiles de usuarios del Erp
  */
-function actualizaPermiso(idPerfil,nombreModulo,permiso,valor) {
-    var parametros = 'idPerfil='+idPerfil+'&nombreModulo='+nombreModulo+'&permiso='+permiso+'&valor='+valor;
+function actualizaPermiso(idPerfil, nombreModulo, permiso, valor) {
+    var parametros = 'idPerfil=' + idPerfil + '&nombreModulo=' + nombreModulo + '&permiso=' + permiso + '&valor=' + valor;
 
     $.ajax({
         url: appPath + "/lib/actualizaPermiso.php",
         type: 'GET',
         async: true,
         data: parametros
-    });    
+    });
 }
 
 /**
  * Crear o borra la relación entre una entidad-id y otra entidad-id
  */
-function actualizaRelacion(entidadOrigen,idOrigen,entidadDestino,idDestino,onOff) {
-    var parametros = 'entidadOrigen='+entidadOrigen+'&idOrigen='+idOrigen+'&entidadDestino='+entidadDestino+'&idDestino='+idDestino+'&onOff='+onOff;
+function actualizaRelacion(entidadOrigen, idOrigen, entidadDestino, idDestino, onOff) {
+    var parametros = 'entidadOrigen=' + entidadOrigen + '&idOrigen=' + idOrigen + '&entidadDestino=' + entidadDestino + '&idDestino=' + idDestino + '&onOff=' + onOff;
 
     $.ajax({
         url: appPath + '/lib/actualizaRelacion.php',
         type: 'GET',
         async: true,
         data: parametros
-    });    
+    });
 }
 /**
  * Crear o borra la relación entre una entidad-id y otra entidad-id
  */
-function actualizaRelacionValor(entidadOrigen,idOrigen,entidadDestino,idDestino,valor) {
-    var parametros = 'entidadOrigen='+entidadOrigen+'&idOrigen='+idOrigen+'&entidadDestino='+entidadDestino+'&idDestino='+idDestino+'&valor='+valor;
+function actualizaRelacionValor(entidadOrigen, idOrigen, entidadDestino, idDestino, valor) {
+    var parametros = 'entidadOrigen=' + entidadOrigen + '&idOrigen=' + idOrigen + '&entidadDestino=' + entidadDestino + '&idDestino=' + idDestino + '&valor=' + valor;
 
     $.ajax({
         url: appPath + '/lib/actualizaRelacionValor.php',
         type: 'GET',
         async: true,
         data: parametros
-    });    
+    });
 }
 
-function actualizaEtiquetasRelacionadas(idModulo,idEntidad,idEtiqueta,onOff) {
+function actualizaEtiquetasRelacionadas(idModulo, idEntidad, idEtiqueta, onOff) {
 
-    var parametros = 'idModulo='+idModulo+'&idEntidad='+idEntidad+'&idEtiqueta='+idEtiqueta+'&onOff='+onOff;
+    var parametros = 'idModulo=' + idModulo + '&idEntidad=' + idEntidad + '&idEtiqueta=' + idEtiqueta + '&onOff=' + onOff;
 
     $.ajax({
         url: appPath + '/lib/etiquetasRelacionadas.php',
@@ -702,42 +722,42 @@ function actualizaEtiquetasRelacionadas(idModulo,idEntidad,idEtiqueta,onOff) {
 /**
  * Actualiza la tripleta idarticulo-idpropiedad-idvalor
  **/
-function actualizaArticuloPropiedad(idArticulo,idPropiedad,idValor) {
+function actualizaArticuloPropiedad(idArticulo, idPropiedad, idValor) {
     var url = appPath + '/lib/actualizaArticuloPropiedad.php';
-    var parametros = 'idArticulo='+idArticulo+'&idPropiedad='+idPropiedad+'&idValor='+idValor;
+    var parametros = 'idArticulo=' + idArticulo + '&idPropiedad=' + idPropiedad + '&idValor=' + idValor;
     $('#resultado').load(url, parametros);
 }
 
 /**
  * Actualiza la tabla de portes
  */
-function actualizaTablaPortes(idAgencia,idZona,kilos,importe) {
+function actualizaTablaPortes(idAgencia, idZona, kilos, importe) {
     var url = appPath + '/lib/actualizaTablaPortes.php';
-    var parametros = 'idAgencia='+idAgencia+'&idZona='+idZona+'&kilos='+kilos+'&importe='+importe;
+    var parametros = 'idAgencia=' + idAgencia + '&idZona=' + idZona + '&kilos=' + kilos + '&importe=' + importe;
 
     $('#resultado').load(url, parametros);
-    
+
 }
 
 /**
  * Actualiza la relacion familias-propiedades
  */
-function actualizaFamiliaPropiedad(idFamilia,idPropiedad,valor) {
+function actualizaFamiliaPropiedad(idFamilia, idPropiedad, valor) {
     var url = appPath + '/lib/actualizaFamiliaPropiedad.php';
-    var parametros = 'idFamilia='+idFamilia+'&idPropiedad='+idPropiedad+'&valor='+valor;
+    var parametros = 'idFamilia=' + idFamilia + '&idPropiedad=' + idPropiedad + '&valor=' + valor;
 
     $('#resultado').load(url, parametros);
-    
+
 }
 /**
  * Actualiza la columna 'Filtrable' de una familia y propiedad
  */
-function actualizaFamiliaPropiedadFiltrable(idFamilia,idPropiedad,valor) {
+function actualizaFamiliaPropiedadFiltrable(idFamilia, idPropiedad, valor) {
     var url = appPath + '/lib/actualizaFamiliaPropiedadFiltrable.php';
-    var parametros = 'idFamilia='+idFamilia+'&idPropiedad='+idPropiedad+'&valor='+valor;
+    var parametros = 'idFamilia=' + idFamilia + '&idPropiedad=' + idPropiedad + '&valor=' + valor;
 
     $('#resultado').load(url, parametros);
-    
+
 }
 /*
  * ----------------------------------------------------------------
@@ -754,16 +774,16 @@ function actualizaFamiliaPropiedadFiltrable(idFamilia,idPropiedad,valor) {
  *
  * ----------------------------------------------------------------
  */
-function notificacion(mensaje,tipo) {
-    var v=0;
-    var errores="";
-    
-    for (var i=0; i<=mensaje.length;i++)
+function notificacion(mensaje, tipo) {
+    var v = 0;
+    var errores = "";
+
+    for (var i = 0; i <= mensaje.length; i++)
     {
-        if(mensaje[i]==='#')
+        if (mensaje[i] === '#')
         {
             errores += '<p>' + mensaje.substring(i, v) + '</p>';
-            v=i+1;
+            v = i + 1;
         }
     }
 
@@ -777,14 +797,14 @@ function notificacion(mensaje,tipo) {
  * SI NO SE INDICA iddiv, SE CREA EL LOTE PERO NO SE RECARGA EL DIV
  * EL PARAMETRO puntero SE UTILIZA PARA EL ID DEL TAG <SELECT>
  */
-function CrearLote(puntero,iddiv,idSelect,nameSelect,idArticulo,lote,fFabricacion,fCaducidad,width) {
-    var url        = appPath + '/lib/crearlote.php';
-    var parametros = 'puntero='+puntero+'&idArticulo='+idArticulo+'&lote='+lote+'&fFabricacion='+fFabricacion+'&fCaducidad='+fCaducidad+'&idSelect='+idSelect+'&nameSelect='+nameSelect+'&width='+width;
+function CrearLote(puntero, iddiv, idSelect, nameSelect, idArticulo, lote, fFabricacion, fCaducidad, width) {
+    var url = appPath + '/lib/crearlote.php';
+    var parametros = 'puntero=' + puntero + '&idArticulo=' + idArticulo + '&lote=' + lote + '&fFabricacion=' + fFabricacion + '&fCaducidad=' + fCaducidad + '&idSelect=' + idSelect + '&nameSelect=' + nameSelect + '&width=' + width;
 
     // Coloco un gif "Cargando..." en la capa
-    $('#'+iddiv).html("<img src='"+appPath+"/images/loading.gif' />");
+    $('#' + iddiv).html("<img src='" + appPath + "/images/loading.gif' />");
 
-    jQuery('#'+iddiv).load(url, parametros);
+    jQuery('#' + iddiv).load(url, parametros);
 
 }
 
@@ -809,30 +829,30 @@ function CrearLote(puntero,iddiv,idSelect,nameSelect,idArticulo,lote,fFabricacio
  * LLAMA AL SCRIP autoCompletar.php QUE ES EL QUE HACE LA CONSULTA
  * A LA BASE DE DATOS Y DEVUELVE EL RESULTADO
  */
-function lookup(key,idSucursal,idInput,idTexto,entidad,valor,desplegableAjax) {
+function lookup(key, idSucursal, idInput, idTexto, entidad, valor, desplegableAjax) {
 
-    if(valor.length < 3) {
+    if (valor.length < 3) {
         // Hide the suggestion box.
-        $('#suggestions'+key).hide();
+        $('#suggestions' + key).hide();
     } else {
         $.post(
-            appPath + "/lib/autoCompletar.php",
-            {
-                key: ""+key+"",
-                idSucursal: ""+idSucursal+"",
-                idInput: ""+idInput+"",
-                idTexto: ""+idTexto+"",
-                entidad: ""+entidad+"",
-                valor: ""+valor+"",
-                desplegableAjax: ""+desplegableAjax+""
-            },
-            function(data){
-                if(data.length >0) {
-                    $('#suggestions'+key).show();
-                    $('#autoSuggestionsList'+key).html(data);
-                }
+                appPath + "/lib/autoCompletar.php",
+                {
+                    key: "" + key + "",
+                    idSucursal: "" + idSucursal + "",
+                    idInput: "" + idInput + "",
+                    idTexto: "" + idTexto + "",
+                    entidad: "" + entidad + "",
+                    valor: "" + valor + "",
+                    desplegableAjax: "" + desplegableAjax + ""
+                },
+        function (data) {
+            if (data.length > 0) {
+                $('#suggestions' + key).show();
+                $('#autoSuggestionsList' + key).html(data);
             }
-            );
+        }
+        );
     }
 }
 
@@ -847,15 +867,15 @@ function lookup(key,idSucursal,idInput,idTexto,entidad,valor,desplegableAjax) {
  * DE VALORES SEPARADOR POR COMAS Y SERAN UTILIZADOS COMO
  * PARAMETROS PARA LA FUNCION DesplegableAjax
  */
-function fill(key,idInput,value,idTexto,texto, desplegableAjax) {
+function fill(key, idInput, value, idTexto, texto, desplegableAjax) {
 
-    $('#'+idInput).val(value);
-    $('#'+idTexto).val(texto);
-    setTimeout("$('#suggestions"+key+"').hide();", 200);
+    $('#' + idInput).val(value);
+    $('#' + idTexto).val(texto);
+    setTimeout("$('#suggestions" + key + "').hide();", 200);
 
-    if (desplegableAjax.length > 0){
+    if (desplegableAjax.length > 0) {
         var params = desplegableAjax.split(',');
-        DesplegableAjax(params[0],params[1],params[2],params[3],value);
+        DesplegableAjax(params[0], params[1], params[2], params[3], value);
     }
 }
 
@@ -863,83 +883,83 @@ function fill(key,idInput,value,idTexto,texto, desplegableAjax) {
  * OCULTA EL DIV suggestions+key
  */
 function hideSuggestions(key) {
-    setTimeout("$('#suggestions"+key+"').hide();", 200);
+    setTimeout("$('#suggestions" + key + "').hide();", 200);
 }
 
 function documentos(entidad, id, idDiv) {
-    var url        = appPath + '/lib/documentos.php';
-    var parametros = 'id='+id+'&entidad='+entidad;
+    var url = appPath + '/lib/documentos.php';
+    var parametros = 'id=' + id + '&entidad=' + entidad;
 
     // Coloco un gif "Cargando..." en la capa
-    $('#'+idDiv).html("<img src='"+appPath+"/images/loading.gif'>");
+    $('#' + idDiv).html("<img src='" + appPath + "/images/loading.gif'>");
 
-    jQuery('#'+idDiv).load(url, parametros); 
+    jQuery('#' + idDiv).load(url, parametros);
 }
 
 
 function isEmail(email)
 {
-	var posArroba = email.indexOf('@',0);
-	
-	if (posArroba <= 0)
-		return false;
+    var posArroba = email.indexOf('@', 0);
 
-	var posPunto = email.indexOf('.',posArroba);
-		
-	if (posPunto == -1)
-		return false;
-		
-	if (posPunto+1 == email.length)
-		return false;
-	// Despues del punto solo puede haber: a-z 0-9 . _-
-	if (!contieneCaracteresPermitidos(email.substr(posPunto+1), "._-"))
-		return false;
+    if (posArroba <= 0)
+        return false;
 
-	return true;
+    var posPunto = email.indexOf('.', posArroba);
+
+    if (posPunto == -1)
+        return false;
+
+    if (posPunto + 1 == email.length)
+        return false;
+    // Despues del punto solo puede haber: a-z 0-9 . _-
+    if (!contieneCaracteresPermitidos(email.substr(posPunto + 1), "._-"))
+        return false;
+
+    return true;
 }
 
 function isAlfanumerico(valor)
 {
-	var longi = valor.length;
-	var c;
-	valor = valor.toLowerCase();
-	
-	if (longi>0) {
-		c = valor.charAt(0);
-		if (!(c >= 'a' && c <= 'z')) {
-			return false;
-		}
-	}
-	
-	for (var i = 1; i < longi; i++)
-	{
-		c = valor.charAt(i);
-		if ((c >= '0' && c <= '9') || (c >= 'a' && c <= 'z') || c=='_' || c=='.')
-			continue;
-		else 
-			return false;
-	}
-	return true;
+    var longi = valor.length;
+    var c;
+    valor = valor.toLowerCase();
+
+    if (longi > 0) {
+        c = valor.charAt(0);
+        if (!(c >= 'a' && c <= 'z')) {
+            return false;
+        }
+    }
+
+    for (var i = 1; i < longi; i++)
+    {
+        c = valor.charAt(i);
+        if ((c >= '0' && c <= '9') || (c >= 'a' && c <= 'z') || c == '_' || c == '.')
+            continue;
+        else
+            return false;
+    }
+    return true;
 }
 
 function contieneCaracteresPermitidos(valor, caracteresValidos)
 {
-	var longi = valor.length;
-	var c;
-	valor = valor.toLowerCase();
-	
-	for (var i = 0; i < longi; i++)
-	{
-		c = valor.charAt(i);
-		if ((c >= '0' && c <= '9') || (c >= 'a' && c <= 'z')) {
-			continue;
-		} else {
-			for (var j=0; j<caracteresValidos.length; j++) {
-				if (caracteresValidos.indexOf(c)==-1) {
-					return false;
-				}
-			}
-		}
-	}
-	return true;
+    var longi = valor.length;
+    var c;
+    valor = valor.toLowerCase();
+
+    for (var i = 0; i < longi; i++)
+    {
+        c = valor.charAt(i);
+        if ((c >= '0' && c <= '9') || (c >= 'a' && c <= 'z')) {
+            continue;
+        } else {
+            for (var j = 0; j < caracteresValidos.length; j++) {
+                if (caracteresValidos.indexOf(c) == -1) {
+                    return false;
+                }
+            }
+        }
+    }
+    return true;
 }

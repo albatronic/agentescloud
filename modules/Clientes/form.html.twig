@@ -7,47 +7,48 @@
 #}
 
 <div class="col-md-6">
-{{ macro.input(values.atributos.RazonSocial,'Etiqueta','text',values.controller ~ '[RazonSocial]',values.controller ~ '_RazonSocial',datos.RazonSocial,'50','CampoTextoLargo','1') }}
-{{ macro.input(values.atributos.NombreComercial,'Etiqueta','text',values.controller ~ '[NombreComercial]',values.controller ~ '_NombreComercial',datos.NombreComercial,'50','CampoTextoLargo','2') }}
-{{ macro.input(values.atributos.Cif,'Etiqueta','text',values.controller ~ '[Cif]',values.controller ~ '_Cif',datos.Cif,'15','CampoTextoCorto','3') }}
-{{ macro.input(values.atributos.Direccion,'Etiqueta','text',values.controller ~ '[Direccion]',values.controller ~ '_Direccion',datos.Direccion,'50','CampoTextoLargo','4') }}
-{{ macro.select(values.atributos.IdPais,'Etiqueta',values.controller ~ '[IdPais]',values.controller ~ '_IdPais',none,datos.IdPais.Id,datos.IdPais.fetchAll('Pais'),'chzn-select','5')}}
-{{ macro.select(values.atributos.IdProvincia,'Etiqueta',values.controller ~ '[IdProvincia]',values.controller ~ '_IdProvincia',none,datos.IdProvincia.Id,datos.IdProvincia.fetchAll('Provincia'),'chzn-select','6')}}
-{{ macro.select(values.atributos.IdPoblacion,'Etiqueta',values.controller ~ '[IdPoblacion]',values.controller ~ '_IdPoblacion',none,datos.IdPoblacion.Id,datos.IdPoblacion.fetchAll('Municipio'),'chzn-select','7')}}
-{{ macro.input(values.atributos.CodigoPostal,'Etiqueta','text',values.controller ~ '[CodigoPostal]',values.controller ~ '_CodigoPostal',datos.CodigoPostal,'10','CampoTextoCorto','8') }}
-{{ macro.input(values.atributos.ApdoCorreos,'Etiqueta','text',values.controller ~ '[ApdoCorreos]',values.controller ~ '_ApdoCorreos',datos.ApdoCorreos,'10','CampoTextoCorto','9') }}
-{{ macro.input(values.atributos.Telefono,'Etiqueta','text',values.controller ~ '[Telefono]',values.controller ~ '_Telefono',datos.Telefono,'30','CampoTextoLargo','10') }}
-{{ macro.input(values.atributos.Fax,'Etiqueta','text',values.controller ~ '[Fax]',values.controller ~ '_Fax',datos.Fax,'30','CampoTextoLargo','11') }}
-{{ macro.input(values.atributos.Movil,'Etiqueta','text',values.controller ~ '[Movil]',values.controller ~ '_Movil',datos.Movil,'30','CampoTextoLargo','12') }}
-{{ macro.input(values.atributos.EMail,'Etiqueta','text',values.controller ~ '[EMail]',values.controller ~ '_EMail',datos.EMail,'50','CampoTextoLargo','13') }}
-{{ macro.input(values.atributos.Web,'Etiqueta','text',values.controller ~ '[Web]',values.controller ~ '_Web',datos.Web,'50','CampoTextoLargo','14') }}
-{{ macro.input(values.atributos.CContable,'Etiqueta','text',values.controller ~ '[CContable]',values.controller ~ '_CContable',datos.CContable,'10','CampoTextoCorto','15') }}
-{{ macro.select(values.atributos.IdRuta,'Etiqueta',values.controller ~ '[IdRuta]',values.controller ~ '_IdRuta',none,datos.IdRuta.Id,datos.IdRuta.fetchAll('Descripcion'),'chzn-select','16')}}
-{{ macro.select(values.atributos.IdActividad,'Etiqueta',values.controller ~ '[IdActividad]',values.controller ~ '_IdActividad',none,datos.IdActividad.Id,datos.IdActividad.fetchAll('Descripcion'),'chzn-select','17')}}
-{{ macro.select(values.atributos.IdGrupoCompras,'Etiqueta',values.controller ~ '[IdGrupoCompras]',values.controller ~ '_IdGrupoCompras',none,datos.IdGrupoCompras.Id,datos.IdGrupoCompras.fetchAll('Descripcion'),'chzn-select','18')}}
+    {{ macro.input(values.atributos.RazonSocial,'Etiqueta','text',values.controller ~ '[RazonSocial]',values.controller ~ '_RazonSocial',datos.RazonSocial,'50','CampoTextoLargo','1') }}
+    {{ macro.input(values.atributos.NombreComercial,'Etiqueta','text',values.controller ~ '[NombreComercial]',values.controller ~ '_NombreComercial',datos.NombreComercial,'50','CampoTextoLargo','2') }}
+    {{ macro.input(values.atributos.Cif,'Etiqueta','text',values.controller ~ '[Cif]',values.controller ~ '_Cif',datos.Cif,'15','CampoTextoCorto','3') }}
+    {{ macro.input(values.atributos.Direccion,'Etiqueta','text',values.controller ~ '[Direccion]',values.controller ~ '_Direccion',datos.Direccion,'50','CampoTextoLargo','4') }}
+    {{ macro.select(values.atributos.IdPais,'Etiqueta',values.controller ~ '[IdPais]',values.controller ~ '_IdPais',none,datos.IdPais.Id,datos.IdPais.fetchAll('Pais'),'chzn-select','5')}}
+    {{ macro.select(values.atributos.IdProvincia,'Etiqueta',values.controller ~ '[IdProvincia]',values.controller ~ '_IdProvincia',none,datos.IdProvincia.Id,datos.IdProvincia.fetchAll('Provincia'),'chzn-select','6')}}
+    {{ macro.select(values.atributos.IdPoblacion,'Etiqueta',values.controller ~ '[IdPoblacion]',values.controller ~ '_IdPoblacion',none,datos.IdPoblacion.Id,datos.IdPoblacion.fetchAll('Municipio'),'chzn-select','7')}}
+    {{ macro.input(values.atributos.CodigoPostal,'Etiqueta','text',values.controller ~ '[CodigoPostal]',values.controller ~ '_CodigoPostal',datos.CodigoPostal,'10','CampoTextoCorto','8') }}
+    {{ macro.input(values.atributos.ApdoCorreos,'Etiqueta','text',values.controller ~ '[ApdoCorreos]',values.controller ~ '_ApdoCorreos',datos.ApdoCorreos,'10','CampoTextoCorto','9') }}
+    {{ macro.input(values.atributos.Telefono,'Etiqueta','text',values.controller ~ '[Telefono]',values.controller ~ '_Telefono',datos.Telefono,'30','CampoTextoLargo','10') }}
+    {{ macro.input(values.atributos.Fax,'Etiqueta','text',values.controller ~ '[Fax]',values.controller ~ '_Fax',datos.Fax,'30','CampoTextoLargo','11') }}
+    {{ macro.input(values.atributos.Movil,'Etiqueta','text',values.controller ~ '[Movil]',values.controller ~ '_Movil',datos.Movil,'30','CampoTextoLargo','12') }}
+    {{ macro.input(values.atributos.EMail,'Etiqueta','text',values.controller ~ '[EMail]',values.controller ~ '_EMail',datos.EMail,'50','CampoTextoLargo','13') }}
+    {{ macro.input(values.atributos.Web,'Etiqueta','text',values.controller ~ '[Web]',values.controller ~ '_Web',datos.Web,'50','CampoTextoLargo','14') }}
+    {{ macro.input(values.atributos.CContable,'Etiqueta','text',values.controller ~ '[CContable]',values.controller ~ '_CContable',datos.CContable,'10','CampoTextoCorto','15') }}
+    {{ macro.select(values.atributos.IdRuta,'Etiqueta',values.controller ~ '[IdRuta]',values.controller ~ '_IdRuta',none,datos.IdRuta.Id,datos.IdRuta.fetchAll('Descripcion'),'chzn-select','16')}}
+    {{ macro.select(values.atributos.IdActividad,'Etiqueta',values.controller ~ '[IdActividad]',values.controller ~ '_IdActividad',none,datos.IdActividad.Id,datos.IdActividad.fetchAll('Descripcion'),'chzn-select','17')}}
+    {{ macro.select(values.atributos.IdGrupoCompras,'Etiqueta',values.controller ~ '[IdGrupoCompras]',values.controller ~ '_IdGrupoCompras',none,datos.IdGrupoCompras.Id,datos.IdGrupoCompras.fetchAll('Descripcion'),'chzn-select','18')}}
 </div>
 <div class="col-md-6">
-{{ macro.select(values.atributos.IdFormaPago,'Etiqueta',values.controller ~ '[IdFormaPago]',values.controller ~ '_IdFormaPago',none,datos.IdFormaPago.Id,datos.IdFormaPago.fetchAll('Descripcion'),'chzn-select','19')}}
-{{ macro.input(values.atributos.DiaDePago,'Etiqueta','text',values.controller ~ '[DiaDePago]',values.controller ~ '_DiaDePago',datos.DiaDePago,'2','CampoUnidades','20') }}
-{{ macro.select(values.atributos.Iva,'Etiqueta',values.controller ~ '[Iva]',values.controller ~ '_Iva',none,datos.Iva.IDTipo,datos.Iva.fetchAll('Descripcion'),'chzn-select','21')}}
-{{ macro.select(values.atributos.RecargoEqu,'Etiqueta',values.controller ~ '[RecargoEqu]',values.controller ~ '_RecargoEqu',none,datos.RecargoEqu.IDTipo,datos.RecargoEqu.fetchAll('Descripcion'),'chzn-select','22')}}
-{{ macro.textarea(values.atributos.Avisos,'Etiqueta',values.controller ~ '[Avisos]',values.controller ~ '_Avisos',datos.Avisos,none,none,'textarea','23')}}
-{{ macro.select(values.atributos.Vigente,'Etiqueta',values.controller ~ '[Vigente]',values.controller ~ '_Vigente',none,datos.Vigente.IDTipo,datos.Vigente.fetchAll('Descripcion'),'chzn-select','24')}}
-{{ macro.select(values.atributos.Sexo,'Etiqueta',values.controller ~ '[Sexo]',values.controller ~ '_Sexo',none,datos.Sexo.IDTipo,datos.Sexo.fetchAll('Descripcion'),'chzn-select','25')}}
-{{ macro.select(values.atributos.Tratamiento,'Etiqueta',values.controller ~ '[Tratamiento]',values.controller ~ '_Tratamiento',none,datos.Tratamiento.IDTipo,datos.Tratamiento.fetchAll('Descripcion'),'chzn-select','26')}}
-{{ macro.fecha(values.atributos.FechaNacimiento,'Etiqueta',values.controller ~ '[FechaNacimiento]',values.controller ~ '_FechaNacimiento',datos.FechaNacimiento,'10','datepicker','27')}}
-{{ macro.input(values.atributos.Login,'Etiqueta','text',values.controller ~ '[Login]',values.controller ~ '_Login',datos.Login,'50','CampoTextoLargo','28') }}
-{{ macro.input(values.atributos.Password,'Etiqueta','text',values.controller ~ '[Password]',values.controller ~ '_Password',datos.Password,'50','CampoTextoLargo','29') }}
-{{ macro.input(values.atributos.Catalogos,'Etiqueta','text',values.controller ~ '[Catalogos]',values.controller ~ '_Catalogos',datos.Catalogos,'11','CampoImporte','30') }}
-{{ macro.input(values.atributos.Banco,'Etiqueta','text',values.controller ~ '[Banco]',values.controller ~ '_Banco',datos.Banco,'60','CampoTextoLargo','31') }}
-{{ macro.input(values.atributos.DireccionBanco,'Etiqueta','text',values.controller ~ '[DireccionBanco]',values.controller ~ '_DireccionBanco',datos.DireccionBanco,'60','CampoTextoLargo','32') }}
-{{ macro.input(values.atributos.Iban,'Etiqueta','text',values.controller ~ '[Iban]',values.controller ~ '_Iban',datos.Iban,'34','CampoTextoLargo','33') }}
-{{ macro.input(values.atributos.Bic,'Etiqueta','text',values.controller ~ '[Bic]',values.controller ~ '_Bic',datos.Bic,'11','CampoTextoCorto','34') }}
-{{ macro.input(values.atributos.Mandato,'Etiqueta','text',values.controller ~ '[Mandato]',values.controller ~ '_Mandato',datos.Mandato,'35','CampoTextoLargo','35') }}
-{{ macro.fecha(values.atributos.FechaMandato,'Etiqueta',values.controller ~ '[FechaMandato]',values.controller ~ '_FechaMandato',datos.FechaMandato,'10','datepicker','36')}}
+    {{ macro.input(values.atributos.Vigente,'Etiqueta','checkbox',values.controller ~ '[Vigente]',values.controller ~ '_Vigente',datos.Vigente.IDTipo,'chzn-select','25')}}     
+    {{ macro.select(values.atributos.IdFormaPago,'Etiqueta',values.controller ~ '[IdFormaPago]',values.controller ~ '_IdFormaPago',none,datos.IdFormaPago.Id,datos.IdFormaPago.fetchAll('Descripcion'),'chzn-select','19')}}
+    {{ macro.input(values.atributos.DiaDePago,'Etiqueta','text',values.controller ~ '[DiaDePago]',values.controller ~ '_DiaDePago',datos.DiaDePago,'2','CampoUnidades','20') }}
+    {{ macro.input(values.atributos.Iva,'Etiqueta','checkbox',values.controller ~ '[Iva]',values.controller ~ '_Iva',datos.Iva.IDTipo,'chzn-select','21')}}
+    {{ macro.input(values.atributos.RecargoEqu,'Etiqueta','checkbox',values.controller ~ '[RecargoEqu]',values.controller ~ '_RecargoEqu',datos.RecargoEqu.IDTipo,'chzn-select','22')}}
+    {{ macro.textarea(values.atributos.Avisos,'Etiqueta',values.controller ~ '[Avisos]',values.controller ~ '_Avisos',datos.Avisos,none,none,'textarea','23')}}
+    {{ macro.select(values.atributos.Sexo,'Etiqueta',values.controller ~ '[Sexo]',values.controller ~ '_Sexo',none,datos.Sexo.IDTipo,datos.Sexo.fetchAll('Descripcion'),'chzn-select','25')}}
+    {{ macro.select(values.atributos.Tratamiento,'Etiqueta',values.controller ~ '[Tratamiento]',values.controller ~ '_Tratamiento',none,datos.Tratamiento.IDTipo,datos.Tratamiento.fetchAll('Descripcion'),'chzn-select','26')}}
+    {{ macro.fecha(values.atributos.FechaNacimiento,'Etiqueta',values.controller ~ '[FechaNacimiento]',values.controller ~ '_FechaNacimiento',datos.FechaNacimiento,'10','datepicker','27')}}
+    {{ macro.input(values.atributos.Login,'Etiqueta','text',values.controller ~ '[Login]',values.controller ~ '_Login',datos.Login,'50','CampoTextoLargo','28') }}
+    {{ macro.input(values.atributos.Password,'Etiqueta','text',values.controller ~ '[Password]',values.controller ~ '_Password',datos.Password,'50','CampoTextoLargo','29') }}
+    {{ macro.input(values.atributos.Catalogos,'Etiqueta','text',values.controller ~ '[Catalogos]',values.controller ~ '_Catalogos',datos.Catalogos,'11','CampoImporte','30') }}
+    {{ macro.input(values.atributos.Banco,'Etiqueta','text',values.controller ~ '[Banco]',values.controller ~ '_Banco',datos.Banco,'60','CampoTextoLargo','31') }}
+    {{ macro.input(values.atributos.DireccionBanco,'Etiqueta','text',values.controller ~ '[DireccionBanco]',values.controller ~ '_DireccionBanco',datos.DireccionBanco,'60','CampoTextoLargo','32') }}
+    {{ macro.input(values.atributos.Iban,'Etiqueta','text',values.controller ~ '[Iban]',values.controller ~ '_Iban',datos.Iban,'34','CampoTextoLargo','33') }}
+    {{ macro.input(values.atributos.Bic,'Etiqueta','text',values.controller ~ '[Bic]',values.controller ~ '_Bic',datos.Bic,'11','CampoTextoCorto','34') }}
+    {{ macro.input(values.atributos.Mandato,'Etiqueta','text',values.controller ~ '[Mandato]',values.controller ~ '_Mandato',datos.Mandato,'35','CampoTextoLargo','35') }}
+    {{ macro.fecha(values.atributos.FechaMandato,'Etiqueta',values.controller ~ '[FechaMandato]',values.controller ~ '_FechaMandato',datos.FechaMandato,'10','datepicker','36')}}
 </div>
 
 <div class="clearfix"></div>
+
 {% include '_global/fieldsComunes.html.twig' %}
 
 {{ macro.foco(values.controller ~ '_RazonSocial') }}

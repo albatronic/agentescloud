@@ -185,6 +185,7 @@ class IndexController extends Controller {
         $archivo->setColumnsDelimiter(";");
         $archivo->setColumnsEnclosure("\"");
 
+        $errores = 0;
 
         if ($archivo->open()) {
             // Leer la cabecera
@@ -198,37 +199,44 @@ class IndexController extends Controller {
                     $item[$titulo] = $row[$key];
                 }
 
-                //print_r($item);
-                $pvd = (string) utf8_encode($item['PRECIO_COMPRA']);
-                $pvd = substr($pvd, 0, -2);
-                $pvd = str_replace(",", ".", $pvd);
-                $pvp = (string) utf8_encode($item['PRECIO_VENTA']);
-                $pvp = substr($pvp, 0, -2);
-                $pvp = str_replace(",", ".", $pvp);
+                if ($item['VIGENTE'] == '1') {
+                    //print_r($item);
+                    $pvd = (string) utf8_encode($item['PRECIO_COMPRA']);
+                    $pvd = substr($pvd, 0, -2);
+                    $pvd = str_replace(",", ".", $pvd);
+                    $pvp = (string) utf8_encode($item['PRECIO_VENTA']);
+                    $pvp = substr($pvp, 0, -2);
+                    $pvp = str_replace(",", ".", $pvp);
 
-                $obj = new Articulos();
-                $obj->setIdFirma($item['IDFIRMA']);
-                $obj->setIdFamilia($item['IDFAMILIA']);
-                $obj->setCodigo($item['IDARTICULO']);
-                $obj->setDescripcion(utf8_encode($item['DESCRIPCION']));
-                $obj->setPvd($pvd);
-                $obj->setMargen($item['MARGEN']);
-                $obj->setPvp($pvp);
-                $obj->setIdIva($item['TIPO_IVA']);
-                $obj->setPackingCompras($item['PACKING']);
-                $obj->setPackingVentas($item['PACKING']);
-                $obj->setMinimoVenta($item['UNIDADES_MINIMAS']);
-                $obj->setObservations(utf8_encode($item['OBSERVACIONES']));
-                $obj->setAvisosPedidos(utf8_encode($item['AVISOPEDIDOS']));
-                $obj->setAvisosFacturas(utf8_encode($item['AVISOFACTURAS']));
-                $obj->setCodigoEAN(utf8_encode($item['EAN']));
-                $obj->setVigente($item['VIGENTE']);
-                $id = $obj->create();
-                if (!$id) {
-                    print_r($obj->getErrores());
+                    $obj = new Articulos();
+                    $obj->setIdFirma($item['IDFIRMA']);
+                    $obj->setIdFamilia($item['IDFAMILIA']);
+                    $obj->setCodigo($item['IDARTICULO']);
+                    $obj->setDescripcion(utf8_encode($item['DESCRIPCION']));
+                    $obj->setPvd($pvd);
+                    $obj->setMargen($item['MARGEN']);
+                    $obj->setPvp($pvp);
+                    $obj->setIdIva($item['TIPO_IVA']);
+                    $obj->setPackingCompras($item['PACKING']);
+                    $obj->setPackingVentas($item['PACKING']);
+                    $obj->setMinimoVenta($item['UNIDADES_MINIMAS']);
+                    $obj->setObservations(utf8_encode($item['OBSERVACIONES']));
+                    $obj->setAvisosPedidos(utf8_encode($item['AVISOPEDIDOS']));
+                    $obj->setAvisosFacturas(utf8_encode($item['AVISOFACTURAS']));
+                    $obj->setCodigoEAN(utf8_encode($item['EAN']));
+                    $obj->setVigente($item['VIGENTE']);
+                    $id = $obj->create();
+                    if (!$id) {
+                        print_r($obj->getErrores());
+                        $errores ++;
+                    }
                 }
             }
             $archivo->close();
+        }
+
+        if ($errores) {
+            echo "Errores Articulos {$errores}</br>";
         }
     }
 

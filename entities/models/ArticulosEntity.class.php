@@ -2,7 +2,7 @@
 
 /**
  * @copyright ALBATRONIC
- * @date 18.06.2015 23:33:42
+ * @date 19.06.2015 21:09:00
  */
 
 /**
@@ -17,6 +17,12 @@ class ArticulosEntity extends EntityComunes {
      * @assert NotBlank(groups="AgtArticulos")
      */
     protected $Id;
+
+    /**
+     * @var entities\Firmas
+     * @assert NotBlank(groups="AgtArticulos")
+     */
+    protected $IdFirma;
 
     /**
      * @var string
@@ -67,12 +73,6 @@ class ArticulosEntity extends EntityComunes {
      * @assert NotBlank(groups="AgtArticulos")
      */
     protected $IdSubfamilia = '0';
-
-    /**
-     * @var entities\Firmas
-     * @assert NotBlank(groups="AgtArticulos")
-     */
-    protected $IdFirma = '0';
 
     /**
      * @var integer
@@ -377,8 +377,8 @@ class ArticulosEntity extends EntityComunes {
      * @var string
      */
     protected $_childEntities = array(
-        'Familias',
         'Firmas',
+        'Familias',
         'TiposIva',
         'ValoresSN',
         'ArticulosEstados',
@@ -394,6 +394,17 @@ class ArticulosEntity extends EntityComunes {
 
     public function getId() {
         return $this->Id;
+    }
+
+    public function setIdFirma($IdFirma) {
+        $this->IdFirma = ($IdFirma instanceof Firmas) ? $IdFirma->getPrimaryKeyValue() : $IdFirma;
+    }
+
+    public function getIdFirma() {
+        if (!($this->IdFirma instanceof Firmas)) {
+            $this->IdFirma = new Firmas($this->IdFirma);
+        }
+        return $this->IdFirma;
     }
 
     public function setCodigo($Codigo) {
@@ -475,17 +486,6 @@ class ArticulosEntity extends EntityComunes {
             $this->IdSubfamilia = new Familias($this->IdSubfamilia);
         }
         return $this->IdSubfamilia;
-    }
-
-    public function setIdFirma($IdFirma) {
-        $this->IdFirma = ($IdFirma instanceof Firmas) ? $IdFirma->getPrimaryKeyValue() : $IdFirma;
-    }
-
-    public function getIdFirma() {
-        if (!($this->IdFirma instanceof Firmas)) {
-            $this->IdFirma = new Firmas($this->IdFirma);
-        }
-        return $this->IdFirma;
     }
 
     public function setPvd($Pvd) {

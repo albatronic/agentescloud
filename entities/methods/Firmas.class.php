@@ -14,4 +14,18 @@ class Firmas extends FirmasEntity {
         return ($this->Id) ? $this->RazonSocial : '';
     }
 
+    /**
+     * Devuelve array (Id,Value) con las familias de la firma en curso
+     * 
+     * @param string $columna El nombre de la columna a devolver como descripción
+     * @return array
+     */
+    public function getFamilias($columna = "Descripcion") {
+
+        $familias = new Familias();
+        $rows = $familias->cargaCondicion("Id,{$columna}  Value", "IdFirma='{$this->Id}'", "Descripcion");
+        unset($familias);
+        return $rows;
+    }
+
 }

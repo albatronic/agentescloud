@@ -523,25 +523,26 @@ class EntityManager {
         $mensaje = "EntityManager [{$method}]: ";
 
         if ($error != '') {
-            $mensaje .= $error;
-        } else {
-            switch (self::$dbEngine) {
-                case 'mysql':
-                    switch (mysql_errno()) {
-                        case '1062':
-                            $mensaje .= "Datos duplicados. " . mysql_error();
-                            break;
-                        default:
-                            $mensaje .= mysql_errno() . " " . mysql_error();
-                            break;
-                    }
-                    break;
-
-                default:
-                    $mensaje .= mysql_errno() . " " . mysql_error();
-                    break;
-            }
+            $mensaje .= $error . "\n";
         }
+
+        switch (self::$dbEngine) {
+            case 'mysql':
+                switch (mysql_errno()) {
+                    case '1062':
+                        $mensaje .= "Datos duplicados. " . mysql_error();
+                        break;
+                    default:
+                        $mensaje .= mysql_errno() . " " . mysql_error();
+                        break;
+                }
+                break;
+
+            default:
+                $mensaje .= mysql_errno() . " " . mysql_error();
+                break;
+        }
+
 
         if ($_SESSION['debug']['save_error_query']) {
             // ESCRIBE EL ERROR EN EL LOG
@@ -555,7 +556,7 @@ class EntityManager {
         // ENVIA CORREO AL SUPER ADMINISTRADOR
         $email = trim($_SESSION['debug']['email_error_query']);
         if ($email != '') {
-            mail($email, "Error query", $_SERVER['PHP_SELF'] . " " .$mensaje);
+            mail($email, "Error query", $_SERVER['PHP_SELF'] . " " . $mensaje);
         }
         $this->error[] = $mensaje;
     }
