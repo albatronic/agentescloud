@@ -59,6 +59,9 @@ class FamiliasEntity extends EntityComunes {
      * @var string
      */
     protected $_parentEntities = array(
+        array('SourceColumn' => 'Id', 'ParentEntity' => 'Articulos', 'ParentColumn' => 'IdCategoria'),
+        array('SourceColumn' => 'Id', 'ParentEntity' => 'Articulos', 'ParentColumn' => 'IdFamilia'),
+        array('SourceColumn' => 'Id', 'ParentEntity' => 'Articulos', 'ParentColumn' => 'IdSubfamilia'),
     );
 
     /**

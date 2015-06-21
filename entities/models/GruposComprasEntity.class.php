@@ -53,6 +53,7 @@ class GruposComprasEntity extends EntityComunes {
      * @var string
      */
     protected $_parentEntities = array(
+        array('SourceColumn' => 'Id', 'ParentEntity' => 'Clientes', 'ParentColumn' => 'IdGrupoCompras'),         
     );
 
     /**

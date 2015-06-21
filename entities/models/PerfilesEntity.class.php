@@ -53,6 +53,7 @@ class PerfilesEntity extends EntityComunes {
      * @var string
      */
     protected $_parentEntities = array(
+        array('SourceColumn' => 'Id', 'ParentEntity' => 'Usuarios', 'ParentColumn' => 'IdPerfil'),                  
     );
 
     /**

@@ -58,7 +58,7 @@ class TiposIvaEntity extends EntityComunes {
      * @var array
      */
     protected $_parentEntities = array(
-        array('SourceColumn' => 'Id', 'ParentEntity' => 'Articulos', 'ParentColumn' => 'Id'),
+        array('SourceColumn' => 'Id', 'ParentEntity' => 'Articulos', 'ParentColumn' => 'IdIva'),
     );
 
     /**

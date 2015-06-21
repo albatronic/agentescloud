@@ -88,6 +88,7 @@ class AgenciasEntity extends EntityComunes {
      * @var string
      */
     protected $_parentEntities = array(
+        array('SourceColumn' => 'Id', 'ParentEntity' => 'Firmas', 'ParentColumn' => 'IdAgencia'),        
     );
 
     /**

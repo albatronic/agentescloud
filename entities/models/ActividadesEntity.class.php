@@ -53,6 +53,7 @@ class ActividadesEntity extends EntityComunes {
      * @var string
      */
     protected $_parentEntities = array(
+        array('SourceColumn' => 'Id', 'ParentEntity' => 'Clientes', 'ParentColumn' => 'IdActividad'),        
     );
 
     /**
