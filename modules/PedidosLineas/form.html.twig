@@ -3,56 +3,28 @@
   Document : modules\PedidosLineas\fields.html.twig
 
   copyright: ALBATRONIC
-  date 06.05.2015 13:13:18
+  date 22.06.2015 23:09:11
 #}
 
-<div class="row">
-    <div class="col-md-6">
-    {{ macro.input(values.atributos.IdPedido,'Etiqueta','text',values.controller ~ '[Id]',values.controller ~ '_Id',datos.IdPedido,'15','CampoTextoCorto','6') }}
-    {{ macro.input(values.atributos.PedidoVips,'Etiqueta','text',values.controller ~ '[PedidoVips]',values.controller ~ '_PedidoVips',datos.PedidoVips,'15','CampoTextoCorto','6') }}
-    {{ macro.input(values.atributos.PedidoDistribuidora,'Etiqueta','text',values.controller ~ '[PedidoDistribuidora]',values.controller ~ '_PedidoDistribuidora',datos.PedidoDistribuidora,'15','CampoTextoCorto','7') }}
-    {{ macro.input(values.atributos.CreatedAt,'Etiqueta','text',values.controller ~ '[Id]',values.controller ~ '_Id',datos.IdPedido.Fecha|date('d/m/Y H:i:s'),'15','CampoTextoCorto','6') }}
-    {{ macro.input(values.atributos.IdSucursal,'Etiqueta','text',values.controller ~ '[IdSucursal]',values.controller ~ '_IdSucursal',datos.IdSucursal,'15')}}
-    {{ macro.input(values.atributos.IdSucursalPedido,'Etiqueta','text',values.controller ~ '[IdSucursalPedido]',values.controller ~ '_IdSucursalPedido',datos.IdSucursalPedido,'9')}}    
-    {{ macro.input(values.atributos.IdDistribuidora,'Etiqueta','text',values.controller ~ '[IdDistribuidora]',values.controller ~ '_IdDistribuidora',datos.IdDistribuidora,'3')}}
-    {{ macro.input(values.atributos.IdUsuario,'Etiqueta','text',values.controller ~ '[IdUsuario]',values.controller ~ '_IdUsuario',datos.IdUsuario,'4')}}
-    {{ macro.input(values.atributos.IdCliente,'Etiqueta','text',values.controller ~ '[IdCliente]',values.controller ~ '_IdCliente',datos.IdCliente,'5')}}
-    </div>
-    <div class="col-md-6">
-    {{ macro.input(values.atributos.IdEstado,'Etiqueta','text',values.controller ~ '[IdEstado]',values.controller ~ '_IdEstado',datos.IdEstado,'28')}}  
-    {{ macro.input(values.atributos.DocumentoRecepcion,'Etiqueta','text',values.controller ~ '[DocumentoRecepcion]',values.controller ~ '_DocumentoRecepcion',datos.DocumentoRecepcion,'15','CampoTextoCorto','8') }}
-    {{ macro.input(values.atributos.Unidades,'Etiqueta','text',values.controller ~ '[Unidades]',values.controller ~ '_Unidades',datos.Unidades,'10','CampoImporte','20') }}
-    {{ macro.input(values.atributos.RecibidoPlataforma,'Etiqueta','text',values.controller ~ '[RecibidoPlataforma]',values.controller ~ '_RecibidoPlataforma',datos.RecibidoPlataforma,'10','CampoImporte','29') }}
-    {{ macro.input(values.atributos.RecibidoTienda,'Etiqueta','text',values.controller ~ '[RecibidoTienda]',values.controller ~ '_RecibidoTienda',datos.RecibidoTienda,'10','CampoImporte','30') }} 
-    {{ macro.textarea(values.atributos.Observations,none,values.controller ~ '[Observations]',values.controller ~ '_Observations',values.datos.Observations)}}
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-md-6">
-    {{ macro.input(values.atributos.Sku,'Etiqueta','text',values.controller ~ '[Sku]',values.controller ~ '_Sku',datos.Sku,'25','CampoTextoCorto','10') }}
-    {{ macro.input(values.atributos.Ean,'Etiqueta','text',values.controller ~ '[Ean]',values.controller ~ '_Ean',datos.Ean,'25','CampoTextoCorto','11') }}
-    {{ macro.input(values.atributos.Descripcion,'Etiqueta','text',values.controller ~ '[Descripcion]',values.controller ~ '_Descripcion',datos.Descripcion,'255','CampoTextoLargo','12') }}
-    {{ macro.input(values.atributos.Autor,'Etiqueta','text',values.controller ~ '[Autor]',values.controller ~ '_Autor',datos.Autor,'255','CampoTextoLargo','13') }}
-    {{ macro.input(values.atributos.Editorial,'Etiqueta','text',values.controller ~ '[Editorial]',values.controller ~ '_Editorial',datos.Editorial,'255','CampoTextoLargo','14') }}
-    {{ macro.input(values.atributos.Estudios,'Etiqueta','text',values.controller ~ '[Estudios]',values.controller ~ '_Estudios',datos.Estudios,'255','CampoTextoLargo','15') }}        
-    {{ macro.input(values.atributos.Curso,'Etiqueta','text',values.controller ~ '[Curso]',values.controller ~ '_Curso',datos.Curso,'255','CampoTextoLargo','16') }}
-    {{ macro.input(values.atributos.Asignatura,'Etiqueta','text',values.controller ~ '[Asignatura]',values.controller ~ '_Asignatura',datos.Asignatura,'255','CampoTextoLargo','17') }}
-    {{ macro.input(values.atributos.Idioma,'Etiqueta','text',values.controller ~ '[Idioma]',values.controller ~ '_Idioma',datos.Idioma,'255','CampoTextoLargo','18') }}
-    {{ macro.input(values.atributos.UrlImagen,'Etiqueta','text',values.controller ~ '[UrlImagen]',values.controller ~ '_UrlImagen',datos.UrlImagen,'255','CampoTextoLargo','19') }}
-    {{ macro.input(values.atributos.Precio,'Etiqueta','text',values.controller ~ '[Precio]',values.controller ~ '_Precio',datos.Precio,'10','CampoImporte','21') }}
-    {{ macro.input(values.atributos.Descuento,'Etiqueta','text',values.controller ~ '[Descuento]',values.controller ~ '_Descuento',datos.Descuento,'10','CampoImporte','22') }}
-    {{ macro.input(values.atributos.Pvd,'Etiqueta','text',values.controller ~ '[Pvd]',values.controller ~ '_Pvd',datos.Pvd,'10','CampoImporte','23') }}
-    {{ macro.input(values.atributos.Importe,'Etiqueta','text',values.controller ~ '[Importe]',values.controller ~ '_Importe',datos.Importe,'10','CampoImporte','24') }}
-    {{ macro.input(values.atributos.Iva,'Etiqueta','text',values.controller ~ '[Iva]',values.controller ~ '_Iva',datos.Iva,'10','CampoImporte','25') }}
-    {{ macro.input(values.atributos.Recargo,'Etiqueta','text',values.controller ~ '[Recargo]',values.controller ~ '_Recargo',datos.Recargo,'10','CampoImporte','26') }}
-    {{ macro.input(values.atributos.IvaIncluido,'Etiqueta','text',values.controller ~ '[IvaIncluido]',values.controller ~ '_IvaIncluido',datos.IvaIncluido,'27')}}         
-    </div>
-    <div class="col-md-6">
-    {% if datos.UrlImagen %}
-        <img src="{{datos.UrlImagen}}"/>
-    {% endif %}        
-    </div>
-</div>
+{{ macro.select(values.atributos.IdPedido,'Etiqueta',values.controller ~ '[IdPedido]',values.controller ~ '_IdPedido',none,datos.IdPedido.IdPedido,datos.IdPedido.fetchAll('Id'),'chzn-select','1')}}
+{{ macro.select(values.atributos.IdFirma,'Etiqueta',values.controller ~ '[IdFirma]',values.controller ~ '_IdFirma',none,datos.IdFirma.IdFirma,datos.IdFirma.fetchAll('Id'),'chzn-select','2')}}
+{{ macro.select(values.atributos.IdFamilia,'Etiqueta',values.controller ~ '[IdFamilia]',values.controller ~ '_IdFamilia',none,datos.IdFamilia.IdFamilia,datos.IdFamilia.fetchAll('Id'),'chzn-select','3')}}
+{{ macro.select(values.atributos.IdArticulo,'Etiqueta',values.controller ~ '[IdArticulo]',values.controller ~ '_IdArticulo',none,datos.IdArticulo.IdArticulo,datos.IdArticulo.fetchAll('Id'),'chzn-select','4')}}
+{{ macro.input(values.atributos.Descripcion,'Etiqueta','text',values.controller ~ '[Descripcion]',values.controller ~ '_Descripcion',datos.Descripcion,'255','CampoTextoLargo','5') }}
+{{ macro.input(values.atributos.Unidades,'Etiqueta','text',values.controller ~ '[Unidades]',values.controller ~ '_Unidades',datos.Unidades,'10','CampoImporte','6') }}
+{{ macro.input(values.atributos.Precio,'Etiqueta','text',values.controller ~ '[Precio]',values.controller ~ '_Precio',datos.Precio,'10','CampoImporte','7') }}
+{{ macro.input(values.atributos.Descuento1,'Etiqueta','text',values.controller ~ '[Descuento1]',values.controller ~ '_Descuento1',datos.Descuento1,'10','CampoImporte','8') }}
+{{ macro.input(values.atributos.Descuento2,'Etiqueta','text',values.controller ~ '[Descuento2]',values.controller ~ '_Descuento2',datos.Descuento2,'10','CampoImporte','9') }}
+{{ macro.input(values.atributos.Descuento3,'Etiqueta','text',values.controller ~ '[Descuento3]',values.controller ~ '_Descuento3',datos.Descuento3,'10','CampoImporte','10') }}
+{{ macro.input(values.atributos.Importe,'Etiqueta','text',values.controller ~ '[Importe]',values.controller ~ '_Importe',datos.Importe,'10','CampoImporte','11') }}
+{{ macro.input(values.atributos.Iva,'Etiqueta','text',values.controller ~ '[Iva]',values.controller ~ '_Iva',datos.Iva,'10','CampoImporte','12') }}
+{{ macro.input(values.atributos.ComisionAgente,'Etiqueta','text',values.controller ~ '[ComisionAgente]',values.controller ~ '_ComisionAgente',datos.ComisionAgente,'10','CampoImporte','13') }}
+{{ macro.input(values.atributos.ComisionSubagente,'Etiqueta','text',values.controller ~ '[ComisionSubagente]',values.controller ~ '_ComisionSubagente',datos.ComisionSubagente,'10','CampoImporte','14') }}
+{{ macro.input(values.atributos.UnidadesPtesFacturar,'Etiqueta','text',values.controller ~ '[UnidadesPtesFacturar]',values.controller ~ '_UnidadesPtesFacturar',datos.UnidadesPtesFacturar,'10','CampoImporte','15') }}
+{{ macro.select(values.atributos.Facturar,'Etiqueta',values.controller ~ '[Facturar]',values.controller ~ '_Facturar',none,datos.Facturar.Facturar,datos.Facturar.fetchAll('IDTipo'),'chzn-select','16')}}
+{{ macro.input(values.atributos.NivelJerarquico,'Etiqueta','text',values.controller ~ '[NivelJerarquico]',values.controller ~ '_NivelJerarquico',datos.NivelJerarquico,'4','CampoUnidades','17') }}
+{{ macro.select(values.atributos.Publish,'Etiqueta',values.controller ~ '[Publish]',values.controller ~ '_Publish',none,datos.Publish.Publish,datos.Publish.fetchAll('IDTipo'),'chzn-select','18')}}
 
 {% include '_global/fieldsComunes.html.twig' %}
+
+{{ macro.foco(values.controller ~ '_IdPedido') }}

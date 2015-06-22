@@ -319,3 +319,72 @@ AgtContadores:
   relations:
   index:
     Contador: { type: unique, columns: 'IDTipo,Serie'}
+    
+# Cabeceras de Pedidos
+AgtPedidosCab:
+  comment: Cabeceras de pedidos
+  columns:   
+    IdFirma:                { type: bigint(11), notnull: true, default: 0, index: index, comment: 'db,Firmas,Id' }
+    IdCliente:              { type: bigint(11), notnull: true, default: 0, index: index, comment: 'db,Clientes,Id' }
+    IdDirec:                { type: bigint(11), notnull: true, default: 0, index: index, comment: 'db,ClientesDEntrega,Id' }
+    IdAlmacen:              { type: bigint(11), notnull: true, default: 0, index: index, comment: 'db,Almacenes,Id' }
+    IdAgente:               { type: bigint(11), notnull: true, default: 0, index: index, comment: 'db,Usuarios,Id' }
+    SuPedido:               { type: varchar(15), default: null, index: index }   
+    Referencia:             { type: varchar(15), default: null }       
+    Fecha:                  { type: date, notnull: true, default: '0000-00-00', index: index }
+    FechaEntrega:           { type: date, notnull: true, default: '0000-00-00', index: index }            
+    ComisionAgente:         { type: decimal, notnull: true, default: 0 }
+    ComisionSubagente:      { type: decimal, notnull: true, default: 0 }
+    Descuentos:             { type: decimal, notnull: true, default: 0 }    
+    DescuentoProntoPago:    { type: decimal, notnull: true, default: 0 }    
+    BaseImponible1:         { type: decimal, notnull: true, default: 0 }    
+    Iva1:                   { type: decimal, notnull: true, default: 0 }    
+    CuotaIva1:              { type: decimal, notnull: true, default: 0 }    
+    Recargo1:               { type: decimal, notnull: true, default: 0 }    
+    CuotaRecargo1:          { type: decimal, notnull: true, default: 0 }    
+    BaseImponible2:         { type: decimal, notnull: true, default: 0 }    
+    Iva2:                   { type: decimal, notnull: true, default: 0 }    
+    CuotaIva2:              { type: decimal, notnull: true, default: 0 }    
+    Recargo2:               { type: decimal, notnull: true, default: 0 }    
+    CuotaRecargo2:          { type: decimal, notnull: true, default: 0 }    
+    BaseImponible3:         { type: decimal, notnull: true, default: 0 }    
+    Iva3:                   { type: decimal, notnull: true, default: 0 }    
+    CuotaIva3:              { type: decimal, notnull: true, default: 0 }    
+    Recargo3:               { type: decimal, notnull: true, default: 0 }    
+    CuotaRecargo3:          { type: decimal, notnull: true, default: 0 }    
+    TotalBases:             { type: decimal, notnull: true, default: 0 }    
+    TotalIva:               { type: decimal, notnull: true, default: 0 }    
+    TotalRecargo:           { type: decimal, notnull: true, default: 0 }       
+    TotalPedido:            { type: decimal, notnull: true, default: 0 }    
+    Incidencias:            { type: text, default: null }        
+    IdEstado:               { type: bigint(11), notnull: true, default: 0, index: index, comment: 'Abstract,EstadosPedidos,IDTipo' }
+    IdFormaPago:            { type: bigint(11), notnull: true, default: 0, index: index, comment: 'db,FormasPago,Id' }    
+    IdAgencia:              { type: bigint(11), notnull: true, default: 0, index: index, comment: 'db,Agencias,Id' }
+    Portes:                 { type: string(40), default: null }
+    Imprimir:               { type: boolean, notnull: true, default: 0, index: index, comment: 'Abstract,ValoresSN,IDTipo' }
+    Servido:                { type: boolean, notnull: true, default: 0, index: index, comment: 'Abstract,ValoresSN,IDTipo' }
+    <?php include '../../entities/schema/schemaColumnsCommon.yml'; echoln('');?>       
+  relations:
+    
+# Líneas de pedidos
+AgtPedidosLineas:
+  comment: Líneas de pedidos
+  columns:  
+    IdPedido:             { type: bigint(11), notnull: true, default: 0, index: index, comment: 'db,PedidosCab,Id' }
+    IdFirma:              { type: bigint(11), notnull: true, default: 0, index: index, comment: 'db,Firmas,Id' }
+    IdFamilia:            { type: bigint(11), notnull: true, default: 0, index: index, comment: 'db,Familias,Id' }
+    IdArticulo:           { type: bigint(11), notnull: true, default: 0, index: index, comment: 'db,Articulos,Id' }
+    Descripcion:          { type: varchar(255), notnull: true }
+    Unidades:             { type: decimal(2), notnull: true, default: 0 }
+    Precio:               { type: decimal(3), notnull: true, default: '0.000' }
+    Descuento1:           { type: decimal(2), notnull: true, default: '0.00' }
+    Descuento2:           { type: decimal(2), notnull: true, default: '0.00' }
+    Descuento3:           { type: decimal(2), notnull: true, default: '0.00' }
+    Importe:              { type: decimal(2), notnull: true, default: '0.00' }
+    Iva:                  { type: decimal(2), notnull: true, default: '0.00' }
+    ComisionAgente:       { type: decimal(2), notnull: true, default: '0.00' }     
+    ComisionSubagente:    { type: decimal(2), notnull: true, default: '0.00' }  
+    UnidadesPtesFacturar: { type: decimal(2), notnull: true, default: '0.00' }   
+    Facturar:             { type: boolean, notnull: true, default: 0, index: index, comment: 'Abstract,ValoresSN,IDTipo' }    
+    <?php include '../../entities/schema/schemaColumnsCommon.yml'; echoln('');?>       
+  relations:

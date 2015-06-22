@@ -3,78 +3,15 @@
   Document : modules\PedidosCab\list.html.twig
 
   copyright: ALBATRONIC
-  date 22.02.2015 14:40:49
+  date 22.06.2015 23:09:15
 #}
 
 {% extends values.controller  ~ '/index.html.twig' %}
 
-{% set listado = values.listado %}
-{% set controller = values.controller %}
-
 {% block listado %}
-    <div class='listado'>
-        {% include '_global/paginacion.html.twig' with {'filter': values.listado.filter, 'controller': values.controller, 'position': 'izq'}%}    
-        
-        <table id="table-listado" class="table table-striped">
-            <thead>
-                <tr>
-                    <th width='16px'>&nbsp;</th>
-                    {% for title in listado.titles %}
-                        <th>{{ title.title }}</th>
-                    {% endfor%}
-                    <th>Retirado</th>
-                </tr>
-            </thead>
 
-            <tbody>
-            {% for key,objeto in listado.data %}
-                {% set idEstado = objeto.IdEstado.IDTipo %}
-                {% if (key is even) %}
-                    {% set classFila = 'Impar' %}
-                {% else %}
-                    {% set classFila = 'Par' %}
-                {% endif %}
-                <tr {#onclick="location.href='{{app.path}}/{{controller}}/edit/{{objeto.getPrimaryKeyMD5()}}'"#} class='{{classFila}}'>
-                    <td>
-                        {% if objeto.Observations != '' %}*&nbsp;{% else %}&nbsp;&nbsp;{% endif %}
-                        <a class="btn-edit" href='{{app.path}}/{{controller}}/Edit/{{objeto.getPrimaryKeyMD5()}}' title='Editar'>
-                            <i class="fa fa-pencil"></i>
-                        <a>
-                    </td>
-                    {% for field,value in listado.titles %}
-                    {% if (value.type == 'decimal' or value.type == 'currency') %}
-                        {% set align = 'right' %}
-                    {% elseif value.type == 'tinyint' %}
-                        {% set align = 'center' %}
-                    {% else %}
-                        {% set align = 'left' %}
-                    {% endif %}
-                    <td class='text-{{align}}'>
-                    {% if value.link.route %}
-                        <a title="{{value.link.title}}" href="{{app.path}}/{{value.link.route}}/{{objeto.getColumnObject(field).PrimaryKeyMD5}}">
-                            {{objeto.getColumnValue(field,value.length)}}
-                        </a>
-                    {% else %}
-                        {% if value.type == 'currency' %}
-                            {{ macro.moneda(objeto.getColumnValue(field,value.length)) }}  
-                        {% elseif value.type == 'datetime' %}
-                            {{ objeto.getColumnValue(field)|date('d/m/Y H:i:s') }}
-                        {% else %}
-                            {{ objeto.getColumnValue(field,value.length) }}
-                        {% endif %}
-                    {% endif%}
-                    </td>
-                    {% endfor %}
-
-                    <td class="text-center">
-                        {% if idEstado >3 and idEstado<7 %}
-                        {{ macro.actualizaColumna(controller,objeto.getPrimaryKeyValue,'IsDefault',objeto.IsDefault.IDTipo,'Marcar como retirado por el cliente')}} 
-                        {% endif %}
-                    </td>
-         
-                   </tr>
-            {% endfor %}
-            </tbody>
-        </table>
-    </div>
+<div class='listado'>
+	{% include '_global/listGenerico.html.twig' with {'listado': values.listado, 'controller': values.controller} %}
+	{% include '_global/paginacion.html.twig' with {'filter': values.listado.filter, 'controller': values.controller, 'position': 'izq'}%}
+</div>
 {% endblock %}

@@ -164,15 +164,87 @@ class IndexController extends Controller {
 
     public function importarAction() {
 
+        /**
+          $this->importClientes();
+          $this->importFirmas();
+          $this->importRutas();
+          $this->importGruposCompras();
+          $this->importFamilias();
+          $this->importContactos();
+          $this->importDireccionesEntrega();
+          $this->importArticulos();
+         * 
+         */
+        $this->importPedidosCab();
+    }
 
-        $this->importClientes();
-        $this->importFirmas();
-        $this->importRutas();
-        $this->importGruposCompras();
-        $this->importFamilias();
-        $this->importContactos();
-        $this->importDireccionesEntrega();
-        $this->importArticulos();
+    private function importPedidosCab() {
+
+        $obj = new PedidosCab();
+        $obj->truncate();
+        
+        $file = getcwd() . "/docs/docs1/import/PEDIDOS.txt";
+        $archivo = new Archivo($file);
+        $archivo->setColumnsDelimiter(";");
+        $archivo->setColumnsEnclosure("\"");
+
+        $errores = 0;
+
+        if ($archivo->open()) {
+            // Leer la cabecera
+            $titulos = $archivo->readLine();
+            // Leer el contenido
+            $i = -1;
+            while ($row = $archivo->readLine()) {
+                $i++;
+                $item = array();
+                foreach ($titulos as $key => $titulo) {
+                    $item[$titulo] = $row[$key];
+                }
+                $fecha = explode("/", substr($item['FECHA_PEDIDO'], 0, -8));
+                $fecha = $fecha[0] . "-" . str_pad($fecha[1], 2, "0", STR_PAD_LEFT) . "-" . str_pad($fecha[2], 2, "0", STR_PAD_LEFT);
+                $fechaEntrega = explode("/", substr($item['FECHA_ENTREGA'], 0, -8));
+                $fechaEntrega = $fechaEntrega[0] . "-" . str_pad($fechaEntrega[1], 2, "0", STR_PAD_LEFT) . "-" . str_pad($fechaEntrega[2], 2, "0", STR_PAD_LEFT);
+
+                $obj = new PedidosCab();
+                $obj->setId($item['IDPEDIDO']);
+                $obj->setFecha($fecha);
+                $obj->setFechaEntrega($fechaEntrega);
+                $obj->setIdFirma($item['IDFIRMA']);
+                $obj->setIdCliente($item['IDCLIENTE']);
+                $obj->setIdDirec($item['IDDIREC_ENTREGA']);
+                $obj->setIdAgente($item['IDSUBAGENTE']);
+                $obj->setIdAlmacen($item['IDALMACEN']);
+                $obj->setSuPedido(utf8_encode($item['SN/PEDIDO']));
+                $obj->setReferencia(utf8_encode($item['REFERENCIA']));
+                $obj->setObservations(utf8_encode($item['OBSERVACIONES']));
+                $obj->setComisionAgente($item['COMISION_AGENTE']);
+                $obj->setComisionSubagente($item['COMISION_SUBAGENTE']);
+                $obj->setDescuentos($item['DESCUENTOS']);
+                $obj->setDescuentoProntoPago($item['DESCUENTO_PP']);
+                $obj->setPortes($item['PORTES']);
+                $obj->setImprimir($item['IMPRIMIR']);
+                $obj->setServido($item['SERVIDO']);
+                /**
+                  $obj->setBaseImponible1($item['BASE1']);
+                  $obj->setIva1($item['IVA1']);
+                  $obj->setCuotaIva1($CuotaIva1);
+                  $obj->setRecargo1($item['REC1']);
+                  $obj->setCuotaRecargo1($CuotaRecargo1);
+                 * 
+                 */
+                $id = $obj->create();
+                if (!$id) {
+                    print_r($obj->getErrores());
+                    $errores ++;
+                }
+            }
+            $archivo->close();
+        }
+
+        if ($errores) {
+            echo "Errores PedidosCab {$errores}</br>";
+        }
     }
 
     private function importArticulos() {

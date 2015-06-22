@@ -3,14 +3,12 @@
   Document : modules\PedidosCab\index.html.twig
 
   copyright: ALBATRONIC
-  date 22.02.2015 14:40:49
+  date 22.06.2015 23:09:15
 #}
 
 {% extends layout %}
 
-{% block title %}
-{{ parent() }} - {{values.titulo}}
-{% endblock %}
+{% block title parent() ~ ' - '  ~ values.titulo %}
 
 {% block content %}
 	{% include '_global/TituloGenerico.html.twig' with {'controller': values.controller, 'linkValue': values.linkBy.value} %}
