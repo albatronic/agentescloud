@@ -163,26 +163,25 @@ class IndexController extends Controller {
     }
 
     public function importarAction() {
+        set_time_limit(0);
 
-        /**
-          $this->importClientes();
-          $this->importFirmas();
-          $this->importRutas();
-          $this->importGruposCompras();
-          $this->importFamilias();
-          $this->importContactos();
-          $this->importDireccionesEntrega();
-          $this->importArticulos();
-         * 
-         */
+        $this->importClientes();
+        $this->importFirmas();
+        $this->importRutas();
+        $this->importGruposCompras();
+        $this->importFamilias();
+        $this->importContactos();
+        $this->importDireccionesEntrega();
+        $this->importArticulos();
         $this->importPedidosCab();
+        $this->importPedidosLineas();
     }
 
     private function importPedidosCab() {
 
         $obj = new PedidosCab();
         $obj->truncate();
-        
+
         $file = getcwd() . "/docs/docs1/import/PEDIDOS.txt";
         $archivo = new Archivo($file);
         $archivo->setColumnsDelimiter(";");
@@ -218,21 +217,52 @@ class IndexController extends Controller {
                 $obj->setSuPedido(utf8_encode($item['SN/PEDIDO']));
                 $obj->setReferencia(utf8_encode($item['REFERENCIA']));
                 $obj->setObservations(utf8_encode($item['OBSERVACIONES']));
-                $obj->setComisionAgente($item['COMISION_AGENTE']);
-                $obj->setComisionSubagente($item['COMISION_SUBAGENTE']);
-                $obj->setDescuentos($item['DESCUENTOS']);
-                $obj->setDescuentoProntoPago($item['DESCUENTO_PP']);
+                $obj->setComisionAgente(self::trataNumero($item['COMISION_AGENTE']));
+                $obj->setComisionSubagente(self::trataNumero($item['COMISION_SUBAGENTE']));
+                $obj->setDescuentos(self::trataMoneda($item['DESCUENTOS']));
+                $obj->setDescuentoProntoPago(self::trataMoneda($item['DESCUENTO_PP']));
                 $obj->setPortes($item['PORTES']);
                 $obj->setImprimir($item['IMPRIMIR']);
                 $obj->setServido($item['SERVIDO']);
-                /**
-                  $obj->setBaseImponible1($item['BASE1']);
-                  $obj->setIva1($item['IVA1']);
-                  $obj->setCuotaIva1($CuotaIva1);
-                  $obj->setRecargo1($item['REC1']);
-                  $obj->setCuotaRecargo1($CuotaRecargo1);
-                 * 
-                 */
+                $obj->setIdFormaPago(self::buscaCreaFromaPago(utf8_encode($item['FORMA_PAGO'])));
+                $obj->setIdAgencia(self::buscaCreaAgencia(utf8_encode($item['AGENCIA_TTE'])));
+
+                $base1 = self::trataMoneda($item['BASE1']);
+                $cuotaIva1 = $base1 * $item['IVA1'] / 100;
+                $cuotaRec1 = $base1 * $item['REC1'] / 100;
+                $obj->setBaseImponible1($base1);
+                $obj->setIva1($item['IVA1']);
+                $obj->setCuotaIva1($cuotaIva1);
+                $obj->setRecargo1($item['REC1']);
+                $obj->setCuotaRecargo1($cuotaRec1);
+
+                $base2 = self::trataMoneda($item['BASE2']);
+                $cuotaIva2 = $base2 * $item['IVA2'] / 100;
+                $cuotaRec2 = $base2 * $item['REC2'] / 100;
+                $obj->setBaseImponible2($base2);
+                $obj->setIva2($item['IVA2']);
+                $obj->setCuotaIva2($cuotaIva2);
+                $obj->setRecargo2($item['REC2']);
+                $obj->setCuotaRecargo2($cuotaRec2);
+
+                $base3 = self::trataMoneda($item['BASE3']);
+                $cuotaIva3 = $base3 * $item['IVA3'] / 100;
+                $cuotaRec3 = $base3 * $item['REC3'] / 100;
+                $obj->setBaseImponible3($base3);
+                $obj->setIva3($item['IVA3']);
+                $obj->setCuotaIva3($cuotaIva3);
+                $obj->setRecargo3($item['REC3']);
+                $obj->setCuotaRecargo3($cuotaRec3);
+
+                $totBases = $base1 + $base2 + $base3;
+                $totIva = $cuotaIva1 + $cuotaIva2 + $cuotaIva3;
+                $totRecargo = $cuotaRec1 + $cuotaRec2 + $cuotaRec3;
+
+                $obj->setTotalBases($totBases);
+                $obj->setTotalIva($totIva);
+                $obj->setTotalRecargo($totRecargo);
+                $obj->setTotalPedido($totBases + $totIva + $totRecargo);
+
                 $id = $obj->create();
                 if (!$id) {
                     print_r($obj->getErrores());
@@ -244,6 +274,63 @@ class IndexController extends Controller {
 
         if ($errores) {
             echo "Errores PedidosCab {$errores}</br>";
+        }
+    }
+
+    private function importPedidosLineas() {
+
+        $obj = new PedidosLineas();
+        $obj->truncate();
+
+        $file = getcwd() . "/docs/docs1/import/PEDIDOS_LINEAS.txt";
+        $archivo = new Archivo($file);
+        $archivo->setColumnsDelimiter(";");
+        $archivo->setColumnsEnclosure("\"");
+
+        $errores = 0;
+
+        if ($archivo->open()) {
+            // Leer la cabecera
+            $titulos = $archivo->readLine();
+            // Leer el contenido
+            $i = -1;
+            while ($row = $archivo->readLine()) {
+                $i++;
+                $item = array();
+                foreach ($titulos as $key => $titulo) {
+                    $item[$titulo] = $row[$key];
+                }
+
+                $obj = new PedidosLineas();
+                $obj->setIdPedido($item['IDPEDIDO']);
+                $obj->setUnidades(self::trataNumero($item['UNIDADES']));
+                $obj->setIdFirma($item['IDFIRMA']);
+                $obj->setIdFamilia($item['IDFAMILIA']);
+                $obj->setIdArticulo(self::getArticulo($item['IDFIRMA'], $item['IDARTICULO']));
+                $obj->setIdCliente($item['IDCLIENTE']);
+                $obj->setDescripcion(utf8_encode($item['DESCRIPCION']));
+                $obj->setPrecio(self::trataMoneda($item['PRECIO']));
+                $obj->setDescuento1(self::trataNumero($item['DCTO1']));
+                $obj->setDescuento2(self::trataNumero($item['DCTO2']));
+                $obj->setDescuento3(self::trataNumero($item['DCTO3']));
+                $obj->setImporte(self::trataMoneda($item['IMPORTE']));
+                $obj->setComisionAgente(self::trataNumero($item['COMISION_AGENTE']));
+                $obj->setComisionSubagente(self::trataNumero($item['COMISION_SUBAGENTE']));
+                $obj->setIva(self::trataNumero($item['IVA']));
+                $obj->setUnidadesPtesFacturar(self::trataNumero($item['PENDIENTE_FACTURAR']));
+                $obj->setObservations(utf8_encode($item['OBSERVACIONES']));
+
+                $id = $obj->create();
+                if (!$id) {
+                    print_r($obj->getErrores());
+                    $errores ++;
+                }
+            }
+            $archivo->close();
+        }
+        echo "PedidosLineas {$i}<br/>";
+        if ($errores) {
+            echo "Errores PedidosLineas {$errores}</br>";
         }
     }
 
@@ -273,21 +360,14 @@ class IndexController extends Controller {
 
                 if ($item['VIGENTE'] == '1') {
                     //print_r($item);
-                    $pvd = (string) utf8_encode($item['PRECIO_COMPRA']);
-                    $pvd = substr($pvd, 0, -2);
-                    $pvd = str_replace(",", ".", $pvd);
-                    $pvp = (string) utf8_encode($item['PRECIO_VENTA']);
-                    $pvp = substr($pvp, 0, -2);
-                    $pvp = str_replace(",", ".", $pvp);
-
                     $obj = new Articulos();
                     $obj->setIdFirma($item['IDFIRMA']);
                     $obj->setIdFamilia($item['IDFAMILIA']);
                     $obj->setCodigo($item['IDARTICULO']);
                     $obj->setDescripcion(utf8_encode($item['DESCRIPCION']));
-                    $obj->setPvd($pvd);
+                    $obj->setPvd(self::trataMoneda($item['PRECIO_COMPRA']));
                     $obj->setMargen($item['MARGEN']);
-                    $obj->setPvp($pvp);
+                    $obj->setPvp(self::trataMoneda($item['PRECIO_VENTA']));
                     $obj->setIdIva($item['TIPO_IVA']);
                     $obj->setPackingCompras($item['PACKING']);
                     $obj->setPackingVentas($item['PACKING']);
@@ -520,6 +600,60 @@ class IndexController extends Controller {
         $row = $prov->querySelect("Id", "Municipio='{$texto}' and IdPais=68", "Id limit 1");
 
         return ($row[0]['Id']) ? $row[0]['Id'] : 0;
+    }
+
+    private function getArticulo($idFirma, $codigo) {
+
+        $codigo = utf8_encode($codigo);
+
+        $obj = new Articulos();
+        $rows = $obj->querySelect("Id", "IdFirma='{$idFirma}' and Codigo='{$codigo}'");
+        unset($obj);
+
+        return ($rows[0]['Id']) ? $rows[0]['Id'] : 0;
+    }
+
+    private function trataNumero($numero) {
+        return str_replace(",", ".", $numero);
+    }
+
+    private function trataMoneda($importe) {
+        $importe = (string) utf8_encode($importe);
+        $importe = substr($importe, 0, -2);
+        $importe = str_replace(",", ".", $importe);
+        return $importe;
+    }
+
+    private function buscaCreaFromaPago($formaPago) {
+
+        $formaPago = trim($formaPago);
+
+        $obj = new FormasPago();
+        $row = $obj->querySelect("Id", "Descripcion='{$formaPago}'");
+        $id = $row[0]['Id'];
+        if ($id == '') {
+            //Crear
+            $obj->setDescripcion($formaPago);
+            $id = $obj->create();
+        }
+
+        return $id;
+    }
+
+    private function buscaCreaAgencia($agencia) {
+
+        $agencia = trim($agencia);
+
+        $obj = new Agencias();
+        $row = $obj->querySelect("Id", "Agencia='{$agencia}'");
+        $id = $row[0]['Id'];
+        if ($id == '') {
+            //Crear
+            $obj->setAgencia($agencia);
+            $id = $obj->create();
+        }
+
+        return $id;
     }
 
     private function leeCsv($file) {

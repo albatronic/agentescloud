@@ -24,6 +24,9 @@
 </div>
 <div class="col-md-6">
     {{ macro.input(values.atributos.Vigente,'Etiqueta','checkbox',values.controller ~ '[Vigente]',values.controller ~ '_Vigente',datos.Vigente.IDTipo,'chzn-select','25')}}   
+    {{ macro.input(values.atributos.Referencia1,'Etiqueta','text',values.controller ~ '[Referencia1]',values.controller ~ '_Referencia1',datos.Referencia1,'25','CampoTextoCorto','1') }}    
+    {{ macro.input(values.atributos.Referencia2,'Etiqueta','text',values.controller ~ '[Referencia2]',values.controller ~ '_Referencia2',datos.Referencia2,'25','CampoTextoCorto','1') }}    
+    {{ macro.input(values.atributos.Referencia3,'Etiqueta','text',values.controller ~ '[Referencia3]',values.controller ~ '_Referencia3',datos.Referencia3,'25','CampoTextoCorto','1') }}    
     {{ macro.textarea(values.atributos.Caracteristicas,'Etiqueta',values.controller ~ '[Caracteristicas]',values.controller ~ '_Caracteristicas',datos.Caracteristicas,none,none,'textarea','23')}}
     {{ macro.textarea(values.atributos.AvisosPedidos,'Etiqueta',values.controller ~ '[AvisosPedidos]',values.controller ~ '_AvisosPedidos',datos.AvisosPedidos,none,none,'textarea','53')}}
     {{ macro.textarea(values.atributos.AvisosFacturas,'Etiqueta',values.controller ~ '[AvisosFacturas]',values.controller ~ '_AvisosFacturas',datos.AvisosFacturas,none,none,'textarea','56')}}

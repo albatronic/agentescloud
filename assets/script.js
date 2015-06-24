@@ -427,6 +427,22 @@ function putFamilias(idFirma, divFamilias) {
         }
     });
 }
+function putDirEntrega(idCliente, divDirecciones) {
+    
+    $('#' + divDirecciones).html('');
+    
+    $.ajax({
+        url: appPath + '/lib/getDirecciones.php?idCliente=' + idCliente,
+        dataType: 'html',
+        type: 'get',
+        success: function (resultado) {
+            var datos = $.parseJSON(resultado);
+            $.each(datos, function (key, value) {
+                $('#' + divDirecciones).append("<option value='"+value.Id+"'>"+value.Value+"</option>");
+            });
+        }
+    });
+}
 
 function ValidaNif(idDiv) {
     cadena = "TRWAGMYFPDXBNJZSQVHLCKET";

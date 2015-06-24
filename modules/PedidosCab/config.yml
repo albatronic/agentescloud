@@ -85,7 +85,7 @@ PedidosCab:
       title: Número
       visible: false
       updatable: false
-      filter: false
+      filter: true
       list: true
       default: null
       help: null
@@ -248,7 +248,7 @@ PedidosCab:
       filter: true
       list: false
       visible: true
-      updatable: true
+      updatable: false
       default: '0.00'
       help: null
       permission: null
@@ -274,7 +274,7 @@ PedidosCab:
       filter: true
       list: false
       visible: true
-      updatable: true
+      updatable: false
       default: '0.00'
       help: null
       permission: null
@@ -287,7 +287,7 @@ PedidosCab:
       filter: true
       list: false
       visible: true
-      updatable: true
+      updatable: false
       default: '0.00'
       help: null
       permission: null
@@ -300,7 +300,7 @@ PedidosCab:
       filter: true
       list: false
       visible: true
-      updatable: true
+      updatable: false
       default: '0.00'
       help: null
       permission: null
@@ -313,7 +313,7 @@ PedidosCab:
       filter: true
       list: false
       visible: true
-      updatable: true
+      updatable: false
       default: '0.00'
       help: null
       permission: null
@@ -326,7 +326,7 @@ PedidosCab:
       filter: true
       list: false
       visible: true
-      updatable: true
+      updatable: false
       default: '0.00'
       help: null
       permission: null
@@ -339,7 +339,7 @@ PedidosCab:
       filter: true
       list: false
       visible: true
-      updatable: true
+      updatable: false
       default: '0.00'
       help: null
       permission: null
@@ -352,7 +352,7 @@ PedidosCab:
       filter: true
       list: false
       visible: true
-      updatable: true
+      updatable: false
       default: '0.00'
       help: null
       permission: null
@@ -365,7 +365,7 @@ PedidosCab:
       filter: true
       list: false
       visible: true
-      updatable: true
+      updatable: false
       default: '0.00'
       help: null
       permission: null
@@ -378,7 +378,7 @@ PedidosCab:
       filter: true
       list: false
       visible: true
-      updatable: true
+      updatable: false
       default: '0.00'
       help: null
       permission: null
@@ -391,7 +391,7 @@ PedidosCab:
       filter: true
       list: false
       visible: true
-      updatable: true
+      updatable: false
       default: '0.00'
       help: null
       permission: null
@@ -404,7 +404,7 @@ PedidosCab:
       filter: true
       list: false
       visible: true
-      updatable: true
+      updatable: false
       default: '0.00'
       help: null
       permission: null
@@ -417,7 +417,7 @@ PedidosCab:
       filter: true
       list: false
       visible: true
-      updatable: true
+      updatable: false
       default: '0.00'
       help: null
       permission: null
@@ -430,7 +430,7 @@ PedidosCab:
       filter: true
       list: false
       visible: true
-      updatable: true
+      updatable: false
       default: '0.00'
       help: null
       permission: null
@@ -443,7 +443,7 @@ PedidosCab:
       filter: true
       list: false
       visible: true
-      updatable: true
+      updatable: false
       default: '0.00'
       help: null
       permission: null
@@ -456,7 +456,7 @@ PedidosCab:
       filter: true
       list: false
       visible: true
-      updatable: true
+      updatable: false
       default: '0.00'
       help: null
       permission: null
@@ -469,7 +469,7 @@ PedidosCab:
       filter: true
       list: false
       visible: true
-      updatable: true
+      updatable: false
       default: '0.00'
       help: null
       permission: null
@@ -482,7 +482,7 @@ PedidosCab:
       filter: true
       list: false
       visible: true
-      updatable: true
+      updatable: false
       default: '0.00'
       help: null
       permission: null
@@ -495,7 +495,7 @@ PedidosCab:
       filter: true
       list: false
       visible: true
-      updatable: true
+      updatable: false
       default: '0.00'
       help: null
       permission: null
@@ -508,14 +508,14 @@ PedidosCab:
       filter: true
       list: true
       visible: true
-      updatable: true
+      updatable: false
       default: '0.00'
       help: null
       permission: null
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: currency, length: '10', min: null, max: null, message: 'Valor Requerido' }
     Incidencias:
       title: Incidencias
       filter: true
@@ -610,7 +610,7 @@ PedidosCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      '#aditional_filter': { order: 14, caption: Servido, entity: ValoresSN, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      aditional_filter: { order: 14, caption: Servido, entity: ValoresSN, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
       validator: { nullable: false, type: tinyint, length: '1', min: null, max: null, message: 'Valor Requerido' }
     Observations:
       title: Observaciones

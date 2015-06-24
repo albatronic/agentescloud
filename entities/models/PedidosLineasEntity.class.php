@@ -43,6 +43,12 @@ class PedidosLineasEntity extends EntityComunes {
     protected $IdArticulo = '0';
 
     /**
+     * @var entities\Articulos
+     * @assert NotBlank(groups="AgtPedidosLineas")
+     */
+    protected $IdCliente = '0';
+
+    /**
      * @var string
      * @assert NotBlank(groups="AgtPedidosLineas")
      */
@@ -210,6 +216,17 @@ class PedidosLineasEntity extends EntityComunes {
             $this->IdArticulo = new Articulos($this->IdArticulo);
         }
         return $this->IdArticulo;
+    }
+
+    public function setIdCliente($IdCliente) {
+        $this->IdCliente = ($IdCliente instanceof Clientes) ? $IdCliente->getPrimaryKeyValue() : $IdCliente;
+    }
+
+    public function getIdCliente() {
+        if (!($this->IdCliente instanceof Clientes)) {
+            $this->IdCliente = new Clientes($this->IdCliente);
+        }
+        return $this->IdCliente;
     }
 
     public function setDescripcion($Descripcion) {

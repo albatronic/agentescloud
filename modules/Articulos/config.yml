@@ -118,7 +118,7 @@ Articulos:
       validator: { nullable: false, type: string, length: '255', min: null, max: null, message: 'Valor Requerido' }
     Subtitulo:
       title: Subtitulo
-      filter: true
+      filter: false
       list: false
       visible: true
       updatable: true
@@ -131,7 +131,7 @@ Articulos:
       validator: { nullable: true, type: string, length: '255', min: null, max: null, message: 'Valor Requerido' }
     Resumen:
       title: Resumen
-      filter: true
+      filter: false
       list: false
       visible: true
       updatable: true
@@ -144,7 +144,7 @@ Articulos:
       validator: { nullable: true, type: string, length: '500', min: null, max: null, message: 'Valor Requerido' }
     ReclamoCorto:
       title: Reclamo Corto
-      filter: true
+      filter: false
       list: false
       visible: true
       updatable: true
@@ -157,7 +157,7 @@ Articulos:
       validator: { nullable: true, type: string, length: '255', min: null, max: null, message: 'Valor Requerido' }
     ReclamoLargo:
       title: Reclamo Largo
-      filter: true
+      filter: false
       list: false
       visible: true
       updatable: true
@@ -226,7 +226,7 @@ Articulos:
       validator: { nullable: false, type: integer, length: 25, min: null, max: null, message: 'Valor Requerido' }
     Pvd:
       title: Pvd
-      filter: true
+      filter: false
       list: true
       visible: true
       updatable: true
@@ -239,7 +239,7 @@ Articulos:
       validator: { nullable: false, type: currency, length: '10', min: null, max: null, message: 'Valor Requerido' }
     Pvp:
       title: Pvp
-      filter: true
+      filter: false
       list: false
       visible: true
       updatable: true
@@ -252,7 +252,7 @@ Articulos:
       validator: { nullable: false, type: currency, length: '10', min: null, max: null, message: 'Valor Requerido' }
     Margen:
       title: Margen
-      filter: true
+      filter: false
       list: false
       visible: true
       updatable: true
@@ -265,7 +265,7 @@ Articulos:
       validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
     Pmc:
       title: Pmc
-      filter: true
+      filter: false
       list: false
       visible: true
       updatable: true
@@ -292,7 +292,7 @@ Articulos:
       validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
     PvpAnterior:
       title: Pvp Anterior
-      filter: true
+      filter: false
       list: false
       visible: true
       updatable: true
@@ -305,7 +305,7 @@ Articulos:
       validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
     Etiqueta:
       title: Etiqueta
-      filter: true
+      filter: false
       list: false
       visible: true
       updatable: true
@@ -317,7 +317,7 @@ Articulos:
       link: { route: null, param: null, title: null, target: null, link: null }
       validator: { nullable: true, type: string, length: '30', min: null, max: null, message: 'Valor Requerido' }
     CodigoEAN:
-      title: CodigoEAN
+      title: EAN
       filter: true
       list: false
       visible: true
@@ -331,7 +331,7 @@ Articulos:
       validator: { nullable: true, type: string, length: '13', min: null, max: null, message: 'Valor Requerido' }
     Caducidad:
       title: Caducidad
-      filter: true
+      filter: false
       list: false
       visible: true
       updatable: true
@@ -344,7 +344,7 @@ Articulos:
       validator: { nullable: false, type: integer, length: '4', min: null, max: null, message: 'Valor Requerido' }
     Garantia:
       title: Garantia
-      filter: true
+      filter: false
       list: false
       visible: true
       updatable: true
@@ -357,7 +357,7 @@ Articulos:
       validator: { nullable: true, type: string, length: '10', min: null, max: null, message: 'Valor Requerido' }
     Peso:
       title: Peso
-      filter: true
+      filter: false
       list: false
       visible: true
       updatable: true
@@ -370,7 +370,7 @@ Articulos:
       validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
     Volumen:
       title: Volumen
-      filter: true
+      filter: false
       list: false
       visible: true
       updatable: true
@@ -383,7 +383,7 @@ Articulos:
       validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
     Caracteristicas:
       title: Caracteristicas
-      filter: true
+      filter: false
       list: false
       visible: true
       updatable: true
@@ -394,9 +394,48 @@ Articulos:
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
       validator: { nullable: true, type: string, length: false, min: null, max: null, message: 'Valor Requerido' }
+    Referencia1:
+      title: Referencia1
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: true, type: string, length: '25', min: null, max: null, message: 'Valor Requerido' }      
+    Referencia2:
+      title: Referencia2
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: true, type: string, length: '25', min: null, max: null, message: 'Valor Requerido' }      
+    Referencia3:
+      title: Referencia3
+      filter: true
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: true, type: string, length: '25', min: null, max: null, message: 'Valor Requerido' }      
     FechaUltimoPrecio:
       title: FechaUltimoPrecio
-      filter: true
+      filter: false
       list: false
       visible: true
       updatable: true
@@ -465,7 +504,7 @@ Articulos:
       validator: { nullable: false, type: tinyint, length: '1', min: null, max: null, message: 'Valor Requerido' }
     PackingCompras:
       title: PackingCompras
-      filter: true
+      filter: false
       list: false
       visible: true
       updatable: true
@@ -478,7 +517,7 @@ Articulos:
       validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
     PackingVentas:
       title: PackingVentas
-      filter: true
+      filter: false
       list: false
       visible: true
       updatable: true
@@ -491,7 +530,7 @@ Articulos:
       validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
     Merma:
       title: Merma
-      filter: true
+      filter: false
       list: false
       visible: true
       updatable: true
@@ -588,7 +627,7 @@ Articulos:
       validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
     StockMinimo:
       title: Stock Minimo
-      filter: true
+      filter: false
       list: false
       visible: true
       updatable: true
@@ -601,7 +640,7 @@ Articulos:
       validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
     StockMaximo:
       title: Stock Maximo
-      filter: true
+      filter: false
       list: false
       visible: true
       updatable: true
@@ -614,7 +653,7 @@ Articulos:
       validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
     MinimoVentaAlto:
       title: Minimo Venta Alto
-      filter: true
+      filter: false
       list: false
       visible: true
       updatable: true
@@ -627,7 +666,7 @@ Articulos:
       validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
     MinimoVentaAncho:
       title: Minimo Venta Ancho
-      filter: true
+      filter: false
       list: false
       visible: true
       updatable: true
@@ -640,7 +679,7 @@ Articulos:
       validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
     MinimoVenta:
       title: Minimo Venta
-      filter: true
+      filter: false
       list: false
       visible: true
       updatable: true
@@ -653,7 +692,7 @@ Articulos:
       validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
     MultiploAlto:
       title: Multiplo Alto
-      filter: true
+      filter: false
       list: false
       visible: true
       updatable: true
@@ -666,7 +705,7 @@ Articulos:
       validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
     MultiploAncho:
       title: Multiplo Ancho
-      filter: true
+      filter: false
       list: false
       visible: true
       updatable: true
@@ -721,7 +760,7 @@ Articulos:
       validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
     CUMC:
       title: CUMC
-      filter: true
+      filter: false
       list: false
       visible: true
       updatable: true
@@ -748,7 +787,7 @@ Articulos:
       validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
     CUMA:
       title: CUMA
-      filter: true
+      filter: false
       list: false
       visible: true
       updatable: true
@@ -775,7 +814,7 @@ Articulos:
       validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
     CUMV:
       title: CUMV
-      filter: true
+      filter: false
       list: false
       visible: true
       updatable: true
@@ -788,7 +827,7 @@ Articulos:
       validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
     AvisosPedidos:
       title: Avisos Pedidos
-      filter: true
+      filter: false
       list: false
       visible: true
       updatable: true
@@ -801,7 +840,7 @@ Articulos:
       validator: { nullable: true, type: string, length: false, min: null, max: null, message: 'Valor Requerido' }
     AvisosPresupuestos:
       title: Avisos Presupuestos
-      filter: true
+      filter: false
       list: false
       visible: true
       updatable: true
@@ -814,7 +853,7 @@ Articulos:
       validator: { nullable: true, type: string, length: false, min: null, max: null, message: 'Valor Requerido' }
     AvisosAlbaranes:
       title: Avisos Albaranes
-      filter: true
+      filter: false
       list: false
       visible: true
       updatable: true
@@ -827,7 +866,7 @@ Articulos:
       validator: { nullable: true, type: string, length: false, min: null, max: null, message: 'Valor Requerido' }
     AvisosFacturas:
       title: Avisos Facturas
-      filter: true
+      filter: false
       list: false
       visible: true
       updatable: true

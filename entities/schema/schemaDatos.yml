@@ -90,6 +90,9 @@ AgtArticulos:
     Peso:              { type: decimal(), notnull: true, default: 0 }
     Volumen:           { type: decimal(), notnull: true, default: 0 }
     Caracteristicas:   { type: text, defatul: null }
+    Referencia1:       { type: string(25), default: null, index: index }    
+    Referencia2:       { type: string(25), default: null, index: index }    
+    Referencia3:       { type: string(25), default: null, index: index }    
     FechaUltimoPrecio: { type: datetime, defatul: null }
     Vigente:           { type: tinyint(1), notnull: true, default: 1, index: index, comment: 'abstract,ValoresSN,IDTipo' }
     Inventario:        { type: tinyint(1), notnull: true, default: 1, index: index, comment: 'abstract,ValoresSN,IDTipo' }
@@ -373,6 +376,7 @@ AgtPedidosLineas:
     IdPedido:             { type: bigint(11), notnull: true, default: 0, index: index, comment: 'db,PedidosCab,Id' }
     IdFirma:              { type: bigint(11), notnull: true, default: 0, index: index, comment: 'db,Firmas,Id' }
     IdFamilia:            { type: bigint(11), notnull: true, default: 0, index: index, comment: 'db,Familias,Id' }
+    IdCliente:            { type: bigint(11), notnull: true, default: 0, index: index, comment: 'db,Clientes,Id' }
     IdArticulo:           { type: bigint(11), notnull: true, default: 0, index: index, comment: 'db,Articulos,Id' }
     Descripcion:          { type: varchar(255), notnull: true }
     Unidades:             { type: decimal(2), notnull: true, default: 0 }

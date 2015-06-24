@@ -14,4 +14,17 @@ class Clientes extends ClientesEntity {
         return ($this->Id) ? $this->RazonSocial : '';
     }
 
+    /**
+     * Devuelve array (Id,Value) con las direcciones del cliente en curso
+     * 
+     * @param string $columna El nombre de la columna a devolver como descripción
+     * @return array
+     */
+    public function getDirecciones($columna = "Direccion") {
+
+        $obj = new ClientesDEntrega();
+        $rows = $obj->cargaCondicion("Id,{$columna}  Value", "IdCliente='{$this->Id}'", $columna);
+        unset($obj);
+        return $rows;
+    }
 }

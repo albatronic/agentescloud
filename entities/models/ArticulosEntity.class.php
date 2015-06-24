@@ -149,6 +149,24 @@ class ArticulosEntity extends EntityComunes {
     protected $Caracteristicas;
 
     /**
+     * @var string
+     * @assert NotBlank(groups="AgtArticulos")
+     */
+    protected $Referencia1;
+
+    /**
+     * @var string
+     * @assert NotBlank(groups="AgtArticulos")
+     */
+    protected $Referencia2;
+
+    /**
+     * @var string
+     * @assert NotBlank(groups="AgtArticulos")
+     */
+    protected $Referencia3;
+
+    /**
      * @var datetime
      */
     protected $FechaUltimoPrecio;
@@ -593,6 +611,30 @@ class ArticulosEntity extends EntityComunes {
 
     public function getCaracteristicas() {
         return $this->Caracteristicas;
+    }
+
+    public function setReferencia1($Referencia1) {
+        $this->Referencia1 = trim($Referencia1);
+    }
+
+    public function getReferencia1() {
+        return $this->Referencia1;
+    }
+
+    public function setReferencia2($Referencia2) {
+        $this->Referencia2 = trim($Referencia2);
+    }
+
+    public function getReferencia2() {
+        return $this->Referencia2;
+    }
+
+    public function setReferencia3($Referencia3) {
+        $this->Referencia3 = trim($Referencia3);
+    }
+
+    public function getReferencia3() {
+        return $this->Referencia3;
     }
 
     public function setFechaUltimoPrecio($FechaUltimoPrecio) {
