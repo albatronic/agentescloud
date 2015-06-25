@@ -7,7 +7,7 @@
             {# if (varEnvMod.translatable == 1)%}
                 <img src="{{app.path}}/lang/{{idiomas.disponibles[idiomas.actual].codigo}}.gif" alt="{{idiomas.disponibles[idiomas.actual].titulo}}" title="{{idiomas.disponibles[idiomas.actual].titulo}}"/>
             {% endif #}
-            <h1>{{ values.titulo }}</h1>
+            <h1>{{values.titulo}} {% if values.datos.getPrimaryKeyValue %}({{values.datos.getPrimaryKeyValue}}){% endif %}</h1>
         </div>
 
         <div class="caption margin-left-10">           

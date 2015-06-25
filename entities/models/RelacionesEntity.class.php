@@ -46,7 +46,7 @@ class RelacionesEntity extends EntityComunes {
      * Nombre de la conexion a la BD
      * @var string
      */
-    protected $_conectionName = '';
+    protected $_conectionName = 'datos';
 
     /**
      * Nombre de la tabla física

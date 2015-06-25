@@ -27,4 +27,29 @@ class Clientes extends ClientesEntity {
         unset($obj);
         return $rows;
     }
+
+    public function getRelacionFirmas() {
+
+        $array = array();
+
+        // Coger todas las firmas definidas
+        $firmas = new Firmas();
+        $rows = $firmas->cargaCondicion("Id,RazonSocial", "Vigente='1'", "RazonSocial ASC");
+        unset($firmas);
+        foreach ($rows as $row) {
+            $array[$row['Id']]['Nombre'] = $row["RazonSocial"];
+        }
+
+        // Coger el código de cada firma para el cliente
+        $relacion = new Relaciones();
+        $rows = $relacion->cargaCondicion("IdEntidadDestino,Observations", "EntidadOrigen='Clientes' and IdEntidadOrigen='{$this->Id}' and EntidadDestino='Firmas'");
+        foreach ($rows as $row) {
+            if ($array[$row['IdEntidadDestino']]['Nombre']) {
+                $array[$row['IdEntidadDestino']]['Codigo'] = $row['Observations'];
+            }
+        }
+
+        return $array;
+    }
+
 }

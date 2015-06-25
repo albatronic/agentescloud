@@ -578,7 +578,7 @@ Clientes:
       '#aditional_filter': { order: 15, caption: FechaMandato, type: range, operator: '>=' }
       validator: { nullable: false, type: date, length: 10, min: null, max: null, message: 'Valor Requerido' }
     Observations:
-      title: Observations
+      title: Observaciones
       filter: false
       list: false
       visible: true
