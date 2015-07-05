@@ -1,0 +1,215 @@
+{# js Clientes #}
+
+{% extends '_global/js.html.twig' %}
+
+{% block js %}
+
+    {{ parent() }}
+    <script src="{{app.path}}/assets/highcharts/js/highcharts.js"></script>
+    <script src="{{app.path}}/assets/highcharts/js/highcharts-3d.js"></script>
+    <script src="{{app.path}}/assets/highcharts/js/modules/exporting.js"></script>
+    <script>
+
+        $(function () {
+            $.ajax({
+                url: appPath + '/lib/graph.php',
+                dataType: 'html',
+                type: 'get',
+                data: {'accion': 'topClientes', 'nItems': 10, 'periodo': 3},
+                success: function (resultado) {
+                    var datos = [];
+                    result = $.parseJSON(resultado);
+                    $.each(result.serie, function (key, item) {
+                        datos.push({name: item.name, y: parseFloat(item.y)});
+                    });
+
+                    var opciones = {
+                        chart: {
+                            type: 'pie',
+                            options3d: {
+                                enabled: true,
+                                alpha: 45,
+                                beta: 0
+                            }
+                        },
+                        title: {
+                            text: result.title
+                        },
+                        tooltip: {
+                            pointFormat: '{series.name}: <b>{point.percentage:.1f}% {point.y:.0f}€</b>'
+                        },
+                        plotOptions: {
+                            pie: {
+                                allowPointSelect: true,
+                                cursor: 'pointer',
+                                depth: 35,
+                                dataLabels: {
+                                    enabled: true,
+                                    format: '{point.name}'
+                                }
+                            }
+                        },
+                        series: [{
+                                type: 'pie',
+                                name: result.serieName,
+                                data: datos
+                            }]
+                    };
+                    $('#topClientes').highcharts(opciones);
+                }
+            });
+
+            $.ajax({
+                url: appPath + '/lib/graph.php',
+                dataType: 'html',
+                type: 'get',
+                data: {'accion': 'topFirmas', 'nItems': 10, 'periodo': 3},
+                success: function (resultado) {
+                    var datos = [];
+                    result = $.parseJSON(resultado);
+                    $.each(result.serie, function (key, item) {
+                        datos.push({name: item.name, y: parseFloat(item.y)});
+                    });
+
+                    var opciones = {
+                        chart: {
+                            type: 'pie',
+                            options3d: {
+                                enabled: true,
+                                alpha: 45,
+                                beta: 0
+                            }
+                        },
+                        title: {
+                            text: result.title
+                        },
+                        tooltip: {
+                            pointFormat: '{series.name}: <b>{point.percentage:.1f}% {point.y:.0f}€</b>'
+                        },
+                        plotOptions: {
+                            pie: {
+                                allowPointSelect: true,
+                                cursor: 'pointer',
+                                depth: 35,
+                                dataLabels: {
+                                    enabled: true,
+                                    format: '{point.name}'
+                                }
+                            }
+                        },
+                        series: [{
+                                type: 'pie',
+                                name: result.serieName,
+                                data: datos
+                            }]
+                    };
+                    $('#topFirmas').highcharts(opciones);
+                }
+            });
+
+            $.ajax({
+                url: appPath + '/lib/graph.php',
+                dataType: 'html',
+                type: 'get',
+                data: {'accion': 'ventas', 'periodo': '0'},
+                success: function (resultado) {
+                    var datos = [];
+                    result = $.parseJSON(resultado);
+                    $.each(result.serie, function (key, item) {
+                        datos.push({name: item.name, y: parseFloat(item.y)});
+                    });
+
+                    var opciones = {
+                        chart: {
+                            type: 'column',
+                        },
+                        title: {
+                            text: result.title
+                        },
+                        xAxis: {
+                            type: 'category'
+                        },
+                        yAxis: {
+                            title: {
+                                text: 'Total Ventas (BI)'
+                            }
+                        },
+                        legend: {
+                            enabled: false
+                        },
+                        tooltip: {
+                            //pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                        },
+                        plotOptions: {
+                            series: {
+                                borderWidth: 0,
+                                dataLabels: {
+                                    enabled: true,
+                                    format: '{point.y:.0f} €'
+                                }
+                            }
+                        },
+                        series: [{
+                                type: 'column',
+                                name: result.serieName,
+                                data: datos
+                            }]
+                    };
+                    $('#ventasTodas').highcharts(opciones);
+                }
+            });
+            
+            $.ajax({
+                url: appPath + '/lib/graph.php',
+                dataType: 'html',
+                type: 'get',
+                data: {'accion': 'ventas', 'periodo': '1'},
+                success: function (resultado) {
+                    var datos = [];
+                    result = $.parseJSON(resultado);
+                    $.each(result.serie, function (key, item) {
+                        datos.push({name: item.name, y: parseFloat(item.y)});
+                    });
+
+                    var opciones = {
+                        chart: {
+                            type: 'column',
+                        },
+                        title: {
+                            text: result.title
+                        },
+                        xAxis: {
+                            type: 'category'
+                        },
+                        yAxis: {
+                            title: {
+                                text: 'Total Ventas (BI)'
+                            }
+                        },
+                        legend: {
+                            enabled: false
+                        },
+                        tooltip: {
+                            //pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                        },
+                        plotOptions: {
+                            series: {
+                                borderWidth: 0,
+                                dataLabels: {
+                                    enabled: true,
+                                    format: '{point.y:.0f} €'
+                                }
+                            }
+                        },
+                        series: [{
+                                type: 'column',
+                                name: result.serieName,
+                                data: datos
+                            }]
+                    };
+                    $('#ventas12Meses').highcharts(opciones);
+                }
+            });
+        });
+    </script>
+{% endblock %}

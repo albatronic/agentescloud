@@ -8,15 +8,15 @@
   date 09.09.2012 01:51:37
 #}
 
-{% if values.varEnvMod.showCommonFields == '1' or user.IDPerfil.IDPerfil == '1' %}
-
+{# if values.varEnvMod.showCommonFields == '1' or user.IDPerfil.Id == '1' #}
+{% if false %}
     {% set atributos = values.atributos %}
     <input name="acordeonActivo" id="acordeonActivo" value="{{ values.acordeonActivo }}" type="hidden" />
 
     <div class="tab-pane" id="fieldsComunes">
         <div id="acordeonColumnas1" class="panel-group">        
             {# PERFILES CON PERMISO DE ACCESO DESDE CPANEL#}
-            {% if (idiomas.actual == 0) and ((user.IDPerfil.IDPerfil == '1') or ((values.permisos.permisosModulo['PC'] and atributos.AccessProfileList.visible == 1))) %}
+            {% if (idiomas.actual == 0) and ((user.IDPerfil.Id == '1') or ((values.permisos.permisosModulo['PC'] and atributos.AccessProfileList.visible == 1))) %}
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
@@ -35,7 +35,7 @@
             {% endif %}
 
             {# PERFILES CON PERMISO DE ACCESO DESDE LA WEB #}
-            {% if (idiomas.actual == 0) and ((user.IDPerfil.IDPerfil == '1') or ((values.permisos.permisosModulo['PW'] and atributos.AccessProfileListWeb.visible == 1))) %}    
+            {% if (idiomas.actual == 0) and ((user.IDPerfil.Id == '1') or ((values.permisos.permisosModulo['PW'] and atributos.AccessProfileListWeb.visible == 1))) %}    
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
@@ -54,7 +54,7 @@
             {% endif %}
 
             {# GENERAL #}
-            {% if (idiomas.actual == 0) and (user.IDPerfil.IDPerfil == '1' or atributos.AllowsChildren.visible or atributos.BelongsTo.visible or atributos.CodigoAppAsociada.visible or atributos.IdAlbumExterno.visible or atributos.IdSliderAsociado.visible or atributos.IdSeccionEnlaces.visible or atributos.IdSeccionVideos.visible or atributos.Observations.visible) %}        
+            {% if (idiomas.actual == 0) and (user.IDPerfil.Id == '1' or atributos.AllowsChildren.visible or atributos.BelongsTo.visible or atributos.CodigoAppAsociada.visible or atributos.IdAlbumExterno.visible or atributos.IdSliderAsociado.visible or atributos.IdSeccionEnlaces.visible or atributos.IdSeccionVideos.visible or atributos.Observations.visible) %}        
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
@@ -63,7 +63,7 @@
                     </div>
                     <div id="fc-general" class="panel-collapse collapse">
                         <div class="panel-body">
-                            {% if user.IDPerfil.IDPerfil == 1 %}
+                            {% if user.IDPerfil.Id == 1 %}
                                 {{ macro.input(datos.primaryKeyName,'Etiqueta','text',values.controller ~ '['~datos.primaryKeyName~']',values.controller ~ '_' ~ datos.primaryKeyName,datos.primaryKeyValue,110,none,'disabled') }}                    
                                 {{ macro.input('MD5','Etiqueta','text',values.controller ~ '[PrimaryKeyMD5]',values.controller ~ '_PrimaryKeyMD5',datos.PrimaryKeyMD5,'100','CampoTextoLargo','disabled') }}
                                 {{ macro.input('Valor por defecto','Etiqueta','checkbox',values.controller ~ '[IsDefault]',values.controller ~ '_IsDefault',datos.IsDefault.IDTipo,'255','CampoTextoLargo','12') }}
@@ -85,7 +85,7 @@
             {% endif %}
 
             {# FECHAS #}
-            {% if (idiomas.actual == 0) and (user.IDPerfil.IDPerfil == '1' or atributos.PublishedAt.visible or atributos.ActiveFrom.visible or atributos.ActiveTo.visible) %}
+            {% if (idiomas.actual == 0) and (user.IDPerfil.Id == '1' or atributos.PublishedAt.visible or atributos.ActiveFrom.visible or atributos.ActiveTo.visible) %}
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
@@ -104,7 +104,7 @@
             {% endif %}
 
             {# POSICIONAMIENTO SEO #}
-            {% if user.IDPerfil.IDPerfil == '1' or values.varEnvMod.showMetaManagement == '1' %}
+            {% if user.IDPerfil.Id == '1' or values.varEnvMod.showMetaManagement == '1' %}
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
@@ -132,7 +132,7 @@
 
             {# IMÁGENES #}
             {% if datos.getPrimaryKeyValue %}
-                {% if values.varEnvMod.numberOfImages > '0' or user.IDPerfil.IDPerfil == '1' %}
+                {% if values.varEnvMod.numberOfImages > '0' or user.IDPerfil.Id == '1' %}
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
@@ -261,7 +261,7 @@
                 {% endif %}
 
                 {# SOLAPA TINY #}
-                {% if values.varEnvMod.withTiny == '1' or user.IDPerfil.IDPerfil == '1' %}
+                {% if values.varEnvMod.withTiny == '1' or user.IDPerfil.Id == '1' %}
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title" id="fc-tiny">
@@ -275,7 +275,7 @@
                 {% endif %}
 
                 {# SOLAPA GALERIA #}
-                {% if values.varEnvMod.withGalery == '1' or user.IDPerfil.IDPerfil == '1' %}
+                {% if values.varEnvMod.withGalery == '1' or user.IDPerfil.Id == '1' %}
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title" id="fc-galeria">
@@ -289,7 +289,7 @@
                 {% endif %}
 
                 {# SOLAPA DOCUMENTOS #}
-                {% if values.varEnvMod.withDocuments == '1' or user.IDPerfil.IDPerfil == '1' %}
+                {% if values.varEnvMod.withDocuments == '1' or user.IDPerfil.Id == '1' %}
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title" id="fc-docs">
@@ -303,7 +303,7 @@
                 {% endif %}
 
                 {# SOLAPA VIDEOS #}
-                {% if values.varEnvMod.withVideos == '1' or user.IDPerfil.IDPerfil == '1' %}
+                {% if values.varEnvMod.withVideos == '1' or user.IDPerfil.Id == '1' %}
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title" id="fc-videos">
@@ -317,7 +317,7 @@
                 {% endif %}
 
                 {# SOLAPA AUDIOS #}
-                {% if values.varEnvMod.withAudios == '1' or user.IDPerfil.IDPerfil == '1' %}
+                {% if values.varEnvMod.withAudios == '1' or user.IDPerfil.Id == '1' %}
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title" id="fc-audios">
@@ -331,7 +331,7 @@
                 {% endif %}
 
                 {# SOLAPA URLS #}
-                {% if user.IDPerfil.IDPerfil == '1' or values.varEnvMod.showUrlFriendlyManagement == '1' %}
+                {% if user.IDPerfil.Id == '1' or values.varEnvMod.showUrlFriendlyManagement == '1' %}
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
@@ -352,7 +352,7 @@
                                 {# SI EL USUARIO ES SUPER, SE MUESTRAN LOS CAMPOS CONTROLLER, ACTION, TEMPLATE y PARAMETERS
                                    QUE ESTAN EN LA TABLA CpanUrlAmigables
                                 #}
-                                {% if user.IDPerfil.IDPerfil == 1 %}
+                                {% if user.IDPerfil.Id == 1 %}
                                     {% set objetoUrlAmigable = datos.getObjetoUrlAmigable %}
                                     <input name="objetoUrlAmigable[Id]" value="{{objetoUrlAmigable.Id}}" type="hidden" />
                                     {{ macro.input({'caption':'Controller','visible':'1','updatable':'1','varEnv':'0','translatable':'1'},'Etiqueta','text','objetoUrlAmigable[Controller]','CpanUrlAmigables_Controller',objetoUrlAmigable.Controller,'255','CampoTextoLargo','12') }}
@@ -366,7 +366,7 @@
                 {% endif %}
 
                 {# SOLAPA URL DESTINO #}
-                {% if (idiomas.actual == 0) and (user.IDPerfil.IDPerfil == 1 or atributos.UrlTarget.visible == 1 or atributos.UrlParameters.visible == 1 or atributos.UrlRequestMethod.visible == 1 or atributos.UrlOrigin.visible == 1 or atributos.UrlTargetBlank.visible == 1 or atributos.UrlIsHttps.visible == 1) %}
+                {% if (idiomas.actual == 0) and (user.IDPerfil.Id == 1 or atributos.UrlTarget.visible == 1 or atributos.UrlParameters.visible == 1 or atributos.UrlRequestMethod.visible == 1 or atributos.UrlOrigin.visible == 1 or atributos.UrlTargetBlank.visible == 1 or atributos.UrlIsHttps.visible == 1) %}
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
@@ -387,7 +387,7 @@
                 {% endif %}
 
                 {# SOLAPA SITEMAP #}
-                {% if (idiomas.actual == 0) and (user.IDPerfil.IDPerfil == '1' or values.varEnvMod.showSiteMapManagement == '1') %}              
+                {% if (idiomas.actual == 0) and (user.IDPerfil.Id == '1' or values.varEnvMod.showSiteMapManagement == '1') %}              
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
@@ -419,7 +419,7 @@
                 {% endif %}
 
                 {# SOLAPA AUDITORIA #}
-                {% if (idiomas.actual == 0) and (user.IDPerfil.IDPerfil == 1 or atributos.Checked.visible == 1 or atributos.Privacy.visible == 1 or atributos.NumberVisits.visible == 1 or atributos.DateTimeLastVisit.visible == 1) %}
+                {% if (idiomas.actual == 0) and (user.IDPerfil.Id == 1 or atributos.Checked.visible == 1 or atributos.Privacy.visible == 1 or atributos.NumberVisits.visible == 1 or atributos.DateTimeLastVisit.visible == 1) %}
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
@@ -451,7 +451,7 @@
             {% endif %}
 
             {# SOLAPA MOSTRAR... #}
-            {% if (idiomas.actual == 0) and (user.IDPerfil.IDPerfil == 1 or atributos.ShowGalery.visible == 1 or atributos.ShowDocuments.visible == 1 or atributos.ShowRelatedLinks.visible == 1 or atributos.ShowRelatedContents == 1) %}
+            {% if (idiomas.actual == 0) and (user.IDPerfil.Id == 1 or atributos.ShowGalery.visible == 1 or atributos.ShowDocuments.visible == 1 or atributos.ShowRelatedLinks.visible == 1 or atributos.ShowRelatedContents == 1) %}
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">

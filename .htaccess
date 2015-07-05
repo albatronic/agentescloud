@@ -15,6 +15,7 @@
     RewriteCond %{REQUEST_FILENAME} !-f
 
     # EXCEPCIONES
+    RewriteCond %{REQUEST_URI} !/theme
     #-----------------------------------
 
     RewriteRule ^(.*)$ index.php [QSA,L]

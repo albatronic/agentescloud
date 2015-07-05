@@ -489,7 +489,7 @@ Articulos:
       '#aditional_filter': { order: 8, caption: Trazabilidad, entity: ValoresSN, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
       validator: { nullable: false, type: tinyint, length: '1', min: null, max: null, message: 'Valor Requerido' }
     BajoPedido:
-      title: BajoPedido
+      title: Bajo Pedido
       filter: false
       list: false
       visible: true
@@ -503,7 +503,7 @@ Articulos:
       '#aditional_filter': { order: 9, caption: BajoPedido, entity: ValoresSN, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
       validator: { nullable: false, type: tinyint, length: '1', min: null, max: null, message: 'Valor Requerido' }
     PackingCompras:
-      title: PackingCompras
+      title: Packing Compras
       filter: false
       list: false
       visible: true
@@ -516,7 +516,7 @@ Articulos:
       link: { route: null, param: null, title: null, target: null, link: null }
       validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
     PackingVentas:
-      title: PackingVentas
+      title: Packing Ventas
       filter: false
       list: false
       visible: true
@@ -542,7 +542,7 @@ Articulos:
       link: { route: null, param: null, title: null, target: null, link: null }
       validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
     BloqueoStock:
-      title: BloqueoStock
+      title: Bloqueo Stock
       filter: false
       list: false
       visible: true
@@ -877,3 +877,42 @@ Articulos:
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
       validator: { nullable: true, type: string, length: false, min: null, max: null, message: 'Valor Requerido' }
+    UrlProducto:
+      title: Url Producto
+      filter: false
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: true, type: string, length: false, min: null, max: null, message: 'Valor Requerido' }
+    UrlImagen:
+      title: Url Imagen
+      filter: false
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: true, type: string, length: false, min: null, max: null, message: 'Valor Requerido' }
+    Observations:
+      title: Observaciones
+      filter: false
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: true, type: string, length: false, min: null, max: null, message: 'Valor Requerido' }      

@@ -10,19 +10,36 @@
 
 {% block title parent() ~ ' - '  ~ values.titulo %}
 
-{% block content %}
-	{% include '_global/TituloGenerico.html.twig' with {'controller': values.controller, 'linkValue': values.linkBy.value} %}
-	{% block filtro %}
-	{% if values.permisos.permisosModulo['CO'] and values.tieneListado %}
-		{% include values.controller ~ '/filtro.html.twig' with {'filter': values.listado.filter} %}
-	{% endif %}
-	{% endblock %}
+    {% block content %}
+        {% if values.datos.PrimaryKeyValue and values.permisos.permisosModulo['CO'] %}
+            {% set adittionalCommands = 
+            { 
+                '0': {
+                        'type'    : 'modal',
+                        'url'     : "#dialogHistoricoVentas", 
+                        'onclick' : "ajaxHistoricoVentas(0,'"~ values.datos.PrimaryKeyValue~"',0);",
+                        'title'   : 'Histórico de Ventas'
+                      },
+                '1': {
+                        'type' : 'modal',
+                        'url'  : '#dialogRutasVentaReparto',
+                        'title': 'Rutas Ventas y Reparto'
+                      },
+             } 
+            %}
+        {% endif %}      
+        {% include '_global/TituloGenerico.html.twig' with {'controller': values.controller, 'linkValue': values.linkBy.value} %}
+        {% block filtro %}
+            {% if values.permisos.permisosModulo['CO'] and values.tieneListado %}
+                {% include values.controller ~ '/filtro.html.twig' with {'filter': values.listado.filter} %}
+            {% endif %}
+        {% endblock %}
 
-	<div id='div_listado'>
-	{% block listado %}
-	{% endblock %}
-	</div>
+        <div id='div_listado'>
+            {% block listado %}
+            {% endblock %}
+        </div>
 
-	{% block mantenimiento %}
-	{% endblock %}
-{% endblock %}
+        {% block mantenimiento %}
+        {% endblock %}
+    {% endblock %}

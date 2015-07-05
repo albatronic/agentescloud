@@ -360,6 +360,16 @@ class ArticulosEntity extends EntityComunes {
     protected $AvisosFacturas;
 
     /**
+     * @var string
+     */
+    protected $UrlProducto;
+
+    /**
+     * @var string
+     */
+    protected $UrlImagen;
+
+    /**
      * Nombre de la conexion a la BD
      * @var string
      */
@@ -388,6 +398,7 @@ class ArticulosEntity extends EntityComunes {
      * @var string
      */
     protected $_parentEntities = array(
+        array('SourceColumn' => 'Id', 'ParentEntity' => 'PedidosLineas', 'ParentColumn' => 'IdArticulo'),        
     );
 
     /**
@@ -944,6 +955,22 @@ class ArticulosEntity extends EntityComunes {
 
     public function getAvisosFacturas() {
         return $this->AvisosFacturas;
+    }
+
+    public function setUrlProducto($UrlProducto) {
+        $this->UrlProducto = trim($UrlProducto);
+    }
+
+    public function getUrlProducto() {
+        return $this->UrlProducto;
+    }
+
+    public function setUrlImagen($UrlImagen) {
+        $this->UrlImagen = trim($UrlImagen);
+    }
+
+    public function getUrlImagen() {
+        return $this->UrlImagen;
     }
 
 }

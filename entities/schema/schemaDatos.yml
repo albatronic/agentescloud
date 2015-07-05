@@ -126,6 +126,8 @@ AgtArticulos:
     AvisosPresupuestos: { type: text, defatul: null }
     AvisosAlbaranes:    { type: text, defatul: null }
     AvisosFacturas:     { type: text, defatul: null }
+    UrlProducto:        { type: string(255), default: null }
+    UrlImagen:          { type: string(255), default: null }
     <?php include '../../entities/schema/schemaColumnsCommon.yml'; echoln('');?>    
   relations:
   index:

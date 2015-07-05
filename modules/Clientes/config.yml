@@ -84,7 +84,7 @@ Clientes:
     - Tratamientos
   columns:
     Id:
-      title: Id
+      title: Código
       visible: false
       updatable: false
       filter: false
@@ -351,7 +351,7 @@ Clientes:
       validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
     DiaDePago:
       title: Día De Pago
-      filter: true
+      filter: false
       list: false
       visible: true
       updatable: true
@@ -392,7 +392,7 @@ Clientes:
       validator: { nullable: false, type: tinyint, length: '1', min: null, max: null, message: 'Valor Requerido' }
     Avisos:
       title: Avisos
-      filter: true
+      filter: false
       list: false
       visible: true
       updatable: true
@@ -461,7 +461,7 @@ Clientes:
       validator: { nullable: false, type: date, length: 10, min: null, max: null, message: 'Valor Requerido' }
     Login:
       title: Login
-      filter: true
+      filter: false
       list: false
       visible: true
       updatable: true
@@ -474,7 +474,7 @@ Clientes:
       validator: { nullable: true, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
     Password:
       title: Password
-      filter: true
+      filter: false
       list: false
       visible: true
       updatable: true
@@ -487,7 +487,7 @@ Clientes:
       validator: { nullable: true, type: string, length: '50', min: null, max: null, message: 'Valor Requerido' }
     Catalogos:
       title: Catálogos
-      filter: true
+      filter: false
       list: false
       visible: true
       updatable: true
@@ -513,7 +513,7 @@ Clientes:
       validator: { nullable: true, type: string, length: '60', min: null, max: null, message: 'Valor Requerido' }
     DireccionBanco:
       title: Dirección Banco
-      filter: true
+      filter: false
       list: false
       visible: true
       updatable: true
@@ -539,7 +539,7 @@ Clientes:
       validator: { nullable: true, type: string, length: '34', min: null, max: null, message: 'Valor Requerido' }
     Bic:
       title: Bic
-      filter: true
+      filter: false
       list: false
       visible: true
       updatable: true
@@ -552,7 +552,7 @@ Clientes:
       validator: { nullable: true, type: string, length: '11', min: null, max: null, message: 'Valor Requerido' }
     Mandato:
       title: Mandato
-      filter: true
+      filter: false
       list: false
       visible: true
       updatable: true

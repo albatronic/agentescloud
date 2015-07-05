@@ -175,6 +175,8 @@ $(function () {
     $('#myTab a:first').tab('show')
 
 
+
+
 });
 
 
@@ -621,7 +623,7 @@ function autoComplete(campoAutoCompletar, campoId, campoTexto, entidad, columna,
     $("#" + campoAutoCompletar).autocomplete({
         source: url,
         minLength: 2,
-        select: function (event, ui) {
+        select: function (event, ui) {           
             devuelve(campoId, ui.item.id, campoTexto, ui.item.value, desplegableAjax);
         }
     });

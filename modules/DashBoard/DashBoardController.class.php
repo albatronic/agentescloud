@@ -11,6 +11,8 @@ class DashBoardController extends Controller {
     
     public function IndexAction() {
 
+        $this->values['dashboard']['topClientes'] = DashBoard::getTopClientes();
+
         /**
         $this->values['dashboard']['pedidosReiterados'] = DashBoard::getPedidosReiterados();
         $this->values['dashboard']['pedidosPendientes'] = DashBoard::getPedidosPendientes();

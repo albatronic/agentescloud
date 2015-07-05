@@ -184,7 +184,8 @@
                                {% if atributos.updatable == '0' %} disabled {% endif %}
                                {% if atributos.validator.nullable == '0' %} required{% endif %}                 
                                />
-                    </div>  
+                        <p class="help-block">{{ atributos.help }}</p>                         
+                    </div>                                
                 {% else %}
                     <div class="{{class}}">
                         <input type="{{ type|default('text') }}"
@@ -197,6 +198,7 @@
                                {% if atributos.updatable == '0' %} disabled{% endif %}
                                {% if atributos.validator.nullable == '0' %} required{% endif %}               
                                />
+                        <p class="help-block">{{ atributos.help }}</p>                          
                     </div>
                 {% endif %}
             {% else %}
@@ -229,7 +231,8 @@
                            onchange = "{{ _self.alertSave }}"
                            onblur = "{{onchange}}"
                            />        
-                </div>
+                    <p class="help-block">{{ atributos.help }}</p>                    
+                </div>                            
             {% endif %}            
             {#    
             <input type="{{ type|default('text') }}" name="{{ name }}" id="{{ id|default(name)}}"
@@ -280,7 +283,7 @@
                     {% if valueSelected == value.Id %} checked{% endif %}
                     />&nbsp;{{value.Value}}&nbsp;
             {% endfor %}
-        </div>
+        </div>           
     </div>
 
 {% endmacro %}

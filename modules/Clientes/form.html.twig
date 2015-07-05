@@ -16,13 +16,9 @@
                 <li><a href="#tabs-2" onclick="cargaDireccionesEntrega('tabs-2');" data-toggle="tab">Dir. Entrega</a></li>
                 <li><a href="#tabs-3" onclick="cargaContactos('tabs-3');" data-toggle="tab">Contactos</a></li>
                 <li><a href="#tabs-4" data-toggle="tab">Varios</a></li>
-                <li><a href="#tabs-5" onclick="cargaCondicionesComerciales('tabs-5');" data-toggle="tab">Condiciones Comerciales</a></li>
-                    {% if values.varEnvMod.showCommonFields == '1'  or user.IDPerfil.IDPerfil == '1' %}
-                    <li>
-                        <a href="#fieldsComunes" onclick='$("#solapaActiva").val("fieldsComunes");' data-toggle="tab">Más detalles...</a>
-                    </li>        
-                {% endif %}              
-            {% endif %}
+                <li><a href="#tabs-5" onclick="cargaCondicionesComerciales('tabs-5');" data-toggle="tab">Condiciones Comerciales</a></li>             
+                <li><a href="#tabs-6" onclick="cargaGraficoVentas('{{datos.Id}}', '0', 'divVentasCliente');cargaGraficoVentasPorFirmas('{{datos.Id}}', '0', 'divVentasPorFirmas');" data-toggle="tab">Gráfico</a></li>             
+                {% endif %}
         </ul>
 
         <div class="tab-content">    
@@ -76,12 +72,12 @@
                         <table class="table table-striped">
                             <thead><tr><th colspan="2">Códigos para cada Firma</th></tr></thead>
                             <tbody>
-                            {% for key,item in datos.RelacionFirmas %}
-                                <tr>
-                                    <td>{{item.Nombre}}</td>
-                                    <td><input type="text" value="{{item.Codigo}}" onblur="actualizaRelacionValor('Clientes', '{{datos.primaryKeyValue}}', 'Firmas', '{{key}}', $(this).val())"/></td>
-                                </tr>
-                            {% endfor %}
+                                {% for key,item in datos.RelacionFirmas %}
+                                    <tr>
+                                        <td>{{item.Nombre}}</td>
+                                        <td><input type="text" value="{{item.Codigo}}" onblur="actualizaRelacionValor('Clientes', '{{datos.primaryKeyValue}}', 'Firmas', '{{key}}', $(this).val())"/></td>
+                                    </tr>
+                                {% endfor %}
                             </tbody>
                         </table>
                     </div>
@@ -96,8 +92,23 @@
                         {{ macro.textarea(values.atributos.Avisos,'Etiqueta','Clientes[Avisos]','Clientes_Avisos',datos.Avisos,none,none,'TextArea')}}
                     </div>            
                 </div>
-                <div class="tab-pane" id="tabs-5"></div>
-                {% include '_global/fieldsComunes.html.twig' %}    
+                <div class="tab-pane" id="tabs-5"></div> 
+                <div class="tab-pane" id="tabs-6">
+                    <div class="col-md-3">
+                    <div class="form-group">
+                        <select class="form-control" onchange="cargaGraficoVentas('{{datos.Id}}', this.value, 'divVentasCliente');cargaGraficoVentasPorFirmas('{{datos.Id}}', this.value, 'divVentasPorFirmas');">
+                            <option value="0">Todos los años</option>
+                            <option value="1">Últimos 12 meses</option>
+                        </select>
+                    </div>
+                    </div>
+                    <div class="row margin-bottom-20">
+                        <div class="col-md-12" id="divVentasCliente"></div>
+                    </div>
+                    <div class="row margin-bottom-20">
+                        <div class="col-md-12" id="divVentasPorFirmas"></div>
+                    </div>
+                </div> 
             {% endif %}  
         </div>
     </div>

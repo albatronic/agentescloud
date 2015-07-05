@@ -257,6 +257,7 @@ class ClientesEntity extends EntityComunes {
     protected $_parentEntities = array(
         array('SourceColumn' => 'Id', 'ParentEntity' => 'ClientesContactos', 'ParentColumn' => 'IdCliente'),           
         array('SourceColumn' => 'Id', 'ParentEntity' => 'ClientesDEntrega', 'ParentColumn' => 'IdCliente'),           
+        array('SourceColumn' => 'Id', 'ParentEntity' => 'PedidosLineas', 'ParentColumn' => 'IdCliente'),           
     );
 
     /**

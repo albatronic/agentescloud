@@ -22,11 +22,11 @@ switch ($_GET['entidad']) {
 
     // BUSCA CLIENTES DE LA SUCURSAL EN CURSO POR %RAZONSOCIAL% y $NOMBRECOMERCIAL%
     case 'clientes':
-        $filtro = "RazonSocial LIKE '%{$_GET['term']}%' OR Email LIKE '%{$_GET['term']}%' OR Telefono LIKE '%{$_GET['term']}%' OR Movil LIKE '%{$_GET['term']}%'";
+        $filtro = "(1) or RazonSocial LIKE '%{$_GET['term']}%' OR Email LIKE '%{$_GET['term']}%' OR Telefono LIKE '%{$_GET['term']}%' OR Movil LIKE '%{$_GET['term']}%'";
         $cliente = new Clientes();
-        $rows = $cliente->cargaCondicion("*", $filtro, "RazonSocial");
+        $rows = $cliente->cargaCondicion("Id,RazonSocial as Value", $filtro, "RazonSocial");
         unset($cliente);
-        
+        /**
         $arrayElementos = array();
         foreach ($rows as $row) {
             $row['value'] = $row['RazonSocial'];
@@ -37,6 +37,8 @@ switch ($_GET['entidad']) {
         // por el autocomplete de jQuery
         print_r(json_encode($arrayElementos));
         exit;
+         * 
+         */
         break;
 
     // BUSCA PAISES POR %Pais%

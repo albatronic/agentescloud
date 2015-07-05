@@ -216,6 +216,7 @@ class FirmasEntity extends EntityComunes {
      */
     protected $_parentEntities = array(
         array('SourceColumn' => 'Id', 'ParentEntity' => 'Articulos', 'ParentColumn' => 'IdFirma'),           
+        array('SourceColumn' => 'Id', 'ParentEntity' => 'PedidosLineas', 'ParentColumn' => 'IdFirma'),           
     );
 
     /**

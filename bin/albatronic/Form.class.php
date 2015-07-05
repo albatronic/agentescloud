@@ -564,8 +564,9 @@ class Form {
 
                 if (is_array($columnasConfig[$key])) {
                     foreach ($columnasConfig[$key] as $keyConfig => $valueConfig) {
-                        if (!isset($atributos[$key][$keyConfig]))
+                        if (!isset($atributos[$key][$keyConfig])) {
                             $atributos[$key][$keyConfig] = $valueConfig;
+                        }
                     }
                 }
             }
