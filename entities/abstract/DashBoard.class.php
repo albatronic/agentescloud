@@ -44,7 +44,7 @@ class DashBoard {
                 break;
         }
 
-        $fecha = new Fecha(date('Y-m-d'));
+        $fecha = new Fecha();
         $desdeFecha = $fecha->sumaDias($diferenciaDias);
         unset($fecha);
 
@@ -97,7 +97,7 @@ class DashBoard {
                 break;
             case "1":
                 $tituloPeriodo = "Últimos 12 meses";
-                $fecha = new Fecha(date('Y-m-d'));
+                $fecha = new Fecha();
                 $desdeFecha = $fecha->sumaDias(-365);
                 unset($fecha);
                 $query = "select DATE_FORMAT(p.Fecha,'%Y-%b') name, sum(p.TotalBases) y "
@@ -150,7 +150,7 @@ class DashBoard {
                 break;
             case '1':
                 $tituloPeriodo = "Últimos 12 meses";
-                $fecha = new Fecha(date('Y-m-d'));
+                $fecha = new Fecha();
                 $desdeFecha = $fecha->sumaDias(-365);
                 unset($fecha);
                 $query = "select DATE_FORMAT(p.Fecha,'%Y-%b') name, sum(p.TotalBases) y "
@@ -203,7 +203,7 @@ class DashBoard {
                 break;
             case '1':
                 $tituloPeriodo = "Últimos 12 meses";
-                $fecha = new Fecha(date('Y-m-d'));
+                $fecha = new Fecha();
                 $desdeFecha = $fecha->sumaDias(-365);
                 unset($fecha);
                 $query = "select DATE_FORMAT(p.Fecha,'%Y-%b') name, sum(p.TotalBases) y "
@@ -257,18 +257,18 @@ class DashBoard {
                         . "from {$pedidosTabla} p, {$firmaTabla} f "
                         . "where p.IdCliente='{$idCliente}' and f.Id=p.IdFirma "
                         . "group by f.RazonSocial "
-                        . "order by sum(p.TotalBases) ASC";
+                        . "order by sum(p.TotalBases) DESC";
                 break;
             case '1':
                 $tituloPeriodo = "Últimos 12 meses";
-                $fecha = new Fecha(date('Y-m-d'));
+                $fecha = new Fecha();
                 $desdeFecha = $fecha->sumaDias(-365);
                 unset($fecha);
                 $query = "select f.RazonSocial name, sum(p.TotalBases) y "
                         . "from {$pedidosTabla} p, {$firmaTabla} f "
                         . "where p.IdCliente='{$idCliente}' and f.Id=p.IdFirma and p.Fecha>'{$desdeFecha}' "
                         . "group by f.RazonSocial "
-                        . "order by sum(p.TotalBases) ASC";                
+                        . "order by sum(p.TotalBases) DESC";                
                 break;
             default:
         }
@@ -284,6 +284,64 @@ class DashBoard {
 
         return array(
             'title' => "Ventas del cliente {$razonSocial} desglosadas por firmas. {$tituloPeriodo}",
+            'serieName' => "Ventas",
+            'serie' => $rows,
+            'query' => $query,
+        );
+    }
+
+    /**
+     * Devuelve las ventas de una firma en el periodo por clientes
+     * 
+     * @param int $idFirma
+     * @param int $periodo 0=todo, 1=últimos 12 meses
+     * @return array
+     */
+    static function getVentasFirmaClientes($idFirma, $periodo = 0) {
+
+        $firma = new Firmas($idFirma);
+        $razonSocial = $firma->getRazonSocial();
+        
+        $cliente = new Clientes();
+        $clienteTabla = $cliente->getDataBaseName() . "." . $cliente->getTableName();
+        $pedidos = new PedidosCab();
+        $pedidosTabla = $pedidos->getDataBaseName() . "." . $pedidos->getTableName();
+        unset($pedidos);
+
+        switch ($periodo) {
+            case '0':
+                $tituloPeriodo = "Todos los años";                
+                $query = "select c.RazonSocial name, sum(p.TotalBases) y "
+                        . "from {$pedidosTabla} p, {$clienteTabla} c "
+                        . "where p.IdFirma='{$idFirma}' and c.Id=p.IdCliente "
+                        . "group by c.RazonSocial "
+                        . "order by sum(p.TotalBases) DESC";
+                break;
+            case '1':
+                $tituloPeriodo = "Últimos 12 meses";
+                $fecha = new Fecha();
+                $desdeFecha = $fecha->sumaDias(-365);
+                unset($fecha);
+                $query = "select c.RazonSocial name, sum(p.TotalBases) y "
+                        . "from {$pedidosTabla} p, {$clienteTabla} c "
+                        . "where p.IdFirma='{$idFirma}' and c.Id=p.IdCliente and p.Fecha>'{$desdeFecha}' "
+                        . "group by c.RazonSocial "
+                        . "order by sum(p.TotalBases) DESC";                
+                break;
+            default:
+        }
+
+
+        $em = new EntityManager($firma->getConectionName());
+        if ($em->getDbLink()) {
+            $em->query($query);
+            $rows = $em->fetchResult();
+            $em->desConecta();
+        }
+        unset($firma);
+
+        return array(
+            'title' => "Ventas de la firma {$razonSocial} desglosadas por clientes. {$tituloPeriodo}",
             'serieName' => "Ventas",
             'serie' => $rows,
             'query' => $query,
@@ -318,7 +376,7 @@ class DashBoard {
                 break;
         }
 
-        $fecha = new Fecha(date('Y-m-d'));
+        $fecha = new Fecha();
         $desdeFecha = $fecha->sumaDias($diferenciaDias);
         unset($fecha);
 

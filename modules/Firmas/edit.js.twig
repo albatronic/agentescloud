@@ -31,7 +31,7 @@
 
         }
 
-        function cargaGrafico(idFirma, periodo, idDiv) {
+        function cargaGraficoVentas(idFirma, periodo, idDiv) {
             $.ajax({
                 url: appPath + '/lib/graph.php',
                 dataType: 'html',
@@ -85,6 +85,62 @@
             });            
         }
 
+        function cargaGraficoVentasPorClientes(idFirma, periodo, idDiv) {
+            $.ajax({
+                url: appPath + '/lib/graph.php',
+                dataType: 'html',
+                type: 'get',
+                data: {'accion': 'firmaClientes', 'idFirma': idFirma, 'periodo': periodo},
+                success: function (resultado) {
+                    var datos = [];
+                    result = $.parseJSON(resultado);
+                    $.each(result.serie, function (key, item) {
+                        datos.push({name: item.name, y: parseFloat(item.y)});
+                    });
+
+                    var opciones = {
+                        chart: {
+                            type: 'pie',
+                        },
+                        title: {
+                            text: result.title
+                        },
+                        xAxis: {
+                            type: 'category'
+                        },
+                        yAxis: {
+                            title: {
+                                text: 'Total Ventas (BI)'
+                            }
+                        },
+                        legend: {
+                            enabled: false
+                        },
+                        tooltip: {
+                            //pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                        },
+                        plotOptions: {
+                            pie: {
+                                allowPointSelect: true,
+                                cursor: 'pointer',
+                                depth: 35,
+                                dataLabels: {
+                                    enabled: true,
+                                    format: '{point.name}'
+                                }
+                            }
+                        },
+                        series: [{
+                                type: 'pie',
+                                name: result.serieName,
+                                data: datos
+                            }]
+                    };
+                    $('#'+idDiv).highcharts(opciones);
+                }
+            });            
+        }
+        
         function limpia(idOrigen, idInput) {
 
             if ($('#' + idOrigen + '_valorAnterior').val() !== $('#' + idOrigen).val()) {

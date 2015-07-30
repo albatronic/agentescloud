@@ -14,7 +14,7 @@
             <li><a href="#tabs-1" data-toggle="tab">Facturación</a></li>
                 {% if datos.PrimaryKeyValue %}
                 <li><a href="#tabs-2" onclick="cargaCondicionesComerciales('tabs-5');" data-toggle="tab">Condiciones Comerciales</a></li>  
-                <li><a href="#tabs-3" onclick="cargaGrafico('{{datos.Id}}', '0', 'divVentasFirma');" data-toggle="tab">Gráfico</a></li>              
+                <li><a href="#tabs-3" onclick="cargaGraficoVentas('{{datos.Id}}', '0', 'divVentasFirma');cargaGraficoVentasPorClientes('{{datos.Id}}', 0, 'divVentasPorClientes');" data-toggle="tab">Gráfico</a></li>              
                 {% endif %}
         </ul>
 
@@ -68,7 +68,7 @@
                 <div class="tab-pane" id="tabs-3">
                     <div class="col-md-3">
                         <div class="form-group">
-                            <select class="form-control" onchange="cargaGrafico('{{datos.Id}}', this.value, 'divVentasFirma');">
+                            <select class="form-control" onchange="cargaGraficoVentas('{{datos.Id}}', this.value, 'divVentasFirma');cargaGraficoVentasPorClientes('{{datos.Id}}', this.value, 'divVentasPorClientes');">
                                 <option value="0">Todos los años</option>
                                 <option value="1">Últimos 12 meses</option>
                             </select>
@@ -77,6 +77,9 @@
                     <div class="row margin-bottom-20">
                         <div class="col-md-12" id="divVentasFirma"></div>
                     </div>
+                    <div class="row margin-bottom-20">
+                        <div class="col-md-12" id="divVentasPorClientes"></div>
+                    </div>                                
                 </div>                 
             {% endif %}  
         </div>

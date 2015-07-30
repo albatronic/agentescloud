@@ -33,6 +33,9 @@ switch ($v['accion']) {
     case 'clienteFirmas':
         $result = DashBoard::getVentasClienteFirmas($v['idCliente'], $v['periodo']);
         break;
+    case 'firmaClientes':
+        $result = DashBoard::getVentasFirmaClientes($v['idFirma'], $v['periodo']);
+        break;
     default:
         $result = array();
 }
