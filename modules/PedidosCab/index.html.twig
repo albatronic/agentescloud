@@ -11,6 +11,18 @@
 {% block title parent() ~ ' - '  ~ values.titulo %}
 
 {% block content %}
+        {% if values.datos.PrimaryKeyValue and values.permisos.permisosModulo['IN'] %}
+            {% set adittionalCommands = 
+            { 
+                '0': {
+                        'type'    : 'modal',
+                        'url'     : "#dialogImportarCsv", 
+                        'onclick' : "",
+                        'title'   : 'Importar pedido csv'
+                      },
+             } 
+            %}
+        {% endif %}     
 	{% include '_global/TituloGenerico.html.twig' with {'controller': values.controller, 'linkValue': values.linkBy.value} %}
 	{% block filtro %}
 	{% if values.permisos.permisosModulo['CO'] and values.tieneListado %}

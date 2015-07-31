@@ -1,0 +1,38 @@
+{# ImportarTarifas/index.html.twig #}
+{% extends layout %}
+
+{% block title %}
+{{ parent() }} - Inicio
+{% endblock %}
+
+{% block content %}
+
+    <div class="page_title row">
+        <div class="col-md-12">
+            <h1>Indique el archivo a importar</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <form name="manto_{{values.controller}}" id="manto_{{values.controller}}" action="" method="POST" enctype="multipart/form-data">
+                <input name="controller" value="{{ values.controller }}" type="hidden" />
+                <input name="action" id="action" value="importar" type="hidden" />
+                <input name="MAX_FILE_SIZE" value="5000000" type="hidden"  />
+                <input id="archivo" class="form-control"  name="archivo" type="file"/>
+                {{ macro.select(values.atributos.IdFirma,'Etiqueta','IdFirma','IdFirma',none,values.IdFirma,values.firma.fetchAll('RazonSocial'),'chzn-select',none,"putFamilias(this.value,'IdFamilia')")}} 
+                {{ macro.select(values.atributos.IdFamilia,'Etiqueta','IdFamilia','IdFamilia',none,values.IdFamilia,values.firma.getFamilias('Descripcion'),'chzn-select','8')}}   
+                <input class="btn btn-primary" type="submit" value="Importar" id="buscar"/>
+            </form>
+        </div>
+    </div>
+                
+    {% include '_global/alertas.html.twig' with {'alertas': values.alertas,'errores': values.errores} %}   
+    
+    {% if values.items %}
+    {% include values.controller ~ '/listado.html.twig' with {'data': values.items, 'titulos': values.titulos}%}
+    {% endif %}
+
+{{ macro.foco('archivo') }}
+
+
+{% endblock %}

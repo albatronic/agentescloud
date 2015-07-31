@@ -301,6 +301,20 @@ AgtFirmas:
     <?php include '../../entities/schema/schemaColumnsCommon.yml'; echoln('');?>    
   relations:
       
+# Firmas Contactos
+AgtFirmasContactos:
+  comment: Contactos de firmas
+  columns:   
+    IdFirma:  { type: bigint(11), notnull: true, index: index, comment: 'datos,Firmas,Id' }
+    Cargo:      { type: varchar(30), notnull: false }
+    Nombre:     { type: varchar(50), notnull: true }
+    Telefono:   { type: varchar(50), default: null }
+    Fax:        { type: varchar(50), default: null } 
+    Movil:      { type: varchar(50), default: null }   
+    EMail:      { type: varchar(50), default: null } 
+    <?php include '../../entities/schema/schemaColumnsCommon.yml'; echoln('');?>     
+  relations: 
+      
 # RELACIONES N A M ENTRE ENTIDADES
 AgtRelaciones:
   comment: Relaciones entre entidades

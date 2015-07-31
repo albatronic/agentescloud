@@ -1,0 +1,21 @@
+{# empty Twig template #}
+
+<table id="table-listado" class="table table-striped">
+    <thead>
+        <tr>
+            {% for key,title in titulos %}
+                <th>{{title}}</th>
+            {% endfor%}
+        </tr>
+    </thead>
+
+    <tbody>
+    {% for item in data %}
+        <tr>
+            {% for field,value in item %}
+                <td>{{value}}</td>
+            {% endfor %}           
+	   </tr>
+    {% endfor %}
+    </tbody>
+</table>

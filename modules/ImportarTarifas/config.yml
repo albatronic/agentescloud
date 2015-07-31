@@ -1,0 +1,12 @@
+## ImportarTarifas/config.yml
+---
+ImportarTarifas:
+  login_required: true
+  permission_control: true
+  favourite_control: NO
+  help_file: help.html.twig
+  title: Importar Tarifas
+  id_video: index
+  url_video: null
+  conection: 
+  entity: ImportarTarifas

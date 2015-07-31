@@ -63,7 +63,7 @@ Modulos:
 
   # UTILIDADES
   - { Id: 80, CodigoApp: Util, NombreModulo: Util,    Nivel: 0, BelongsTo: 0,  Titulo: Utilidades, Funcionalidades: AC, Icon: 'glyphicon glyphicon-tasks' }
-  - { CodigoApp: Util, NombreModulo: ImportarTarfias, Nivel: 1, BelongsTo: 80, Titulo: Importar Tarfias, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}    
+  - { CodigoApp: Util, NombreModulo: ImportarTarifas, Nivel: 1, BelongsTo: 80, Titulo: Importar Tarifas, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}    
   
 Permisos:
   # PERMISOS PARA EL SUPERADMINSITRADOR
@@ -109,7 +109,7 @@ Permisos:
   - { IdPerfil: 1, NombreModulo: Informes, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>} 
 
   - { IdPerfil: 1, NombreModulo: Util, Funcionalidades: 'AC,VW' }
-  - { IdPerfil: 1, NombreModulo: ImportarTarfias, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>} 
+  - { IdPerfil: 1, NombreModulo: ImportarTarifas, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>} 
   
   # PERMISOS PARA EL ADMINISTRADOR
   - { IdPerfil: 2, NombreModulo: Dash,    Funcionalidades: 'AC,VW' } 
@@ -154,4 +154,4 @@ Permisos:
   - { IdPerfil: 2, NombreModulo: Informes, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>} 
 
   - { IdPerfil: 2, NombreModulo: Util, Funcionalidades: 'AC,VW' }
-  - { IdPerfil: 2, NombreModulo: ImportarTarfias, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>} 
+  - { IdPerfil: 2, NombreModulo: ImportarTarifas, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>} 
