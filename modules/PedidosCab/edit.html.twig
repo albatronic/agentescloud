@@ -7,5 +7,34 @@
 {% block navegador %}{% endblock %}
 
 {% block mantenimiento %}
-   {% include '_global/formEdit.html.twig' with {'values': values} %}
+    <form class="form-horizontal margin-top-20" name="manto_{{values.controller}}" id="manto_{{values.controller}}" action="" method="POST" enctype="multipart/form-data">
+        <input name="controller" value="{{ values.controller }}" type="hidden" />
+        <input name="action" id="action_{{values.controller}}" value="edit" type="hidden" />
+        <input name="accion" id="accion_{{values.controller}}" value="" type="hidden" />    
+        <input name="{{ values.controller }}[{{values.datos.getPrimaryKeyName}}]" value="{{values.datos.getPrimaryKeyValue}}" type="hidden" />
+        {% include '_global/alertas.html.twig' with {'alertas': values.alertas,'errores': values.errores} %}
+        {% include values.controller ~ "/form.html.twig" with {'datos': values.datos} %}
+        
+        <div class="modal fade" id="dialogImportarCsv" tabindex="-1" role="dialogImportarCsv" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                        <h4 class="modal-title">Importar Pedido</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Indique un archivo de texto que contenga los códigos y unidades de artículo. Los dos campos deben venir en ese orden (codigo;unidades) y estar separados por punto y coma (;). Los campos adicionales serán ignorados. Todos los artículos serán incorporados al pedido en curso.</p>
+                        <div class="form-group">
+                            <div class="form-control"><input type="file" name="pedidoCsv"/></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn default" data-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary" onclick="$('#action_{{values.controller}}').val('Importar');
+                                submitForm('manto_{{ values.controller}}');">Importar</button>
+                    </div>                  
+                </div>
+            </div>
+        </div>        
+    </form>   
 {% endblock %}

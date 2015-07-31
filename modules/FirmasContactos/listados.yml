@@ -1,0 +1,31 @@
+# Module: FirmasContactos
+# Document : modules\FirmasContactos\listados.yml
+#
+# @copyright: ALBATRONIC
+# @date 18.06.2015 22:39:21
+#
+---
+listados:
+  -
+    title: FirmasContactos
+    order_by: Id
+    break_field: null
+    idPerfil: null
+    orientation: P
+    unit: mm
+    format: A4
+    margins: '10, 10, 15, 10'
+    body_font: 'Courier, , 8'
+    line_height: 4
+    print_interline: null
+    legend_bottom: null
+    columns:
+      IdFirma: { field: IdFirma, title: IdFirma, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      Cargo: { field: Cargo, title: Cargo, length: '30', align: L, type: string, total: NO, formula: null, format: null }
+      Nombre: { field: Nombre, title: Nombre, length: '50', align: L, type: string, total: NO, formula: null, format: null }
+      Telefono: { field: Telefono, title: Telefono, length: '50', align: L, type: string, total: NO, formula: null, format: null }
+      Fax: { field: Fax, title: Fax, length: '50', align: L, type: string, total: NO, formula: null, format: null }
+      Movil: { field: Movil, title: Movil, length: '50', align: L, type: string, total: NO, formula: null, format: null }
+      EMail: { field: EMail, title: EMail, length: '50', align: L, type: string, total: NO, formula: null, format: null }
+      NivelJerarquico: { field: NivelJerarquico, title: NivelJerarquico, length: '4', align: R, type: integer, total: NO, formula: null, format: null }
+      Publish: { field: Publish, title: Publish, length: '1', align: L, type: tinyint, total: NO, formula: null, format: null }
