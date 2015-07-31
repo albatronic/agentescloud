@@ -1,11 +1,6 @@
 # PARAMETROS DE CONFIGURACION GLOBAL DE LA APLICACION
 ---
 config:
-  # INDICA SI EL ENTORNO DEL PROYECTO ESTÁ EN
-  # PRODUCCION (prod) O DESARROLLO (dev)
-  enviroment: dev
-  wsvips_enviroment: dev
-    
   debug:
     active: false
     save_queries: false
@@ -25,20 +20,26 @@ config:
     
   # ENTORNO DE LA APLICACION
   app:
-    name: Intranet VIPS
-    url: http://grupovips.albatronic.com/vips/
-    path: /vips 
+    name: Agentes CLOUD
+    url: http://www.albatronic.com/webs/agentescloud
+    path: /webs/agentescloud 
     framework: bin/albatronic/
     #urlParent: http://localhost/Pcae 
     
   # CONEXIONES A LAS BASES DE DATOS
   conections:
-    db:
+    emp:
       dbEngine: mysql
       host: localhost
-      user: root
-      password: $Madrid!15
-      database: vips
+      user: albatro
+      password: p17s26a26
+      database: albatro_agentes_emp
+    datos:
+      dbEngine: mysql
+      host: localhost
+      user: albatro
+      password: p17s26a26
+      database: albatro_agentes_datos<?php echo $_SESSION['emp'];?>
 
   # CONEXIóN FTP NECESARIA SI LA WEB SUBE DOCUMENTOS AL SERVIDOR
   projectFtp:
@@ -60,7 +61,7 @@ config:
     user_name: info@albatronic.com
     password: I12#34o
     from: info@albatronic.com
-    from_name: GRUPO VIPS
+    from_name: AGENTES CLOUD
     timeout: 30
     port: 25
     save_sends: true
