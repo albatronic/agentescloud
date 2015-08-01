@@ -27,6 +27,7 @@ class Usuarios extends UsuariosEntity {
             'Id' => $this->getId(),
             'Nombre' => $this->getNombre(),
             'IdPerfil' => $this->getIdPerfil()->getId(),
+            'Email' => $this->getEMail(),
             'Menu' => $this->getArrayMenu(),
             //'Sucursales' => $sucursales,
             //'ListaSucursales' => $this->getListaSucursales(),

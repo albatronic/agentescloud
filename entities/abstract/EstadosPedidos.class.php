@@ -11,7 +11,7 @@
 class EstadosPedidos extends Tipos {
 
     protected $tipos = array(
-        array('Id' => '0', 'Value' => 'Pte. Servir'),
+        array('Id' => '0', 'Value' => 'Pte. Facturar'),
         array('Id' => '1', 'Value' => 'Semi facturado'),
         array('Id' => '2', 'Value' => 'Facturado'),
     );

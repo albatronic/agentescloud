@@ -39,7 +39,7 @@ class PedidosCab extends PedidosCabEntity {
 
         return (count($this->_errores) == 0);
     }
-    
+
     /**
      * Recalcula los importes del pedido en base a sus lineas
      * Actualiza las propiedades de totales pero no salva los datos.
@@ -51,14 +51,14 @@ class PedidosCab extends PedidosCabEntity {
         $lineas = new PedidosLineas();
         $rows = $lineas->cargaCondicion("sum(Importe) as Bruto", "IdPedido='{$this->Id}'");
         $bruto = ($rows[0]['Bruto']) ? $rows[0]['Bruto'] : 0;
-        
+
         //SI TIENE DESCUENTO, CALCULO EL PORCENTAJE QUE SUPONE RESPECTO AL IMPORTE BRUTO
         //PARA REPERCUTUIRLO PORCENTUALMENTE A CADA BASE
         $pordcto = 0;
-        if ( ($this->getDescuentos() != 0) && ($bruto != 0) ) {
+        if (($this->getDescuentos() != 0) && ($bruto != 0)) {
             $pordcto = round(100 * ($this->getDescuentos() / $bruto), 2);
         }
-        
+
         $rows = $lineas->cargaCondicion("Iva, sum(Importe) as Importe", "(IdPedido='{$this->Id}') group by Iva order by Iva");
 
         $totbases = 0;
@@ -101,7 +101,7 @@ class PedidosCab extends PedidosCabEntity {
         //$this->setVolumen($rows[0]['Volumen']);
         //$this->setBultos($rows[0]['Bultos']);
     }
-    
+
     /**
      * Hace una copia del pedido.
      * Genera otro pedido en base al actual.
@@ -140,7 +140,8 @@ class PedidosCab extends PedidosCabEntity {
         unset($lineaDestino);
 
         return $idDestino;
-    }    
+    }
+
     /**
      * Guarda la informacion (update)
      */
@@ -148,4 +149,24 @@ class PedidosCab extends PedidosCabEntity {
         $this->recalcula();
         parent::save();
     }
+
+    /**
+     * Devuelve array de objetos pedidos lineas de pedido en curso
+     * 
+     * @return \PedidosLineas Array de objetos PedidosLineas
+     */
+    public function getLineas() {
+
+        $array = array();
+
+        $lineas = new PedidosLineas();
+        $rows = $lineas->cargaCondicion("Id", "IdPedido='{$this->Id}'", "Id ASC");
+        unset($lineas);
+        foreach ($rows as $row) {
+            $array[] = new PedidosLineas($row['Id']);
+        }
+
+        return $array;
+    }
+
 }

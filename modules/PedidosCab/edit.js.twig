@@ -31,6 +31,10 @@
                 $('#action_{{values.controller}}').val('Duplicar');
                 $('#manto_{{ values.controller}}').submit();
             });
+            $('#botonMail').click(function(){
+                $('#action_{{values.controller}}').val('enviar');
+                $('#manto_{{ values.controller}}').submit();
+            });
             
             $('#PedidosCab_IdDirec').focus(function(){
                 $(this).attr("size",5);

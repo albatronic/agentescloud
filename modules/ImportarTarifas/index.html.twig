@@ -2,7 +2,7 @@
 {% extends layout %}
 
 {% block title %}
-{{ parent() }} - Inicio
+    {{ parent() }} - Inicio
 {% endblock %}
 
 {% block content %}
@@ -13,26 +13,37 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-12">
-            <form name="manto_{{values.controller}}" id="manto_{{values.controller}}" action="" method="POST" enctype="multipart/form-data">
-                <input name="controller" value="{{ values.controller }}" type="hidden" />
-                <input name="action" id="action" value="importar" type="hidden" />
-                <input name="MAX_FILE_SIZE" value="6000000" type="hidden"  />
-                <input id="archivo" class="form-control"  name="archivo" type="file"/>
+
+        <form name="manto_{{values.controller}}" id="manto_{{values.controller}}" action="" method="POST" enctype="multipart/form-data">
+            <input name="controller" value="{{ values.controller }}" type="hidden" />
+            <input name="action" id="action" value="importar" type="hidden" />
+            <input name="MAX_FILE_SIZE" value="6000000" type="hidden"  />
+            <div class="col-md-6">                
+                <div class="form-group">
+                    <span class="col-sm-3 control-label"><label class="control-label" for="Archivo">Archivo</label></span>
+                    <div class="col-sm-9">                           
+                        <input class="form-control" type="file" name="archivo" id="Archivo"/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">                 
                 {{ macro.select(values.atributos.IdFirma,'Etiqueta','IdFirma','IdFirma',none,values.IdFirma,values.firma.fetchAll('RazonSocial'),'chzn-select',none,"putFamilias(this.value,'IdFamilia')")}} 
                 {{ macro.select(values.atributos.IdFamilia,'Etiqueta','IdFamilia','IdFamilia',none,values.IdFamilia,values.firma.getFamilias('Descripcion'),'chzn-select','8')}}   
-                <input class="btn btn-primary" type="submit" value="Importar" id="buscar"/>
-            </form>
-        </div>
+                <div class="form-group">
+                    <input class="btn btn-primary" type="submit" value="Importar" id="buscar"/>
+                </div>
+            </div>
+        </form>
+
     </div>
-                
+
     {% include '_global/alertas.html.twig' with {'alertas': values.alertas,'errores': values.errores} %}   
-    
+
     {% if values.items %}
-    {% include values.controller ~ '/listado.html.twig' with {'data': values.items, 'titulos': values.titulos}%}
+        {% include values.controller ~ '/listado.html.twig' with {'data': values.items, 'titulos': values.titulos}%}
     {% endif %}
 
-{{ macro.foco('archivo') }}
+    {{ macro.foco('archivo') }}
 
 
 {% endblock %}

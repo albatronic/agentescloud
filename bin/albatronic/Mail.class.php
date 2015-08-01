@@ -108,7 +108,9 @@ class Mail {
             }
 
             foreach ($adjuntos as $adjunto) {
-                $message->attach(Swift_Attachment::fromPath($adjunto));
+                if (trim($adjunto)) {
+                    $message->attach(Swift_Attachment::fromPath($adjunto));
+                }
             }
 
             $nEnvios = $this->mailer->send($message);

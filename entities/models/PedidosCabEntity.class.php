@@ -62,7 +62,7 @@ class PedidosCabEntity extends EntityComunes {
      * @var date
      * @assert NotBlank(groups="AgtPedidosCab")
      */
-    protected $Fecha = '0000-00-00';
+    protected $Fecha;
 
     /**
      * @var date

@@ -46,75 +46,39 @@ class PedidosCabController extends Controller {
      */
     public function enviarAction() {
 
-        switch ($this->request['accion']) {
-            case 'Enviar':
-                $para = $this->request['Para'];
-                $de = $this->request['De'];
-                $deNombre = $this->request['DeNombre'];
-                $conCopia = $this->request['Cc'];
-                $conCopiaOculta = $this->request['Cco'];
-                $asunto = $this->request['Asunto'];
-                $mensaje = $this->request['Mensaje'];
-                $adjuntos = array($this->request['Adjunto'],);
-
-                $envio = new Mail();
-                $ok = $envio->send($para, $de, $deNombre, $conCopia, $conCopiaOculta, $asunto, $mensaje, $adjuntos);
-                if ($ok) {
-                    $entidad = new $this->entity($this->request['PedidosCab']['IDPedido']);
-                    $entidad->auditaEmail();
-                    unset($entidad);
-                    $this->values['resultadoEnvio'][] = "Envío con éxito";
-                } else {
-                    $this->values['resultadoEnvio'] = $envio->getMensaje();
-                }
-                unset($envio);
-                break;
-
-            case 'CambioFormato':
-                $datos = new PedidosCab($this->request['PedidosCab']['IDPedido']);
-                $formatos = DocumentoPdf::getFormatos($this->entity);
-                $formato = $this->request['Formato'];
-                if ($formato == '')
-                    $formato = 0;
-
-                $this->values['archivo'] = $this->generaPdf($this->entity, array('0' => $datos->getIDPedido()), $formato);
-                $this->values['email'] = array(
-                    'Para' => $this->request['Para'],
-                    'De' => $this->request['De'],
-                    'DeNombre' => $this->request['DeNombre'],
-                    'Cc' => $this->request['Cc'],
-                    'Cco' => $this->request['Cco'],
-                    'Asunto' => $this->request['Asunto'],
-                    'Formatos' => $formatos,
-                    'Formato' => $formato,
-                    'Mensaje' => $this->request['Mensaje'],
-                    'idPedido' => $datos->getIDPedido(),
-                );
-                break;
-
-            case '':
-                $datos = new $this->entity($this->request[$this->entity]['IDPedido']);
-                $formatos = DocumentoPdf::getFormatos($this->entity);
-                $formato = $this->request['Formato'];
-                if ($formato == '')
-                    $formato = 0;
-
-                $this->values['archivo'] = $this->generaPdf($this->entity, array('0' => $datos->getIDPedido()), $formato);
-                $this->values['email'] = array(
-                    'Para' => $datos->getIDProveedor()->getEMail(),
-                    'De' => $_SESSION['usuarioPortal']['email'], //$datos->getIDAgente()->getIDAgente()->getEMail(),
-                    'DeNombre' => $datos->getIDAgente()->getNombre(),
-                    'Cco' => $_SESSION['usuarioPortal']['email'],
-                    'Asunto' => 'Pedido n. ' . $datos->getIDPedido(),
-                    'Formatos' => $formatos,
-                    'Formato' => $formato,
-                    'Mensaje' => 'Le adjunto el pedido ' . $datos->getIDPedido() . "\n\nUn saludo.",
-                    'idPedido' => $datos->getIDPedido(),
-                );
-                break;
+        $para = $this->request['Para'];
+        $de = $_SESSION['usuarioPortal']['Email'];
+        $deNombre = $_SESSION['usuarioPortal']['Nombre'];
+        $conCopia = $this->request['Cc'];
+        $conCopiaOculta = $this->request['Cco'];
+        $asunto = $this->request['Asunto'];
+        $mensaje = $this->request['Mensaje'];
+        $adjuntos = array();
+        if ($this->request['FILES']['Adjunto']['error'] == 0) {
+            $destino = "docs/docs{$_SESSION['emp']}/uploads/" . $this->request['FILES']['Adjunto']['name'];
+            $ok = move_uploaded_file($this->request['FILES']['Adjunto']['tmp_name'], $destino);
+            if ($ok) {
+                $adjuntos = array($destino,);
+            } else {
+                $this->values['alertas'] = "No se ha podido adjuntar el archivo {$destino}. Consulte con el administrador los permisos de la carpeta";
+            }
         }
 
-        return parent::enviarAction();
+        $envio = new Mail();
+        $ok = $envio->send($para, $asunto, $mensaje, $de, $deNombre, $conCopia, $conCopiaOculta, $adjuntos);
+        if ($ok) {
+            $entidad = new $this->entity($this->request['PedidosCab']['Id']);
+            $entidad->auditaEmail();
+            unset($entidad);
+            $this->values['alertas'][] = "Envío con éxito";
+        } else {
+            $this->values['errores'][] = $envio->getMensaje();
+        }
+        unset($envio);
+
+        $this->values['datos'] = new PedidosCab($this->request['PedidosCab']['Id']);
+
+        return array('template' => $this->entity . '/edit.html.twig', 'values' => $this->values);
     }
 
     /**
@@ -160,7 +124,7 @@ class PedidosCabController extends Controller {
         if ($this->values['permisos']['permisosModulo']['UP']) {
 
             $pedido = new PedidosCab($this->request['PedidosCab']['Id']);
-            
+
             if ($pedido->getIdEstado()->getIDTipo() == 0) {
                 $file = $this->request['FILES']['pedidoCsv'];
                 if ($file['error'] != 0) {

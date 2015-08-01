@@ -60,7 +60,7 @@ config:
     host: mail.albatronic.com
     smtp_auth: true
     user_name: pruebas@albatronic.com
-    password: P12#34s 
+    password: P123#456s 
     from: pruebas@albatronic.com
     from_name: Agentes Cloud
     timeout: 30

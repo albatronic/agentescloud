@@ -207,7 +207,7 @@ AgtClientesContactos:
   relations:    
     
 # Direcciones de entrega de clientes
-AgtClientesDentrega:
+AgtClientesDEntrega:
   comment: Direcciones de entrega de clientes
   columns:   
     IdCliente:                { type: bigint(11), notnull: true, index: index, comment: 'datos,Clientes,Id' }
