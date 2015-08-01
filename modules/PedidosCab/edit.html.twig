@@ -23,15 +23,34 @@
                         <h4 class="modal-title">Importar Pedido</h4>
                     </div>
                     <div class="modal-body">
-                        <p>Indique un archivo de texto que contenga los códigos y unidades de artículo. Los dos campos deben venir en ese orden (codigo;unidades) y estar separados por punto y coma (;). Los campos adicionales serán ignorados. Todos los artículos serán incorporados al pedido en curso.</p>
+                        <p>Indique un archivo de texto que contenga los códigos y unidades de artículo. 
+                            Los dos campos deben venir en ese orden (codigo;unidades) y estar separados por punto y coma (;). 
+                            Los campos adicionales serán ignorados. Todos los artículos serán incorporados al pedido en curso.
+                        </p>
                         <div class="form-group">
-                            <div class="form-control"><input type="file" name="pedidoCsv"/></div>
+                            <div class="form-control"><input type="file" name="pedidoCsv" id="pedidoCsv"/></div>
                         </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn default" data-dismiss="modal">Cancelar</button>
-                        <button type="button" class="btn btn-primary" onclick="$('#action_{{values.controller}}').val('Importar');
-                                submitForm('manto_{{ values.controller}}');">Importar</button>
+                        {#<button type="button" class="btn btn-primary" onclick="">Importar</button>#}
+                    </div>                  
+                </div>
+            </div>
+        </div>        
+        <div class="modal fade" id="dialogDuplicar" tabindex="-1" role="dialogDuplicar" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                        <h4 class="modal-title">Duplicar Pedido</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Se generará un pedido nuevo en base al actual.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn default" data-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary" id="botonDuplicar">Duplicar</button>
                     </div>                  
                 </div>
             </div>

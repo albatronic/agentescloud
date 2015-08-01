@@ -1,0 +1,47 @@
+{# js PedidosCab #}
+
+{% extends '_global/js.html.twig' %}
+
+{% block js %}
+
+    {{ parent() }}   
+    <script>
+        function ajaxHistoricoVentas(idArticulo, idCliente, periodo) {
+
+            if (idArticulo === '') {
+                idArticulo = '0';
+            }
+
+            $.ajax({
+                url: appPath + '/apiRest/HistoricoVentas/' + idArticulo + '/' + idCliente + '/' + periodo + '/html',
+                dataType: 'html',
+                type: 'get',
+                success: function (html) {
+                    $("#dialogHistoricoVentas .modal-body").html(html);
+                }
+            });
+        }
+
+        $(function(){
+            $('#pedidoCsv').change(function(){
+                $('#action_{{values.controller}}').val('Importar');
+                $('#manto_{{ values.controller}}').submit();
+            });
+            $('#botonDuplicar').click(function(){
+                $('#action_{{values.controller}}').val('Duplicar');
+                $('#manto_{{ values.controller}}').submit();
+            });
+            
+            $('#PedidosCab_IdDirec').focus(function(){
+                $(this).attr("size",5);
+                var x = "select[tabindex='" + (parseInt($(this).attr('tabindex'),10) + 1) + "']";
+                //$(x).fadeTo(50,0);
+            });
+            $('#PedidosCab_IdDirec').blur(function(){
+                $(this).attr("size",1); 
+                var x = "select[tabindex='" + (parseInt($(this).attr('tabindex'),10) + 1) + "']";       
+                //$(x).fadeTo('fast',1.0);            
+            });            
+        });
+    </script>
+{% endblock %}

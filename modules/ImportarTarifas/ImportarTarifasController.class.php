@@ -57,7 +57,7 @@ class ImportarTarifasController extends Controller {
 
         if ($csv->open()) {
             $columnas = $csv->readline(); //print_r($columnas);
-            while ($linea = $csv->readLine()) {
+            while ( ($linea = $csv->readLine()) && ($nLinea < 1000) ) {
                 $nLinea ++; //print_r($linea);
                 foreach ($linea as $key => $value) {
                     $items[$nLinea][$columnas[$key]] = $value;

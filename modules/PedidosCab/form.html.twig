@@ -16,7 +16,7 @@
     {{ macro.input(values.atributos.Referencia,'Etiqueta','text',values.controller ~ '[Referencia]',values.controller ~ '_Referencia',datos.Referencia,'15','CampoTextoCorto','7') }}
     {{ macro.fecha(values.atributos.Fecha,'Etiqueta',values.controller ~ '[Fecha]',values.controller ~ '_Fecha',datos.Fecha,'10','datepicker','8')}}
     {{ macro.fecha(values.atributos.FechaEntrega,'Etiqueta',values.controller ~ '[FechaEntrega]',values.controller ~ '_FechaEntrega',datos.FechaEntrega,'10','datepicker','9')}}
-    {{ macro.select(values.atributos.IdEstado,'Etiqueta',values.controller ~ '[IdEstado]',values.controller ~ '_IdEstado',none,datos.IdEstado.IdEstado,datos.IdEstado.fetchAll('IDTipo'),'chzn-select','34')}}
+    {{ macro.select(values.atributos.IdEstado,'Etiqueta',values.controller ~ '[IdEstado]',values.controller ~ '_IdEstado',none,datos.IdEstado.IDTipo,datos.IdEstado.fetchAll('Descripcion'),'chzn-select','34')}}
     {{ macro.select(values.atributos.IdFormaPago,'Etiqueta',values.controller ~ '[IdFormaPago]',values.controller ~ '_IdFormaPago',none,datos.IdFormaPago.Id,datos.IdFormaPago.fetchAll('Descripcion'),'chzn-select','35')}}
     {{ macro.select(values.atributos.IdAgencia,'Etiqueta',values.controller ~ '[IdAgencia]',values.controller ~ '_IdAgencia',none,datos.IdAgencia.Id,datos.IdAgencia.fetchAll('Agencia'),'chzn-select','36')}}
     {{ macro.input(values.atributos.Portes,'Etiqueta','text',values.controller ~ '[Portes]',values.controller ~ '_Portes',datos.Portes,'40','CampoTextoLargo','37') }}
@@ -34,21 +34,27 @@
     {{ macro.input(values.atributos.BaseImponible1,'Etiqueta','text',values.controller ~ '[BaseImponible1]',values.controller ~ '_BaseImponible1',datos.BaseImponible1,'10','CampoImporte','14') }}
     {{ macro.input(values.atributos.Iva1,'Etiqueta','text',values.controller ~ '[Iva1]',values.controller ~ '_Iva1',datos.Iva1,'10','CampoImporte','15') }}
     {{ macro.input(values.atributos.CuotaIva1,'Etiqueta','text',values.controller ~ '[CuotaIva1]',values.controller ~ '_CuotaIva1',datos.CuotaIva1,'10','CampoImporte','16') }}
+    {#
     {{ macro.input(values.atributos.Recargo1,'Etiqueta','text',values.controller ~ '[Recargo1]',values.controller ~ '_Recargo1',datos.Recargo1,'10','CampoImporte','17') }}
     {{ macro.input(values.atributos.CuotaRecargo1,'Etiqueta','text',values.controller ~ '[CuotaRecargo1]',values.controller ~ '_CuotaRecargo1',datos.CuotaRecargo1,'10','CampoImporte','18') }}
+    #}
     {{ macro.input(values.atributos.BaseImponible2,'Etiqueta','text',values.controller ~ '[BaseImponible2]',values.controller ~ '_BaseImponible2',datos.BaseImponible2,'10','CampoImporte','19') }}
     {{ macro.input(values.atributos.Iva2,'Etiqueta','text',values.controller ~ '[Iva2]',values.controller ~ '_Iva2',datos.Iva2,'10','CampoImporte','20') }}
     {{ macro.input(values.atributos.CuotaIva2,'Etiqueta','text',values.controller ~ '[CuotaIva2]',values.controller ~ '_CuotaIva2',datos.CuotaIva2,'10','CampoImporte','21') }}
+    {#
     {{ macro.input(values.atributos.Recargo2,'Etiqueta','text',values.controller ~ '[Recargo2]',values.controller ~ '_Recargo2',datos.Recargo2,'10','CampoImporte','22') }}
     {{ macro.input(values.atributos.CuotaRecargo2,'Etiqueta','text',values.controller ~ '[CuotaRecargo2]',values.controller ~ '_CuotaRecargo2',datos.CuotaRecargo2,'10','CampoImporte','23') }}
+    #}
     {{ macro.input(values.atributos.BaseImponible3,'Etiqueta','text',values.controller ~ '[BaseImponible3]',values.controller ~ '_BaseImponible3',datos.BaseImponible3,'10','CampoImporte','24') }}
     {{ macro.input(values.atributos.Iva3,'Etiqueta','text',values.controller ~ '[Iva3]',values.controller ~ '_Iva3',datos.Iva3,'10','CampoImporte','25') }}
     {{ macro.input(values.atributos.CuotaIva3,'Etiqueta','text',values.controller ~ '[CuotaIva3]',values.controller ~ '_CuotaIva3',datos.CuotaIva3,'10','CampoImporte','26') }}
+    {#
     {{ macro.input(values.atributos.Recargo3,'Etiqueta','text',values.controller ~ '[Recargo3]',values.controller ~ '_Recargo3',datos.Recargo3,'10','CampoImporte','27') }}
     {{ macro.input(values.atributos.CuotaRecargo3,'Etiqueta','text',values.controller ~ '[CuotaRecargo3]',values.controller ~ '_CuotaRecargo3',datos.CuotaRecargo3,'10','CampoImporte','28') }}
+    #}
     {{ macro.input(values.atributos.TotalBases,'Etiqueta','text',values.controller ~ '[TotalBases]',values.controller ~ '_TotalBases',datos.TotalBases,'10','CampoImporte','29') }}
     {{ macro.input(values.atributos.TotalIva,'Etiqueta','text',values.controller ~ '[TotalIva]',values.controller ~ '_TotalIva',datos.TotalIva,'10','CampoImporte','30') }}
-    {{ macro.input(values.atributos.TotalRecargo,'Etiqueta','text',values.controller ~ '[TotalRecargo]',values.controller ~ '_TotalRecargo',datos.TotalRecargo,'10','CampoImporte','31') }}
+    {# macro.input(values.atributos.TotalRecargo,'Etiqueta','text',values.controller ~ '[TotalRecargo]',values.controller ~ '_TotalRecargo',datos.TotalRecargo,'10','CampoImporte','31') #}
     {{ macro.input(values.atributos.TotalPedido,'Etiqueta','text',values.controller ~ '[TotalPedido]',values.controller ~ '_TotalPedido',datos.TotalPedido,'10','CampoImporte','32') }}    
 </div>
 
