@@ -596,7 +596,7 @@ PedidosCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      aditional_filter: { order: 4, caption: Almacén, entity: Almacenes, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
+      aditional_filter: { order: 4, caption: Almacén, entity: Almacenes, method: fetchAll, params: Nombre, type: select, operator: '=', event: null }
       validator: { nullable: false, type: integer, length: '15', min: null, max: null, message: 'Valor Requerido' }
     Servido:
       title: Servido
