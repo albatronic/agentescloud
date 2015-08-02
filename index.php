@@ -216,6 +216,7 @@ $popup = "_global/layoutPopup.html.twig";
 
 // Renderizo el template y los valores devueltos por el método
 $twig->addGlobal('user', new Usuarios($_SESSION['usuarioPortal']['Id']));
+$twig->addGlobal('emp', new Empresas($_SESSION['emp']));
 $twig->addGlobal('appPath', $app['path']);
 $twig->addGlobal('varEnvMod', $result['values']['varEnvMod']);
 $twig->addGlobal('permisosModulo', $result['values']['permisos']['permisosModulo']);

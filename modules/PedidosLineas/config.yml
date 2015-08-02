@@ -59,7 +59,7 @@ PedidosLineas:
   entity: PedidosLineas
   table: AgtPedidosLineas
   primarykey: Id
-  linkBy: ''
+  linkBy: IdPedido
   records_per_page: 15
   export: 'false'
   order_by:

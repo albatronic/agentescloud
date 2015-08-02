@@ -2,7 +2,7 @@
 ---
 config:
   debug:
-    active: true
+    active: false
     save_queries: false
     save_error_query: true
     email_error_query: info@albatronic.com

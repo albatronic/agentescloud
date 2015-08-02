@@ -10,8 +10,40 @@
 
 {% block listado %}
 
-<div class='listado'>
-	{% include '_global/listGenerico.html.twig' with {'listado': values.listado, 'controller': values.controller} %}
-	{% include '_global/paginacion.html.twig' with {'filter': values.listado.filter, 'controller': values.controller, 'position': 'izq'}%}
-</div>
+    <div class='listado'>
+        <div class="row">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="text-center">Artículo</th>
+                        <th class="text-center">Descripción</th>
+                        <th class="text-center">Udes</th>
+                        <th class="text-center">Precio</th>
+                        <th class="text-center" colspan="3">% Descuentos</th>
+                        <th class="text-center">Importe</th>
+                        <th class="text-center">Iva</th>
+                        <th class="text-center">Comisión</th>
+                        <th class="text-center">Pte Fact.</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for keyLinea,linea in values.listado.data %}
+                        <tr>
+                            <td>{{linea.IdArticulo.Codigo}}</td>
+                            <td>{{linea.Descripcion}}</td>
+                            <td>{{linea.Unidades}}</td>
+                            <td>{{linea.Precio}}</td>
+                            <td>{{linea.Descuento1}}</td>
+                            <td>{{linea.Descuento2}}</td>
+                            <td>{{linea.Descuento3}}</td>
+                            <td class="text-right">{{macro.moneda(linea.Importe)}}</td>
+                            <td class="text-right">{{linea.Iva}} %</td>
+                            <td class="text-right">{{linea.ComisionAgente}} %</td>
+                            <td class="text-right">{{linea.UnidadesPtesFacturar}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
 {% endblock %}

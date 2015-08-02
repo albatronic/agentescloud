@@ -6,132 +6,153 @@
   date 22.06.2015 23:09:15
 #}
 
+{% if datos.IdEstado.IDTipo == 0 %}
+    {% set colorEstado = "red-soft" %}
+{% elseif datos.IdEstado.IDTipo == 1%}
+    {% set colorEstado = "yellow-casablanca" %}
+{% else %}
+    {% set colorEstado = "blue-steel" %}
+{% endif %}
+
 <div class="col-md-7">
-    <div class="col-md-6">     
-        {{ macro.fecha(values.atributos.Fecha,'Etiqueta',values.controller ~ '[Fecha]',values.controller ~ '_Fecha',datos.Fecha,'10','datepicker','8')}}    
-    </div>
-    <div class="col-md-6">
-        {{ macro.select(values.atributos.IdFirma,'Etiqueta',values.controller ~ '[IdFirma]',values.controller ~ '_IdFirma',none,datos.IdFirma.Id,datos.IdFirma.fetchAll('RazonSocial'),'chzn-select','1')}}
-    </div>
-    <div class="col-md-6">
-        {{ macro.select(values.atributos.IdCliente,'Etiqueta',values.controller ~ '[IdCliente]',values.controller ~ '_IdCliente',none,datos.IdCliente.Id,datos.IdCliente.fetchAll('RazonSocial'),'chzn-select',none,"putDirEntrega(this.value,'PedidosCab_IdDirec')")}}
-    </div>
-    <div class="col-md-6">
-        {{ macro.select(values.atributos.IdDirec,'Etiqueta',values.controller ~ '[IdDirec]',values.controller ~ '_IdDirec',none,datos.IdDirec.Id,datos.IdCliente.getDirecciones('Direccion'),'chzn-select','3')}}
-    </div>
-    {{ macro.select(values.atributos.IdFormaPago,'Etiqueta',values.controller ~ '[IdFormaPago]',values.controller ~ '_IdFormaPago',none,datos.IdFormaPago.Id,datos.IdFormaPago.fetchAll('Descripcion'),'chzn-select','35')}}     
-    <div class="col-md-6"> 
-        {{ macro.select(values.atributos.IdAlmacen,'Etiqueta',values.controller ~ '[IdAlmacen]',values.controller ~ '_IdAlmacen',none,datos.IdAlmacen.Id,datos.IdAlmacen.fetchAll('Nombre'),'chzn-select','4')}}
-    </div>
-    <div class="col-md-6">
-        {{ macro.select(values.atributos.IdAgente,'Etiqueta',values.controller ~ '[IdAgente]',values.controller ~ '_IdAgente',none,datos.IdAgente.Id,datos.IdAgente.fetchAll('Nombre'),'chzn-select','5')}}
-    </div>
-    <div class="col-md-6">    
-        {{ macro.input(values.atributos.SuPedido,'Etiqueta','text',values.controller ~ '[SuPedido]',values.controller ~ '_SuPedido',datos.SuPedido,'15','CampoTextoCorto','6') }}
-    </div>
-    <div class="col-md-6">
-        {{ macro.input(values.atributos.Referencia,'Etiqueta','text',values.controller ~ '[Referencia]',values.controller ~ '_Referencia',datos.Referencia,'15','CampoTextoCorto','7') }}
-    </div>
-    {# macro.fecha(values.atributos.FechaEntrega,'Etiqueta',values.controller ~ '[FechaEntrega]',values.controller ~ '_FechaEntrega',datos.FechaEntrega,'10','datepicker','9')#}
-    <div class="col-md-6">
-        {{ macro.select(values.atributos.IdAgencia,'Etiqueta',values.controller ~ '[IdAgencia]',values.controller ~ '_IdAgencia',none,datos.IdAgencia.Id,datos.IdAgencia.fetchAll('Agencia'),'chzn-select','36')}}
-    </div>
-    <div class="col-md-6">
-        {{ macro.input(values.atributos.Portes,'Etiqueta','text',values.controller ~ '[Portes]',values.controller ~ '_Portes',datos.Portes,'40','CampoTextoLargo','37') }}
-    </div>
-    <div class="col-md-6">
-        {{ macro.textarea(values.atributos.Observations,'Etiqueta',values.controller ~ '[Observations]',values.controller ~ '_Observations',datos.Observations,none,none,'textarea','33')}}        
-    </div>
-    <div class="col-md-6">
-        {{ macro.textarea(values.atributos.Incidencias,'Etiqueta',values.controller ~ '[Incidencias]',values.controller ~ '_Incidencias',datos.Incidencias,none,none,'textarea','33')}} 
+    <div class="portlet box {{colorEstado}}">
+        <div class="portlet-title">
+            <div class="caption"><i class="fa fa-bank"></i>Cabecera</div>
+        </div>
+        <div class="portlet-body">
+            <div class="row">
+                <div class="col-md-6">     
+                    {{ macro.fecha(values.atributos.Fecha,'Etiqueta',values.controller ~ '[Fecha]',values.controller ~ '_Fecha',datos.Fecha,'10','datepicker','8')}}    
+                </div>
+                <div class="col-md-6">
+                    {{ macro.select(values.atributos.IdFirma,'Etiqueta',values.controller ~ '[IdFirma]',values.controller ~ '_IdFirma',none,datos.IdFirma.Id,datos.IdFirma.fetchAll('RazonSocial'),'chzn-select','1')}}
+                </div>
+            </div>
+            <div class="row">            
+                <div class="col-md-6">
+                    {{ macro.select(values.atributos.IdCliente,'Etiqueta',values.controller ~ '[IdCliente]',values.controller ~ '_IdCliente',none,datos.IdCliente.Id,datos.IdCliente.fetchAll('RazonSocial'),'chzn-select',none,"putDirEntrega(this.value,'PedidosCab_IdDirec')")}}
+                </div>
+                <div class="col-md-6">
+                    {{ macro.select(values.atributos.IdDirec,'Etiqueta',values.controller ~ '[IdDirec]',values.controller ~ '_IdDirec',none,datos.IdDirec.Id,datos.IdCliente.getDirecciones('Direccion'),'chzn-select','3')}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    {{ macro.select(values.atributos.IdFormaPago,'Etiqueta',values.controller ~ '[IdFormaPago]',values.controller ~ '_IdFormaPago',none,datos.IdFormaPago.Id,datos.IdFormaPago.fetchAll('Descripcion'),'chzn-select','35')}}     
+                </div>
+            </div>
+            <div class="row">    
+                <div class="col-md-6"> 
+                    {{ macro.select(values.atributos.IdAlmacen,'Etiqueta',values.controller ~ '[IdAlmacen]',values.controller ~ '_IdAlmacen',none,datos.IdAlmacen.Id,datos.IdAlmacen.fetchAll('Nombre'),'chzn-select','4')}}
+                </div>
+                <div class="col-md-6">
+                    {{ macro.select(values.atributos.IdAgente,'Etiqueta',values.controller ~ '[IdAgente]',values.controller ~ '_IdAgente',none,datos.IdAgente.Id,datos.IdAgente.fetchAll('Nombre'),'chzn-select','5')}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">    
+                    {{ macro.input(values.atributos.SuPedido,'Etiqueta','text',values.controller ~ '[SuPedido]',values.controller ~ '_SuPedido',datos.SuPedido,'15','CampoTextoCorto','6') }}
+                </div>
+                <div class="col-md-6">
+                    {{ macro.input(values.atributos.Referencia,'Etiqueta','text',values.controller ~ '[Referencia]',values.controller ~ '_Referencia',datos.Referencia,'15','CampoTextoCorto','7') }}
+                </div>
+            </div>
+            {# macro.fecha(values.atributos.FechaEntrega,'Etiqueta',values.controller ~ '[FechaEntrega]',values.controller ~ '_FechaEntrega',datos.FechaEntrega,'10','datepicker','9')#}
+            <div class="row">
+                <div class="col-md-6">
+                    {{ macro.select(values.atributos.IdAgencia,'Etiqueta',values.controller ~ '[IdAgencia]',values.controller ~ '_IdAgencia',none,datos.IdAgencia.Id,datos.IdAgencia.fetchAll('Agencia'),'chzn-select','36')}}
+                </div>
+                <div class="col-md-6">
+                    {{ macro.input(values.atributos.Portes,'Etiqueta','text',values.controller ~ '[Portes]',values.controller ~ '_Portes',datos.Portes,'40','CampoTextoLargo','37') }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    {{ macro.textarea(values.atributos.Observations,'Etiqueta',values.controller ~ '[Observations]',values.controller ~ '_Observations',datos.Observations,4,none,'textarea','33')}}        
+                </div>
+                <div class="col-md-6">
+                    {{ macro.textarea(values.atributos.Incidencias,'Etiqueta',values.controller ~ '[Incidencias]',values.controller ~ '_Incidencias',datos.Incidencias,4,none,'textarea','33')}} 
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
 <div class="col-md-5">
-    <div class="col-md-6">
-        {{ macro.select(values.atributos.IdEstado,'Etiqueta',values.controller ~ '[IdEstado]',values.controller ~ '_IdEstado',none,datos.IdEstado.IDTipo,datos.IdEstado.fetchAll('Descripcion'),'chzn-select','34')}}
+    <div class="portlet box {{colorEstado}}">
+        <div class="portlet-title">
+            <div class="caption"><i class="fa fa-money"></i>Totales {{ macro.moneda(datos.TotalPedido) }}</div>
+        </div>
+        <div class="portlet-body"> 
+            <div class="row">
+                <div class="col-md-6">
+                    {{ macro.select(values.atributos.IdEstado,'Etiqueta',values.controller ~ '[IdEstado]',values.controller ~ '_IdEstado',none,datos.IdEstado.IDTipo,datos.IdEstado.fetchAll('Descripcion'),'chzn-select','34')}}
+                </div>
+                <div class="col-md-6">
+                    {{ macro.input(values.atributos.Servido,'Etiqueta','checkbox',values.controller ~ '[Servido]',values.controller ~ '_Servido',datos.Servido.IDTipo,'chzn-select','25')}}              
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table">
+                        <theah>
+                            <tr><th>Base</th><th>Iva</th><th>Cuota Iva</th></tr>
+                        </theah>
+                        <tdbody>
+                            <tr>
+                                <td>{{ macro.moneda(datos.BaseImponible1) }}</td>
+                                <td>{{ datos.Iva1 }}</td>
+                                <td>{{ macro.moneda(datos.CuotaIva1) }}</td>
+                            </tr>
+                            <tr>
+                                <td>{{ macro.moneda(datos.BaseImponible2) }}</td>
+                                <td>{{ datos.Iva2 }}</td>
+                                <td>{{ macro.moneda(datos.CuotaIva2) }}</td>
+                            </tr>
+                            <tr>
+                                <td>{{ macro.moneda(datos.BaseImponible3) }}</td>
+                                <td>{{ datos.Iva3 }}</td>
+                                <td>{{ macro.moneda(datos.CuotaIva3) }}</td>
+                            </tr>
+                            <tr><th>Suma Bases</th><th>Suma Iva</th><th>Total Pedido</th></tr>            
+                            <tr>
+                                <td>{{ macro.moneda(datos.TotalBases) }}</td>
+                                <td>{{ macro.moneda(datos.TotalIva) }}</td>
+                                <td>{{ macro.moneda(datos.TotalPedido) }}</td>
+                            </tr>
+                        </tdbody>
+                    </table> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">            
+                    {{ macro.input(values.atributos.ComisionAgente,'Etiqueta','text',values.controller ~ '[ComisionAgente]',values.controller ~ '_ComisionAgente',datos.ComisionAgente,'10','CampoImporte','10') }}
+                </div>
+                <div class="col-md-6">
+                    {{ macro.input(values.atributos.ComisionSubagente,'Etiqueta','text',values.controller ~ '[ComisionSubagente]',values.controller ~ '_ComisionSubagente',datos.ComisionSubagente,'10','CampoImporte','11') }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    {{ macro.input(values.atributos.Descuentos,'Etiqueta','text',values.controller ~ '[Descuentos]',values.controller ~ '_Descuentos',datos.Descuentos,'10','CampoImporte','12') }}
+                </div>
+                <div class="col-md-6">
+                    {{ macro.input(values.atributos.DescuentoProntoPago,'Etiqueta','text',values.controller ~ '[DescuentoProntoPago]',values.controller ~ '_DescuentoProntoPago',datos.DescuentoProntoPago,'10','CampoImporte','13') }}
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col-md-6">
-        {{ macro.input(values.atributos.Servido,'Etiqueta','checkbox',values.controller ~ '[Servido]',values.controller ~ '_Servido',datos.Servido.IDTipo,'chzn-select','25')}}              
-    </div>
-    <table class="table">
-        <theah>
-            <tr><th>Base</th><th>Iva</th><th>Cuota Iva</th></tr>
-        </theah>
-        <tdbody>
-            <tr>
-                <td>{{ macro.moneda(datos.BaseImponible1) }}</td>
-                <td>{{ datos.Iva1 }}</td>
-                <td>{{ macro.moneda(datos.CuotaIva1) }}</td>
-            </tr>
-            <tr>
-                <td>{{ macro.moneda(datos.BaseImponible2) }}</td>
-                <td>{{ datos.Iva2 }}</td>
-                <td>{{ macro.moneda(datos.CuotaIva2) }}</td>
-            </tr>
-            <tr>
-                <td>{{ macro.moneda(datos.BaseImponible3) }}</td>
-                <td>{{ datos.Iva3 }}</td>
-                <td>{{ macro.moneda(datos.CuotaIva3) }}</td>
-            </tr>
-            <tr><th>Suma Bases</th><th>Suma Iva</th><th>Total Pedido</th></tr>            
-            <tr>
-                <td>{{ macro.moneda(datos.TotalBases) }}</td>
-                <td>{{ macro.moneda(datos.TotalIva) }}</td>
-                <td>{{ macro.moneda(datos.TotalPedido) }}</td>
-            </tr>
-        </tdbody>
-    </table>    
-    <div class="col-md-6">            
-        {{ macro.input(values.atributos.ComisionAgente,'Etiqueta','text',values.controller ~ '[ComisionAgente]',values.controller ~ '_ComisionAgente',datos.ComisionAgente,'10','CampoImporte','10') }}
-    </div>
-    <div class="col-md-6">
-        {{ macro.input(values.atributos.ComisionSubagente,'Etiqueta','text',values.controller ~ '[ComisionSubagente]',values.controller ~ '_ComisionSubagente',datos.ComisionSubagente,'10','CampoImporte','11') }}
-    </div>
-    <div class="col-md-6">
-        {{ macro.input(values.atributos.Descuentos,'Etiqueta','text',values.controller ~ '[Descuentos]',values.controller ~ '_Descuentos',datos.Descuentos,'10','CampoImporte','12') }}
-    </div>
-    <div class="col-md-6">
-        {{ macro.input(values.atributos.DescuentoProntoPago,'Etiqueta','text',values.controller ~ '[DescuentoProntoPago]',values.controller ~ '_DescuentoProntoPago',datos.DescuentoProntoPago,'10','CampoImporte','13') }}
-    </div>
-
 </div>
 
 {% include '_global/fieldsComunes.html.twig' %}
 <div class="clearfix"></div>
 {{ macro.foco(values.controller ~ '_IdFirma') }}
 
-<div class="row">
-    <table class="table">
-        <thead>
-            <tr>
-                <th class="text-center">Artículo</th>
-                <th class="text-center">Descripción</th>
-                <th class="text-center">Udes</th>
-                <th class="text-center">Precio</th>
-                <th class="text-center" colspan="3">% Descuentos</th>
-                <th class="text-center">Importe</th>
-                <th class="text-center">Iva</th>
-                <th class="text-center">Comisión</th>
-                <th class="text-center">Pte Facturar</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for keyLinea,linea in datos.getLineas() %}
-                <tr>
-                <td>{{linea.IdArticulo.Codigo}}</td>
-                <td>{{linea.Descripcion}}</td>
-                <td>{{linea.Unidades}}</td>
-                <td>{{linea.Precio}}</td>
-                <td>{{linea.Descuento1}}</td>
-                <td>{{linea.Descuento2}}</td>
-                <td>{{linea.Descuento3}}</td>
-                <td class="text-right">{{macro.moneda(linea.Importe)}}</td>
-                <td class="text-right">{{linea.Iva}} %</td>
-                <td class="text-right">{{linea.ComisionAgente}} %</td>
-                <td class="text-right">{{linea.UnidadesPtesFacturar}}</td>
-                </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+<div class="portlet box {{colorEstado}}">
+    <div class="portlet-title">
+        <div class="caption"><i class="fa fa-list"></i>Líneas de pedido</div>
+    </div>
+    <div class="portlet-body">
+        <iframe src='{{app.path}}/PedidosLineas/list/{{datos.Id}}' width='100%' height='400' margin='0' scrolling='yes' style='border: 0px dotted grey;'></iframe>
+    </div>
 </div>

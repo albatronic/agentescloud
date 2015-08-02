@@ -613,7 +613,7 @@ PedidosCab:
       aditional_filter: { order: 14, caption: Servido, entity: ValoresSN, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
       validator: { nullable: false, type: tinyint, length: '2', min: null, max: null, message: 'Valor Requerido' }
     Observations:
-      title: Observaciones
+      title: Observ.
       filter: false
       list: false
       visible: true

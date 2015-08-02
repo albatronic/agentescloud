@@ -278,7 +278,7 @@ Firmas:
       title: Gerente
       filter: true
       list: false
-      visible: true
+      visible: false
       updatable: true
       default: null
       help: null
@@ -291,7 +291,7 @@ Firmas:
       title: Director Comercial
       filter: true
       list: false
-      visible: true
+      visible: false
       updatable: true
       default: null
       help: null
@@ -304,7 +304,7 @@ Firmas:
       title: Email Gerente
       filter: true
       list: false
-      visible: true
+      visible: false
       updatable: true
       default: null
       help: null
@@ -330,7 +330,7 @@ Firmas:
       title: Email Soporte Técnico
       filter: true
       list: false
-      visible: true
+      visible: false
       updatable: true
       default: null
       help: null
@@ -485,6 +485,32 @@ Firmas:
       link: { route: null, param: null, title: null, target: null, link: null }
       aditional_filter: { order: 7, caption: Vigente, entity: ValoresSN, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
       validator: { nullable: false, type: tinyint, length: '1', min: null, max: null, message: 'Valor Requerido' }
+    AvisoPedidos:
+      title: Aviso Pedidos
+      filter: false
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: true, type: string, length: false, min: null, max: null, message: 'Valor Requerido' }
+    AvisoFacturas:
+      title: Aviso Facturas
+      filter: false
+      list: false
+      visible: true
+      updatable: true
+      default: null
+      help: null
+      permission: null
+      translatable: false
+      searchable: false
+      link: { route: null, param: null, title: null, target: null, link: null }
+      validator: { nullable: true, type: string, length: false, min: null, max: null, message: 'Valor Requerido' }
     Observations:
       title: Observations
       filter: false

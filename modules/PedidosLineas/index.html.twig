@@ -5,24 +5,12 @@
   copyright: ALBATRONIC
   date 22.06.2015 23:09:11
 #}
-
-{% extends layout %}
-
-{% block title parent() ~ ' - '  ~ values.titulo %}
+{% extends popup %}
 
 {% block content %}
-	{% include '_global/TituloGenerico.html.twig' with {'controller': values.controller, 'linkValue': values.linkBy.value} %}
-	{% block filtro %}
-	{% if values.permisos.permisosModulo['CO'] and values.tieneListado %}
-		{% include values.controller ~ '/filtro.html.twig' with {'filter': values.listado.filter} %}
-	{% endif %}
-	{% endblock %}
+    {% include "_global/alertas.html.twig" with {'alertas': values.alertas,'errores': values.errores} %}
 
-	<div id='div_listado'>
-	{% block listado %}
-	{% endblock %}
-	</div>
+    {% block listado %}
+    {% endblock %}
 
-	{% block mantenimiento %}
-	{% endblock %}
 {% endblock %}

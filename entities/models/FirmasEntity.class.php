@@ -187,6 +187,18 @@ class FirmasEntity extends EntityComunes {
     protected $Vigente = '1';
 
     /**
+     * @var string
+     * @assert NotBlank(groups="AgtFirmas")
+     */
+    protected $AvisoPedidos;
+
+    /**
+     * @var string
+     * @assert NotBlank(groups="AgtFirmas")
+     */
+    protected $AvisoFacturas;
+
+    /**
      * Nombre de la conexion a la BD
      * @var string
      */
@@ -215,8 +227,8 @@ class FirmasEntity extends EntityComunes {
      * @var string
      */
     protected $_parentEntities = array(
-        array('SourceColumn' => 'Id', 'ParentEntity' => 'Articulos', 'ParentColumn' => 'IdFirma'),           
-        array('SourceColumn' => 'Id', 'ParentEntity' => 'PedidosLineas', 'ParentColumn' => 'IdFirma'),           
+        array('SourceColumn' => 'Id', 'ParentEntity' => 'Articulos', 'ParentColumn' => 'IdFirma'),
+        array('SourceColumn' => 'Id', 'ParentEntity' => 'PedidosLineas', 'ParentColumn' => 'IdFirma'),
     );
 
     /**
@@ -500,6 +512,22 @@ class FirmasEntity extends EntityComunes {
             $this->Vigente = new ValoresSN($this->Vigente);
         }
         return $this->Vigente;
+    }
+
+    public function setAvisoPedidos($AvisoPedidos) {
+        $this->AvisoPedidos = trim($AvisoPedidos);
+    }
+
+    public function getAvisoPedidos() {
+        return $this->AvisoPedidos;
+    }
+
+    public function setAvisoFacturas($AvisoFacturas) {
+        $this->AvisoFacturas = trim($AvisoFacturas);
+    }
+
+    public function getAvisoFacturas() {
+        return $this->AvisoFacturas;
     }
 
 }

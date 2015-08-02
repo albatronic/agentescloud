@@ -297,7 +297,9 @@ AgtFirmas:
     PlazoEntrega:        { type: int(4), default: null }
     IdAgencia:           { type: bigint(11), deafult: 0, index: index, comment: 'datos,Agencias,Id' }
     SinPortes:           { type: decimal, default: 0 }
-    Vigente:             { type: boolean, notnull: true, default: 1, index: index, comment: 'datos,ValoresSN,IDTipo' }    
+    Vigente:             { type: boolean, notnull: true, default: 1, index: index, comment: 'datos,ValoresSN,IDTipo' }  
+    AvisoPedidos:        { type: text, default: null }    
+    AvisoFacturas:       { type: text, default: null }    
     <?php include '../../entities/schema/schemaColumnsCommon.yml'; echoln('');?>    
   relations:
       
