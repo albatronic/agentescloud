@@ -11,8 +11,7 @@
         <!-- Para que esté disponible el path de la app en todos los java scripts -->
         <script type="text/javascript">var appPath = "{{app.path}}";</script>
 
-        {% include "_global/css.html.twig" %}      
-        {% include "_global/js.html.twig" %}       
+        {% include values.archivoCss %}    
 
     </head>
     <body style="background:#eeeeee;">
@@ -33,5 +32,6 @@
             {% endif %}
             </div>
         </div>
+    {% include values.archivoJs %}            
     </body>
 </html>

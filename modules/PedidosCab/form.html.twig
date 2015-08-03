@@ -11,7 +11,7 @@
 {% elseif datos.IdEstado.IDTipo == 1%}
     {% set colorEstado = "yellow-casablanca" %}
 {% else %}
-    {% set colorEstado = "blue-steel" %}
+    {% set colorEstado = "green-meadow" %}
 {% endif %}
 
 <div class="col-md-7">
@@ -94,31 +94,31 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <table class="table">
+                    <table class="table table-hover table-bordered table-striped">
                         <theah>
-                            <tr><th>Base</th><th>Iva</th><th>Cuota Iva</th></tr>
+                            <tr><th class="text-center">Base</th><th class="text-center">Iva</th><th class="text-center">Cuota Iva</th></tr>
                         </theah>
                         <tdbody>
                             <tr>
-                                <td>{{ macro.moneda(datos.BaseImponible1) }}</td>
-                                <td>{{ datos.Iva1 }}</td>
-                                <td>{{ macro.moneda(datos.CuotaIva1) }}</td>
+                                <td class="text-right">{{ macro.moneda(datos.BaseImponible1) }}</td>
+                                <td class="text-right">{{ datos.Iva1 }}</td>
+                                <td class="text-right">{{ macro.moneda(datos.CuotaIva1) }}</td>
                             </tr>
                             <tr>
-                                <td>{{ macro.moneda(datos.BaseImponible2) }}</td>
-                                <td>{{ datos.Iva2 }}</td>
-                                <td>{{ macro.moneda(datos.CuotaIva2) }}</td>
+                                <td class="text-right">{{ macro.moneda(datos.BaseImponible2) }}</td>
+                                <td class="text-right">{{ datos.Iva2 }}</td>
+                                <td class="text-right">{{ macro.moneda(datos.CuotaIva2) }}</td>
                             </tr>
                             <tr>
-                                <td>{{ macro.moneda(datos.BaseImponible3) }}</td>
-                                <td>{{ datos.Iva3 }}</td>
-                                <td>{{ macro.moneda(datos.CuotaIva3) }}</td>
+                                <td class="text-right">{{ macro.moneda(datos.BaseImponible3) }}</td>
+                                <td class="text-right">{{ datos.Iva3 }}</td>
+                                <td class="text-right">{{ macro.moneda(datos.CuotaIva3) }}</td>
                             </tr>
-                            <tr><th>Suma Bases</th><th>Suma Iva</th><th>Total Pedido</th></tr>            
+                            <tr><th class="text-center">Suma Bases</th><th class="text-center">Suma Iva</th><th class="text-center">Total Pedido</th></tr>            
                             <tr>
-                                <td>{{ macro.moneda(datos.TotalBases) }}</td>
-                                <td>{{ macro.moneda(datos.TotalIva) }}</td>
-                                <td>{{ macro.moneda(datos.TotalPedido) }}</td>
+                                <td class="text-right">{{ macro.moneda(datos.TotalBases) }}</td>
+                                <td class="text-right">{{ macro.moneda(datos.TotalIva) }}</td>
+                                <td class="text-right">{{ macro.moneda(datos.TotalPedido) }}</td>
                             </tr>
                         </tdbody>
                     </table> 

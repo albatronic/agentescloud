@@ -1,0 +1,32 @@
+{# js PedidosLineas #}
+
+{% extends '_global/js.html.twig' %}
+
+{% block js %}
+
+    {{ parent() }}   
+    <script>
+        function ajaxHistoricoVentas(idArticulo, idCliente, periodo) {
+
+            if (idArticulo === '') {
+                idArticulo = '0';
+            }
+
+            $.ajax({
+                url: appPath + '/apiRest/HistoricoVentas/' + idArticulo + '/' + idCliente + '/' + periodo + '/html',
+                dataType: 'html',
+                type: 'get',
+                success: function (html) {
+                    $("#dialogHistoricoVentas .modal-body").html(html);
+                }
+            });
+        }
+
+        $(function () {
+            $('input.typeahead').typeahead({
+                name: 'accounts',
+                local: ['Audi', 'BMW', 'Bugatti', 'Ferrari', 'Ford', 'Lamborghini', 'Mercedes Benz', 'Porsche', 'Rolls-Royce', 'Volkswagen']
+            });
+        });
+    </script>
+{% endblock %}

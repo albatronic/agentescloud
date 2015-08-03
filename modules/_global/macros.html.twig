@@ -187,7 +187,7 @@
                         <p class="help-block">{{ atributos.help }}</p>                         
                     </div>                                
                 {% else %}
-                    <div class="{{class}}">
+                    <div class="{{class}}">                       
                         <input type="{{ type|default('text') }}"
                                name="{{ name }}"
                                id="{{ id|default(name)}}"
@@ -221,7 +221,7 @@
                            onchange = "{{ _self.alertSave }}"
                            onblur = "{{onchange}}"
                      />
-                    #}         
+                    #} 
                     <input type="{{ type|default('text') }}"
                            id="{{ id|default(name)}}"
                            name="{{name}}"
@@ -245,6 +245,44 @@
     {% endif %}
 {% endmacro %}
 
+{% macro inputMail(atributos,classLabel, type, name, id, value, maxLength, class, extra, onchange, autoComplete, tabIndex) %}
+
+    {% if classLabel == 'EtiquetaLarga' %}
+        {% set classLabel = 'col-sm-8 control-label'%}
+        {% set class = 'col-sm-4' %}
+    {% elseif classLabel == 'EtiquetaMedia' %}
+        {% set classLabel = 'col-sm-5 control-label'%}
+        {% set class = 'col-sm-7' %}            
+    {% else %}
+        {% set classLabel = 'col-sm-3 control-label'%}
+        {% set class = 'col-sm-9' %}        
+    {% endif %}
+
+    {% if not(atributos is iterable) %}
+        {% set atributos = {'caption':atributos,'visible':'1','updatable':'1', 'varEnv':'0'} %}
+    {% endif %}
+        <div id="div_{{id}}" {% if ((atributos.visible == 1) or (user.getIDPerfil.Id == '1')) and (atributos.translatable or idiomas.actual == 0) %}class="form-group"{% else %}class="form-group oculto"{% endif %}>
+            {% if atributos.caption %}
+                {{ _self.label(atributos,classLabel, name, id) }}
+            {% endif %}
+
+            <div class="{{class}} input-group"> 
+                <span class="input-group-addon"><i class="fa fa-envelope"></i></span>                 
+                <input type="{{ type|default('text') }}"
+                       name="{{ name }}"
+                       id="{{ id|default(name)}}"
+                       value="{{ value }}" maxlength="{{ maxLength|default(20) }}"
+                       class="form-control" {{extra}} title="{{ atributos.help }}" tabindex="{{ tabIndex }}"
+                       onchange="{{ onchange }}{{ _self.alertSave }}"
+                       {{extra}}
+                       {% if atributos.updatable == '0' %} disabled{% endif %}
+                       {% if atributos.validator.nullable == '0' %} required{% endif %}               
+                       />
+                <p class="help-block">{{ atributos.help }}</p>                          
+            </div>             
+        </div>    
+    
+{% endmacro %}
 {# ------------------------
    INPUT RADIO 
 ---------------------------#}
@@ -528,12 +566,17 @@
         {% endif %}
 
         <div class="{{class}}">
+            <div class="input-group input-small date date-picker" data-date-format="dd-mm-yyyy">
             <input name="{{name}}" type="text" id="{{id|default(label)}}" value="{{value}}"
-                   size="{{size|default("10")}}" class="{{class|default("form-control")}} datepicker"
+                   size="{{size|default("10")}}" class="form-control datepicker"
                    onKeyUp=""  {{extra}}
                    {% if atributos.updatable == '0' %} disabled {% endif %}
                    {% if atributos.nullable == '0' %} required {% endif %}
                    />
+            <span class="input-group-btn">
+                <button class="btn default" type="button"><i class="fa fa-calendar"></i></button>
+            </span>            
+            </div>
         </div>
     </div>
 {% endmacro %}

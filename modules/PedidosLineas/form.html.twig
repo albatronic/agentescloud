@@ -5,7 +5,51 @@
   copyright: ALBATRONIC
   date 22.06.2015 23:09:11
 #}
+{% extends values.controller  ~ '/index.html.twig' %}
 
+{% block listado %}
+        <div class="row">
+            <table class="table table-hover table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th class="text-center">Artículo</th>
+                        <th class="text-center">Descripción</th>
+                        <th class="text-center">Udes</th>
+                        <th class="text-center">Precio</th>
+                        <th class="text-center" colspan="3">% Descuentos</th>
+                        <th class="text-center">Importe</th>
+                        <th class="text-center">Iva</th>
+                        <th class="text-center">Comisión</th>
+                        <th class="text-center">Pte Fact.</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for keyLinea,linea in values.listado.data %}
+                        <form name="linea{{keyLinea}}">
+                            <input type="hidden" name="Linea[Id]" value="{{linea.Id}}"/>
+                        <tr>
+                            <td>
+                                <input type="hidden" name="Linea[IdArticulo]" id="IdArticulo{{keyLinea}}" value="{{linea.IdArticulo.Id}}"/>
+                                <input class="form-control input-small typeahead tt-query" autocomplete="off" type="text" name="Codigo" id="Codigo{{keyLinea}}" value="{{linea.IdArticulo.Codigo}}"/>
+                            </td>
+                            <td><input class="form-control input-large" type="text" name="Linea[Descripcion]" id="Descripcion{{keyLinea}}" value="{{linea.Descripcion}}"/></td>
+                            <td><input class="text-right form-control input-small" type="text" name="Linea[Unidades]" id="Unidades{{keyLinea}}" value="{{linea.Unidades}}"/></td>
+                            <td><input class="text-right form-control input-small" type="text" name="Linea[Precio]" id="Precio{{keyLinea}}" value="{{linea.Precio}}"/></td>
+                            <td><input class="text-right form-control input-small" type="text" name="Linea[Descuento1]" id="Descuento1{{keyLinea}}" value="{{linea.Descuento1}}"/></td>
+                            <td><input class="text-right form-control input-small" type="text" name="Linea[Descuento2]" id="Descuento2{{keyLinea}}" value="{{linea.Descuento2}}"/></td>
+                            <td><input class="text-right form-control input-small" type="text" name="Linea[Descuento3]" id="Descuento3{{keyLinea}}" value="{{linea.Descuento3}}"/></td>
+                            <td><input class="text-right form-control input-small" type="text" name="Linea[Importe]" id="Importe{{keyLinea}}" value="{{linea.Importe}}"/></td>
+                            <td><input class="text-right form-control input-small" type="text" name="Linea[Iva]" id="Iva{{keyLinea}}" value="{{linea.Iva}}"/></td>
+                            <td><input class="text-right form-control input-small" type="text" name="Linea[ComisionAgente]" id="ComisionAgente{{keyLinea}}" value="{{linea.ComisionAgente}}"/></td>
+                            <td class="text-right">{{linea.UnidadesPtesFacturar}}</td>
+                        </tr>
+                        </form>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+{% endblock %}
+{#
 {{ macro.select(values.atributos.IdPedido,'Etiqueta',values.controller ~ '[IdPedido]',values.controller ~ '_IdPedido',none,datos.IdPedido.IdPedido,datos.IdPedido.fetchAll('Id'),'chzn-select','1')}}
 {{ macro.select(values.atributos.IdFirma,'Etiqueta',values.controller ~ '[IdFirma]',values.controller ~ '_IdFirma',none,datos.IdFirma.IdFirma,datos.IdFirma.fetchAll('Id'),'chzn-select','2')}}
 {{ macro.select(values.atributos.IdFamilia,'Etiqueta',values.controller ~ '[IdFamilia]',values.controller ~ '_IdFamilia',none,datos.IdFamilia.IdFamilia,datos.IdFamilia.fetchAll('Id'),'chzn-select','3')}}
@@ -24,7 +68,4 @@
 {{ macro.select(values.atributos.Facturar,'Etiqueta',values.controller ~ '[Facturar]',values.controller ~ '_Facturar',none,datos.Facturar.Facturar,datos.Facturar.fetchAll('IDTipo'),'chzn-select','16')}}
 {{ macro.input(values.atributos.NivelJerarquico,'Etiqueta','text',values.controller ~ '[NivelJerarquico]',values.controller ~ '_NivelJerarquico',datos.NivelJerarquico,'4','CampoUnidades','17') }}
 {{ macro.select(values.atributos.Publish,'Etiqueta',values.controller ~ '[Publish]',values.controller ~ '_Publish',none,datos.Publish.Publish,datos.Publish.fetchAll('IDTipo'),'chzn-select','18')}}
-
-{% include '_global/fieldsComunes.html.twig' %}
-
-{{ macro.foco(values.controller ~ '_IdPedido') }}
+#}

@@ -10,9 +10,8 @@
 
 {% block listado %}
 
-    <div class='listado'>
         <div class="row">
-            <table class="table">
+            <table class="table table-hover table-bordered table-striped">
                 <thead>
                     <tr>
                         <th class="text-center">Artículo</th>
@@ -31,11 +30,11 @@
                         <tr>
                             <td>{{linea.IdArticulo.Codigo}}</td>
                             <td>{{linea.Descripcion}}</td>
-                            <td>{{linea.Unidades}}</td>
-                            <td>{{linea.Precio}}</td>
-                            <td>{{linea.Descuento1}}</td>
-                            <td>{{linea.Descuento2}}</td>
-                            <td>{{linea.Descuento3}}</td>
+                            <td class="text-right">{{linea.Unidades}}</td>
+                            <td class="text-right">{{macro.moneda(linea.Precio)}}</td>
+                            <td class="text-right">{{linea.Descuento1}}</td>
+                            <td class="text-right">{{linea.Descuento2}}</td>
+                            <td class="text-right">{{linea.Descuento3}}</td>
                             <td class="text-right">{{macro.moneda(linea.Importe)}}</td>
                             <td class="text-right">{{linea.Iva}} %</td>
                             <td class="text-right">{{linea.ComisionAgente}} %</td>
@@ -45,5 +44,5 @@
                 </tbody>
             </table>
         </div>
-    </div>
+
 {% endblock %}

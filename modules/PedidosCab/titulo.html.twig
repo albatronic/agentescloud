@@ -1,0 +1,40 @@
+<div class="portlet">
+    <div class="portlet-title">
+
+        <div class=caption">
+            {# if (varEnvMod.translatable == 1)%}
+                <img src="{{app.path}}/lang/{{idiomas.disponibles[idiomas.actual].codigo}}.gif" alt="{{idiomas.disponibles[idiomas.actual].titulo}}" title="{{idiomas.disponibles[idiomas.actual].titulo}}"/>
+            {% endif #}
+            <h1>{{values.titulo}} {% if values.datos.getPrimaryKeyValue %}({{values.datos.getPrimaryKeyValue}}){% endif %}</h1>
+        </div>
+
+        <div class="caption margin-left-10">           
+            {# BANDERAS DE IDIOMAS #}
+            {% if ((varEnvMod.translatable == 1) and (idiomas.disponibles|length > 1) )%}
+                <select class="form-control" style="width: 100px;" name="idioma" id="idioma" onchange="document.location.href = '{{app.path}}/{{values.controller}}/lang/' + this.value + '/{{values.datos.getPrimaryKeyMD5}}'">
+                    {% for key,idioma in idiomas.disponibles %}
+                        <option value="{{key}}" {% if key == idiomas.actual %}selected{% endif %}>{{idioma.titulo}}</option>}
+                    {% endfor%}
+                </select>
+            {% endif %}             
+        </div>
+
+        <div class="actions btn-set">            
+            {% include "_global/comandosNew.html.twig" %}
+            {% include "_global/comandosCreate.html.twig" %}
+            {% if values.datos.IdEstado.IDTipo == 0 %}
+                {% include "_global/comandosSave.html.twig" %}
+                {% include "_global/comandosDelete.html.twig" %}
+            {% endif %}
+            {% include "_global/comandosList.html.twig" %}
+            {% include "_global/comandosPrint.html.twig" %}
+            {% if values.permisos.permisosModulo['LI'] and (values.datos.getPrimaryKeyValue) %}            
+            <button class="btn green" onclick="">
+                <i class="fa fa-mail-forward"></i>&nbsp;<a data-toggle="modal" href="#dialogMail" style="color: white;">Mail</a>
+            </button>
+            {% endif %}
+            {% include "_global/comandosMoreActions.html.twig" with {'adittionalCommands': adittionalCommands} %}
+        </div>                        
+    </div>
+</div>
+<div class="salto"></div>

@@ -13,35 +13,23 @@
 {% block content %}
         {% if values.datos.PrimaryKeyValue and values.permisos.permisosModulo['IN'] %}
             {% set adittionalCommands = 
-            { 
-                '0': {
-                        'type'    : 'modal',
-                        'url'     : "#dialogImprimir", 
-                        'onclick' : "",
-                        'title'   : 'Imprimir'
-                      },
-                '1': {
-                        'type'    : 'modal',
-                        'url'     : "#dialogMail", 
-                        'onclick' : "",
-                        'title'   : 'Enviar mail'
-                      },
-                '2': {
-                        'type'    : 'modal',
-                        'url'     : "#dialogImportarCsv", 
-                        'onclick' : "",
-                        'title'   : 'Importar pedido csv'
-                      },
-                '3': {
-                        'type'    : 'modal',
-                        'url'     : "#dialogDuplicar", 
-                        'onclick' : "",
-                        'title'   : 'Duplicar pedido'
-                      },
-             } 
+                { 
+                    '1': {
+                            'type'    : 'modal',
+                            'url'     : "#dialogImportarCsv", 
+                            'onclick' : "",
+                            'title'   : 'Importar pedido csv'
+                          },
+                    '2': {
+                            'type'    : 'modal',
+                            'url'     : "#dialogDuplicar", 
+                            'onclick' : "",
+                            'title'   : 'Duplicar pedido'
+                          },
+                 } 
             %}
         {% endif %}     
-	{% include '_global/TituloGenerico.html.twig' with {'controller': values.controller, 'linkValue': values.linkBy.value} %}
+	{% include values.controller ~ '/titulo.html.twig' with {'controller': values.controller, 'linkValue': values.linkBy.value} %}
 	{% block filtro %}
 	{% if values.permisos.permisosModulo['CO'] and values.tieneListado %}
 		{% include values.controller ~ '/filtro.html.twig' with {'filter': values.listado.filter} %}

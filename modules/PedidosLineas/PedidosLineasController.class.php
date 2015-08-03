@@ -53,7 +53,7 @@ class PedidosLineasController extends Controller {
                 $lineas[] = new $this->entity($row['Id']);
             }
 
-            if ($pedido->getIdEstado()->getIDTipo() == '1') {
+            if ($pedido->getIdEstado()->getIDTipo() == '0') {
                 $template = $this->entity . '/form.html.twig';
             } else {
                 $template = $this->entity . '/list.html.twig';
