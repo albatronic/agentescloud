@@ -30,7 +30,18 @@
             </div>
             <div class="row">            
                 <div class="col-md-6">
-                    {{ macro.select(values.atributos.IdCliente,'Etiqueta',values.controller ~ '[IdCliente]',values.controller ~ '_IdCliente',none,datos.IdCliente.Id,datos.IdCliente.fetchAll('RazonSocial'),'chzn-select',none,"putDirEntrega(this.value,'PedidosCab_IdDirec')")}}
+                    <div id="div_PedidosCab_IdCLiente" class="form-group">
+                        <span class="col-sm-3 control-label">
+                              <label class="control-label" for="PedidosCab_IdCliente">Cliente</label>
+                        </span>
+                        <div class="col-sm-9">
+                            <input type="hidden" name="PedidosCab[IdCliente]" id="PedidosCab_IdCliente" value="{{datos.IdCliente.Id}}"/>
+                            <input type="text" class="form-control" name="cliente" id="cliente" value="{{datos.IdCliente.RazonSocial}}" onkeyup="autoComplete('cliente','PedidosCab_IdCliente','cliente','clientes');" onblur="putDirEntrega($('#PedidosCab_IdCliente').val(),'PedidosCab_IdDirec');"/>
+                        </div>
+                        {#                   
+                        {{ macro.select(values.atributos.IdCliente,'Etiqueta',values.controller ~ '[IdCliente]',values.controller ~ '_IdCliente',none,datos.IdCliente.Id,datos.IdCliente.fetchAll('RazonSocial'),'chzn-select',none,"putDirEntrega(this.value,'PedidosCab_IdDirec')")}}
+                        #}
+                    </div>
                 </div>
                 <div class="col-md-6">
                     {{ macro.select(values.atributos.IdDirec,'Etiqueta',values.controller ~ '[IdDirec]',values.controller ~ '_IdDirec',none,datos.IdDirec.Id,datos.IdCliente.getDirecciones('Direccion'),'chzn-select','3')}}
@@ -153,6 +164,6 @@
         <div class="caption"><i class="fa fa-list"></i>Líneas de pedido</div>
     </div>
     <div class="portlet-body">
-        <iframe src='{{app.path}}/PedidosLineas/list/{{datos.Id}}' width='100%' height='400' margin='0' scrolling='yes' style='border: 0px dotted grey;'></iframe>
+        <iframe src='{{app.path}}/PedidosLineas/list/{{datos.Id}}' width='100%' height='600' padding='0' scrolling='yes' style='border: 0px'></iframe>
     </div>
 </div>

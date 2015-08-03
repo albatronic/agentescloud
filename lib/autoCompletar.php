@@ -11,7 +11,6 @@
  * @copyright Informatica ALBATRONIC
  * @since 27.05.2011
  */
-
 // Notificar solamente errores de ejecución
 error_reporting(E_ERROR | E_WARNING | E_PARSE);
 
@@ -22,21 +21,22 @@ switch ($_GET['entidad']) {
 
     // BUSCA CLIENTES DE LA SUCURSAL EN CURSO POR %RAZONSOCIAL% y $NOMBRECOMERCIAL%
     case 'clientes':
-        $filtro = "(1) or RazonSocial LIKE '%{$_GET['term']}%' OR Email LIKE '%{$_GET['term']}%' OR Telefono LIKE '%{$_GET['term']}%' OR Movil LIKE '%{$_GET['term']}%'";
+        $filtro = "(Vigente='1') AND RazonSocial LIKE '%{$_GET['term']}%'";
+        //$filtro = "RazonSocial LIKE '%{$_GET['term']}%' OR Email LIKE '%{$_GET['term']}%' OR Telefono LIKE '%{$_GET['term']}%' OR Movil LIKE '%{$_GET['term']}%'";
         $cliente = new Clientes();
         $rows = $cliente->cargaCondicion("Id,RazonSocial as Value", $filtro, "RazonSocial");
         unset($cliente);
         /**
-        $arrayElementos = array();
-        foreach ($rows as $row) {
-            $row['value'] = $row['RazonSocial'];
-            array_push($arrayElementos, $row);
-        }
+          $arrayElementos = array();
+          foreach ($rows as $row) {
+          $row['value'] = $row['RazonSocial'];
+          array_push($arrayElementos, $row);
+          }
 
-        // El array creado se devuelve en formato JSON, requerido asi
-        // por el autocomplete de jQuery
-        print_r(json_encode($arrayElementos));
-        exit;
+          // El array creado se devuelve en formato JSON, requerido asi
+          // por el autocomplete de jQuery
+          print_r(json_encode($arrayElementos));
+          exit;
          * 
          */
         break;
@@ -83,6 +83,25 @@ switch ($_GET['entidad']) {
         $zona = new ZonasHorarias();
         $rows = $zona->cargaCondicion("Id as Id, Zona as Value", $filtro, "Zona");
         unset($zona);
+        break;
+
+    // ARTICULOS
+    case 'articulos':
+        $filtro = "";
+        if ($_GET['idFirma']) {
+            $filtro = "(IdFirma='{$_GET['idFirma']}') AND ";
+        }
+        $filtro .= "(Vigente='1') AND (Codigo LIKE '%{$_GET['term']}%' OR Descripcion LIKE '%{$_GET['term']}%' OR CodigoEAN LIKE '%{$_GET['term']}%' OR Referencia1 LIKE '%{$_GET['term']}%' OR Referencia2 LIKE '%{$_GET['term']}%' OR Referencia3 LIKE '%{$_GET['term']}%')";
+        $articulo = new Articulos();
+        $rows = $articulo->querySelect("Id as id, concat(Codigo,' # ',Descripcion) as value", $filtro, "Descripcion limit 20");
+        //array_push($rows, array('Id'=>'','Value'=>$filtro));
+        unset($articulo);
+        $arrayElementos = array();
+        foreach ($rows as $item) {
+            array_push($arrayElementos, $item);
+        }
+        print_r(json_encode($arrayElementos));
+        exit;
         break;
 }
 

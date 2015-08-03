@@ -208,6 +208,7 @@
                            id="{{ id|default(name)}}_valorAnterior"
                            value="{{ value }}" maxlength="{{ maxLength|default(20) }}"
                     />
+                    #}
                     <input type="hidden"
                            name="{{ name }}"
                            id="{{ id|default(name)}}"
@@ -221,16 +222,17 @@
                            onchange = "{{ _self.alertSave }}"
                            onblur = "{{onchange}}"
                      />
-                    #} 
+                    {# 
                     <input type="{{ type|default('text') }}"
                            id="{{ id|default(name)}}"
                            name="{{name}}"
                            value="{{ value }}" maxlength="{{ maxLength|default(20) }}"
-                           class="form-control" title="{{ atributos.help }}" tabindex="{{ tabIndex }}"
+                           class="form-control" title="{{ atributos.help }}" tabindex="{{tabIndex}}"
                            onkeyup="autoCompleteSoloTexto('{{ id|default(name)}}', '{{autoComplete[0]}}', '{{autoComplete[1]}}', '{{autoComplete[2]}}');"
                            onchange = "{{ _self.alertSave }}"
                            onblur = "{{onchange}}"
-                           />        
+                           />
+                    #}
                     <p class="help-block">{{ atributos.help }}</p>                    
                 </div>                            
             {% endif %}            

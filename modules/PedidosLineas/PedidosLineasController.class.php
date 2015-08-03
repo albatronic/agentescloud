@@ -43,6 +43,8 @@ class PedidosLineasController extends Controller {
                 // por lo tanto le añado un objeto linea vacío
                 $objetoNuevo = new $this->entity();
                 $objetoNuevo->setIdPedido($idPedido);
+                $objetoNuevo->setIdFirma($pedido->getIdFirma());
+                $objetoNuevo->setUnidades(1);
                 $lineas[] = $objetoNuevo;
                 unset($objetoNuevo);
             }

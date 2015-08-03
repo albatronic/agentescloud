@@ -8,46 +8,61 @@
 {% extends values.controller  ~ '/index.html.twig' %}
 
 {% block listado %}
-        <div class="row">
-            <table class="table table-hover table-bordered table-striped">
-                <thead>
+    <div class="row">
+        <table class="table table-hover table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th class="text-center">Artículo</th>
+                    <th class="text-center">Descripción</th>
+                    <th class="text-center">Udes</th>
+                    <th class="text-center">Precio</th>
+                    <th class="text-center" colspan="3">% Descuentos</th>
+                    <th class="text-center">Importe</th>
+                    <th class="text-center">Iva</th>
+                    <th class="text-center">Comisión</th>
+                    <th class="text-center">Pte Fact.</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for keyLinea,linea in values.listado.data %}
+                <form name="formLinea{{keyLinea}}" id="formLinea{{keyLinea}}" method="post">
+                    <input type="hidden" name="controller" value="PedidosLineas"/>
+                    <input type="hidden" name="action" id="action{{keyLinea}}" value=""/>
+                    <input type="hidden" name="accion" id="accion{{keyLinea}}" value=""/>
+                    <input type="hidden" name="PedidosLineas[Id]" value="{{linea.Id}}"/>
+                    <input type="hidden" name="PedidosLineas[IdPedido]" value="{{linea.IdPedido.Id}}"/>
                     <tr>
-                        <th class="text-center">Artículo</th>
-                        <th class="text-center">Descripción</th>
-                        <th class="text-center">Udes</th>
-                        <th class="text-center">Precio</th>
-                        <th class="text-center" colspan="3">% Descuentos</th>
-                        <th class="text-center">Importe</th>
-                        <th class="text-center">Iva</th>
-                        <th class="text-center">Comisión</th>
-                        <th class="text-center">Pte Fact.</th>
+                        <td>
+                            <input type="hidden" id="codigo{{keyLinea}}" value=""/>
+                            <input type="hidden" name="PedidosLineas[IdArticulo]" id="IdArticulo{{keyLinea}}" value="{{linea.IdArticulo.Id}}"/>
+                            <input class="form-control input-small" autocomplete="off" spellcheck="false" type="text" id="Codigo{{keyLinea}}" value="{{linea.IdArticulo.Codigo}}"
+                                   onkeyup="autoCompleteArticulo('{{keyLinea}}', '{{linea.IdFirma.Id}}');" onblur="$(this).val($('#codigo{{keyLinea}}').val());"/> 
+                        </td>
+                        <td><input class="form-control input-large" type="text" name="PedidosLineas[Descripcion]" id="Descripcion{{keyLinea}}" value="{{linea.Descripcion}}"/></td>
+                        <td><input class="text-right form-control" style="width: 70px;" type="text" name="PedidosLineas[Unidades]" id="Unidades{{keyLinea}}" value="{{linea.Unidades}}"/></td>
+                        <td><input class="text-right form-control" style="width: 80px;" type="text" name="PedidosLineas[Precio]" id="Precio{{keyLinea}}" value="{{linea.Precio}}"/></td>
+                        <td><input class="text-right form-control" style="width: 55px;" type="text" name="PedidosLineas[Descuento1]" id="Descuento1{{keyLinea}}" value="{{linea.Descuento1}}"/></td>
+                        <td><input class="text-right form-control" style="width: 55px;" type="text" name="PedidosLineas[Descuento2]" id="Descuento2{{keyLinea}}" value="{{linea.Descuento2}}"/></td>
+                        <td><input class="text-right form-control" style="width: 55px;" type="text" name="PedidosLineas[Descuento3]" id="Descuento3{{keyLinea}}" value="{{linea.Descuento3}}"/></td>
+                        <td><input class="text-right form-control" style="width: 80px;" type="text" name="PedidosLineas[Importe]" id="Importe{{keyLinea}}" value="{{linea.Importe}}" onblur="{% if keyLinea == 0 %}crear({{keyLinea}});{% else %}guardar({{keyLinea}});{% endif %}"/></td>
+                        <td><input class="text-right form-control" style="width: 55px;" type="text" name="PedidosLineas[Iva]" id="Iva{{keyLinea}}" value="{{linea.Iva}}"/></td>
+                        <td><input class="text-right form-control" style="width: 55px;" type="text" name="PedidosLineas[ComisionAgente]" id="ComisionAgente{{keyLinea}}" value="{{linea.ComisionAgente}}"/></td>
+                        <td class="text-right">{{linea.UnidadesPtesFacturar}}</td>
+                        <td>
+                            {% if linea.Id %}
+                                <button class="btn primary" style="float:left; margin-right: 0px !important;" onclick="guardar({{keyLinea}});"><i class="fa fa-save"></i></button>
+                                <button class="btn primary" style="float:left; margin-right: 0px !important;" onclick="borrar({{keyLinea}});"><i class="fa fa-trash"></i></button>
+                                {% else %}
+                                <button class="btn primary" style="float:left; margin-right: 0px !important;" onclick="crear({{keyLinea}});"><i class="fa fa-save"></i></button>                                
+                                {% endif %}
+                        </td>
                     </tr>
-                </thead>
-                <tbody>
-                    {% for keyLinea,linea in values.listado.data %}
-                        <form name="linea{{keyLinea}}">
-                            <input type="hidden" name="Linea[Id]" value="{{linea.Id}}"/>
-                        <tr>
-                            <td>
-                                <input type="hidden" name="Linea[IdArticulo]" id="IdArticulo{{keyLinea}}" value="{{linea.IdArticulo.Id}}"/>
-                                <input class="form-control input-small typeahead tt-query" autocomplete="off" type="text" name="Codigo" id="Codigo{{keyLinea}}" value="{{linea.IdArticulo.Codigo}}"/>
-                            </td>
-                            <td><input class="form-control input-large" type="text" name="Linea[Descripcion]" id="Descripcion{{keyLinea}}" value="{{linea.Descripcion}}"/></td>
-                            <td><input class="text-right form-control input-small" type="text" name="Linea[Unidades]" id="Unidades{{keyLinea}}" value="{{linea.Unidades}}"/></td>
-                            <td><input class="text-right form-control input-small" type="text" name="Linea[Precio]" id="Precio{{keyLinea}}" value="{{linea.Precio}}"/></td>
-                            <td><input class="text-right form-control input-small" type="text" name="Linea[Descuento1]" id="Descuento1{{keyLinea}}" value="{{linea.Descuento1}}"/></td>
-                            <td><input class="text-right form-control input-small" type="text" name="Linea[Descuento2]" id="Descuento2{{keyLinea}}" value="{{linea.Descuento2}}"/></td>
-                            <td><input class="text-right form-control input-small" type="text" name="Linea[Descuento3]" id="Descuento3{{keyLinea}}" value="{{linea.Descuento3}}"/></td>
-                            <td><input class="text-right form-control input-small" type="text" name="Linea[Importe]" id="Importe{{keyLinea}}" value="{{linea.Importe}}"/></td>
-                            <td><input class="text-right form-control input-small" type="text" name="Linea[Iva]" id="Iva{{keyLinea}}" value="{{linea.Iva}}"/></td>
-                            <td><input class="text-right form-control input-small" type="text" name="Linea[ComisionAgente]" id="ComisionAgente{{keyLinea}}" value="{{linea.ComisionAgente}}"/></td>
-                            <td class="text-right">{{linea.UnidadesPtesFacturar}}</td>
-                        </tr>
-                        </form>
-                    {% endfor %}
-                </tbody>
-            </table>
-        </div>
+                </form>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
 {% endblock %}
 {#
 {{ macro.select(values.atributos.IdPedido,'Etiqueta',values.controller ~ '[IdPedido]',values.controller ~ '_IdPedido',none,datos.IdPedido.IdPedido,datos.IdPedido.fetchAll('Id'),'chzn-select','1')}}

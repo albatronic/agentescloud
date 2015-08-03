@@ -629,6 +629,22 @@ function autoComplete(campoAutoCompletar, campoId, campoTexto, entidad, columna,
     });
 }
 
+function autoCompleteArticulo(id,idFirma) {
+
+    var url = appPath + "/lib/autoCompletar.php?entidad=articulos&idFirma=" + idFirma;
+
+    $("#Codigo" + id).autocomplete({
+        source: url,
+        minLength: 2,
+        select: function (event, resultado) {
+            value = resultado.item.value.split(" # ");
+            $("#IdArticulo" + id).val(resultado.item.id);
+            $("#codigo" + id).val(value[0]);
+            $("#Descripcion" + id).val(value[1]);
+        }
+    });
+}
+
 function devuelve(campoId, id, campoTexto, value, desplegableAjax) {
     $("#" + campoId).val(id);
     $("#" + campoTexto).val(value);
