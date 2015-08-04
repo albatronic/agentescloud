@@ -1,4 +1,4 @@
-{# js PedidosLineas #}
+{# js ListForm #}
 
 {% extends '_global/js.html.twig' %}
 
@@ -6,30 +6,14 @@
 
     {{ parent() }}   
     <script>
-        $('#Codigo0').focus();
-
-        function ajaxHistoricoVentas(idArticulo, idCliente, periodo) {
-
-            if (idArticulo === '') {
-                idArticulo = '0';
-            }
-
-            $.ajax({
-                url: appPath + '/apiRest/HistoricoVentas/' + idArticulo + '/' + idCliente + '/' + periodo + '/html',
-                dataType: 'html',
-                type: 'get',
-                success: function (html) {
-                    $("#dialogHistoricoVentas .modal-body").html(html);
-                }
-            });
-        }
+        $('#Descripcion0').focus();
 
         function guardar(keyLinea) {
             if (valida(keyLinea)) {
                 espere(keyLinea);
-                $('#action' + keyLinea).val('edit');
+                $('#action' + keyLinea).val('editForm');
                 $('#accion' + keyLinea).val('G');
-                $('#formLinea' + keyLinea).submit();
+                $('#formLinea' + keyLinea).submit();return false;
             } else {
                 return false;
             }
@@ -38,7 +22,7 @@
         function borrar(keyLinea) {
             if (valida(keyLinea)) {
                 espere(keyLinea);
-                $('#action' + keyLinea).val('edit');
+                $('#action' + keyLinea).val('editForm');
                 $('#accion' + keyLinea).val('B');
                 $('#formLinea' + keyLinea).submit();
             } else {
@@ -49,19 +33,19 @@
         function crear(keyLinea) {
             if (valida(keyLinea)) {
                 espere(keyLinea);
-                $('#action' + keyLinea).val('new');
+                $('#action' + keyLinea).val('newForm');
                 $('#formLinea' + keyLinea).submit();
             } else {
-                alert("No valida");
+                alert("Debe indicar la descripción de la familia");
                 return false;
             }
         }
 
         function valida(keyLinea) {
             ok = true;
-            if ($('#IdArticulo' + keyLinea).val() < 1) {
+            if ($('#Descripcion' + keyLinea).val() === '') {
                 ok = false;
-                mensaje = "Debe seleccionar un artículo";
+                mensaje = "Debe indicar la descripción de la familia";
             }
             return ok;
         }

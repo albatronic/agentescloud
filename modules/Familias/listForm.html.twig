@@ -1,0 +1,50 @@
+{# empty Twig template #}
+
+{% extends popup %}
+
+{% block content %}
+    {% include "_global/alertas.html.twig" with {'alertas': values.alertas,'errores': values.errores} %}
+
+    {% block listado %}
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6 text-center">
+                <table class="table table-hover table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Familia</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for keyLinea,linea in values.listado.data %}
+                        <form name="formLinea{{keyLinea}}" id="formLinea{{keyLinea}}" method="post">
+                            <input type="hidden" name="controller" value="Familias"/>
+                            <input type="hidden" name="action" id="action{{keyLinea}}" value=""/>
+                            <input type="hidden" name="accion" id="accion{{keyLinea}}" value=""/>
+                            <input type="hidden" name="Familias[Id]" value="{{linea.Id}}"/>
+                            <input type="hidden" name="Familias[IdFirma]" value="{{linea.IdFirma.Id}}"/>
+                            <tr>
+                                <td><input class="form-control input-large" type="text" name="Familias[Descripcion]" id="Descripcion{{keyLinea}}" value="{{linea.Descripcion}}"/></td>
+                                <td>
+                                    <div  id="botonera{{keyLinea}}">
+                                        {% if linea.Id %}
+                                            <button class="btn primary" style="float:left; margin-right: 0px !important;" onclick="return guardar({{keyLinea}});"><i class="fa fa-save"></i></button>
+                                            <button class="btn primary" style="float:left; margin-right: 0px !important;" onclick="borrar({{keyLinea}});"><i class="fa fa-trash"></i></button>
+                                            {% else %}
+                                            <button class="btn primary" style="float:left; margin-right: 0px !important;" onclick="return crear({{keyLinea}});"><i class="fa fa-save"></i></button>                                
+                                            {% endif %}
+                                    </div>
+                                    <div id="espere{{keyLinea}}" class="hidden text-center"><img src="/assets/global/img/loading-spinner-blue.gif"/></div>
+                                </td>
+                            </tr>
+                        </form>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-3"></div>
+        </div>        
+    {% endblock %}
+
+{% endblock %}

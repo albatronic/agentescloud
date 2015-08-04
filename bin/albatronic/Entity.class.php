@@ -427,8 +427,9 @@ class Entity {
 
         if ($this->getPrimaryKeyValue() != '') {
             // Estoy validando antes de actualizar
-            if (($this->IsSuper || $this->IsDefault) and ( $_SESSION['usuarioPortal']['IdPerfil'] != '1'))
+            if (($this->IsSuper || $this->IsDefault) and ( $_SESSION['usuarioPortal']['IdPerfil'] != '1')) {
                 $this->_errores[] = "No se puede modificar, es un valor reservado";
+            }
         }
 
         // Asignar el nivel Jerárquico
@@ -456,13 +457,15 @@ class Entity {
 
         // No se puede borrar si el objeto es un valor predeterminado y el usuario
         // no es el super
-        if (($this->IsDefault) AND ( $_SESSION['usuarioPortal']['IdPerfil'] != 1))
+        if (($this->IsDefault) AND ( $_SESSION['usuarioPortal']['IdPerfil'] != 1)) {
             $this->_errores[] = "No se puede eliminar. Es un valor predeterminado";
+        }
 
         // No se puede borrar si el objeto es un valor SUPER y el usuario
         // no es el super
-        if (($this->IsSuper) AND ( $_SESSION['usuarioPortal']['IdPerfil'] != 1))
+        if (($this->IsSuper) AND ( $_SESSION['usuarioPortal']['IdPerfil'] != 1)) {
             $this->_errores[] = "No se puede eliminar. Es un valor reservado";
+        }
 
         // Validacion de integridad referencial respecto a entidades que usan a esta        
         if (count($this->_errores) == 0) {

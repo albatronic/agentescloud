@@ -50,12 +50,15 @@
                         <td><input class="text-right form-control" style="width: 55px;" type="text" name="PedidosLineas[ComisionAgente]" id="ComisionAgente{{keyLinea}}" value="{{linea.ComisionAgente}}"/></td>
                         <td class="text-right">{{linea.UnidadesPtesFacturar}}</td>
                         <td>
+                            <div  id="botonera{{keyLinea}}">
                             {% if linea.Id %}
-                                <button class="btn primary" style="float:left; margin-right: 0px !important;" onclick="guardar({{keyLinea}});"><i class="fa fa-save"></i></button>
+                                <button class="btn primary" style="float:left; margin-right: 0px !important;" onclick="return guardar({{keyLinea}});"><i class="fa fa-save"></i></button>
                                 <button class="btn primary" style="float:left; margin-right: 0px !important;" onclick="borrar({{keyLinea}});"><i class="fa fa-trash"></i></button>
                                 {% else %}
-                                <button class="btn primary" style="float:left; margin-right: 0px !important;" onclick="crear({{keyLinea}});"><i class="fa fa-save"></i></button>                                
+                                <button class="btn primary" style="float:left; margin-right: 0px !important;" onclick="return crear({{keyLinea}});"><i class="fa fa-save"></i></button>                                
                                 {% endif %}
+                            </div>
+                            <div id="espere{{keyLinea}}" class="hidden text-center"><img src="/assets/global/img/loading-spinner-blue.gif"/></div>
                         </td>
                     </tr>
                 </form>

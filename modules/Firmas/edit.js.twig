@@ -25,12 +25,16 @@
             });
         }
 
+        function cargaFamilias(idDiv) {
+            $('#' + idDiv).html("<iframe width='100%' height='460' scrolling='yes' style='border: 0px dotted grey;' src='{{app.path}}/Familias/listForm/{{values.datos.Id}}'></iframe>");
+        }
+        
         function cargaContactos(idDiv) {
-            $('#' + idDiv).html("<iframe width='100%' height='380' scrolling='yes' style='border: 0px dotted grey;' src='{{app.path}}/FirmasContactos/list/{{datos.IdFirma}}'></iframe>");
+            $('#' + idDiv).html("<iframe width='100%' height='380' scrolling='yes' style='border: 0px dotted grey;' src='{{app.path}}/FirmasContactos/list/{{values.datos.Id}}'></iframe>");
         }
 
         function cargaCondicionesComerciales(idDiv) {
-            $('#' + idDiv).html("<iframe width='100%' height='380' scrolling='yes' style='border: 0px dotted grey;' src='{{app.path}}/Firmas/listVencimientos/{{datos.IdFirma}}'></iframe>");
+            $('#' + idDiv).html("<iframe width='100%' height='380' scrolling='yes' style='border: 0px dotted grey;' src='{{app.path}}/Firmas/listVencimientos/{{values.datos.Id}}'></iframe>");
         }
 
         function cargaGraficoVentas(idFirma, periodo, idDiv) {

@@ -13,6 +13,7 @@
             <li class="active"><a href="#general" data-toggle="tab">{%if datos.RazonSocial%}<b>{{macro.recortaTexto(datos.RazonSocial,40)}}</b>{%else%}Firma{%endif%}</a></li>            
             <li><a href="#tabs-1" data-toggle="tab">Facturación</a></li>
             {% if datos.PrimaryKeyValue %}
+            <li><a href="#tabs-5" onclick="cargaFamilias('tabs-5');" data-toggle="tab">Familias</a></li>                
             <li><a href="#tabs-2" onclick="cargaContactos('tabs-2');" data-toggle="tab">Contactos</a></li>                
             <li><a href="#tabs-3" onclick="cargaCondicionesComerciales('tabs-3');" data-toggle="tab">Condiciones Comerciales</a></li>  
             <li><a href="#tabs-4" onclick="cargaGraficoVentas('{{datos.Id}}', '0', 'divVentasFirma');cargaGraficoVentasPorClientes('{{datos.Id}}', 0, 'divVentasPorClientes');" data-toggle="tab">Gráfico</a></li>              
@@ -67,6 +68,7 @@
                 </div> 
             </div>
             {% if datos.PrimaryKeyValue %}            
+                <div class="tab-pane" id="tabs-5"></div> 
                 <div class="tab-pane" id="tabs-2"></div> 
                 <div class="tab-pane" id="tabs-3"></div> 
                 <div class="tab-pane" id="tabs-4">
