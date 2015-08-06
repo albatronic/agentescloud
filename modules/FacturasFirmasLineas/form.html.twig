@@ -1,0 +1,31 @@
+{#
+  Module: FacturasFirmasLineas
+  Document : modules\FacturasFirmasLineas\fields.html.twig
+
+  copyright: ALBATRONIC
+  date 05.08.2015 21:12:37
+#}
+
+{{ macro.select(values.atributos.IdFactura,'Etiqueta',values.controller ~ '[IdFactura]',values.controller ~ '_IdFactura',none,datos.IdFactura.IdFactura,datos.IdFactura.fetchAll('Id'),'chzn-select','1')}}
+{{ macro.select(values.atributos.IdFirma,'Etiqueta',values.controller ~ '[IdFirma]',values.controller ~ '_IdFirma',none,datos.IdFirma.IdFirma,datos.IdFirma.fetchAll('Id'),'chzn-select','2')}}
+{{ macro.select(values.atributos.IdFamilia,'Etiqueta',values.controller ~ '[IdFamilia]',values.controller ~ '_IdFamilia',none,datos.IdFamilia.IdFamilia,datos.IdFamilia.fetchAll('Id'),'chzn-select','3')}}
+{{ macro.select(values.atributos.IdCliente,'Etiqueta',values.controller ~ '[IdCliente]',values.controller ~ '_IdCliente',none,datos.IdCliente.IdCliente,datos.IdCliente.fetchAll('Id'),'chzn-select','4')}}
+{{ macro.select(values.atributos.IdArticulo,'Etiqueta',values.controller ~ '[IdArticulo]',values.controller ~ '_IdArticulo',none,datos.IdArticulo.IdArticulo,datos.IdArticulo.fetchAll('Id'),'chzn-select','5')}}
+{{ macro.input(values.atributos.Descripcion,'Etiqueta','text',values.controller ~ '[Descripcion]',values.controller ~ '_Descripcion',datos.Descripcion,'255','CampoTextoLargo','6') }}
+{{ macro.input(values.atributos.Unidades,'Etiqueta','text',values.controller ~ '[Unidades]',values.controller ~ '_Unidades',datos.Unidades,'10','CampoImporte','7') }}
+{{ macro.input(values.atributos.Precio,'Etiqueta','text',values.controller ~ '[Precio]',values.controller ~ '_Precio',datos.Precio,'10','CampoImporte','8') }}
+{{ macro.input(values.atributos.Descuento1,'Etiqueta','text',values.controller ~ '[Descuento1]',values.controller ~ '_Descuento1',datos.Descuento1,'10','CampoImporte','9') }}
+{{ macro.input(values.atributos.Descuento2,'Etiqueta','text',values.controller ~ '[Descuento2]',values.controller ~ '_Descuento2',datos.Descuento2,'10','CampoImporte','10') }}
+{{ macro.input(values.atributos.Descuento3,'Etiqueta','text',values.controller ~ '[Descuento3]',values.controller ~ '_Descuento3',datos.Descuento3,'10','CampoImporte','11') }}
+{{ macro.input(values.atributos.Importe,'Etiqueta','text',values.controller ~ '[Importe]',values.controller ~ '_Importe',datos.Importe,'10','CampoImporte','12') }}
+{{ macro.input(values.atributos.Iva,'Etiqueta','text',values.controller ~ '[Iva]',values.controller ~ '_Iva',datos.Iva,'10','CampoImporte','13') }}
+{{ macro.input(values.atributos.ComisionAgente,'Etiqueta','text',values.controller ~ '[ComisionAgente]',values.controller ~ '_ComisionAgente',datos.ComisionAgente,'10','CampoImporte','14') }}
+{{ macro.input(values.atributos.ComisionSubagente,'Etiqueta','text',values.controller ~ '[ComisionSubagente]',values.controller ~ '_ComisionSubagente',datos.ComisionSubagente,'10','CampoImporte','15') }}
+{{ macro.select(values.atributos.IdPedido,'Etiqueta',values.controller ~ '[IdPedido]',values.controller ~ '_IdPedido',none,datos.IdPedido.IdPedido,datos.IdPedido.fetchAll('Id'),'chzn-select','16')}}
+{{ macro.select(values.atributos.IdLineaPedido,'Etiqueta',values.controller ~ '[IdLineaPedido]',values.controller ~ '_IdLineaPedido',none,datos.IdLineaPedido.IdLineaPedido,datos.IdLineaPedido.fetchAll('Id'),'chzn-select','17')}}
+{{ macro.input(values.atributos.NivelJerarquico,'Etiqueta','text',values.controller ~ '[NivelJerarquico]',values.controller ~ '_NivelJerarquico',datos.NivelJerarquico,'4','CampoUnidades','18') }}
+{{ macro.select(values.atributos.Publish,'Etiqueta',values.controller ~ '[Publish]',values.controller ~ '_Publish',none,datos.Publish.Publish,datos.Publish.fetchAll('IDTipo'),'chzn-select','19')}}
+
+{% include '_global/fieldsComunes.html.twig' %}
+
+{{ macro.foco(values.controller ~ '_IdFactura') }}

@@ -1,0 +1,25 @@
+# Module: Vencimientos
+# Document : modules\Vencimientos\listados.yml
+#
+# @copyright: ALBATRONIC
+# @date 05.08.2015 21:13:11
+#
+---
+listados:
+  -
+    title: Vencimientos
+    order_by: Id
+    break_field: null
+    idPerfil: null
+    orientation: P
+    unit: mm
+    format: A4
+    margins: '10, 10, 15, 10'
+    body_font: 'Courier, , 8'
+    line_height: 4
+    print_interline: null
+    legend_bottom: null
+    columns:
+      IdFactura: { field: IdFactura, title: IdFactura, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      Fecha: { field: Fecha, title: Fecha, length: 10, align: R, type: date, total: NO, formula: null, format: null }
+      Importe: { field: Importe, title: Importe, length: '10', align: R, type: integer, total: NO, formula: null, format: null }

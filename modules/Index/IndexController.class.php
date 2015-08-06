@@ -165,16 +165,20 @@ class IndexController extends Controller {
     public function importarAction() {
         set_time_limit(0);
 
-        $this->importClientes();
-        $this->importFirmas();
-        $this->importRutas();
-        $this->importGruposCompras();
-        $this->importFamilias();
-        $this->importContactos();
-        $this->importDireccionesEntrega();
-        $this->importArticulos();
-        $this->importPedidosCab();
-        $this->importPedidosLineas();
+        /**
+          $this->importClientes();
+          $this->importFirmas();
+          $this->importRutas();
+          $this->importGruposCompras();
+          $this->importFamilias();
+          $this->importContactos();
+          $this->importDireccionesEntrega();
+          $this->importArticulos();
+          $this->importPedidosCab();
+          $this->importPedidosLineas();
+         * *
+         */
+        $this->importTarifas();
     }
 
     private function importPedidosCab() {
@@ -498,6 +502,32 @@ class IndexController extends Controller {
             $id = $obj->create();
             if (!$id) {
                 print_r($obj->getErrores());
+            }
+        }
+    }
+
+    private function importTarifas() {
+
+        $file = getcwd() . "/docs/docs1/import/TARIFAS.txt";
+        $array = $this->leeCsv($file);
+        $obj = new Tarifas();
+        $obj->truncate();
+        $articulo = new Articulos();
+        foreach ($array as $item) {
+            //print_r($item);
+            $codigo = trim($item['IDARTICULO']);
+            $row = $articulo->querySelect("Id", "IdFirma='{$item['IDFIRMA']}' and IdFamilia='{$item['IDFAMILIA']}' and Codigo='{$codigo}'");
+            if ($row[0]['Id']) {
+                $obj = new Tarifas();
+                $obj->setIdArticulo($row[0]['Id']);
+                $obj->setIdTarifa($item['TARIFA']);
+                $obj->setPrecio(self::trataMoneda($item['PRECIO']));
+                $id = $obj->create();
+                if (!$id) {
+                    print_r($obj->getErrores());
+                }
+            } else {
+                echo "Importar Tarifas: No existe el artículo {$codigo}<br/>";
             }
         }
     }

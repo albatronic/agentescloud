@@ -1,0 +1,19 @@
+{#
+  Module: CondicionesComerciales
+  Document : modules\CondicionesComerciales\fields.html.twig
+
+  copyright: ALBATRONIC
+  date 05.08.2015 21:11:59
+#}
+
+{{ macro.select(values.atributos.IdFirma,'Etiqueta',values.controller ~ '[IdFirma]',values.controller ~ '_IdFirma',none,datos.IdFirma.IdFirma,datos.IdFirma.fetchAll('Id'),'chzn-select','1')}}
+{{ macro.select(values.atributos.IdFamilia,'Etiqueta',values.controller ~ '[IdFamilia]',values.controller ~ '_IdFamilia',none,datos.IdFamilia.IdFamilia,datos.IdFamilia.fetchAll('Id'),'chzn-select','2')}}
+{{ macro.input(values.atributos.IdCondicion,'Etiqueta','text',values.controller ~ '[IdCondicion]',values.controller ~ '_IdCondicion',datos.IdCondicion,'4','CampoUnidades','3') }}
+{{ macro.input(values.atributos.Descuento1,'Etiqueta','text',values.controller ~ '[Descuento1]',values.controller ~ '_Descuento1',datos.Descuento1,'10','CampoImporte','4') }}
+{{ macro.input(values.atributos.Descuento2,'Etiqueta','text',values.controller ~ '[Descuento2]',values.controller ~ '_Descuento2',datos.Descuento2,'10','CampoImporte','5') }}
+{{ macro.input(values.atributos.Comision,'Etiqueta','text',values.controller ~ '[Comision]',values.controller ~ '_Comision',datos.Comision,'10','CampoImporte','6') }}
+{{ macro.input(values.atributos.FormaPago,'Etiqueta','text',values.controller ~ '[FormaPago]',values.controller ~ '_FormaPago',datos.FormaPago,'50','CampoTextoLargo','7') }}
+
+{% include '_global/fieldsComunes.html.twig' %}
+
+{{ macro.foco(values.controller ~ '_IdFirma') }}

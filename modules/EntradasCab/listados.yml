@@ -1,0 +1,27 @@
+# Module: EntradasCab
+# Document : modules\EntradasCab\listados.yml
+#
+# @copyright: ALBATRONIC
+# @date 05.08.2015 21:13:19
+#
+---
+listados:
+  -
+    title: EntradasCab
+    order_by: Id
+    break_field: null
+    idPerfil: null
+    orientation: P
+    unit: mm
+    format: A4
+    margins: '10, 10, 15, 10'
+    body_font: 'Courier, , 8'
+    line_height: 4
+    print_interline: null
+    legend_bottom: null
+    columns:
+      Fecha: { field: Fecha, title: Fecha, length: 10, align: R, type: date, total: NO, formula: null, format: null }
+      Documento: { field: Documento, title: Documento, length: '50', align: L, type: string, total: NO, formula: null, format: null }
+      IdAlmacen: { field: IdAlmacen, title: IdAlmacen, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      IdFirma: { field: IdFirma, title: IdFirma, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      Recepcionado: { field: Recepcionado, title: Recepcionado, length: '1', align: L, type: tinyint, total: NO, formula: null, format: null }

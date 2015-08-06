@@ -6,9 +6,9 @@
  */
 
 /**
- * @orm:Entity(ClientesContactos)
+ * @orm:Entity(FirmasContactos)
  */
-class ClientesContactos extends ClientesContactosEntity {
+class FirmasContactos extends FirmasContactosEntity {
 
     public function __toString() {
         return ($this->Id) ? $this->Nombre : '';

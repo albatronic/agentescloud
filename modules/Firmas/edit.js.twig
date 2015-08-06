@@ -30,11 +30,11 @@
         }
         
         function cargaContactos(idDiv) {
-            $('#' + idDiv).html("<iframe width='100%' height='380' scrolling='yes' style='border: 0px dotted grey;' src='{{app.path}}/FirmasContactos/list/{{values.datos.Id}}'></iframe>");
+            $('#' + idDiv).html("<iframe width='100%' height='380' scrolling='yes' style='border: 0px dotted grey;' src='{{app.path}}/FirmasContactos/listForm/{{values.datos.Id}}'></iframe>");
         }
 
         function cargaCondicionesComerciales(idDiv) {
-            $('#' + idDiv).html("<iframe width='100%' height='380' scrolling='yes' style='border: 0px dotted grey;' src='{{app.path}}/Firmas/listVencimientos/{{values.datos.Id}}'></iframe>");
+            $('#' + idDiv).html("<iframe width='100%' height='380' scrolling='yes' style='border: 0px dotted grey;' src='{{app.path}}/CondicionesComerciales/Index/{{values.datos.Id}}'></iframe>");
         }
 
         function cargaGraficoVentas(idFirma, periodo, idDiv) {

@@ -1,0 +1,20 @@
+{#
+  Module: EntradasLineas
+  Document : modules\EntradasLineas\fields.html.twig
+
+  copyright: ALBATRONIC
+  date 05.08.2015 21:13:24
+#}
+
+{{ macro.select(values.atributos.IdEntrada,'Etiqueta',values.controller ~ '[IdEntrada]',values.controller ~ '_IdEntrada',none,datos.IdEntrada.IdEntrada,datos.IdEntrada.fetchAll('Id'),'chzn-select','1')}}
+{{ macro.select(values.atributos.IdFirma,'Etiqueta',values.controller ~ '[IdFirma]',values.controller ~ '_IdFirma',none,datos.IdFirma.IdFirma,datos.IdFirma.fetchAll('Id'),'chzn-select','2')}}
+{{ macro.select(values.atributos.IdFamilia,'Etiqueta',values.controller ~ '[IdFamilia]',values.controller ~ '_IdFamilia',none,datos.IdFamilia.IdFamilia,datos.IdFamilia.fetchAll('Id'),'chzn-select','3')}}
+{{ macro.select(values.atributos.IdArticulo,'Etiqueta',values.controller ~ '[IdArticulo]',values.controller ~ '_IdArticulo',none,datos.IdArticulo.IdArticulo,datos.IdArticulo.fetchAll('Id'),'chzn-select','4')}}
+{{ macro.input(values.atributos.Descripcion,'Etiqueta','text',values.controller ~ '[Descripcion]',values.controller ~ '_Descripcion',datos.Descripcion,'255','CampoTextoLargo','5') }}
+{{ macro.input(values.atributos.Unidades,'Etiqueta','text',values.controller ~ '[Unidades]',values.controller ~ '_Unidades',datos.Unidades,'10','CampoImporte','6') }}
+{{ macro.input(values.atributos.Precio,'Etiqueta','text',values.controller ~ '[Precio]',values.controller ~ '_Precio',datos.Precio,'10','CampoImporte','7') }}
+{{ macro.input(values.atributos.Importe,'Etiqueta','text',values.controller ~ '[Importe]',values.controller ~ '_Importe',datos.Importe,'10','CampoImporte','8') }}
+
+{% include '_global/fieldsComunes.html.twig' %}
+
+{{ macro.foco(values.controller ~ '_IdEntrada') }}

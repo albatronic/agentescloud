@@ -1,0 +1,41 @@
+# Module: FacturasFirmasLineas
+# Document : modules\FacturasFirmasLineas\listados.yml
+#
+# @copyright: ALBATRONIC
+# @date 05.08.2015 21:12:37
+#
+---
+listados:
+  -
+    title: FacturasFirmasLineas
+    order_by: Id
+    break_field: null
+    idPerfil: null
+    orientation: P
+    unit: mm
+    format: A4
+    margins: '10, 10, 15, 10'
+    body_font: 'Courier, , 8'
+    line_height: 4
+    print_interline: null
+    legend_bottom: null
+    columns:
+      IdFactura: { field: IdFactura, title: IdFactura, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      IdFirma: { field: IdFirma, title: IdFirma, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      IdFamilia: { field: IdFamilia, title: IdFamilia, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      IdCliente: { field: IdCliente, title: IdCliente, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      IdArticulo: { field: IdArticulo, title: IdArticulo, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      Descripcion: { field: Descripcion, title: Descripcion, length: '255', align: L, type: string, total: NO, formula: null, format: null }
+      Unidades: { field: Unidades, title: Unidades, length: '10', align: R, type: integer, total: NO, formula: null, format: null }
+      Precio: { field: Precio, title: Precio, length: '10', align: R, type: integer, total: NO, formula: null, format: null }
+      Descuento1: { field: Descuento1, title: Descuento1, length: '10', align: R, type: integer, total: NO, formula: null, format: null }
+      Descuento2: { field: Descuento2, title: Descuento2, length: '10', align: R, type: integer, total: NO, formula: null, format: null }
+      Descuento3: { field: Descuento3, title: Descuento3, length: '10', align: R, type: integer, total: NO, formula: null, format: null }
+      Importe: { field: Importe, title: Importe, length: '10', align: R, type: integer, total: NO, formula: null, format: null }
+      Iva: { field: Iva, title: Iva, length: '10', align: R, type: integer, total: NO, formula: null, format: null }
+      ComisionAgente: { field: ComisionAgente, title: ComisionAgente, length: '10', align: R, type: integer, total: NO, formula: null, format: null }
+      ComisionSubagente: { field: ComisionSubagente, title: ComisionSubagente, length: '10', align: R, type: integer, total: NO, formula: null, format: null }
+      IdPedido: { field: IdPedido, title: IdPedido, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      IdLineaPedido: { field: IdLineaPedido, title: IdLineaPedido, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      NivelJerarquico: { field: NivelJerarquico, title: NivelJerarquico, length: '4', align: R, type: integer, total: NO, formula: null, format: null }
+      Publish: { field: Publish, title: Publish, length: '1', align: L, type: tinyint, total: NO, formula: null, format: null }

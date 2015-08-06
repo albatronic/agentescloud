@@ -27,19 +27,19 @@
 
         function cargaDireccionesEntrega(idDiv) {
 
-            $('#' + idDiv).html("<iframe width='100%' height='380' scrolling='yes' style='border: 0px dotted grey;' src='{{app.path}}/ClientesDEntrega/list/{{datos.IdCliente}}'></iframe>");
+            $('#' + idDiv).html("<iframe width='100%' height='680' scrolling='yes' style='border: 0px dotted grey;' src='{{app.path}}/ClientesDEntrega/listForm/{{values.datos.Id}}'></iframe>");
 
         }
 
         function cargaContactos(idDiv) {
 
-            $('#' + idDiv).html("<iframe width='100%' height='380' scrolling='yes' style='border: 0px dotted grey;' src='{{app.path}}/ClientesContactos/list/{{datos.IdCliente}}'></iframe>");
+            $('#' + idDiv).html("<iframe width='100%' height='380' scrolling='yes' style='border: 0px dotted grey;' src='{{app.path}}/ClientesContactos/listForm/{{values.datos.Id}}'></iframe>");
 
         }
 
         function cargaCondicionesComerciales(idDiv) {
 
-            $('#' + idDiv).html("<iframe width='100%' height='380' scrolling='yes' style='border: 0px dotted grey;' src='{{app.path}}/Clientes/listVencimientos/{{datos.IdCliente}}'></iframe>");
+            $('#' + idDiv).html("<iframe width='100%' height='380' scrolling='yes' style='border: 0px dotted grey;' src='{{app.path}}/Clientes/listVencimientos/{{values.datos.Id}}'></iframe>");
 
         }
 

@@ -47,8 +47,8 @@
                     {# macro.input(values.atributos.EmailGerente,'Etiqueta','text',values.controller ~ '[EmailGerente]',values.controller ~ '_EmailGerente',datos.EmailGerente,'100','CampoTextoLargo','17') #}
                     {{ macro.input(values.atributos.EmailPedidos,'Etiqueta','text',values.controller ~ '[EmailPedidos]',values.controller ~ '_EmailPedidos',datos.EmailPedidos,'100','CampoTextoLargo','18') }}
                     {# macro.input(values.atributos.EmailSoporteTecnico,'Etiqueta','text',values.controller ~ '[EmailSoporteTecnico]',values.controller ~ '_EmailSoporteTecnico',datos.EmailSoporteTecnico,'100','CampoTextoLargo','19') #}
-                    {{ macro.textarea(values.atributos.AvisoPedidos,'Etiqueta','Clientes[AvisoPedidos]','Clientes_AvisoPedidos',datos.AvisoPedidos,none,none,'TextArea')}}                    
-                    {{ macro.textarea(values.atributos.AvisoFacturas,'Etiqueta','Clientes[AvisoFacturas]','Clientes_AvisoFacturas',datos.AvisoFacturas,none,none,'TextArea')}}                    
+                    {{ macro.textarea(values.atributos.AvisoPedidos,'Etiqueta',values.controller ~ '[AvisoPedidos]',values.controller ~ '_AvisoPedidos',datos.AvisoPedidos,none,none,'TextArea')}}                    
+                    {{ macro.textarea(values.atributos.AvisoFacturas,'Etiqueta',values.controller ~ '[AvisoFacturas]',values.controller ~ '_AvisoFacturas',datos.AvisoFacturas,none,none,'TextArea')}}                    
                 </div>
             </div>
             <div class="tab-pane" id="tabs-1">

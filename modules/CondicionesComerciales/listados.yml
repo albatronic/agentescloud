@@ -1,0 +1,29 @@
+# Module: CondicionesComerciales
+# Document : modules\CondicionesComerciales\listados.yml
+#
+# @copyright: ALBATRONIC
+# @date 05.08.2015 21:11:59
+#
+---
+listados:
+  -
+    title: CondicionesComerciales
+    order_by: Id
+    break_field: null
+    idPerfil: null
+    orientation: P
+    unit: mm
+    format: A4
+    margins: '10, 10, 15, 10'
+    body_font: 'Courier, , 8'
+    line_height: 4
+    print_interline: null
+    legend_bottom: null
+    columns:
+      IdFirma: { field: IdFirma, title: IdFirma, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      IdFamilia: { field: IdFamilia, title: IdFamilia, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      IdCondicion: { field: IdCondicion, title: IdCondicion, length: '4', align: R, type: integer, total: NO, formula: null, format: null }
+      Descuento1: { field: Descuento1, title: Descuento1, length: '10', align: R, type: integer, total: NO, formula: null, format: null }
+      Descuento2: { field: Descuento2, title: Descuento2, length: '10', align: R, type: integer, total: NO, formula: null, format: null }
+      Comision: { field: Comision, title: Comision, length: '10', align: R, type: integer, total: NO, formula: null, format: null }
+      FormaPago: { field: FormaPago, title: FormaPago, length: '50', align: L, type: string, total: NO, formula: null, format: null }

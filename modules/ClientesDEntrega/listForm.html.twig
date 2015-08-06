@@ -1,0 +1,147 @@
+{# empty Twig template #}
+
+{% extends popup %}
+
+{% block content %}
+    {% include "_global/alertas.html.twig" with {'alertas': values.alertas,'errores': values.errores} %}
+
+    {% block listado %}
+        <div class="margin-top-15"></div>
+        {% for keyLinea,linea in values.listado.data %}
+            <div class="col-md-4">
+                <div class="portlet box blue-hoki">
+                    <div class="portlet-title">
+                        <div class="caption>">{% if linea.Nombre %}{{linea.Nombre}}{% else %}INDIQUE UNA DIRECCIÓN DE ENTREGA NUEVA{% endif %}</div>
+                        <div class="actions">
+                            {% if linea.Id %}
+                                <a class="btn btn-default btn-sm" href="#" onclick="return guardar({{keyLinea}});"><i class="fa fa-save"></i></a>
+                                <a class="btn btn-default btn-sm" href="#" onclick="borrar({{keyLinea}});"><i class="fa fa-trash"></i></a>
+                            {% else %}
+                                <a class="btn btn-default btn-sm" href="#" onclick="return crear({{keyLinea}});"><i class="fa fa-save"></i></a>                            
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <div class="portlet-body">
+                        <form name="formLinea{{keyLinea}}" id="formLinea{{keyLinea}}" method="post">
+                            <input type="hidden" name="controller" value="ClientesDEntrega"/>
+                            <input type="hidden" name="action" id="action{{keyLinea}}" value=""/>
+                            <input type="hidden" name="accion" id="accion{{keyLinea}}" value=""/>
+                            <input type="hidden" name="ClientesDEntrega[Id]" value="{{linea.Id}}"/>
+                            <input type="hidden" name="ClientesDEntrega[IdCliente]" value="{{linea.IdCliente.Id}}"/>
+                            <div class="row">
+
+                                <div class="form-group">
+                                    <span class="col-sm-3 control-label">
+                                        <label class="control-label" for="Nombre{{keyLinea}}">Nombre</label>
+                                    </span>
+                                    <div class="col-sm-9">
+                                        <input class="form-control input-medium" type="text" name="ClientesDEntrega[Nombre]" id="Nombre{{keyLinea}}" value="{{linea.Nombre}}"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <span class="col-sm-3 control-label">
+                                        <label class="control-label" for="Direccion{{keyLinea}}">Dirección</label>
+                                    </span>
+                                    <div class="col-sm-9">                                
+                                        <input class="form-control input-medium" type="text" name="ClientesDEntrega[Direccion]" id="Direccion{{keyLinea}}" value="{{linea.Direccion}}"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <span class="col-sm-3 control-label">
+                                        <label class="control-label" for="IdProvincia{{keyLinea}}">Provincia</label>
+                                    </span>
+                                    <div class="col-sm-9">                                 
+                                        <input class="form-control input-medium" type="text" name="ClientesDEntrega[IdProvincia]" id="IdProvincia{{keyLinea}}" value="{{linea.IdProvincia}}"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <span class="col-sm-3 control-label">
+                                        <label class="control-label" for="IdPoblacion{{keyLinea}}">Población</label>
+                                    </span>
+                                    <div class="col-sm-9">                                 
+                                        <input class="form-control input-medium" type="text" name="ClientesDEntrega[IdPoblacion]" id="IdPoblacion{{keyLinea}}" value="{{linea.IdPoblacion}}"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <span class="col-sm-3 control-label">
+                                        <label class="control-label" for="CodigoPostal{{keyLinea}}">C. Postal</label>
+                                    </span>
+                                    <div class="col-sm-9">                                 
+                                        <input class="form-control input-medium" type="text" name="ClientesDEntrega[CodigoPostal]" id="CodigoPostal{{keyLinea}}" value="{{linea.CodigoPostal}}"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <span class="col-sm-3 control-label">
+                                        <label class="control-label" for="Telefono{{keyLinea}}">Teléfono</label>
+                                    </span>
+                                    <div class="col-sm-9">                                 
+                                        <input class="form-control input-medium" type="text" name="ClientesDEntrega[Telefono]" id="Telefono{{keyLinea}}" value="{{linea.Telefono}}"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <span class="col-sm-3 control-label">
+                                        <label class="control-label" for="Movil{{keyLinea}}">Móvil</label>
+                                    </span>
+                                    <div class="col-sm-9">                                
+                                        <input class="form-control input-medium" type="text" name="ClientesDEntrega[Movil]" id="Movil{{keyLinea}}" value="{{linea.Movil}}"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <span class="col-sm-3 control-label">
+                                        <label class="control-label" for="Fax{{keyLinea}}">Fax</label>
+                                    </span>
+                                    <div class="col-sm-9">                                
+                                        <input class="form-control input-medium" type="text" name="ClientesDEntrega[Fax]" id="Fax{{keyLinea}}" value="{{linea.Fax}}"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <span class="col-sm-3 control-label">
+                                        <label class="control-label" for="Email{{keyLinea}}">Email</label>
+                                    </span>
+                                    <div class="col-sm-9">                                 
+                                        <input class="form-control input-medium" type="text" name="ClientesDEntrega[Email]" id="Email{{keyLinea}}" value="{{linea.Email}}"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <span class="col-sm-3 control-label">
+                                        <label class="control-label" for="PersonaContacto{{keyLinea}}">Contacto</label>
+                                    </span>
+                                    <div class="col-sm-9">
+                                        <input class="form-control input-medium" type="text" name="ClientesDEntrega[PersonaContacto]" id="PersonaContacto{{keyLinea}}" value="{{linea.PersonaContacto}}"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <span class="col-sm-3 control-label">
+                                        <label class="control-label" for="AgenciaHabitual{{keyLinea}}">Agencia</label>
+                                    </span>
+                                    <div class="col-sm-9">                                
+                                        <input class="form-control input-medium" type="text" name="ClientesDEntrega[AgenciaHabitual]" id="AgenciaHabitual{{keyLinea}}" value="{{linea.AgenciaHabitual}}"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <span class="col-sm-3 control-label">
+                                        <label class="control-label" for="Horario{{keyLinea}}">Horario</label>
+                                    </span>
+                                    <div class="col-sm-9">                                
+                                        <input class="form-control input-medium" type="text" name="ClientesDEntrega[Horario]" id="Horario{{keyLinea}}" value="{{linea.Horario}}"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <span class="col-sm-3 control-label">
+                                        <label class="control-label" for="HorarioLlamadas{{keyLinea}}">Horario Llamadas</label>
+                                    </span>
+                                    <div class="col-sm-9">                                
+                                        <input class="form-control input-medium" type="text" name="ClientesDEntrega[HorarioLlamadas]" id="HorarioLlamadas{{keyLinea}}" value="{{linea.HorarioLlamadas}}"/>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}                                
+    {% endblock %}
+
+{% endblock %}

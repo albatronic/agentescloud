@@ -1,0 +1,17 @@
+{#
+  Module: EntradasCab
+  Document : modules\EntradasCab\list.html.twig
+
+  copyright: ALBATRONIC
+  date 05.08.2015 21:13:19
+#}
+
+{% extends values.controller  ~ '/index.html.twig' %}
+
+{% block listado %}
+
+<div class='listado'>
+	{% include '_global/listGenerico.html.twig' with {'listado': values.listado, 'controller': values.controller} %}
+	{% include '_global/paginacion.html.twig' with {'filter': values.listado.filter, 'controller': values.controller, 'position': 'izq'}%}
+</div>
+{% endblock %}

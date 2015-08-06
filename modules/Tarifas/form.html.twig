@@ -1,0 +1,17 @@
+{#
+  Module: Tarifas
+  Document : modules\Tarifas\fields.html.twig
+
+  copyright: ALBATRONIC
+  date 05.08.2015 23:03:22
+#}
+
+{{ macro.select(values.atributos.IdArticulo,'Etiqueta',values.controller ~ '[IdArticulo]',values.controller ~ '_IdArticulo',none,datos.IdArticulo.IdArticulo,datos.IdArticulo.fetchAll('Id'),'chzn-select','1')}}
+{{ macro.input(values.atributos.IdTarifa,'Etiqueta','text',values.controller ~ '[IdTarifa]',values.controller ~ '_IdTarifa',datos.IdTarifa,'11','CampoImporte','2') }}
+{{ macro.input(values.atributos.Precio,'Etiqueta','text',values.controller ~ '[Precio]',values.controller ~ '_Precio',datos.Precio,'10','CampoImporte','3') }}
+{{ macro.input(values.atributos.NivelJerarquico,'Etiqueta','text',values.controller ~ '[NivelJerarquico]',values.controller ~ '_NivelJerarquico',datos.NivelJerarquico,'4','CampoUnidades','4') }}
+{{ macro.select(values.atributos.Publish,'Etiqueta',values.controller ~ '[Publish]',values.controller ~ '_Publish',none,datos.Publish.Publish,datos.Publish.fetchAll('IDTipo'),'chzn-select','5')}}
+
+{% include '_global/fieldsComunes.html.twig' %}
+
+{{ macro.foco(values.controller ~ '_IdArticulo') }}

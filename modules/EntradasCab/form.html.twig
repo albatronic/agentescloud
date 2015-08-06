@@ -1,0 +1,17 @@
+{#
+  Module: EntradasCab
+  Document : modules\EntradasCab\fields.html.twig
+
+  copyright: ALBATRONIC
+  date 05.08.2015 21:13:19
+#}
+
+{{ macro.fecha(values.atributos.Fecha,'Etiqueta',values.controller ~ '[Fecha]',values.controller ~ '_Fecha',datos.Fecha,'10','datepicker','1')}}
+{{ macro.input(values.atributos.Documento,'Etiqueta','text',values.controller ~ '[Documento]',values.controller ~ '_Documento',datos.Documento,'50','CampoTextoLargo','2') }}
+{{ macro.select(values.atributos.IdAlmacen,'Etiqueta',values.controller ~ '[IdAlmacen]',values.controller ~ '_IdAlmacen',none,datos.IdAlmacen.IdAlmacen,datos.IdAlmacen.fetchAll('Id'),'chzn-select','3')}}
+{{ macro.select(values.atributos.IdFirma,'Etiqueta',values.controller ~ '[IdFirma]',values.controller ~ '_IdFirma',none,datos.IdFirma.IdFirma,datos.IdFirma.fetchAll('Id'),'chzn-select','4')}}
+{{ macro.select(values.atributos.Recepcionado,'Etiqueta',values.controller ~ '[Recepcionado]',values.controller ~ '_Recepcionado',none,datos.Recepcionado.Recepcionado,datos.Recepcionado.fetchAll(),'chzn-select','5')}}
+
+{% include '_global/fieldsComunes.html.twig' %}
+
+{{ macro.foco(values.controller ~ '_Fecha') }}

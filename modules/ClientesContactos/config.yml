@@ -47,14 +47,14 @@ ClientesContactos:
   action: Index
   template: index.html.twig
   parametros: ''
-  login_required: tru
-  permission_control: tru
+  login_required: true
+  permission_control: false
   favourite_control: false
   help_file: help.html.twig
   title: Contactos
   id_video: clientescontactos
   url_video: null
-  feature_list: tru
+  feature_list: true
   conection: datos
   entity: ClientesContactos
   table: AgtClientesContactos

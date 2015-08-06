@@ -1,0 +1,68 @@
+{# empty Twig template #}
+
+{% extends popup %}
+
+{% block content %}
+    {% include "_global/alertas.html.twig" with {'alertas': values.alertas,'errores': values.errores} %}
+
+    {% block listado %}
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <table class="table table-hover table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Nombre</th>
+                            <th class="text-center">Direccion</th>
+                            <th class="text-center">Provincia</th>
+                            <th class="text-center">Población</th>
+                            <th class="text-center">Cod.Postal</th>
+                            <th class="text-center">Teléfono</th>
+                            <th class="text-center">Móvil</th>
+                            <th class="text-center">Fax</th>
+                            <th class="text-center">Email</th>
+                            <th class="text-center">Persona Contacto</th>
+                            <th class="text-center">Agencia</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for keyLinea,linea in values.listado.data %}
+                        <form name="formLinea{{keyLinea}}" id="formLinea{{keyLinea}}" method="post">
+                            <input type="hidden" name="controller" value="ClientesDEntrega"/>
+                            <input type="hidden" name="action" id="action{{keyLinea}}" value=""/>
+                            <input type="hidden" name="accion" id="accion{{keyLinea}}" value=""/>
+                            <input type="hidden" name="ClientesDEntrega[Id]" value="{{linea.Id}}"/>
+                            <input type="hidden" name="ClientesDEntrega[IdCliente]" value="{{linea.IdCliente.Id}}"/>
+                            <tr>
+                                <td><input class="form-control input-small" type="text" name="ClientesDEntrega[Nombre]" id="Nombre{{keyLinea}}" value="{{linea.Nombre}}"/></td>
+                                <td><input class="form-control input-small" type="text" name="ClientesDEntrega[Direccion]" id="Direccion{{keyLinea}}" value="{{linea.Direccion}}"/></td>
+                                <td><input class="form-control input-small" type="text" name="ClientesDEntrega[IdProvincia]" id="IdProvincia{{keyLinea}}" value="{{linea.IdProvincia}}"/></td>
+                                <td><input class="form-control input-small" type="text" name="ClientesDEntrega[IdPoblacion]" id="IdPoblacion{{keyLinea}}" value="{{linea.IdPoblacion}}"/></td>
+                                <td><input class="form-control input-small" type="text" name="ClientesDEntrega[CodigoPostal]" id="CodigoPostal{{keyLinea}}" value="{{linea.CodigoPostal}}"/></td>
+                                <td><input class="form-control input-small" type="text" name="ClientesDEntrega[Telefono]" id="Telefono{{keyLinea}}" value="{{linea.Telefono}}"/></td>
+                                <td><input class="form-control input-small" type="text" name="ClientesDEntrega[Movil]" id="Movil{{keyLinea}}" value="{{linea.Movil}}"/></td>
+                                <td><input class="form-control input-small" type="text" name="ClientesDEntrega[Fax]" id="Fax{{keyLinea}}" value="{{linea.Fax}}"/></td>
+                                <td><input class="form-control input-small" type="text" name="ClientesDEntrega[Email]" id="Email{{keyLinea}}" value="{{linea.Email}}"/></td>
+                                <td><input class="form-control input-small" type="text" name="ClientesDEntrega[PersonaContacto]" id="PersonaContacto{{keyLinea}}" value="{{linea.PersonaContacto}}"/></td>
+                                <td><input class="form-control input-small" type="text" name="ClientesDEntrega[AgenciaHabitual]" id="AgenciaHabitual{{keyLinea}}" value="{{linea.AgenciaHabitual}}"/></td>
+                                <td>
+                                    <div  id="botonera{{keyLinea}}">
+                                        {% if linea.Id %}
+                                            <button class="btn primary" style="float:left; margin-right: 0px !important;" onclick="return guardar({{keyLinea}});"><i class="fa fa-save"></i></button>
+                                            <button class="btn primary" style="float:left; margin-right: 0px !important;" onclick="borrar({{keyLinea}});"><i class="fa fa-trash"></i></button>
+                                            {% else %}
+                                            <button class="btn primary" style="float:left; margin-right: 0px !important;" onclick="return crear({{keyLinea}});"><i class="fa fa-save"></i></button>                                
+                                            {% endif %}
+                                    </div>
+                                    <div id="espere{{keyLinea}}" class="hidden text-center"><img src="/assets/global/img/loading-spinner-blue.gif"/></div>
+                                </td>
+                            </tr>
+                        </form>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>        
+    {% endblock %}
+
+{% endblock %}

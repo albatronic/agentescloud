@@ -1,0 +1,95 @@
+{# empty Twig template #}
+
+{% extends popup %}
+
+{% block content %}
+    {% include "_global/alertas.html.twig" with {'alertas': values.alertas,'errores': values.errores} %}
+
+    {% block listado %}
+        <div class="margin-top-15"></div>
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-5">
+                <table class="table table-hover table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Tarifa</th>
+                            <th class="text-center small_text">Precio</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for keyLinea,linea in values.listado.data %}
+                        <form name="formLinea{{keyLinea}}" id="formLinea{{keyLinea}}" method="post">
+                            {% if keyLinea < 5 %}
+                                <input type="hidden" name="controller" value="Tarifas"/>
+                                <input type="hidden" name="action" id="action{{keyLinea}}" value=""/>
+                                <input type="hidden" name="accion" id="accion{{keyLinea}}" value=""/>
+                                <input type="hidden" name="Tarifas[Id]" value="{{linea.Id}}"/>
+                                <input type="hidden" name="Tarifas[IdArticulo]" value="{{linea.IdArticulo.Id}}"/>
+                                <tr>
+                                    <td class="text-center">{{linea.IdTarifa}}</td>
+                                    <td><input class="form-control input-small text-center" type="text" name="Tarifas[Precio]" id="Precio{{keyLinea}}" value="{{linea.Precio}}" /></td>
+                                    <td>
+                                        <div  id="botonera{{keyLinea}}">
+                                            {% if linea.Id %}
+                                                <button class="btn primary" style="float:left; margin-right: 0px !important;" onclick="return guardar({{keyLinea}});"><i class="fa fa-save"></i></button>
+                                                {#<button class="btn primary" style="float:left; margin-right: 0px !important;" onclick="borrar({{keyLinea}});"><i class="fa fa-trash"></i></button>#}
+                                                {% else %}
+                                                <button class="btn primary" style="float:left; margin-right: 0px !important;" onclick="return crear({{keyLinea}});"><i class="fa fa-save"></i></button>                                
+                                                {% endif %}
+                                        </div>
+                                        <div id="espere{{keyLinea}}" class="hidden text-center"><img src="/assets/global/img/loading-spinner-blue.gif"/></div>
+                                    </td>
+                                </tr>
+                            {% endif %}
+                        </form>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-md-5">
+                <table class="table table-hover table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Tarifa</th>
+                            <th class="text-center small_text">Precio</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for keyLinea,linea in values.listado.data %}
+                        <form name="formLinea{{keyLinea}}" id="formLinea{{keyLinea}}" method="post">
+                            {% if keyLinea >= 5 %}
+                                <input type="hidden" name="controller" value="Tarifas"/>
+                                <input type="hidden" name="action" id="action{{keyLinea}}" value=""/>
+                                <input type="hidden" name="accion" id="accion{{keyLinea}}" value=""/>
+                                <input type="hidden" name="Tarifas[Id]" value="{{linea.Id}}"/>
+                                <input type="hidden" name="Tarifas[IdArticulo]" value="{{linea.IdArticulo.Id}}"/>
+                                <tr>
+                                    <td class="text-center">{{linea.IdTarifa}}</td>
+                                    <td><input class="form-control input-small text-center" type="text" name="Tarifas[Precio]" id="Precio{{keyLinea}}" value="{{linea.Precio}}"/></td>
+                                    <td>
+                                        <div  id="botonera{{keyLinea}}">
+                                            {% if linea.Id %}
+                                                <button class="btn primary" style="float:left; margin-right: 0px !important;" onclick="return guardar({{keyLinea}});"><i class="fa fa-save"></i></button>
+                                                {#<button class="btn primary" style="float:left; margin-right: 0px !important;" onclick="borrar({{keyLinea}});"><i class="fa fa-trash"></i></button>#}
+                                                {% else %}
+                                                <button class="btn primary" style="float:left; margin-right: 0px !important;" onclick="return crear({{keyLinea}});"><i class="fa fa-save"></i></button>                                
+                                                {% endif %}
+                                        </div>
+                                        <div id="espere{{keyLinea}}" class="hidden text-center"><img src="/assets/global/img/loading-spinner-blue.gif"/></div>
+                                    </td>
+                                </tr>
+                            {% endif %}
+                        </form>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-1"></div>                    
+        </div>        
+    {% endblock %}
+
+{% endblock %}

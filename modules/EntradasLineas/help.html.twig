@@ -1,0 +1,21 @@
+{#
+  Module: EntradasLineas
+  Document : modules\EntradasLineas\help.html.twig
+
+  copyright: ALBATRONIC
+  date 05.08.2015 21:13:24
+#}
+
+{% extends '_help/layout.html.twig' %}
+
+{% block titulo %}<h2>{{ values.title }}</h2>{% endblock %}
+
+{% block contenido %}
+<h2>Objetivo</h2>
+
+<h2>Operatoria</h2>
+
+<h2>FAQ</h2>
+
+{{ macro.embedVideo(values.idVideo,none,none)}}
+{% endblock %}

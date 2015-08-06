@@ -1,0 +1,27 @@
+# Module: Tarifas
+# Document : modules\Tarifas\listados.yml
+#
+# @copyright: ALBATRONIC
+# @date 05.08.2015 23:03:22
+#
+---
+listados:
+  -
+    title: Tarifas
+    order_by: Id
+    break_field: null
+    idPerfil: null
+    orientation: P
+    unit: mm
+    format: A4
+    margins: '10, 10, 15, 10'
+    body_font: 'Courier, , 8'
+    line_height: 4
+    print_interline: null
+    legend_bottom: null
+    columns:
+      IdArticulo: { field: IdArticulo, title: IdArticulo, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      IdTarifa: { field: IdTarifa, title: IdTarifa, length: '11', align: R, type: integer, total: NO, formula: null, format: null }
+      Precio: { field: Precio, title: Precio, length: '10', align: R, type: integer, total: NO, formula: null, format: null }
+      NivelJerarquico: { field: NivelJerarquico, title: NivelJerarquico, length: '4', align: R, type: integer, total: NO, formula: null, format: null }
+      Publish: { field: Publish, title: Publish, length: '1', align: L, type: tinyint, total: NO, formula: null, format: null }

@@ -258,6 +258,7 @@ class ClientesEntity extends EntityComunes {
         array('SourceColumn' => 'Id', 'ParentEntity' => 'ClientesContactos', 'ParentColumn' => 'IdCliente'),           
         array('SourceColumn' => 'Id', 'ParentEntity' => 'ClientesDEntrega', 'ParentColumn' => 'IdCliente'),           
         array('SourceColumn' => 'Id', 'ParentEntity' => 'PedidosLineas', 'ParentColumn' => 'IdCliente'),           
+        array('SourceColumn' => 'Id', 'ParentEntity' => 'FacturasFirmasCab', 'ParentColumn' => 'IdCliente'),           
     );
 
     /**

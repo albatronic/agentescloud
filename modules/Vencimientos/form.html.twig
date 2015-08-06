@@ -1,0 +1,15 @@
+{#
+  Module: Vencimientos
+  Document : modules\Vencimientos\fields.html.twig
+
+  copyright: ALBATRONIC
+  date 05.08.2015 21:13:11
+#}
+
+{{ macro.select(values.atributos.IdFactura,'Etiqueta',values.controller ~ '[IdFactura]',values.controller ~ '_IdFactura',none,datos.IdFactura.IdFactura,datos.IdFactura.fetchAll('Id'),'chzn-select','1')}}
+{{ macro.fecha(values.atributos.Fecha,'Etiqueta',values.controller ~ '[Fecha]',values.controller ~ '_Fecha',datos.Fecha,'10','datepicker','2')}}
+{{ macro.input(values.atributos.Importe,'Etiqueta','text',values.controller ~ '[Importe]',values.controller ~ '_Importe',datos.Importe,'10','CampoImporte','3') }}
+
+{% include '_global/fieldsComunes.html.twig' %}
+
+{{ macro.foco(values.controller ~ '_IdFactura') }}
