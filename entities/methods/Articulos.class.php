@@ -54,4 +54,52 @@ class Articulos extends ArticulosEntity {
         }
     }
 
+    /**
+     * Devuelve array de objetos promociones del artículo en curso
+     * 
+     * @param boolean $soloVigentes Por defecto solo las vigentes
+     * @return \Promociones Array de objetos promociones
+     */
+    public function getPromociones($soloVigentes= true) {
+        
+        $array = array();
+        
+        $hoy = date('Y-m-d');
+        $filtro = ($soloVigentes) ? "(FechaLimite>'{$hoy}')" : "(1)";
+        $filtro .= " and (IdArticulo='{$this->Id}')";
+        //echo $filtro;
+        $promo = new Promociones();
+        $rows = $promo->querySelect("Id",$filtro,"FechaLimite ASC");
+        unset($promo);
+        
+        foreach($rows as $row) {
+            $array[] = new Promociones($row['Id']);
+        }
+        
+        return $array;
+    }
+    
+    static public function getPromocionesFirmaFamilia($idFirma, $idFamilia, $soloVigentes = true) {
+        
+        $rows = array();
+        
+        $promo = new Promociones();
+        $database = $promo->getDataBaseName();
+        $table = $promo->getTableName();
+        $promo->conecta();
+        if (is_resource($promo->_dbLink)) {
+
+            $query = "SELECT p.Id "
+                    . "FROM {$database}.{$table} p, {$database}.AgtArticulos a "
+                    . "WHERE p.IdArticulo=a.Id AND "
+                    . " a.IdFirma='{$idFirma}' AND "
+                    . " a.IdFamilia='{$idFamilia}'";
+            //echo $query,"<br/>";
+            $promo->_em->query($query);
+            $rows = $promo->_em->fetchResult();
+        }
+        
+        return $rows;
+    }
+
 }

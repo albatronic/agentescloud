@@ -1,0 +1,11 @@
+{# Template edit.html.twig for Promociones #}
+{# -------------------------------------------------------#}
+{# EDITAR UN REGISTRO. ACCIONES: GUARDAR Y BORRAR         #}
+{# -------------------------------------------------------#}
+{% extends values.controller ~ '/index.html.twig' %}
+
+{% block navegador %}{% endblock %}
+
+{% block mantenimiento %}
+   {% include '_global/formEdit.html.twig' with {'values': values} %}
+{% endblock %}

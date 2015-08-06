@@ -1,0 +1,54 @@
+{#
+  Module: Promociones
+  Document : modules\Promociones\index.html.twig
+
+  copyright: ALBATRONIC
+  date 06.08.2015 17:03:43
+#}
+
+{% extends layout %}
+
+{% block title parent() ~ ' - '  ~ values.titulo %}
+
+    {% block content %}
+        <div class="portlet">
+            <div class="portlet-title">
+                <div class=caption">
+                    <h1>{{values.titulo}}</h1>
+                </div>                       
+            </div>
+        </div>
+        <div class="salto"></div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <span class="col-sm-3 control-label">
+                        <label class="control-label" for="IdFirma">Firma</label>
+                    </span>
+                    <div class="col-sm-9">
+                        <select name="IdFirma" id="IdFirma" class="form-control">
+                            {% for firma in values.firmas %}
+                                <option value="{{firma.Id}}" selected>{{firma.Value}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div id="espereFamilias" class="hidden"><img src="/assets/global/img/loading-spinner-blue.gif"/></div>
+                <div class="form-group hidden" id="divFamilias">
+                    <span class="col-sm-3 control-label">
+                        <label class="control-label" for="IdFirma">Familia</label>
+                    </span>
+                    <div class="col-sm-9">
+                        <select name="IdFamilia" id="IdFamilia" class="form-control">
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+                        
+        {% include values.controller ~ '/list.html.twig' %}
+        
+    {% endblock %}

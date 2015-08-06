@@ -1,0 +1,18 @@
+{#
+  Module: Promociones
+  Document : modules\Promociones\fields.html.twig
+
+  copyright: ALBATRONIC
+  date 06.08.2015 17:03:43
+#}
+
+{{ macro.select(values.atributos.IdArticulo,'Etiqueta',values.controller ~ '[IdArticulo]',values.controller ~ '_IdArticulo',none,datos.IdArticulo.IdArticulo,datos.IdArticulo.fetchAll('Id'),'chzn-select','1')}}
+{{ macro.fecha(values.atributos.FechaLimite,'Etiqueta',values.controller ~ '[FechaLimite]',values.controller ~ '_FechaLimite',datos.FechaLimite,'10','datepicker','2')}}
+{{ macro.input(values.atributos.CantidadMinima,'Etiqueta','text',values.controller ~ '[CantidadMinima]',values.controller ~ '_CantidadMinima',datos.CantidadMinima,'10','CampoImporte','3') }}
+{{ macro.input(values.atributos.PrecioNeto,'Etiqueta','text',values.controller ~ '[PrecioNeto]',values.controller ~ '_PrecioNeto',datos.PrecioNeto,'10','CampoImporte','4') }}
+{{ macro.input(values.atributos.Descuento,'Etiqueta','text',values.controller ~ '[Descuento]',values.controller ~ '_Descuento',datos.Descuento,'10','CampoImporte','5') }}
+{{ macro.input(values.atributos.Comision,'Etiqueta','text',values.controller ~ '[Comision]',values.controller ~ '_Comision',datos.Comision,'10','CampoImporte','6') }}
+
+{% include '_global/fieldsComunes.html.twig' %}
+
+{{ macro.foco(values.controller ~ '_IdArticulo') }}

@@ -534,3 +534,15 @@ AgtPedidosLineas:
     Facturar:             { type: boolean, notnull: true, default: 0, index: index, comment: 'Abstract,ValoresSN,IDTipo' }    
     <?php include '../../entities/schema/schemaColumnsCommon.yml'; echoln('');?>       
   relations:
+      
+AgtPromociones:
+  comment: Promociones de artículos
+  columns:
+    IdArticulo:     { type: bigint(11), notnull: true, default: 0, index: index, comment: 'db,Articulos,Id' }
+    FechaLimite:    { type: date, default: null, index: index }
+    CantidadMinima: { type: decimal(2), default: 0 }
+    PrecioNeto:     { type: decimal(2), default: 0 }
+    Descuento:      { type: decimal(2), default: 0 }
+    Comision:       { type: decimal(2), default: 0 }
+    <?php include '../../entities/schema/schemaColumnsCommon.yml'; echoln('');?>      
+    

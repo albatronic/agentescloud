@@ -50,6 +50,7 @@ Modulos:
   - { CodigoApp: Gesco, NombreModulo: Liquidacion,      Nivel: 1, BelongsTo: 50, Titulo: Liquidación de Comisiones, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}  
   - { CodigoApp: Gesco, NombreModulo: FacturasEmitidasCab, Nivel: 1, BelongsTo: 50, Titulo: Facturas Emitidas, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}  
   - { CodigoApp: Gesco, NombreModulo: CondicionesComerciales, Nivel: 1, BelongsTo: 50, Titulo: Condiciones Comerciales, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}  
+  - { CodigoApp: Gesco, NombreModulo: Promociones, Nivel: 1, BelongsTo: 50, Titulo: Promociones, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}  
   - { CodigoApp: Gesco, NombreModulo: Vencimientos,     Nivel: 1, BelongsTo: 50, Titulo: Vencimientos, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}  
   - { CodigoApp: Gesco, NombreModulo: Gastos,           Nivel: 1, BelongsTo: 50, Titulo: Gastos, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}  
 
@@ -101,6 +102,7 @@ Permisos:
   - { IdPerfil: 1, NombreModulo: Liquidacion, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}   
   - { IdPerfil: 1, NombreModulo: FacturasEmitidasCab, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}   
   - { IdPerfil: 1, NombreModulo: CondicionesComerciales, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}   
+  - { IdPerfil: 1, NombreModulo: Promociones, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}   
   - { IdPerfil: 1, NombreModulo: Gastos, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}   
 
   - { IdPerfil: 1, NombreModulo: Alma, Funcionalidades: 'AC,VW' }
@@ -147,6 +149,7 @@ Permisos:
   - { IdPerfil: 2, NombreModulo: Liquidacion, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}   
   - { IdPerfil: 2, NombreModulo: FacturasEmitidasCab, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}   
   - { IdPerfil: 2, NombreModulo: CondicionesComerciales, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}   
+  - { IdPerfil: 2, NombreModulo: Promociones, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}   
   - { IdPerfil: 2, NombreModulo: Gastos, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}   
 
   - { IdPerfil: 2, NombreModulo: Alma, Funcionalidades: 'AC,VW' }

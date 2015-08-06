@@ -176,11 +176,69 @@ class IndexController extends Controller {
           $this->importArticulos();
           $this->importPedidosCab();
           $this->importPedidosLineas();
+          $this->importTarifas();
          * *
          */
-        $this->importTarifas();
+        $this->importPromociones();
     }
 
+    private function importPromociones() {
+
+        $file = getcwd() . "/docs/docs1/import/PROMOCIONES.txt";
+        $array = $this->leeCsv($file);
+        $obj = new Promociones();
+        $obj->truncate();
+        $articulo = new Articulos();
+        foreach ($array as $item) {
+            //print_r($item);
+            $codigo = trim($item['IDARTICULO']);
+            $row = $articulo->querySelect("Id", "IdFirma='{$item['IDFIRMA']}' and IdFamilia='{$item['IDFAMILIA']}' and Codigo='{$codigo}'");
+            if ($row[0]['Id']) {
+                $fecha = split(" ",$item['FECHALIMITE']);
+                $fecha = split("/",$fecha[0]);
+                $fecha = $fecha[2]."-".str_pad($fecha[1], 2, "0", STR_PAD_LEFT)."-".str_pad($fecha[0], 2, "0", STR_PAD_LEFT);
+                $obj = new Promociones();
+                $obj->setId($item['IDPROMOCION']);
+                $obj->setIdArticulo($row[0]['Id']);
+                $obj->setFechaLimite($fecha);
+                $obj->setCantidadMinima(self::trataNumero($item['CANTIDADMINIMA']));
+                $obj->setPrecioNeto(self::trataMoneda($item['NETO']));
+                $obj->setDescuento(self::trataNumero($item['DESCUENTO']));
+                $obj->setComision(self::trataNumero($item['COMISION']));
+                $id = $obj->create();
+                if (!$id) {
+                    print_r($obj->getErrores());
+                }
+            } else {
+                echo "Importar Promociones: No existe el artículo {$codigo}<br/>";
+            }
+        } 
+        
+        // Importar las relaciones promocion-cliente
+        $file = getcwd() . "/docs/docs1/import/PROMOCIONES_CLIENTES.txt";
+        $array = $this->leeCsv($file);
+        $obj = new Relaciones();
+        $obj->queryDelete("EntidadOrigen='Promociones' and EntidadDestino='Clientes'");
+        $promocion = new Promociones();
+        foreach ($array as $item) {
+            //print_r($item);
+            $row = $promocion->querySelect("Id", "Id='{$item['IDPROMOCION']}'");
+            if ($row[0]['Id']) {
+                $obj = new Relaciones();
+                $obj->setEntidadOrigen('Promociones');
+                $obj->setIdEntidadOrigen($item['IDPROMOCION']);
+                $obj->setEntidadDestino('Clientes');
+                $obj->setIdEntidadDestino($item['IDCLIENTE']);
+                $id = $obj->create();
+                if (!$id) {
+                    print_r($obj->getErrores());
+                }
+            } else {
+                echo "Importar Promociones-Clientes: No existe la promocion {$item['IDPROMOCION']}<br/>";
+            }
+        }         
+    }
+    
     private function importPedidosCab() {
 
         $obj = new PedidosCab();

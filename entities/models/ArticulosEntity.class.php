@@ -400,6 +400,7 @@ class ArticulosEntity extends EntityComunes {
     protected $_parentEntities = array(
         array('SourceColumn' => 'Id', 'ParentEntity' => 'PedidosLineas', 'ParentColumn' => 'IdArticulo'),        
         array('SourceColumn' => 'Id', 'ParentEntity' => 'FacturasFirmasLineas', 'ParentColumn' => 'IdArticulo'),        
+        array('SourceColumn' => 'Id', 'ParentEntity' => 'Promociones', 'ParentColumn' => 'IdArticulo'),        
     );
 
     /**
