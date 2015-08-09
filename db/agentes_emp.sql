@@ -673,7 +673,7 @@ CREATE TABLE `AgtUsuarios` (
 
 LOCK TABLES `AgtUsuarios` WRITE;
 /*!40000 ALTER TABLE `AgtUsuarios` DISABLE KEYS */;
-INSERT INTO `AgtUsuarios` VALUES (1,'Sergio','Pérez','','','España','','','','','','','info@albatronic.com','Piticlis1','',44,'2015-08-06 17:16:13',1,1,'','15583371b1d53f8-25049407',1,1,0,1,1,1,'2015-06-18 23:24:43',1,'2015-08-06 17:16:13',0,0,'0000-00-00 00:00:00',0,'0000-00-00 00:00:00',0,'0000-00-00 00:00:00'),(2,'German','Molina de los Rios','','','España','','','','','','','german.molinamalaga@gmail.com','1234','',2,'2015-08-01 23:55:35',2,1,'','15583371b1d7890-57280916',0,0,0,1,1,1,'2015-06-18 23:24:43',2,'2015-08-01 23:55:35',0,0,'0000-00-00 00:00:00',0,'0000-00-00 00:00:00',0,'0000-00-00 00:00:00');
+INSERT INTO `AgtUsuarios` VALUES (1,'Sergio','Pérez','','','España','','','','','','','info@albatronic.com','Piticlis1','',48,'2015-08-09 17:06:00',1,1,'','15583371b1d53f8-25049407',1,1,0,1,1,1,'2015-06-18 23:24:43',1,'2015-08-09 17:06:00',0,0,'0000-00-00 00:00:00',0,'0000-00-00 00:00:00',0,'0000-00-00 00:00:00'),(2,'German','Molina de los Rios','','','España','','','','','','','german.molinamalaga@gmail.com','1234','',2,'2015-08-01 23:55:35',2,1,'','15583371b1d7890-57280916',0,0,0,1,1,1,'2015-06-18 23:24:43',2,'2015-08-01 23:55:35',0,0,'0000-00-00 00:00:00',0,'0000-00-00 00:00:00',0,'0000-00-00 00:00:00');
 /*!40000 ALTER TABLE `AgtUsuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -785,4 +785,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-08-07  1:42:49
+-- Dump completed on 2015-08-09 23:43:01

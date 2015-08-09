@@ -34,10 +34,10 @@
                     <input type="hidden" name="PedidosLineas[IdPedido]" value="{{linea.IdPedido.Id}}"/>
                     <tr>
                         <td>
-                            <input type="hidden" id="codigo{{keyLinea}}" value=""/>
+                            <input type="hidden" id="codigo{{keyLinea}}" value="{{linea.IdArticulo.Codigo}}"/>
                             <input type="hidden" name="PedidosLineas[IdArticulo]" id="IdArticulo{{keyLinea}}" value="{{linea.IdArticulo.Id}}"/>
                             <input class="form-control input-small" autocomplete="off" spellcheck="false" type="text" id="Codigo{{keyLinea}}" value="{{linea.IdArticulo.Codigo}}"
-                                   onkeyup="autoCompleteArticulo('{{keyLinea}}', '{{linea.IdFirma.Id}}');" onblur="$(this).val($('#codigo{{keyLinea}}').val());"/> 
+                                   onkeyup="autoCompleteArticulo('{{keyLinea}}', '{{linea.IdFirma.Id}}', '');" onblur="$(this).val($('#codigo{{keyLinea}}').val());"/> 
                         </td>
                         <td><input class="form-control input-large" type="text" name="PedidosLineas[Descripcion]" id="Descripcion{{keyLinea}}" value="{{linea.Descripcion}}"/></td>
                         <td><input class="text-right form-control" style="width: 70px;" type="text" name="PedidosLineas[Unidades]" id="Unidades{{keyLinea}}" value="{{linea.Unidades}}"/></td>

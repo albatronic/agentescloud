@@ -7,7 +7,23 @@
     {{ parent() }}   
     <script>
         $('#Codigo0').focus();
-        
+
+        function showClientes(keyLinea) {
+            alert($('#IdPromocion' + keyLinea).val());
+            html = '<iframe  width="100%" height="400" padding="0" scrolling="yes" style="border: 0px" id="articulos" src="Promociones/listClientes/' + $('#IdPromocion' + keyLinea).val() + '"></iframe>';
+            var iframei1 = document.getElementById('i1');
+            var innerDoc1 = iframei1.contentDocument || iframei1.contentWindow.document;
+            var iframei2 = document.getElementById('i2');
+            var innerDoc2 = iframei2.contentDocument || iframei2.contentWindow.document;
+
+            innerDoc1.getElementById('i1').value = valor;
+            innerDoc2.getElementById('i2').value = valor;
+
+
+            $('#divClientes').html(html);
+            return false;
+        }
+
         function espere(keyLinea) {
             $('#botonera' + keyLinea).hide();
             $('#espere' + keyLinea).removeClass('hidden');
