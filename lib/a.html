@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            function cambia(valor) {
+                var iframei1 = document.getElementById('i1');
+                var innerDoc1 = iframei1.contentDocument || iframei1.contentWindow.document;             
+                var iframei2 = document.getElementById('i2');
+                var innerDoc2 = iframei2.contentDocument || iframei2.contentWindow.document; 
+                
+                innerDoc1.getElementById('i1').value = valor;
+                innerDoc2.getElementById('i2').value = valor;
+            }
+                
+        </script>
+        <div>
+            <select id="a" onchange="cambia(this.value);">
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+        </div>
+        <iframe id="i1" src="i1.html"></iframe>
+        <iframe id="i2" src="i2.html"></iframe>
+    </body>
+</html>

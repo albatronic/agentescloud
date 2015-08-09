@@ -1,0 +1,54 @@
+{# js ListArticulos #}
+
+{% extends '_global/js.html.twig' %}
+
+{% block js %}
+
+    {{ parent() }}   
+    <script>
+        $('#Codigo0').focus();
+        
+        function espere(keyLinea) {
+            $('#botonera' + keyLinea).hide();
+            $('#espere' + keyLinea).removeClass('hidden');
+        }
+        function guardar(keyLinea) {
+            if (valida(keyLinea)) {
+                espere(keyLinea);
+                $('#action' + keyLinea).val('editArticulos');
+                $('#accion' + keyLinea).val('G');
+                $('#formLinea' + keyLinea).submit();
+            } else {
+                return false;
+            }
+        }
+
+        function borrar(keyLinea) {
+            if (valida(keyLinea)) {
+                espere(keyLinea);
+                $('#action' + keyLinea).val('editArticulos');
+                $('#accion' + keyLinea).val('B');
+                $('#formLinea' + keyLinea).submit();
+            } else {
+                return false;
+            }
+        }
+
+        function crear(keyLinea) {
+            if (valida(keyLinea)) {
+                espere(keyLinea);
+                $('#action' + keyLinea).val('newArticulos');
+                $('#formLinea' + keyLinea).submit();
+            } else {
+                alert("Debe indicar la descripción de la familia");
+                return false;
+            }
+        }
+
+        function valida(keyLinea) {
+            ok = true;
+
+            return ok;
+        }
+    </script>
+{% endblock %}

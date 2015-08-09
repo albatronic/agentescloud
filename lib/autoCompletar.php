@@ -89,7 +89,10 @@ switch ($_GET['entidad']) {
     case 'articulos':
         $filtro = "";
         if ($_GET['idFirma']) {
-            $filtro = "(IdFirma='{$_GET['idFirma']}') AND ";
+            $filtro .= "(IdFirma='{$_GET['idFirma']}') AND ";
+        }
+        if ($_GET['idFamilia']) {
+            $filtro .= "(IdFamilia='{$_GET['idFamilia']}') AND ";
         }
         $filtro .= "(Vigente='1') AND (Codigo LIKE '%{$_GET['term']}%' OR Descripcion LIKE '%{$_GET['term']}%' OR CodigoEAN LIKE '%{$_GET['term']}%' OR Referencia1 LIKE '%{$_GET['term']}%' OR Referencia2 LIKE '%{$_GET['term']}%' OR Referencia3 LIKE '%{$_GET['term']}%')";
         $articulo = new Articulos();

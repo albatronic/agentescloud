@@ -1,0 +1,66 @@
+{# Formulario artículos en promoción #}
+
+{% extends popup %}
+
+{% block content %}
+    {% include "_global/alertas.html.twig" with {'alertas': values.alertas,'errores': values.errores} %}
+
+    {% block listado %}
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <table class="table table-hover table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Código</th>
+                            <th class="text-center">Descripción</th>
+                            <th class="text-center">Fecha Límite</th>
+                            <th class="text-center">Udes Mínima</th>
+                            <th class="text-center">Precio Neto</th>
+                            <th class="text-center">% Dcto</th>
+                            <th class="text-center">% Comisión</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for keyLinea,linea in values.promociones %}
+                        <form name="formLinea{{keyLinea}}" id="formLinea{{keyLinea}}" method="post">
+                            <input type="hidden" name="controller" value="Promociones"/>
+                            <input type="hidden" name="action" id="action{{keyLinea}}" value=""/>
+                            <input type="hidden" name="accion" id="accion{{keyLinea}}" value=""/>
+                            <input type="hidden" name="idFirma" value="{{values.idFirma}}"/>
+                            <input type="hidden" name="idFamilia" value="{{values.idFamilia}}"/>
+                            <input type="hidden" name="Promociones[Id]" value="{{linea.Id}}"/>
+                            <tr>
+                                <td>
+                                    <input type="hidden" id="codigo{{keyLinea}}" value=""/>
+                                    <input type="hidden" name="Promociones[IdArticulo]" id="IdArticulo{{keyLinea}}" value="{{linea.IdArticulo.Id}}"/>
+                                    <input class="form-control" style="width: 90px;" autocomplete="off" spellcheck="false" type="text" id="Codigo{{keyLinea}}" value="{{linea.IdArticulo.Codigo}}"
+                                           onkeyup="autoCompleteArticulo('{{keyLinea}}', '{{values.idFirma}}', '{{values.idFamilia}}');" onblur="$(this).val($('#codigo{{keyLinea}}').val());"/> 
+                                </td>                                
+                                <td><input class="form-control input-medium" type="text" name="Promociones[Descripcion]" id="Descripcion{{keyLinea}}" value="{{linea.IdArticulo.Descripcion}}"/></td>
+                                <td><input class="form-control datepicker" style="width: 90px;" type="text" name="Promociones[FechaLimite]" id="FechaLimite{{keyLinea}}" value="{{linea.FechaLimite}}"/></td>
+                                <td><input class="text-right form-control" style="width: 70px;" type="text" name="Promociones[CantidadMinima]" id="CantidadMinima{{keyLinea}}" value="{{linea.CantidadMinima}}"/></td>
+                                <td><input class="text-right form-control" style="width: 75px;" type="text" name="Promociones[PrecioNeto]" id="PrecioNeto{{keyLinea}}" value="{{linea.PrecioNeto}}"/></td>
+                                <td><input class="text-right form-control" style="width: 55px;" type="text" name="Promociones[Descuento]" id="Descuento{{keyLinea}}" value="{{linea.Descuento}}"/></td>
+                                <td><input class="text-right form-control" style="width: 55px;" type="text" name="Promociones[Comision]" id="Comision{{keyLinea}}" value="{{linea.Comision}}"/></td>
+                                <td>
+                                    <div  id="botonera{{keyLinea}}">
+                                        {% if linea.Id %}
+                                            <button class="btn primary" style="float:left; margin-right: 0px !important;" onclick="return guardar({{keyLinea}});"><i class="fa fa-save"></i></button>
+                                            <button class="btn primary" style="float:left; margin-right: 0px !important;" onclick="borrar({{keyLinea}});"><i class="fa fa-trash"></i></button>
+                                            {% else %}
+                                            <button class="btn primary" style="float:left; margin-right: 0px !important;" onclick="return crear({{keyLinea}});"><i class="fa fa-save"></i></button>                                
+                                            {% endif %}
+                                    </div>
+                                    <div id="espere{{keyLinea}}" class="hidden text-center"><img src="/assets/global/img/loading-spinner-blue.gif"/></div>
+                                </td>
+                            </tr>
+                        </form>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>        
+    {% endblock %}
+
+{% endblock %}

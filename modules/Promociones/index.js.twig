@@ -16,67 +16,13 @@
         });
         
         $('#IdFamilia').change(function(){
-
-            $.ajax({
-                url: appPath + '/lib/getPromociones.php?idFirma=' + $('#IdFirma').val() + '&idFamilia=' + this.value,
-                dataType: 'html',
-                type: 'get',
-                success: function (resultado) {
-                    var datos = $.parseJSON(resultado);
-                    $.each(datos, function (key, value) {
-                        $('#promociones').append(value.Id+" "+value.IdArticulo+" "+value.FechaLimite+"<br/>");
-                    });
-                }
-            }); 
-            $('#listado').removeClass('hidden');            
+            html = '<iframe  width="100%" height="400" padding="0" scrolling="yes" style="border: 0px" id="articulos" src="Promociones/listArticulos/'+$('#IdFirma').val()+'/'+$('#IdFamilia').val()+'"></iframe>';
+            $('#divArticulos').html(html);                       
         });
         
-        function guardar(keyLinea) {
-            if (valida(keyLinea)) {
-                espere(keyLinea);
-                $('#action' + keyLinea).val('editForm');
-                $('#accion' + keyLinea).val('G');
-                $('#formLinea' + keyLinea).submit();
-            } else {
-                return false;
-            }
-        }
-
-        function borrar(keyLinea) {
-            if (valida(keyLinea)) {
-                espere(keyLinea);
-                $('#action' + keyLinea).val('editForm');
-                $('#accion' + keyLinea).val('B');
-                $('#formLinea' + keyLinea).submit();
-            } else {
-                return false;
-            }
-        }
-
-        function crear(keyLinea) {
-            if (valida(keyLinea)) {
-                espere(keyLinea);
-                $('#action' + keyLinea).val('newForm');
-                $('#formLinea' + keyLinea).submit();
-            } else {
-                alert("Debe indicar la descripción de la familia");
-                return false;
-            }
-        }
-
-        function valida(keyLinea) {
-            ok = true;
-            if ($('#Descripcion' + keyLinea).val() === '') {
-                ok = false;
-                mensaje = "Debe indicar la descripción de la familia";
-            }
-            return ok;
-        }
-
         function espere(keyLinea) {
             $('#botonera' + keyLinea).hide();
             $('#espere' + keyLinea).removeClass('hidden');
         }
-
     </script>
 {% endblock %}

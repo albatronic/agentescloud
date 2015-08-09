@@ -629,9 +629,9 @@ function autoComplete(campoAutoCompletar, campoId, campoTexto, entidad, columna,
     });
 }
 
-function autoCompleteArticulo(id,idFirma) {
+function autoCompleteArticulo(id,idFirma, idFamilia) {
 
-    var url = appPath + "/lib/autoCompletar.php?entidad=articulos&idFirma=" + idFirma;
+    var url = appPath + "/lib/autoCompletar.php?entidad=articulos&idFirma=" + idFirma + '&idFamilia=' +idFamilia;
 
     $("#Codigo" + id).autocomplete({
         source: url,
