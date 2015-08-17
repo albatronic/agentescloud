@@ -31,14 +31,14 @@ config:
     emp:
       dbEngine: mysql
       host: localhost
-      user: albatro
-      password: p17s26a26
+      user: 
+      password: 
       database: albatro_agentes_emp
     datos:
       dbEngine: mysql
       host: localhost
-      user: albatro
-      password: p17s26a26
+      user:
+      password: 
       database: albatro_agentes_datos<?php echo $_SESSION['emp'];?>
 
   # CONEXIóN FTP NECESARIA SI LA WEB SUBE DOCUMENTOS AL SERVIDOR
@@ -59,7 +59,7 @@ config:
     host: mail.albatronic.com
     smtp_auth: true
     user_name: info@albatronic.com
-    password: I12#34o
+    password: 
     from: info@albatronic.com
     from_name: AGENTES CLOUD
     timeout: 30

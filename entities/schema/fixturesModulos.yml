@@ -34,7 +34,7 @@ Modulos:
   - { Id: 30, CodigoApp: Fich, NombreModulo: Fich,   Nivel: 0, BelongsTo: 0,   Titulo: Ficheros, Funcionalidades: AC, Icon: 'glyphicon glyphicon-th' }  
   - { CodigoApp: Fich, NombreModulo: Clientes,       Nivel: 1, BelongsTo: 30,  Titulo: Clientes, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}  
   - { CodigoApp: Fich, NombreModulo: Firmas,         Nivel: 1, BelongsTo: 30,  Titulo: Firmas Representadas, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}  
-  - { CodigoApp: Fich, NombreModulo: Familias,        Nivel: 1, BelongsTo: 30,  Titulo: Familias, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}  
+  #- { CodigoApp: Fich, NombreModulo: Familias,        Nivel: 1, BelongsTo: 30,  Titulo: Familias, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}  
   - { CodigoApp: Fich, NombreModulo: Articulos,       Nivel: 1, BelongsTo: 30,  Titulo: Artículos, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}  
   - { CodigoApp: Fich, NombreModulo: Subagentes,     Nivel: 1, BelongsTo: 30,  Titulo: Subagentes, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}    
   - { CodigoApp: Fich, NombreModulo: Agencias,       Nivel: 1, BelongsTo: 30,  Titulo: Agencia Transporte, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}  
@@ -87,7 +87,7 @@ Permisos:
   - { IdPerfil: 1, NombreModulo: Fich, Funcionalidades: 'AC,VW' }  
   - { IdPerfil: 1, NombreModulo: Clientes, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}   
   - { IdPerfil: 1, NombreModulo: Firmas, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}   
-  - { IdPerfil: 1, NombreModulo: Familias, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}   
+  #- { IdPerfil: 1, NombreModulo: Familias, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}   
   - { IdPerfil: 1, NombreModulo: Articulos, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}   
   - { IdPerfil: 1, NombreModulo: Subagentes, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}   
   - { IdPerfil: 1, NombreModulo: Agencias, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}   
@@ -134,7 +134,7 @@ Permisos:
   - { IdPerfil: 2, NombreModulo: Fich, Funcionalidades: 'AC,VW' } 
   - { IdPerfil: 2, NombreModulo: Clientes, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}   
   - { IdPerfil: 2, NombreModulo: Firmas, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}   
-  - { IdPerfil: 2, NombreModulo: Familias, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}   
+  #- { IdPerfil: 2, NombreModulo: Familias, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}   
   - { IdPerfil: 2, NombreModulo: Articulos, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}   
   - { IdPerfil: 2, NombreModulo: Subagentes, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}   
   - { IdPerfil: 2, NombreModulo: Agencias, Funcionalidades: <?php include '../../entities/schema/defaultFunctionality.yml';?>}   

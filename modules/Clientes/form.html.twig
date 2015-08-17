@@ -16,7 +16,7 @@
                 <li><a href="#tabs-2" onclick="cargaDireccionesEntrega('tabs-2');" data-toggle="tab">Dir. Entrega</a></li>
                 <li><a href="#tabs-3" onclick="cargaContactos('tabs-3');" data-toggle="tab">Contactos</a></li>
                 <li><a href="#tabs-4" data-toggle="tab">Varios</a></li>
-                <li><a href="#tabs-5" onclick="cargaCondicionesComerciales('tabs-5');" data-toggle="tab">Condiciones Comerciales</a></li>             
+                {#<li><a href="#tabs-5" onclick="cargaCondicionesComerciales('tabs-5');" data-toggle="tab">Condiciones Comerciales</a></li>#}           
                 <li><a href="#tabs-6" onclick="cargaGraficoVentas('{{datos.Id}}', '0', 'divVentasCliente');cargaGraficoVentasPorFirmas('{{datos.Id}}', '0', 'divVentasPorFirmas');" data-toggle="tab">Gráfico</a></li>             
                 {% endif %}
         </ul>
@@ -92,7 +92,7 @@
                         {{ macro.textarea(values.atributos.Avisos,'Etiqueta','Clientes[Avisos]','Clientes_Avisos',datos.Avisos,none,none,'TextArea')}}
                     </div>            
                 </div>
-                <div class="tab-pane" id="tabs-5"></div> 
+                {#<div class="tab-pane" id="tabs-5"></div>#}
                 <div class="tab-pane" id="tabs-6">
                     <div class="col-md-3">
                     <div class="form-group">

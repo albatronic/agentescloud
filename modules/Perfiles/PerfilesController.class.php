@@ -26,7 +26,7 @@ class PerfilesController extends Controller {
     public function listAction($aditionalFilter = '') {
 
         if ($_SESSION['usuarioPortal']['IdPerfil'] != 1)
-            $aditionalFilter = "IDPerfil <> '1'";
+            $aditionalFilter = "Id <> '1'";
         return parent::listAction($aditionalFilter);
     }
 
@@ -40,13 +40,13 @@ class PerfilesController extends Controller {
 
         $per = new Permisos();
         $em = new EntityManager($per->getConectionName());
-        $query = "select t1.IDPerfil,t1.Permisos,t4.Perfil,t2.Titulo as Opcion,t3.Titulo as SubOpcion
-                from ErpPermisos as t1,menu as t2, submenu as t3, perfiles as t4
+        $query = "select t1.IdPerfil,t1.Permisos,t4.Perfil,t2.Titulo as Opcion,t3.Titulo as SubOpcion
+                from AgtPermisos as t1,menu as t2, submenu as t3, perfiles as t4
                 where t1.IDOpcion=t2.IDOpcion
                 and t1.IDOpcion=t3.IDOpcion
                 and t3.Id=t1.IDSubOpcion
-                and t1.IDPerfil=t4.IDPerfil
-                order by t1.IDPerfil,t1.IDOpcion,t1.IDSubOpcion;";
+                and t1.IdPerfil=t4.Id
+                order by t1.IdPerfil,t1.IDOpcion,t1.IDSubOpcion;";
         $em->query($query);
         $rows = $em->fetchResult();
         $em->desConecta();
