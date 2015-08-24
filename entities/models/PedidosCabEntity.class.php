@@ -223,13 +223,13 @@ class PedidosCabEntity extends EntityComunes {
      * @var entities\FormasPago
      * @assert NotBlank(groups="AgtPedidosCab")
      */
-    protected $IdFormaPago = '0';
+    protected $FormaPago = '';
 
     /**
      * @var entities\Agencias
      * @assert NotBlank(groups="AgtPedidosCab")
      */
-    protected $IdAgencia = '0';
+    protected $Agencia = '';
 
     /**
      * @var string
@@ -290,8 +290,6 @@ class PedidosCabEntity extends EntityComunes {
         'Almacenes',
         'Usuarios',
         'EstadosPedidos',
-        'FormasPago',
-        'Agencias',
         'ValoresSN',
     );
 
@@ -606,26 +604,20 @@ class PedidosCabEntity extends EntityComunes {
         return $this->IdEstado;
     }
 
-    public function setIdFormaPago($IdFormaPago) {
-        $this->IdFormaPago = ($IdFormaPago instanceof FormasPago) ? $IdFormaPago->getPrimaryKeyValue() : $IdFormaPago;
+    public function setFormaPago($FormaPago) {
+        $this->FormaPago = trim($FormaPago);
     }
 
-    public function getIdFormaPago() {
-        if (!($this->IdFormaPago instanceof FormasPago)) {
-            $this->IdFormaPago = new FormasPago($this->IdFormaPago);
-        }
-        return $this->IdFormaPago;
+    public function getFormaPago() {
+        return $this->FormaPago;
     }
 
-    public function setIdAgencia($IdAgencia) {
-        $this->IdAgencia = ($IdAgencia instanceof Agencias) ? $IdAgencia->getPrimaryKeyValue() : $IdAgencia;
+    public function setAgencia($Agencia) {
+        $this->Agencia = trim($Agencia);
     }
 
-    public function getIdAgencia() {
-        if (!($this->IdAgencia instanceof Agencias)) {
-            $this->IdAgencia = new Agencias($this->IdAgencia);
-        }
-        return $this->IdAgencia;
+    public function getAgencia() {
+        return $this->Agencia;
     }
 
     public function setPortes($Portes) {

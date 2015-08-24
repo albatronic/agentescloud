@@ -165,20 +165,19 @@ class IndexController extends Controller {
     public function importarAction() {
         set_time_limit(0);
 
-        /**
-          $this->importClientes();
-          $this->importFirmas();
-          $this->importRutas();
-          $this->importGruposCompras();
-          $this->importFamilias();
-          $this->importContactos();
-          $this->importDireccionesEntrega();
-          $this->importArticulos();
-          $this->importPedidosCab();
-          $this->importPedidosLineas();
-          $this->importTarifas();
-         * *
-         */
+
+        $this->importClientes();
+        $this->importFirmas();
+        $this->importRutas();
+        $this->importGruposCompras();
+        $this->importFamilias();
+        $this->importContactos();
+        $this->importDireccionesEntrega();
+        $this->importArticulos();
+        $this->importPedidosCab();
+        $this->importPedidosLineas();
+        $this->importTarifas();
+
         $this->importPromociones();
     }
 
@@ -194,9 +193,9 @@ class IndexController extends Controller {
             $codigo = trim($item['IDARTICULO']);
             $row = $articulo->querySelect("Id", "IdFirma='{$item['IDFIRMA']}' and IdFamilia='{$item['IDFAMILIA']}' and Codigo='{$codigo}'");
             if ($row[0]['Id']) {
-                $fecha = split(" ",$item['FECHALIMITE']);
-                $fecha = split("/",$fecha[0]);
-                $fecha = $fecha[2]."-".str_pad($fecha[1], 2, "0", STR_PAD_LEFT)."-".str_pad($fecha[0], 2, "0", STR_PAD_LEFT);
+                $fecha = split(" ", $item['FECHALIMITE']);
+                $fecha = split("/", $fecha[0]);
+                $fecha = $fecha[2] . "-" . str_pad($fecha[1], 2, "0", STR_PAD_LEFT) . "-" . str_pad($fecha[0], 2, "0", STR_PAD_LEFT);
                 $obj = new Promociones();
                 $obj->setId($item['IDPROMOCION']);
                 $obj->setIdArticulo($row[0]['Id']);
@@ -212,8 +211,8 @@ class IndexController extends Controller {
             } else {
                 echo "Importar Promociones: No existe el artículo {$codigo}<br/>";
             }
-        } 
-        
+        }
+
         // Importar las relaciones promocion-cliente
         $file = getcwd() . "/docs/docs1/import/PROMOCIONES_CLIENTES.txt";
         $array = $this->leeCsv($file);
@@ -236,9 +235,9 @@ class IndexController extends Controller {
             } else {
                 echo "Importar Promociones-Clientes: No existe la promocion {$item['IDPROMOCION']}<br/>";
             }
-        }         
+        }
     }
-    
+
     private function importPedidosCab() {
 
         $obj = new PedidosCab();
@@ -286,8 +285,8 @@ class IndexController extends Controller {
                 $obj->setPortes($item['PORTES']);
                 $obj->setImprimir($item['IMPRIMIR']);
                 $obj->setServido($item['SERVIDO']);
-                $obj->setIdFormaPago(self::buscaCreaFromaPago(utf8_encode($item['FORMA_PAGO'])));
-                $obj->setIdAgencia(self::buscaCreaAgencia(utf8_encode($item['AGENCIA_TTE'])));
+                $obj->setFormaPago(utf8_encode($item['FORMA_PAGO']));
+                $obj->setAgencia(utf8_encode($item['AGENCIA_TTE']));
 
                 $base1 = self::trataMoneda($item['BASE1']);
                 $cuotaIva1 = $base1 * $item['IVA1'] / 100;
@@ -620,7 +619,7 @@ class IndexController extends Controller {
             $obj->setDirectorComercial(utf8_encode($item['DIRECTOR COMERCIAL']));
             $obj->setPlazoEntrega($item['PLAZO_ENTREGA']);
             $obj->setSinPortes(utf8_encode($item['SIN PORTES']));
-            //$obj->setIdAgencia($item['AGENCIATTE']);
+            $obj->setAgencia(utf8_encode($item['AGENCIATTE']));
             $obj->setObservations(utf8_encode($item['OBSERVACIONES']));
             $obj->setVigente($item['VIGENTE']);
             $id = $obj->create();
@@ -663,6 +662,7 @@ class IndexController extends Controller {
             $obj->setCatalogos($item['CATALOGOS']);
             $obj->setIdRuta($item['IDRUTA']);
             $obj->setIdGrupoCompras($item['IDGRUPOCOMPRAS']);
+            $obj->setFormaPago(utf8_encode($item['FORMA DE PAGO']));
             $id = $obj->create();
             if (!$id) {
                 print_r($obj->getErrores());

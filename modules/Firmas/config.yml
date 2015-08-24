@@ -74,7 +74,6 @@ Firmas:
     - Paises
     - Provincias
     - Municipios
-    - Agencias
     - ValoresSN
   columns:
     Id:
@@ -444,8 +443,8 @@ Firmas:
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
       validator: { nullable: true, type: integer, length: '4', min: null, max: null, message: 'Valor Requerido' }
-    IdAgencia:
-      title: Agencia
+    Agencia:
+      title: Agencía
       filter: false
       list: false
       visible: true
@@ -456,8 +455,7 @@ Firmas:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      '#aditional_filter': { order: 6, caption: IdAgencia, entity: Agencias, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
-      validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: true, type: integer, length: '50', min: null, max: null, message: 'Valor Requerido' }
     SinPortes:
       title: Importe Pedido sin Portes
       filter: true

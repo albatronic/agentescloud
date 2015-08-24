@@ -45,7 +45,19 @@
                 $(this).attr("size",1); 
                 var x = "select[tabindex='" + (parseInt($(this).attr('tabindex'),10) + 1) + "']";       
                 //$(x).fadeTo('fast',1.0);            
-            });            
+            }); 
+            
+            $("#cambia1").click(function(){
+                var aux = $('#Cc').val();
+                $('#Cc').val( $('#Para').val() );
+                $('#Para').val(aux);
+            });
+            
+            $("#cambia2").click(function(){
+                var aux = $('#Para').val();
+                $('#Para').val( $('#Cc').val() );
+                $('#Cc').val(aux);
+            });
         });
     </script>
 {% endblock %}

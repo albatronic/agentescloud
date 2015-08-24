@@ -130,7 +130,7 @@ class ClientesEntity extends EntityComunes {
      * @var entities\FormasPago
      * @assert NotBlank(groups="AgtClientes")
      */
-    protected $IdFormaPago = '0';
+    protected $FormaPago = '';
 
     /**
      * @var integer
@@ -255,10 +255,10 @@ class ClientesEntity extends EntityComunes {
      * @var string
      */
     protected $_parentEntities = array(
-        array('SourceColumn' => 'Id', 'ParentEntity' => 'ClientesContactos', 'ParentColumn' => 'IdCliente'),           
-        array('SourceColumn' => 'Id', 'ParentEntity' => 'ClientesDEntrega', 'ParentColumn' => 'IdCliente'),           
-        array('SourceColumn' => 'Id', 'ParentEntity' => 'PedidosLineas', 'ParentColumn' => 'IdCliente'),           
-        array('SourceColumn' => 'Id', 'ParentEntity' => 'FacturasFirmasCab', 'ParentColumn' => 'IdCliente'),           
+        array('SourceColumn' => 'Id', 'ParentEntity' => 'ClientesContactos', 'ParentColumn' => 'IdCliente'),
+        array('SourceColumn' => 'Id', 'ParentEntity' => 'ClientesDEntrega', 'ParentColumn' => 'IdCliente'),
+        array('SourceColumn' => 'Id', 'ParentEntity' => 'PedidosLineas', 'ParentColumn' => 'IdCliente'),
+        array('SourceColumn' => 'Id', 'ParentEntity' => 'FacturasFirmasCab', 'ParentColumn' => 'IdCliente'),
     );
 
     /**
@@ -272,7 +272,6 @@ class ClientesEntity extends EntityComunes {
         'Rutas',
         'Actividades',
         'GruposCompras',
-        'FormasPago',
         'ValoresSN',
         'Sexos',
         'Tratamientos',
@@ -451,15 +450,12 @@ class ClientesEntity extends EntityComunes {
         return $this->IdGrupoCompras;
     }
 
-    public function setIdFormaPago($IdFormaPago) {
-        $this->IdFormaPago = ($IdFormaPago instanceof FormasPago) ? $IdFormaPago->getPrimaryKeyValue() : $IdFormaPago;
+    public function setFormaPago($FormaPago) {
+        $this->FormaPago = trim($FormaPago);
     }
 
-    public function getIdFormaPago() {
-        if (!($this->IdFormaPago instanceof FormasPago)) {
-            $this->IdFormaPago = new FormasPago($this->IdFormaPago);
-        }
-        return $this->IdFormaPago;
+    public function getFormaPago() {
+        return $this->FormaPago;
     }
 
     public function setDiaDePago($DiaDePago) {

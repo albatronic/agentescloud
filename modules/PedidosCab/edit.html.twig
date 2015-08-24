@@ -28,6 +28,7 @@
                             <div class="col-sm-8 input-group">
                                 <span class="input-group-addon"><i class="fa fa-envelope"></i></span> 
                                 <input class="form-control" type="text" name="Para" id="Para" value="{{values.datos.IdFirma.EmailPedidos}}"/>
+                                <span class="input-group-addon" id="cambia1"><i class="fa fa-arrow-circle-down"></i></span>                                
                             </div>
                         </div>
                         <div class="form-group">
@@ -35,6 +36,7 @@
                             <div class="col-sm-8 input-group">
                                 <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
                                 <input class="form-control" type="text" name="Cc" id="Cc" value="{{values.datos.IdCliente.Email}}"/>
+                                <span class="input-group-addon" id="cambia2"><i class="fa fa-arrow-circle-up"></i></span>
                             </div>
                         </div>
                         <div class="form-group">
@@ -56,6 +58,15 @@
                                 <textarea class="form-control" type="text" name="Mensaje" id="Mensaje">Le adjunto pedido n. {{values.datos.Id}}</textarea>
                             </div>
                         </div>
+                        <div class="form-group">
+                            <span class="col-sm-3 control-label"><label class="control-label" for="Formato">Formato</label></span>
+                            <div class="col-sm-8">                           
+                                <select class="form-control" name="Formato" id="Formato">
+                                    <option value="pdf">Pdf</option>
+                                    <option value="csv">Csv</option>
+                                </select>
+                            </div>
+                        </div>                            
                         <div class="form-group">
                             <span class="col-sm-3 control-label"><label class="control-label" for="Adjunto">Archivo Adjunto</label></span>
                             <div class="col-sm-8">                           

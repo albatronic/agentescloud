@@ -173,7 +173,7 @@ class FirmasEntity extends EntityComunes {
     /**
      * @var entities\Agencias
      */
-    protected $IdAgencia = '0';
+    protected $Agencia = '';
 
     /**
      * @var integer
@@ -242,7 +242,6 @@ class FirmasEntity extends EntityComunes {
         'Paises',
         'Provincias',
         'Municipios',
-        'Agencias',
         'ValoresSN',
     );
 
@@ -487,15 +486,12 @@ class FirmasEntity extends EntityComunes {
         return $this->PlazoEntrega;
     }
 
-    public function setIdAgencia($IdAgencia) {
-        $this->IdAgencia = ($IdAgencia instanceof Agencias) ? $IdAgencia->getPrimaryKeyValue() : $IdAgencia;
+    public function setAgencia($Agencia) {
+        $this->Agencia = trim($Agencia);
     }
 
-    public function getIdAgencia() {
-        if (!($this->IdAgencia instanceof Agencias)) {
-            $this->IdAgencia = new Agencias($this->IdAgencia);
-        }
-        return $this->IdAgencia;
+    public function getAgencia() {
+        return $this->Agencia;
     }
 
     public function setSinPortes($SinPortes) {

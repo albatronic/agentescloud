@@ -20,7 +20,7 @@
 {{ macro.input(values.atributos.PersonaContacto,'Etiqueta','text',values.controller ~ '[PersonaContacto]',values.controller ~ '_PersonaContacto',datos.PersonaContacto,'50','CampoTextoLargo','12') }}
 {{ macro.select(values.atributos.EnviarCopiaFactura,'Etiqueta',values.controller ~ '[EnviarCopiaFactura]',values.controller ~ '_EnviarCopiaFactura',none,datos.EnviarCopiaFactura.EnviarCopiaFactura,datos.EnviarCopiaFactura.fetchAll('IDTipo'),'chzn-select','13')}}
 {{ macro.select(values.atributos.FacturacionIndependiente,'Etiqueta',values.controller ~ '[FacturacionIndependiente]',values.controller ~ '_FacturacionIndependiente',none,datos.FacturacionIndependiente.FacturacionIndependiente,datos.FacturacionIndependiente.fetchAll('IDTipo'),'chzn-select','14')}}
-{{ macro.select(values.atributos.AgenciaHabitual,'Etiqueta',values.controller ~ '[AgenciaHabitual]',values.controller ~ '_AgenciaHabitual',none,datos.AgenciaHabitual.AgenciaHabitual,datos.AgenciaHabitual.fetchAll('Id'),'chzn-select','15')}}
+{{ macro.input(values.atributos.AgenciaHabitual,'Etiqueta','text',values.controller ~ '[AgenciaHabitual]',values.controller ~ '_AgenciaHabitual',datos.AgenciaHabitual,'50','CampoTextoLargo','15') }}
 {{ macro.input(values.atributos.Horario,'Etiqueta','text',values.controller ~ '[Horario]',values.controller ~ '_Horario',datos.Horario,'50','CampoTextoLargo','16') }}
 {{ macro.input(values.atributos.HorarioLlamadas,'Etiqueta','text',values.controller ~ '[HorarioLlamadas]',values.controller ~ '_HorarioLlamadas',datos.HorarioLlamadas,'50','CampoTextoLargo','17') }}
 {{ macro.select(values.atributos.Vigente,'Etiqueta',values.controller ~ '[Vigente]',values.controller ~ '_Vigente',none,datos.Vigente.Vigente,datos.Vigente.fetchAll('IDTipo'),'chzn-select','18')}}

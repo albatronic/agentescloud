@@ -47,14 +47,14 @@ FacturasFirmasCab:
   action: Index
   template: index.html.twig
   parametros: ''
-  login_required: YES
-  permission_control: YES
-  favourite_control: NO
+  login_required: true
+  permission_control: true
+  favourite_control: false
   help_file: help.html.twig
   title: FacturasFirmasCab
   id_video: facturasfirmascab
   url_video: null
-  feature_list: YES
+  feature_list: true
   entity: FacturasFirmasCab
   table: AgtFacturasFirmasCab
   primarykey: Id
@@ -75,16 +75,14 @@ FacturasFirmasCab:
     - ClientesDEntrega
     - Usuarios
     - EstadosPedidos
-    - FormasPago
-    - Agencias
     - ValoresSN
   columns:
     Id:
       title: Id
       visible: false
       updatable: false
-      filter: NO
-      list: NO
+      filter: false
+      list: false
       default: null
       help: null
       permission: null
@@ -93,8 +91,8 @@ FacturasFirmasCab:
       link: { route: null, param: null, title: null, target: null, link: null }
     Serie:
       title: Serie
-      filter: YES
-      list: NO
+      filter: true
+      list: false
       visible: true
       updatable: true
       default: null
@@ -103,11 +101,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: NO, type: string, length: '1', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: string, length: '1', min: null, max: null, message: 'Valor Requerido' }
     IdFirma:
       title: IdFirma
-      filter: NO
-      list: NO
+      filter: false
+      list: false
       visible: true
       updatable: true
       default: '0'
@@ -117,11 +115,11 @@ FacturasFirmasCab:
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
       '#aditional_filter': { order: 1, caption: IdFirma, entity: Firmas, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
-      validator: { nullable: NO, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
     IdCliente:
       title: IdCliente
-      filter: NO
-      list: NO
+      filter: false
+      list: false
       visible: true
       updatable: true
       default: '0'
@@ -131,11 +129,11 @@ FacturasFirmasCab:
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
       '#aditional_filter': { order: 2, caption: IdCliente, entity: Clientes, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
-      validator: { nullable: NO, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
     IdDirec:
       title: IdDirec
-      filter: NO
-      list: NO
+      filter: false
+      list: false
       visible: true
       updatable: true
       default: '0'
@@ -145,11 +143,11 @@ FacturasFirmasCab:
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
       '#aditional_filter': { order: 3, caption: IdDirec, entity: ClientesDEntrega, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
-      validator: { nullable: NO, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
     IdSubagente:
       title: IdSubagente
-      filter: NO
-      list: NO
+      filter: false
+      list: false
       visible: true
       updatable: true
       default: '0'
@@ -159,11 +157,11 @@ FacturasFirmasCab:
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
       '#aditional_filter': { order: 4, caption: IdSubagente, entity: Usuarios, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
-      validator: { nullable: NO, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
     SuFactura:
       title: SuFactura
-      filter: YES
-      list: NO
+      filter: true
+      list: false
       visible: true
       updatable: true
       default: null
@@ -172,11 +170,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: YES, type: string, length: '15', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: true, type: string, length: '15', min: null, max: null, message: 'Valor Requerido' }
     Referencia:
       title: Referencia
-      filter: YES
-      list: NO
+      filter: true
+      list: false
       visible: true
       updatable: true
       default: null
@@ -185,11 +183,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: YES, type: string, length: '15', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: true, type: string, length: '15', min: null, max: null, message: 'Valor Requerido' }
     Fecha:
       title: Fecha
-      filter: NO
-      list: NO
+      filter: false
+      list: false
       visible: true
       updatable: true
       default: '0000-00-00'
@@ -199,11 +197,11 @@ FacturasFirmasCab:
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
       '#aditional_filter': { order: 5, caption: Fecha, type: range, operator: '>=' }
-      validator: { nullable: NO, type: date, length: 10, min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: date, length: 10, min: null, max: null, message: 'Valor Requerido' }
     LiquidacionFirma:
       title: LiquidacionFirma
-      filter: YES
-      list: NO
+      filter: true
+      list: false
       visible: true
       updatable: true
       default: null
@@ -212,11 +210,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: YES, type: string, length: '15', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: true, type: string, length: '15', min: null, max: null, message: 'Valor Requerido' }
     LiquidacionSubagente:
       title: LiquidacionSubagente
-      filter: YES
-      list: NO
+      filter: true
+      list: false
       visible: true
       updatable: true
       default: null
@@ -225,11 +223,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: YES, type: string, length: '15', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: true, type: string, length: '15', min: null, max: null, message: 'Valor Requerido' }
     ComisionAgente:
       title: ComisionAgente
-      filter: YES
-      list: NO
+      filter: true
+      list: false
       visible: true
       updatable: true
       default: '0.00'
@@ -238,11 +236,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: NO, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
     ComisionSubagente:
       title: ComisionSubagente
-      filter: YES
-      list: NO
+      filter: true
+      list: false
       visible: true
       updatable: true
       default: '0.00'
@@ -251,11 +249,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: NO, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
     Descuentos:
       title: Descuentos
-      filter: YES
-      list: NO
+      filter: true
+      list: false
       visible: true
       updatable: true
       default: '0.00'
@@ -264,11 +262,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: NO, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
     DescuentoProntoPago:
       title: DescuentoProntoPago
-      filter: YES
-      list: NO
+      filter: true
+      list: false
       visible: true
       updatable: true
       default: '0.00'
@@ -277,11 +275,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: NO, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
     GastosEnvio:
       title: GastosEnvio
-      filter: YES
-      list: NO
+      filter: true
+      list: false
       visible: true
       updatable: true
       default: '0.00'
@@ -290,11 +288,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: NO, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
     BaseImponible1:
       title: BaseImponible1
-      filter: YES
-      list: NO
+      filter: true
+      list: false
       visible: true
       updatable: true
       default: '0.00'
@@ -303,11 +301,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: NO, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
     Iva1:
       title: Iva1
-      filter: YES
-      list: NO
+      filter: true
+      list: false
       visible: true
       updatable: true
       default: '0.00'
@@ -316,11 +314,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: NO, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
     CuotaIva1:
       title: CuotaIva1
-      filter: YES
-      list: NO
+      filter: true
+      list: false
       visible: true
       updatable: true
       default: '0.00'
@@ -329,11 +327,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: NO, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
     Recargo1:
       title: Recargo1
-      filter: YES
-      list: NO
+      filter: true
+      list: false
       visible: true
       updatable: true
       default: '0.00'
@@ -342,11 +340,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: NO, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
     CuotaRecargo1:
       title: CuotaRecargo1
-      filter: YES
-      list: NO
+      filter: true
+      list: false
       visible: true
       updatable: true
       default: '0.00'
@@ -355,11 +353,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: NO, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
     BaseImponible2:
       title: BaseImponible2
-      filter: YES
-      list: NO
+      filter: true
+      list: false
       visible: true
       updatable: true
       default: '0.00'
@@ -368,11 +366,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: NO, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
     Iva2:
       title: Iva2
-      filter: YES
-      list: NO
+      filter: true
+      list: false
       visible: true
       updatable: true
       default: '0.00'
@@ -381,11 +379,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: NO, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
     CuotaIva2:
       title: CuotaIva2
-      filter: YES
-      list: NO
+      filter: true
+      list: false
       visible: true
       updatable: true
       default: '0.00'
@@ -394,11 +392,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: NO, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
     Recargo2:
       title: Recargo2
-      filter: YES
-      list: NO
+      filter: true
+      list: false
       visible: true
       updatable: true
       default: '0.00'
@@ -407,11 +405,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: NO, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
     CuotaRecargo2:
       title: CuotaRecargo2
-      filter: YES
-      list: NO
+      filter: true
+      list: false
       visible: true
       updatable: true
       default: '0.00'
@@ -420,11 +418,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: NO, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
     BaseImponible3:
       title: BaseImponible3
-      filter: YES
-      list: NO
+      filter: true
+      list: false
       visible: true
       updatable: true
       default: '0.00'
@@ -433,11 +431,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: NO, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
     Iva3:
       title: Iva3
-      filter: YES
-      list: NO
+      filter: true
+      list: false
       visible: true
       updatable: true
       default: '0.00'
@@ -446,11 +444,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: NO, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
     CuotaIva3:
       title: CuotaIva3
-      filter: YES
-      list: NO
+      filter: true
+      list: false
       visible: true
       updatable: true
       default: '0.00'
@@ -459,11 +457,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: NO, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
     Recargo3:
       title: Recargo3
-      filter: YES
-      list: NO
+      filter: true
+      list: false
       visible: true
       updatable: true
       default: '0.00'
@@ -472,11 +470,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: NO, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
     CuotaRecargo3:
       title: CuotaRecargo3
-      filter: YES
-      list: NO
+      filter: true
+      list: false
       visible: true
       updatable: true
       default: '0.00'
@@ -485,11 +483,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: NO, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
     TotalBases:
       title: TotalBases
-      filter: YES
-      list: NO
+      filter: true
+      list: false
       visible: true
       updatable: true
       default: '0.00'
@@ -498,11 +496,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: NO, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
     TotalIva:
       title: TotalIva
-      filter: YES
-      list: NO
+      filter: true
+      list: false
       visible: true
       updatable: true
       default: '0.00'
@@ -511,11 +509,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: NO, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
     TotalRecargo:
       title: TotalRecargo
-      filter: YES
-      list: NO
+      filter: true
+      list: false
       visible: true
       updatable: true
       default: '0.00'
@@ -524,11 +522,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: NO, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
     TotalFactura:
       title: TotalFactura
-      filter: YES
-      list: NO
+      filter: true
+      list: false
       visible: true
       updatable: true
       default: '0.00'
@@ -537,11 +535,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: NO, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: integer, length: '10', min: null, max: null, message: 'Valor Requerido' }
     Incidencias:
       title: Incidencias
-      filter: YES
-      list: NO
+      filter: true
+      list: false
       visible: true
       updatable: true
       default: null
@@ -550,11 +548,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: YES, type: string, length: false, min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: true, type: string, length: false, min: null, max: null, message: 'Valor Requerido' }
     IdEstado:
       title: IdEstado
-      filter: NO
-      list: NO
+      filter: false
+      list: false
       visible: true
       updatable: true
       default: '0'
@@ -564,11 +562,11 @@ FacturasFirmasCab:
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
       '#aditional_filter': { order: 7, caption: IdEstado, entity: EstadosPedidos, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
-      validator: { nullable: NO, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
-    IdFormaPago:
-      title: IdFormaPago
-      filter: NO
-      list: NO
+      validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
+    FormaPago:
+      title: Forma Pago
+      filter: false
+      list: false
       visible: true
       updatable: true
       default: '0'
@@ -577,12 +575,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      '#aditional_filter': { order: 8, caption: IdFormaPago, entity: FormasPago, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
-      validator: { nullable: NO, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: true, type: integer, length: '50', min: null, max: null, message: 'Valor Requerido' }
     DomicilioPago:
       title: DomicilioPago
-      filter: YES
-      list: NO
+      filter: true
+      list: false
       visible: true
       updatable: true
       default: null
@@ -591,11 +588,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: YES, type: string, length: '100', min: null, max: null, message: 'Valor Requerido' }
-    IdAgencia:
-      title: IdAgencia
-      filter: NO
-      list: NO
+      validator: { nullable: true, type: string, length: '100', min: null, max: null, message: 'Valor Requerido' }
+    Agencia:
+      title: Agencia
+      filter: false
+      list: false
       visible: true
       updatable: true
       default: '0'
@@ -604,12 +601,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      '#aditional_filter': { order: 9, caption: IdAgencia, entity: Agencias, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
-      validator: { nullable: NO, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: true, type: integer, length: '50', min: null, max: null, message: 'Valor Requerido' }
     Portes:
       title: Portes
-      filter: YES
-      list: NO
+      filter: true
+      list: false
       visible: true
       updatable: true
       default: null
@@ -618,11 +614,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: YES, type: string, length: '40', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: true, type: string, length: '40', min: null, max: null, message: 'Valor Requerido' }
     Liquidar:
       title: Liquidar
-      filter: NO
-      list: NO
+      filter: false
+      list: false
       visible: true
       updatable: true
       default: '0'
@@ -632,11 +628,11 @@ FacturasFirmasCab:
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
       '#aditional_filter': { order: 10, caption: Liquidar, entity: ValoresSN, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
-      validator: { nullable: NO, type: tinyint, length: '1', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: tinyint, length: '1', min: null, max: null, message: 'Valor Requerido' }
     Servido:
       title: Servido
-      filter: NO
-      list: NO
+      filter: false
+      list: false
       visible: true
       updatable: true
       default: '0'
@@ -646,11 +642,11 @@ FacturasFirmasCab:
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
       '#aditional_filter': { order: 11, caption: Servido, entity: ValoresSN, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
-      validator: { nullable: NO, type: tinyint, length: '1', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: tinyint, length: '1', min: null, max: null, message: 'Valor Requerido' }
     Observations:
       title: Observations
-      filter: NO
-      list: NO
+      filter: false
+      list: false
       visible: true
       updatable: true
       default: null
@@ -659,11 +655,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: YES, type: string, length: false, min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: true, type: string, length: false, min: null, max: null, message: 'Valor Requerido' }
     PrimaryKeyMD5:
       title: PrimaryKeyMD5
-      filter: NO
-      list: NO
+      filter: false
+      list: false
       visible: true
       updatable: true
       default: null
@@ -672,11 +668,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: YES, type: string, length: '100', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: true, type: string, length: '100', min: null, max: null, message: 'Valor Requerido' }
     IsDefault:
       title: IsDefault
-      filter: NO
-      list: NO
+      filter: false
+      list: false
       visible: true
       updatable: true
       default: '0'
@@ -686,11 +682,11 @@ FacturasFirmasCab:
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
       '#aditional_filter': { order: 12, caption: IsDefault, entity: ValoresSN, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
-      validator: { nullable: NO, type: tinyint, length: '1', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: tinyint, length: '1', min: null, max: null, message: 'Valor Requerido' }
     IsSuper:
       title: IsSuper
-      filter: NO
-      list: NO
+      filter: false
+      list: false
       visible: true
       updatable: true
       default: '0'
@@ -700,11 +696,11 @@ FacturasFirmasCab:
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
       '#aditional_filter': { order: 13, caption: IsSuper, entity: ValoresSN, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
-      validator: { nullable: NO, type: tinyint, length: '1', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: tinyint, length: '1', min: null, max: null, message: 'Valor Requerido' }
     BelongsTo:
       title: BelongsTo
-      filter: NO
-      list: NO
+      filter: false
+      list: false
       visible: true
       updatable: true
       default: '0'
@@ -713,11 +709,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: NO, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
     NivelJerarquico:
       title: NivelJerarquico
-      filter: YES
-      list: NO
+      filter: true
+      list: false
       visible: true
       updatable: true
       default: '1'
@@ -726,11 +722,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: NO, type: integer, length: '4', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: integer, length: '4', min: null, max: null, message: 'Valor Requerido' }
     Publish:
       title: Publish
-      filter: NO
-      list: NO
+      filter: false
+      list: false
       visible: true
       updatable: true
       default: '0'
@@ -740,11 +736,11 @@ FacturasFirmasCab:
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
       '#aditional_filter': { order: 14, caption: Publish, entity: ValoresSN, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
-      validator: { nullable: NO, type: tinyint, length: '1', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: tinyint, length: '1', min: null, max: null, message: 'Valor Requerido' }
     CreatedBy:
       title: CreatedBy
-      filter: NO
-      list: NO
+      filter: false
+      list: false
       visible: true
       updatable: true
       default: '0'
@@ -753,11 +749,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: NO, type: integer, length: '4', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: integer, length: '4', min: null, max: null, message: 'Valor Requerido' }
     CreatedAt:
       title: CreatedAt
-      filter: NO
-      list: NO
+      filter: false
+      list: false
       visible: true
       updatable: true
       default: '0000-00-00 00:00:00'
@@ -766,11 +762,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: NO, type: datetime, length: false, min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: datetime, length: false, min: null, max: null, message: 'Valor Requerido' }
     ModifiedBy:
       title: ModifiedBy
-      filter: NO
-      list: NO
+      filter: false
+      list: false
       visible: true
       updatable: true
       default: '0'
@@ -779,11 +775,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: NO, type: integer, length: '4', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: integer, length: '4', min: null, max: null, message: 'Valor Requerido' }
     ModifiedAt:
       title: ModifiedAt
-      filter: NO
-      list: NO
+      filter: false
+      list: false
       visible: true
       updatable: true
       default: '0000-00-00 00:00:00'
@@ -792,11 +788,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: NO, type: datetime, length: false, min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: datetime, length: false, min: null, max: null, message: 'Valor Requerido' }
     Deleted:
       title: Deleted
-      filter: NO
-      list: NO
+      filter: false
+      list: false
       visible: true
       updatable: true
       default: '0'
@@ -806,11 +802,11 @@ FacturasFirmasCab:
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
       '#aditional_filter': { order: 15, caption: Deleted, entity: ValoresSN, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
-      validator: { nullable: NO, type: tinyint, length: '1', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: tinyint, length: '1', min: null, max: null, message: 'Valor Requerido' }
     DeletedBy:
       title: DeletedBy
-      filter: NO
-      list: NO
+      filter: false
+      list: false
       visible: true
       updatable: true
       default: '0'
@@ -819,11 +815,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: NO, type: integer, length: '4', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: integer, length: '4', min: null, max: null, message: 'Valor Requerido' }
     DeletedAt:
       title: DeletedAt
-      filter: NO
-      list: NO
+      filter: false
+      list: false
       visible: true
       updatable: true
       default: '0000-00-00 00:00:00'
@@ -832,11 +828,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: NO, type: datetime, length: false, min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: datetime, length: false, min: null, max: null, message: 'Valor Requerido' }
     PrintedBy:
       title: PrintedBy
-      filter: NO
-      list: NO
+      filter: false
+      list: false
       visible: true
       updatable: true
       default: '0'
@@ -845,11 +841,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: NO, type: integer, length: '4', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: integer, length: '4', min: null, max: null, message: 'Valor Requerido' }
     PrintedAt:
       title: PrintedAt
-      filter: NO
-      list: NO
+      filter: false
+      list: false
       visible: true
       updatable: true
       default: '0000-00-00 00:00:00'
@@ -858,11 +854,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: NO, type: datetime, length: false, min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: datetime, length: false, min: null, max: null, message: 'Valor Requerido' }
     EmailedBy:
       title: EmailedBy
-      filter: NO
-      list: NO
+      filter: false
+      list: false
       visible: true
       updatable: true
       default: '0'
@@ -871,11 +867,11 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: NO, type: integer, length: '4', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: integer, length: '4', min: null, max: null, message: 'Valor Requerido' }
     EmailedAt:
       title: EmailedAt
-      filter: NO
-      list: NO
+      filter: false
+      list: false
       visible: true
       updatable: true
       default: '0000-00-00 00:00:00'
@@ -884,4 +880,4 @@ FacturasFirmasCab:
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      validator: { nullable: NO, type: datetime, length: false, min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: false, type: datetime, length: false, min: null, max: null, message: 'Valor Requerido' }

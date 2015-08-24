@@ -30,7 +30,8 @@
                 {{ macro.select(values.atributos.IdFirma,'Etiqueta','IdFirma','IdFirma',none,values.IdFirma,values.firma.fetchAll('RazonSocial'),'chzn-select',none,"putFamilias(this.value,'IdFamilia')")}} 
                 {{ macro.select(values.atributos.IdFamilia,'Etiqueta','IdFamilia','IdFamilia',none,values.IdFamilia,values.firma.getFamilias('Descripcion'),'chzn-select','8')}}   
                 <div class="form-group">
-                    <input class="btn btn-primary" type="submit" value="Importar" id="buscar"/>
+                    <input class="btn btn-primary" id="botonImportar" type="submit" value="Importar" />
+                    <div id="espere" class="hidden text-center"><src img="{{app.url}}/assets/global/img/loading-spinner-blue.gif"/></div>
                 </div>
             </div>
         </form>

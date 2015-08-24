@@ -99,7 +99,7 @@ class ClientesDEntregaEntity extends EntityComunes {
     /**
      * @var entities\Agencias
      */
-    protected $AgenciaHabitual = '0';
+    protected $AgenciaHabitual = '';
 
     /**
      * @var string
@@ -158,7 +158,6 @@ class ClientesDEntregaEntity extends EntityComunes {
         'Provincias',
         'Municipios',
         'ValoresSN',
-        'Agencias',
     );
 
     /**
@@ -303,13 +302,10 @@ class ClientesDEntregaEntity extends EntityComunes {
     }
 
     public function setAgenciaHabitual($AgenciaHabitual) {
-        $this->AgenciaHabitual = ($AgenciaHabitual instanceof Agencias) ? $AgenciaHabitual->getPrimaryKeyValue() : $AgenciaHabitual;
+        $this->AgenciaHabitual = trim($AgenciaHabitual);
     }
 
     public function getAgenciaHabitual() {
-        if (!($this->AgenciaHabitual instanceof Agencias)) {
-            $this->AgenciaHabitual = new Agencias($this->AgenciaHabitual);
-        }
         return $this->AgenciaHabitual;
     }
 

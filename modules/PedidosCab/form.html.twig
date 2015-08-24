@@ -49,7 +49,7 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    {{ macro.select(values.atributos.IdFormaPago,'Etiqueta',values.controller ~ '[IdFormaPago]',values.controller ~ '_IdFormaPago',none,datos.IdFormaPago.Id,datos.IdFormaPago.fetchAll('Descripcion'),'chzn-select','35')}}     
+                    {{ macro.input(values.atributos.FormaPago,'Etiqueta','text',values.controller ~ '[FormaPago]',values.controller ~ '_FormaPago',datos.FormaPago,'50','CampoTextoLargo','4') }}
                 </div>
             </div>
             <div class="row">    
@@ -71,7 +71,7 @@
             {# macro.fecha(values.atributos.FechaEntrega,'Etiqueta',values.controller ~ '[FechaEntrega]',values.controller ~ '_FechaEntrega',datos.FechaEntrega,'10','datepicker','9')#}
             <div class="row">
                 <div class="col-md-6">
-                    {{ macro.select(values.atributos.IdAgencia,'Etiqueta',values.controller ~ '[IdAgencia]',values.controller ~ '_IdAgencia',none,datos.IdAgencia.Id,datos.IdAgencia.fetchAll('Agencia'),'chzn-select','36')}}
+                    {{ macro.input(values.atributos.Agencia,'Etiqueta','text',values.controller ~ '[Agencia]',values.controller ~ '_Agencia',datos.Agencia,'50','CampoTextoLargo','36')}}
                 </div>
                 <div class="col-md-6">
                     {{ macro.input(values.atributos.Portes,'Etiqueta','text',values.controller ~ '[Portes]',values.controller ~ '_Portes',datos.Portes,'40','CampoTextoLargo','37') }}

@@ -41,11 +41,12 @@ class PedidosCabController extends Controller {
     }
 
     /**
-     * Envia por email el albaran en formato PDF
+     * Envia por email el pedido en formato PDF
      * @return <type>
      */
     public function enviarAction() {
 
+        $idPedido = $this->request['PedidosCab']['Id'];
         $para = $this->request['Para'];
         $de = $_SESSION['usuarioPortal']['Email'];
         $deNombre = $_SESSION['usuarioPortal']['Nombre'];
@@ -54,11 +55,21 @@ class PedidosCabController extends Controller {
         $asunto = $this->request['Asunto'];
         $mensaje = $this->request['Mensaje'];
         $adjuntos = array();
+
+        switch ($this->request['Formato']) {
+            case 'pdf':
+                break;
+            case 'csv':
+                $adjuntos[] = PedidosCab::getCsv($idPedido);
+                break;
+        }
+
+        // Eventual archivo adjunto
         if ($this->request['FILES']['Adjunto']['error'] == 0) {
             $destino = "docs/docs{$_SESSION['emp']}/uploads/" . $this->request['FILES']['Adjunto']['name'];
             $ok = move_uploaded_file($this->request['FILES']['Adjunto']['tmp_name'], $destino);
             if ($ok) {
-                $adjuntos = array($destino,);
+                $adjuntos[] = $destino;
             } else {
                 $this->values['alertas'] = "No se ha podido adjuntar el archivo {$destino}. Consulte con el administrador los permisos de la carpeta";
             }

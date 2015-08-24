@@ -169,4 +169,41 @@ class PedidosCab extends PedidosCabEntity {
         return $array;
     }
 
+    static function getCsv($idPedido) {
+
+        $pedido = new PedidosCab($idPedido);
+
+        $cabecera = '"Firma";"' . $pedido->getIdFirma()->getRazonSocial() . '"\n';
+        $cabecera .= '"Cliente";"' . $pedido->getIdCliente()->getRazonSocial() . '"\n';
+        $cabecera .= '"Dir. Entrega";"' . $pedido->getIdDirec()->getDireccion() . '"\n';
+        $cabecera .= '"Fecha";"' . $pedido->getFecha() . '"\n';
+        $cabecera .= '"S/Pedido";"' . $pedido->getSuPedido() . '"\n';
+        $cabecera .= '"Observaciones";"' . $pedido->getObservations() . '"\n';
+        $cabecera .= '"Forma de Pago";"' . $pedido->getFormaPago() . '"\n';
+        $cabecera .= '"Agencia Tte.";"' . $pedido->getAgencia() . '"\n\n';
+
+        $lineas = '"Articulo";"Descripcion";"Unidades";"Precio";"Descuento1";"Descuento2";"Descuento3";"Importe"\n';
+
+        foreach ($pedido->getLineas() as $linea) {
+            $lineas .= '"' . $linea->getIdArticulo()->getCodigo() . '";' .
+                    '"' . $linea->getIdArticulo()->getDescripcion() . '";' .
+                    '"' . $linea->getUnidades() . '";' .
+                    '"' . $linea->getPrecio() . '";' .
+                    '"' . $linea->getDescuento1() . '";' .
+                    '"' . $linea->getDescuento2() . '";' .
+                    '"' . $linea->getDescuento3() . '";' .
+                    '"' . $linea->getImporte() . '"\n';
+        }
+
+        $csv = $lineas;
+
+        $fileCsv = Archivo::getTemporalFileName("export", "csv");
+        $archivo = new Archivo($fileCsv);
+        if (!$archivo->write($csv)) {
+            $fileCsv = "";
+        }
+
+        return $fileCsv;
+    }
+
 }

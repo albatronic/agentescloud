@@ -171,7 +171,7 @@ AgtClientes:
     IdRuta:              { type: bigint(11), notnull: true, default: 0, index: index, comment: 'datos,Rutas,Id' }    
     IdActividad:         { type: bigint(11), notnull: true, default: 0, index: index, comment: 'datos,Actividades,Id' }    
     IdGrupoCompras:      { type: bigint(11), notnull: true, default: 0, index: index, comment: 'datos,GruposCompras,Id' }    
-    IdFormaPago:         { type: bigint(11), notnull: true, default: 0, index: index, comment: 'datos,FormasPago,Id' }    
+    FormaPago:           { type: varchar(50), default: null }
     DiaDePago:           { type: int(2), notnull: true, defatul: 0 }
     Iva:                 { type: boolean, notnull: true, default: 0, index: index, comment: 'datos,ValoresSN,IDTipo' }
     RecargoEqu:          { type: boolean, notnull: true, default: 0, index: index, comment: 'datos,ValoresSN,IDTipo' }
@@ -224,7 +224,7 @@ AgtClientesDEntrega:
     PersonaContacto:          { type: varchar(50), default: null }
     EnviarCopiaFactura:       { type: boolean, notnull: true, default: 1, index: index, comment: 'datos,ValoresSN,IDTipo' }    
     FacturacionIndependiente: { type: boolean, notnull: true, default: 0, index: index, comment: 'datos,ValoresSN,IDTipo' }    
-    AgenciaHabitual:          { type: bigint(11), default: 0, index: index, comment: 'datos,Agencias,Id' } 
+    AgenciaHabitual:          { type: varchar(50), default: null } 
     Horario:                  { type: varchar(50), default: null } 
     HorarioLlamadas:          { type: varchar(50), default: null }
     Vigente:                  { type: tinyint(1), notnull: true, default: 1, index: index, comment: 'Abstract,ValoresSN,IDTipo' }    
@@ -355,9 +355,9 @@ AgtFacturasFirmasCab:
     TotalFactura:           { type: decimal, notnull: true, default: 0 }    
     Incidencias:            { type: text, default: null }        
     IdEstado:               { type: bigint(11), notnull: true, default: 0, index: index, comment: 'Abstract,EstadosPedidos,IDTipo' }
-    IdFormaPago:            { type: bigint(11), notnull: true, default: 0, index: index, comment: 'db,FormasPago,Id' } 
+    FormaPago:              { type: varchar(50), default: null }
     DomicilioPago:          { type: varchar(100), default: null }
-    IdAgencia:              { type: bigint(11), notnull: true, default: 0, index: index, comment: 'db,Agencias,Id' }
+    Agencia:                { type: varchar(50), default: null }
     Portes:                 { type: string(40), default: null }
     Liquidar:               { type: boolean, notnull: true, default: 0, index: index, comment: 'Abstract,ValoresSN,IDTipo' }
     Servido:                { type: boolean, notnull: true, default: 0, index: index, comment: 'Abstract,ValoresSN,IDTipo' }
@@ -419,7 +419,7 @@ AgtFirmas:
     Mandato:             { type: varchar(35), default: null }
     FechaMandato:        { type: date, notnull: true, default: '0000-00-00' }
     PlazoEntrega:        { type: int(4), default: null }
-    IdAgencia:           { type: bigint(11), deafult: 0, index: index, comment: 'datos,Agencias,Id' }
+    Agencia:             { type: varchar(50), default: null }
     SinPortes:           { type: decimal, default: 0 }
     Vigente:             { type: boolean, notnull: true, default: 1, index: index, comment: 'datos,ValoresSN,IDTipo' }  
     AvisoPedidos:        { type: text, default: null }    
@@ -503,8 +503,8 @@ AgtPedidosCab:
     TotalPedido:            { type: decimal, notnull: true, default: 0 }    
     Incidencias:            { type: text, default: null }        
     IdEstado:               { type: bigint(11), notnull: true, default: 0, index: index, comment: 'Abstract,EstadosPedidos,IDTipo' }
-    IdFormaPago:            { type: bigint(11), notnull: true, default: 0, index: index, comment: 'db,FormasPago,Id' }    
-    IdAgencia:              { type: bigint(11), notnull: true, default: 0, index: index, comment: 'db,Agencias,Id' }
+    FormaPago:              { type: varchar(50), default: null } 
+    Agencia:                { type: varchar(50), default: null }
     Portes:                 { type: string(40), default: null }
     Imprimir:               { type: boolean, notnull: true, default: 0, index: index, comment: 'Abstract,ValoresSN,IDTipo' }
     Servido:                { type: boolean, notnull: true, default: 0, index: index, comment: 'Abstract,ValoresSN,IDTipo' }

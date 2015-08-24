@@ -77,8 +77,6 @@ PedidosCab:
     - Almacenes
     - Usuarios
     - EstadosPedidos
-    - FormasPago
-    - Agencias
     - ValoresSN
   columns:
     Id:
@@ -529,34 +527,32 @@ PedidosCab:
       link: { route: null, param: null, title: null, target: null, link: null }
       aditional_filter: { order: 10, caption: Estado, entity: EstadosPedidos, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
       validator: { nullable: false, type: integer, length: '15', min: null, max: null, message: 'Valor Requerido' }
-    IdFormaPago:
+    FormaPago:
       title: Forma Pago
       filter: false
       list: false
       visible: true
       updatable: true
-      default: '0'
+      default: ''
       help: null
       permission: null
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      '#aditional_filter': { order: 11, caption: IdFormaPago, entity: FormasPago, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
-      validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
-    IdAgencia:
-      title: Agencia
+      validator: { nullable: true, type: integer, length: '50', min: null, max: null, message: 'Valor Requerido' }
+    Agencia:
+      title: Agencía
       filter: false
       list: false
       visible: true
       updatable: true
-      default: '0'
+      default: ''
       help: null
       permission: null
       translatable: false
       searchable: false
       link: { route: null, param: null, title: null, target: null, link: null }
-      '#aditional_filter': { order: 12, caption: IdAgencia, entity: Agencias, method: fetchAll, params: Descripcion, type: select, operator: '=', event: null }
-      validator: { nullable: false, type: integer, length: '11', min: null, max: null, message: 'Valor Requerido' }
+      validator: { nullable: true, type: integer, length: '50', min: null, max: null, message: 'Valor Requerido' }
     Portes:
       title: Portes
       filter: true

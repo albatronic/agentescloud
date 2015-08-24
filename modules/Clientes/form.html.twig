@@ -50,7 +50,7 @@
             <div class="tab-pane" id="tabs-1">
                 <div class="col-md-6">
                     {{ macro.input(values.atributos.CContable,'Etiqueta','text',values.controller ~ '[CContable]',values.controller ~ '_CContable',datos.CContable,'10','CampoTextoCorto','15') }} 
-                    {{ macro.select(values.atributos.IdFormaPago,'Etiqueta',values.controller ~ '[IdFormaPago]',values.controller ~ '_IdFormaPago',none,datos.IdFormaPago.Id,datos.IdFormaPago.fetchAll('Descripcion'),'chzn-select','19')}}
+                    {{ macro.input(values.atributos.FormaPago,'Etiqueta','text',values.controller ~ '[FormaPago]',values.controller ~ '_FormaPago',datos.FormaPago,'50','CampoTextoCorto','16') }} 
                     {{ macro.input(values.atributos.DiaDePago,'Etiqueta','text',values.controller ~ '[DiaDePago]',values.controller ~ '_DiaDePago',datos.DiaDePago,'2','CampoUnidades','20') }}
                     {{ macro.input(values.atributos.Iva,'Etiqueta','checkbox',values.controller ~ '[Iva]',values.controller ~ '_Iva',datos.Iva.IDTipo,'chzn-select','21')}}
                     {{ macro.input(values.atributos.RecargoEqu,'Etiqueta','checkbox',values.controller ~ '[RecargoEqu]',values.controller ~ '_RecargoEqu',datos.RecargoEqu.IDTipo,'chzn-select','22')}}                          

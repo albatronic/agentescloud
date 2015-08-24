@@ -54,7 +54,7 @@
             <div class="tab-pane" id="tabs-1">
                 <div class="col-md-6">
                     {{ macro.input(values.atributos.PlazoEntrega,'Etiqueta','text',values.controller ~ '[PlazoEntrega]',values.controller ~ '_PlazoEntrega',datos.PlazoEntrega,'4','CampoUnidades','27') }}
-                    {{ macro.select(values.atributos.IdAgencia,'Etiqueta',values.controller ~ '[IdAgencia]',values.controller ~ '_IdAgencia',none,datos.IdAgencia.Id,datos.IdAgencia.fetchAll('Agencia'),'chzn-select','28')}}
+                    {{ macro.input(values.atributos.Agencia,'Etiqueta','text',values.controller ~ '[Agencia]',values.controller ~ '_Agencia',datos.Agencia,'10','CampoTextoCorto','28') }}
                     {{ macro.input(values.atributos.SinPortes,'Etiqueta','text',values.controller ~ '[SinPortes]',values.controller ~ '_SinPortes',datos.SinPortes,'10','CampoImporte','29') }}                         
                 </div>
                 <div class="col-md-6">       

@@ -1,0 +1,14 @@
+
+{% extends "_global/js.html.twig" %}
+
+{% block js %}
+    {{ parent() }}
+    <script>
+    $(document).ready(function() {         
+        $('#botonImportar').click(function(){
+            $('#botonImportar').hide();
+            $('#espere').removeClass('hidden');
+        });   
+    });
+    </script>
+{% endblock %}
